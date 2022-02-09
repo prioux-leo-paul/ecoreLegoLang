@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: langageCompilation.concrete.syntax
+Bundle-ManifestVersion: 2
+Bundle-Name: langageCompilation.concrete.syntax
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: langageCompilation.concrete.syntax; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: langageCompilation,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: langageCompilation.concrete.syntax.validation,
+ langageCompilation.concrete.syntax.serializer,
+ langageCompilation.concrete.syntax.generator,
+ langageCompilation.concrete.syntax.services,
+ langageCompilation.concrete.syntax.scoping,
+ langageCompilation.concrete.syntax,
+ langageCompilation.concrete.syntax.formatting2,
+ langageCompilation.concrete.syntax.parser.antlr.internal,
+ langageCompilation.concrete.syntax.parser.antlr
+Import-Package: org.apache.log4j

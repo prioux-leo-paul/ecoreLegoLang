@@ -1,0 +1,37 @@
+/**
+ */
+package langageCompilation.impl;
+
+import langageCompilation.Incrementation;
+import langageCompilation.LangageCompilationPackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Incrementation</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class IncrementationImpl extends BinaryOperationImpl implements Incrementation {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IncrementationImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LangageCompilationPackage.Literals.INCREMENTATION;
+	}
+
+} //IncrementationImpl

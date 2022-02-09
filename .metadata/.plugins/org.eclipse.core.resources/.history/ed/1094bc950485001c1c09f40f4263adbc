@@ -1,0 +1,94 @@
+/**
+ */
+package langageCompilation;
+
+import java.lang.String;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Variable</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link langageCompilation.Variable#isIsConsst <em>Is Consst</em>}</li>
+ *   <li>{@link langageCompilation.Variable#getType <em>Type</em>}</li>
+ *   <li>{@link langageCompilation.Variable#getName <em>Name</em>}</li>
+ * </ul>
+ *
+ * @see langageCompilation.LangageCompilationPackage#getVariable()
+ * @model
+ * @generated
+ */
+public interface Variable extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Is Consst</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Consst</em>' attribute.
+	 * @see #setIsConsst(boolean)
+	 * @see langageCompilation.LangageCompilationPackage#getVariable_IsConsst()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsConsst();
+
+	/**
+	 * Sets the value of the '{@link langageCompilation.Variable#isIsConsst <em>Is Consst</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Consst</em>' attribute.
+	 * @see #isIsConsst()
+	 * @generated
+	 */
+	void setIsConsst(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' reference.
+	 * @see #setType(EClass)
+	 * @see langageCompilation.LangageCompilationPackage#getVariable_Type()
+	 * @model type="langageCompilation.Type" required="true"
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
+	 * Sets the value of the '{@link langageCompilation.Variable#getType <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(EClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see langageCompilation.LangageCompilationPackage#getVariable_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link langageCompilation.Variable#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+} // Variable

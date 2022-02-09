@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/langageCompilation/src-gen" creationIcons="false"
+    editDirectory="/langageCompilation.edit/src-gen" editorDirectory="/langageCompilation.editor/src-gen"
+    modelPluginID="langageCompilation" modelName="LangageCompilation" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>langageCompilation.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="LangageCompilation" disposableProviderFactory="true" ecorePackage="langageCompilation.ecore#/">
+    <genClasses ecoreClass="langageCompilation.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Program/statement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Program/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Program/type"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Statement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Variable/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Loop/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//WhileLoop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//WhileLoop/loopCondition"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Expression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Expression/type"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//BinaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BinaryOperation/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BinaryOperation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Type"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//VariableRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//VariableRef/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//Substarction"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Comparaison"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//GT"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Assignement"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Integer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Integer/initialValue"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//String/initialeValue"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//VariableDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//VariableDeclaration/variable"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

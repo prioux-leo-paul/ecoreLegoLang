@@ -1,0 +1,151 @@
+/**
+ */
+package langageCompilation.impl;
+
+import java.util.Collection;
+
+import langageCompilation.EFELSE;
+import langageCompilation.LangageCompilationPackage;
+import langageCompilation.Statement;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>EFELSE</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link langageCompilation.impl.EFELSEImpl#getElseStatement <em>Else Statement</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class EFELSEImpl extends ConditionEtatImpl implements EFELSE {
+	/**
+	 * The cached value of the '{@link #getElseStatement() <em>Else Statement</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElseStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Statement> elseStatement;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EFELSEImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LangageCompilationPackage.Literals.EFELSE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Statement> getElseStatement() {
+		if (elseStatement == null) {
+			elseStatement = new EObjectContainmentEList<Statement>(Statement.class, this,
+					LangageCompilationPackage.EFELSE__ELSE_STATEMENT);
+		}
+		return elseStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case LangageCompilationPackage.EFELSE__ELSE_STATEMENT:
+			return ((InternalEList<?>) getElseStatement()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case LangageCompilationPackage.EFELSE__ELSE_STATEMENT:
+			return getElseStatement();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case LangageCompilationPackage.EFELSE__ELSE_STATEMENT:
+			getElseStatement().clear();
+			getElseStatement().addAll((Collection<? extends Statement>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case LangageCompilationPackage.EFELSE__ELSE_STATEMENT:
+			getElseStatement().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case LangageCompilationPackage.EFELSE__ELSE_STATEMENT:
+			return elseStatement != null && !elseStatement.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //EFELSEImpl

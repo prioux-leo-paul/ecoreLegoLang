@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: langageCompilation.concrete.syntax.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: langageCompilation.concrete.syntax.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: langageCompilation.concrete.syntax.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: langageCompilation.concrete.syntax,
+ langageCompilation.concrete.syntax.ide,
+ langageCompilation,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: langageCompilation.concrete.syntax.ui.internal,
+ langageCompilation.concrete.syntax.ui.quickfix,
+ langageCompilation.concrete.syntax.ui.contentassist
+Bundle-Activator: langageCompilation.concrete.syntax.ui.internal.SyntaxActivator

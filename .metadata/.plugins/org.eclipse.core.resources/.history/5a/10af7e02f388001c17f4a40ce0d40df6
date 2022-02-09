@@ -1,0 +1,240 @@
+/**
+ */
+package langageCompilation.impl;
+
+import langageCompilation.*;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class LangageCompilationFactoryImpl extends EFactoryImpl implements LangageCompilationFactory {
+	/**
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static LangageCompilationFactory init() {
+		try {
+			LangageCompilationFactory theLangageCompilationFactory = (LangageCompilationFactory) EPackage.Registry.INSTANCE
+					.getEFactory(LangageCompilationPackage.eNS_URI);
+			if (theLangageCompilationFactory != null) {
+				return theLangageCompilationFactory;
+			}
+		} catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new LangageCompilationFactoryImpl();
+	}
+
+	/**
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LangageCompilationFactoryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+		case LangageCompilationPackage.PROGRAM:
+			return createProgram();
+		case LangageCompilationPackage.WHILE_LOOP:
+			return createWhileLoop();
+		case LangageCompilationPackage.VARIABLE_REF:
+			return createVariableRef();
+		case LangageCompilationPackage.SUBSTRACTION:
+			return createSubstraction();
+		case LangageCompilationPackage.GT:
+			return createGT();
+		case LangageCompilationPackage.ASSIGNEMENT:
+			return createAssignement();
+		case LangageCompilationPackage.UN_INTEGER:
+			return createunInteger();
+		case LangageCompilationPackage.UN_STRING:
+			return createunString();
+		case LangageCompilationPackage.LT:
+			return createLT();
+		case LangageCompilationPackage.EQUAL:
+			return createEqual();
+		case LangageCompilationPackage.ADDITION:
+			return createAddition();
+		case LangageCompilationPackage.DIVISION:
+			return createDivision();
+		case LangageCompilationPackage.MULTIPLICATION:
+			return createMultiplication();
+		default:
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Program createProgram() {
+		ProgramImpl program = new ProgramImpl();
+		return program;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WhileLoop createWhileLoop() {
+		WhileLoopImpl whileLoop = new WhileLoopImpl();
+		return whileLoop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableRef createVariableRef() {
+		VariableRefImpl variableRef = new VariableRefImpl();
+		return variableRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Substraction createSubstraction() {
+		SubstractionImpl substraction = new SubstractionImpl();
+		return substraction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GT createGT() {
+		GTImpl gt = new GTImpl();
+		return gt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Assignement createAssignement() {
+		AssignementImpl assignement = new AssignementImpl();
+		return assignement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public unInteger createunInteger() {
+		unIntegerImpl unInteger = new unIntegerImpl();
+		return unInteger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public unString createunString() {
+		unStringImpl unString = new unStringImpl();
+		return unString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LT createLT() {
+		LTImpl lt = new LTImpl();
+		return lt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Equal createEqual() {
+		EqualImpl equal = new EqualImpl();
+		return equal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Addition createAddition() {
+		AdditionImpl addition = new AdditionImpl();
+		return addition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Division createDivision() {
+		DivisionImpl division = new DivisionImpl();
+		return division;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Multiplication createMultiplication() {
+		MultiplicationImpl multiplication = new MultiplicationImpl();
+		return multiplication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LangageCompilationPackage getLangageCompilationPackage() {
+		return (LangageCompilationPackage) getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static LangageCompilationPackage getPackage() {
+		return LangageCompilationPackage.eINSTANCE;
+	}
+
+} //LangageCompilationFactoryImpl
