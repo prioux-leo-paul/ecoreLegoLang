@@ -4,35 +4,35 @@ package langageCompilation;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>un String</b></em>'.
+ * A representation of the model object '<em><b>Un String</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link langageCompilation.unString#getInitialeValue <em>Initiale Value</em>}</li>
+ *   <li>{@link langageCompilation.UnString#getInitialeValue <em>Initiale Value</em>}</li>
  * </ul>
  *
- * @see langageCompilation.LangageCompilationPackage#getunString()
+ * @see langageCompilation.LangageCompilationPackage#getUnString()
  * @model
  * @generated
  */
-public interface unString extends Variable {
+public interface UnString extends Variable {
 	/**
 	 * Returns the value of the '<em><b>Initiale Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initiale Value</em>' attribute.
 	 * @see #setInitialeValue(String)
-	 * @see langageCompilation.LangageCompilationPackage#getunString_InitialeValue()
+	 * @see langageCompilation.LangageCompilationPackage#getUnString_InitialeValue()
 	 * @model
 	 * @generated
 	 */
 	String getInitialeValue();
 
 	/**
-	 * Sets the value of the '{@link langageCompilation.unString#getInitialeValue <em>Initiale Value</em>}' attribute.
+	 * Sets the value of the '{@link langageCompilation.UnString#getInitialeValue <em>Initiale Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initiale Value</em>' attribute.
@@ -41,4 +41,4 @@ public interface unString extends Variable {
 	 */
 	void setInitialeValue(String value);
 
-} // unString
+} // UnString

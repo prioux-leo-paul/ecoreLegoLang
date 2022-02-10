@@ -23,33 +23,18 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalLegoLangParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'Program'", "'{'", "'}'", "'if'", "'else{'", "'while'", "'print('", "');'", "'('", "'-'", "')'", "'+'", "'*'", "'/'", "'>'", "'<'", "'=='", "'!='", "'<='", "'>='", "'='", "'+='", "'-='", "'int'", "';'", "'double'", "'.'", "'bool'", "'string'", "'const'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'Program'", "'{'", "'}'", "'if'", "'else{'", "'while'", "'print('", "');'", "','", "'('", "'-'", "')'", "'+'", "'*'", "'/'", "'>'", "'<'", "'=='", "'!='", "'<='", "'>='", "'='", "'+='", "'-='", "'int'", "';'", "'double'", "'.'", "'bool'", "'string'", "'const'"
     };
-    public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__37=37;
     public static final int T__16=16;
-    public static final int T__38=38;
     public static final int T__17=17;
-    public static final int T__39=39;
     public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__33=33;
     public static final int T__12=12;
-    public static final int T__34=34;
     public static final int T__13=13;
-    public static final int T__35=35;
     public static final int T__14=14;
-    public static final int T__36=36;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -60,11 +45,27 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_STRING=4;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__20=20;
     public static final int T__42=42;
-    public static final int T__21=21;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -2226,18 +2227,18 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleEBoolean"
 
 
-    // $ANTLR start "entryRuleunInteger"
-    // InternalLegoLang.g:679:1: entryRuleunInteger : ruleunInteger EOF ;
-    public final void entryRuleunInteger() throws RecognitionException {
+    // $ANTLR start "entryRuleUnInteger"
+    // InternalLegoLang.g:679:1: entryRuleUnInteger : ruleUnInteger EOF ;
+    public final void entryRuleUnInteger() throws RecognitionException {
         try {
-            // InternalLegoLang.g:680:1: ( ruleunInteger EOF )
-            // InternalLegoLang.g:681:1: ruleunInteger EOF
+            // InternalLegoLang.g:680:1: ( ruleUnInteger EOF )
+            // InternalLegoLang.g:681:1: ruleUnInteger EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerRule()); 
             }
             pushFollow(FOLLOW_1);
-            ruleunInteger();
+            ruleUnInteger();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2257,12 +2258,12 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleunInteger"
+    // $ANTLR end "entryRuleUnInteger"
 
 
-    // $ANTLR start "ruleunInteger"
-    // InternalLegoLang.g:688:1: ruleunInteger : ( ( rule__UnInteger__Group__0 ) ) ;
-    public final void ruleunInteger() throws RecognitionException {
+    // $ANTLR start "ruleUnInteger"
+    // InternalLegoLang.g:688:1: ruleUnInteger : ( ( rule__UnInteger__Group__0 ) ) ;
+    public final void ruleUnInteger() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2308,21 +2309,21 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleunInteger"
+    // $ANTLR end "ruleUnInteger"
 
 
-    // $ANTLR start "entryRuleunDouble"
-    // InternalLegoLang.g:704:1: entryRuleunDouble : ruleunDouble EOF ;
-    public final void entryRuleunDouble() throws RecognitionException {
+    // $ANTLR start "entryRuleUnDouble"
+    // InternalLegoLang.g:704:1: entryRuleUnDouble : ruleUnDouble EOF ;
+    public final void entryRuleUnDouble() throws RecognitionException {
         try {
-            // InternalLegoLang.g:705:1: ( ruleunDouble EOF )
-            // InternalLegoLang.g:706:1: ruleunDouble EOF
+            // InternalLegoLang.g:705:1: ( ruleUnDouble EOF )
+            // InternalLegoLang.g:706:1: ruleUnDouble EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleRule()); 
             }
             pushFollow(FOLLOW_1);
-            ruleunDouble();
+            ruleUnDouble();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2342,12 +2343,12 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleunDouble"
+    // $ANTLR end "entryRuleUnDouble"
 
 
-    // $ANTLR start "ruleunDouble"
-    // InternalLegoLang.g:713:1: ruleunDouble : ( ( rule__UnDouble__Group__0 ) ) ;
-    public final void ruleunDouble() throws RecognitionException {
+    // $ANTLR start "ruleUnDouble"
+    // InternalLegoLang.g:713:1: ruleUnDouble : ( ( rule__UnDouble__Group__0 ) ) ;
+    public final void ruleUnDouble() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2393,21 +2394,21 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleunDouble"
+    // $ANTLR end "ruleUnDouble"
 
 
-    // $ANTLR start "entryRuleunBoolean"
-    // InternalLegoLang.g:729:1: entryRuleunBoolean : ruleunBoolean EOF ;
-    public final void entryRuleunBoolean() throws RecognitionException {
+    // $ANTLR start "entryRuleUnBoolean"
+    // InternalLegoLang.g:729:1: entryRuleUnBoolean : ruleUnBoolean EOF ;
+    public final void entryRuleUnBoolean() throws RecognitionException {
         try {
-            // InternalLegoLang.g:730:1: ( ruleunBoolean EOF )
-            // InternalLegoLang.g:731:1: ruleunBoolean EOF
+            // InternalLegoLang.g:730:1: ( ruleUnBoolean EOF )
+            // InternalLegoLang.g:731:1: ruleUnBoolean EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanRule()); 
             }
             pushFollow(FOLLOW_1);
-            ruleunBoolean();
+            ruleUnBoolean();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2427,12 +2428,12 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleunBoolean"
+    // $ANTLR end "entryRuleUnBoolean"
 
 
-    // $ANTLR start "ruleunBoolean"
-    // InternalLegoLang.g:738:1: ruleunBoolean : ( ( rule__UnBoolean__Group__0 ) ) ;
-    public final void ruleunBoolean() throws RecognitionException {
+    // $ANTLR start "ruleUnBoolean"
+    // InternalLegoLang.g:738:1: ruleUnBoolean : ( ( rule__UnBoolean__Group__0 ) ) ;
+    public final void ruleUnBoolean() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2478,21 +2479,21 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleunBoolean"
+    // $ANTLR end "ruleUnBoolean"
 
 
-    // $ANTLR start "entryRuleunString"
-    // InternalLegoLang.g:754:1: entryRuleunString : ruleunString EOF ;
-    public final void entryRuleunString() throws RecognitionException {
+    // $ANTLR start "entryRuleUnString"
+    // InternalLegoLang.g:754:1: entryRuleUnString : ruleUnString EOF ;
+    public final void entryRuleUnString() throws RecognitionException {
         try {
-            // InternalLegoLang.g:755:1: ( ruleunString EOF )
-            // InternalLegoLang.g:756:1: ruleunString EOF
+            // InternalLegoLang.g:755:1: ( ruleUnString EOF )
+            // InternalLegoLang.g:756:1: ruleUnString EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringRule()); 
             }
             pushFollow(FOLLOW_1);
-            ruleunString();
+            ruleUnString();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2512,12 +2513,12 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleunString"
+    // $ANTLR end "entryRuleUnString"
 
 
-    // $ANTLR start "ruleunString"
-    // InternalLegoLang.g:763:1: ruleunString : ( ( rule__UnString__Group__0 ) ) ;
-    public final void ruleunString() throws RecognitionException {
+    // $ANTLR start "ruleUnString"
+    // InternalLegoLang.g:763:1: ruleUnString : ( ( rule__UnString__Group__0 ) ) ;
+    public final void ruleUnString() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2563,7 +2564,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleunString"
+    // $ANTLR end "ruleUnString"
 
 
     // $ANTLR start "entryRuleTheDouble"
@@ -3006,11 +3007,11 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                 alt1=1;
                 }
                 break;
-            case 36:
-            case 38:
-            case 40:
+            case 37:
+            case 39:
             case 41:
             case 42:
+            case 43:
                 {
                 alt1=2;
                 }
@@ -3020,8 +3021,8 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
             case RULE_INT:
             case 11:
             case 12:
-            case 21:
             case 22:
+            case 23:
                 {
                 alt1=3;
                 }
@@ -3556,36 +3557,36 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Variable__Alternatives"
-    // InternalLegoLang.g:1044:1: rule__Variable__Alternatives : ( ( ruleunInteger ) | ( ruleunString ) | ( ruleunBoolean ) | ( ruleunDouble ) );
+    // InternalLegoLang.g:1044:1: rule__Variable__Alternatives : ( ( ruleUnInteger ) | ( ruleUnString ) | ( ruleUnBoolean ) | ( ruleUnDouble ) );
     public final void rule__Variable__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1048:1: ( ( ruleunInteger ) | ( ruleunString ) | ( ruleunBoolean ) | ( ruleunDouble ) )
+            // InternalLegoLang.g:1048:1: ( ( ruleUnInteger ) | ( ruleUnString ) | ( ruleUnBoolean ) | ( ruleUnDouble ) )
             int alt4=4;
             switch ( input.LA(1) ) {
-            case 42:
+            case 43:
                 {
                 switch ( input.LA(2) ) {
-                case 40:
-                    {
-                    alt4=3;
-                    }
-                    break;
-                case 36:
-                    {
-                    alt4=1;
-                    }
-                    break;
-                case 41:
+                case 42:
                     {
                     alt4=2;
                     }
                     break;
-                case 38:
+                case 39:
                     {
                     alt4=4;
+                    }
+                    break;
+                case 41:
+                    {
+                    alt4=3;
+                    }
+                    break;
+                case 37:
+                    {
+                    alt4=1;
                     }
                     break;
                 default:
@@ -3598,22 +3599,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
                 }
                 break;
-            case 36:
+            case 37:
                 {
                 alt4=1;
                 }
                 break;
-            case 41:
+            case 42:
                 {
                 alt4=2;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt4=3;
                 }
                 break;
-            case 38:
+            case 39:
                 {
                 alt4=4;
                 }
@@ -3628,16 +3629,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
             switch (alt4) {
                 case 1 :
-                    // InternalLegoLang.g:1049:2: ( ruleunInteger )
+                    // InternalLegoLang.g:1049:2: ( ruleUnInteger )
                     {
-                    // InternalLegoLang.g:1049:2: ( ruleunInteger )
-                    // InternalLegoLang.g:1050:3: ruleunInteger
+                    // InternalLegoLang.g:1049:2: ( ruleUnInteger )
+                    // InternalLegoLang.g:1050:3: ruleUnInteger
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVariableAccess().getUnIntegerParserRuleCall_0()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleunInteger();
+                    ruleUnInteger();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -3651,16 +3652,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // InternalLegoLang.g:1055:2: ( ruleunString )
+                    // InternalLegoLang.g:1055:2: ( ruleUnString )
                     {
-                    // InternalLegoLang.g:1055:2: ( ruleunString )
-                    // InternalLegoLang.g:1056:3: ruleunString
+                    // InternalLegoLang.g:1055:2: ( ruleUnString )
+                    // InternalLegoLang.g:1056:3: ruleUnString
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVariableAccess().getUnStringParserRuleCall_1()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleunString();
+                    ruleUnString();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -3674,16 +3675,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // InternalLegoLang.g:1061:2: ( ruleunBoolean )
+                    // InternalLegoLang.g:1061:2: ( ruleUnBoolean )
                     {
-                    // InternalLegoLang.g:1061:2: ( ruleunBoolean )
-                    // InternalLegoLang.g:1062:3: ruleunBoolean
+                    // InternalLegoLang.g:1061:2: ( ruleUnBoolean )
+                    // InternalLegoLang.g:1062:3: ruleUnBoolean
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVariableAccess().getUnBooleanParserRuleCall_2()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleunBoolean();
+                    ruleUnBoolean();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -3697,16 +3698,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // InternalLegoLang.g:1067:2: ( ruleunDouble )
+                    // InternalLegoLang.g:1067:2: ( ruleUnDouble )
                     {
-                    // InternalLegoLang.g:1067:2: ( ruleunDouble )
-                    // InternalLegoLang.g:1068:3: ruleunDouble
+                    // InternalLegoLang.g:1067:2: ( ruleUnDouble )
+                    // InternalLegoLang.g:1068:3: ruleUnDouble
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVariableAccess().getUnDoubleParserRuleCall_3()); 
                     }
                     pushFollow(FOLLOW_2);
-                    ruleunDouble();
+                    ruleUnDouble();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -3747,7 +3748,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
             int alt5=6;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==21) ) {
+            if ( (LA5_0==22) ) {
                 int LA5_1 = input.LA(2);
 
                 if ( (synpred20_InternalLegoLang()) ) {
@@ -4485,7 +4486,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( ((LA8_0>=RULE_STRING && LA8_0<=RULE_INT)||(LA8_0>=11 && LA8_0<=12)||LA8_0==16||(LA8_0>=18 && LA8_0<=19)||(LA8_0>=21 && LA8_0<=22)||LA8_0==36||LA8_0==38||(LA8_0>=40 && LA8_0<=42)) ) {
+                if ( ((LA8_0>=RULE_STRING && LA8_0<=RULE_INT)||(LA8_0>=11 && LA8_0<=12)||LA8_0==16||(LA8_0>=18 && LA8_0<=19)||(LA8_0>=22 && LA8_0<=23)||LA8_0==37||LA8_0==39||(LA8_0>=41 && LA8_0<=43)) ) {
                     alt8=1;
                 }
 
@@ -4913,7 +4914,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( ((LA9_0>=RULE_STRING && LA9_0<=RULE_INT)||(LA9_0>=11 && LA9_0<=12)||LA9_0==16||(LA9_0>=18 && LA9_0<=19)||(LA9_0>=21 && LA9_0<=22)||LA9_0==36||LA9_0==38||(LA9_0>=40 && LA9_0<=42)) ) {
+                if ( ((LA9_0>=RULE_STRING && LA9_0<=RULE_INT)||(LA9_0>=11 && LA9_0<=12)||LA9_0==16||(LA9_0>=18 && LA9_0<=19)||(LA9_0>=22 && LA9_0<=23)||LA9_0==37||LA9_0==39||(LA9_0>=41 && LA9_0<=43)) ) {
                     alt9=1;
                 }
 
@@ -5683,7 +5684,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( ((LA11_0>=RULE_STRING && LA11_0<=RULE_INT)||(LA11_0>=11 && LA11_0<=12)||LA11_0==16||(LA11_0>=18 && LA11_0<=19)||(LA11_0>=21 && LA11_0<=22)||LA11_0==36||LA11_0==38||(LA11_0>=40 && LA11_0<=42)) ) {
+                if ( ((LA11_0>=RULE_STRING && LA11_0<=RULE_INT)||(LA11_0>=11 && LA11_0<=12)||LA11_0==16||(LA11_0>=18 && LA11_0<=19)||(LA11_0>=22 && LA11_0<=23)||LA11_0==37||LA11_0==39||(LA11_0>=41 && LA11_0<=43)) ) {
                     alt11=1;
                 }
 
@@ -6001,29 +6002,29 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MethodePrint__Group__2__Impl"
-    // InternalLegoLang.g:1770:1: rule__MethodePrint__Group__2__Impl : ( ( ( rule__MethodePrint__ExpressionAssignment_2 ) ) ( ( rule__MethodePrint__ExpressionAssignment_2 )* ) ) ;
+    // InternalLegoLang.g:1770:1: rule__MethodePrint__Group__2__Impl : ( ( ( rule__MethodePrint__Group_2__0 ) ) ( ( rule__MethodePrint__Group_2__0 )* ) ) ;
     public final void rule__MethodePrint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1774:1: ( ( ( ( rule__MethodePrint__ExpressionAssignment_2 ) ) ( ( rule__MethodePrint__ExpressionAssignment_2 )* ) ) )
-            // InternalLegoLang.g:1775:1: ( ( ( rule__MethodePrint__ExpressionAssignment_2 ) ) ( ( rule__MethodePrint__ExpressionAssignment_2 )* ) )
+            // InternalLegoLang.g:1774:1: ( ( ( ( rule__MethodePrint__Group_2__0 ) ) ( ( rule__MethodePrint__Group_2__0 )* ) ) )
+            // InternalLegoLang.g:1775:1: ( ( ( rule__MethodePrint__Group_2__0 ) ) ( ( rule__MethodePrint__Group_2__0 )* ) )
             {
-            // InternalLegoLang.g:1775:1: ( ( ( rule__MethodePrint__ExpressionAssignment_2 ) ) ( ( rule__MethodePrint__ExpressionAssignment_2 )* ) )
-            // InternalLegoLang.g:1776:2: ( ( rule__MethodePrint__ExpressionAssignment_2 ) ) ( ( rule__MethodePrint__ExpressionAssignment_2 )* )
+            // InternalLegoLang.g:1775:1: ( ( ( rule__MethodePrint__Group_2__0 ) ) ( ( rule__MethodePrint__Group_2__0 )* ) )
+            // InternalLegoLang.g:1776:2: ( ( rule__MethodePrint__Group_2__0 ) ) ( ( rule__MethodePrint__Group_2__0 )* )
             {
-            // InternalLegoLang.g:1776:2: ( ( rule__MethodePrint__ExpressionAssignment_2 ) )
-            // InternalLegoLang.g:1777:3: ( rule__MethodePrint__ExpressionAssignment_2 )
+            // InternalLegoLang.g:1776:2: ( ( rule__MethodePrint__Group_2__0 ) )
+            // InternalLegoLang.g:1777:3: ( rule__MethodePrint__Group_2__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2()); 
+               before(grammarAccess.getMethodePrintAccess().getGroup_2()); 
             }
-            // InternalLegoLang.g:1778:3: ( rule__MethodePrint__ExpressionAssignment_2 )
-            // InternalLegoLang.g:1778:4: rule__MethodePrint__ExpressionAssignment_2
+            // InternalLegoLang.g:1778:3: ( rule__MethodePrint__Group_2__0 )
+            // InternalLegoLang.g:1778:4: rule__MethodePrint__Group_2__0
             {
             pushFollow(FOLLOW_14);
-            rule__MethodePrint__ExpressionAssignment_2();
+            rule__MethodePrint__Group_2__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -6031,34 +6032,34 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2()); 
+               after(grammarAccess.getMethodePrintAccess().getGroup_2()); 
             }
 
             }
 
-            // InternalLegoLang.g:1781:2: ( ( rule__MethodePrint__ExpressionAssignment_2 )* )
-            // InternalLegoLang.g:1782:3: ( rule__MethodePrint__ExpressionAssignment_2 )*
+            // InternalLegoLang.g:1781:2: ( ( rule__MethodePrint__Group_2__0 )* )
+            // InternalLegoLang.g:1782:3: ( rule__MethodePrint__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2()); 
+               before(grammarAccess.getMethodePrintAccess().getGroup_2()); 
             }
-            // InternalLegoLang.g:1783:3: ( rule__MethodePrint__ExpressionAssignment_2 )*
+            // InternalLegoLang.g:1783:3: ( rule__MethodePrint__Group_2__0 )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( ((LA12_0>=RULE_STRING && LA12_0<=RULE_INT)||(LA12_0>=11 && LA12_0<=12)||(LA12_0>=21 && LA12_0<=22)) ) {
+                if ( ((LA12_0>=RULE_STRING && LA12_0<=RULE_INT)||(LA12_0>=11 && LA12_0<=12)||(LA12_0>=22 && LA12_0<=23)) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalLegoLang.g:1783:4: rule__MethodePrint__ExpressionAssignment_2
+            	    // InternalLegoLang.g:1783:4: rule__MethodePrint__Group_2__0
             	    {
             	    pushFollow(FOLLOW_14);
-            	    rule__MethodePrint__ExpressionAssignment_2();
+            	    rule__MethodePrint__Group_2__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -6072,7 +6073,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2()); 
+               after(grammarAccess.getMethodePrintAccess().getGroup_2()); 
             }
 
             }
@@ -6172,15 +6173,178 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__MethodePrint__Group__3__Impl"
 
 
+    // $ANTLR start "rule__MethodePrint__Group_2__0"
+    // InternalLegoLang.g:1819:1: rule__MethodePrint__Group_2__0 : rule__MethodePrint__Group_2__0__Impl rule__MethodePrint__Group_2__1 ;
+    public final void rule__MethodePrint__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalLegoLang.g:1823:1: ( rule__MethodePrint__Group_2__0__Impl rule__MethodePrint__Group_2__1 )
+            // InternalLegoLang.g:1824:2: rule__MethodePrint__Group_2__0__Impl rule__MethodePrint__Group_2__1
+            {
+            pushFollow(FOLLOW_15);
+            rule__MethodePrint__Group_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__MethodePrint__Group_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodePrint__Group_2__0"
+
+
+    // $ANTLR start "rule__MethodePrint__Group_2__0__Impl"
+    // InternalLegoLang.g:1831:1: rule__MethodePrint__Group_2__0__Impl : ( ( rule__MethodePrint__ExpressionAssignment_2_0 ) ) ;
+    public final void rule__MethodePrint__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalLegoLang.g:1835:1: ( ( ( rule__MethodePrint__ExpressionAssignment_2_0 ) ) )
+            // InternalLegoLang.g:1836:1: ( ( rule__MethodePrint__ExpressionAssignment_2_0 ) )
+            {
+            // InternalLegoLang.g:1836:1: ( ( rule__MethodePrint__ExpressionAssignment_2_0 ) )
+            // InternalLegoLang.g:1837:2: ( rule__MethodePrint__ExpressionAssignment_2_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2_0()); 
+            }
+            // InternalLegoLang.g:1838:2: ( rule__MethodePrint__ExpressionAssignment_2_0 )
+            // InternalLegoLang.g:1838:3: rule__MethodePrint__ExpressionAssignment_2_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__MethodePrint__ExpressionAssignment_2_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodePrint__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__MethodePrint__Group_2__1"
+    // InternalLegoLang.g:1846:1: rule__MethodePrint__Group_2__1 : rule__MethodePrint__Group_2__1__Impl ;
+    public final void rule__MethodePrint__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalLegoLang.g:1850:1: ( rule__MethodePrint__Group_2__1__Impl )
+            // InternalLegoLang.g:1851:2: rule__MethodePrint__Group_2__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__MethodePrint__Group_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodePrint__Group_2__1"
+
+
+    // $ANTLR start "rule__MethodePrint__Group_2__1__Impl"
+    // InternalLegoLang.g:1857:1: rule__MethodePrint__Group_2__1__Impl : ( ',' ) ;
+    public final void rule__MethodePrint__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalLegoLang.g:1861:1: ( ( ',' ) )
+            // InternalLegoLang.g:1862:1: ( ',' )
+            {
+            // InternalLegoLang.g:1862:1: ( ',' )
+            // InternalLegoLang.g:1863:2: ','
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMethodePrintAccess().getCommaKeyword_2_1()); 
+            }
+            match(input,21,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getMethodePrintAccess().getCommaKeyword_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodePrint__Group_2__1__Impl"
+
+
     // $ANTLR start "rule__Substraction__Group__0"
-    // InternalLegoLang.g:1819:1: rule__Substraction__Group__0 : rule__Substraction__Group__0__Impl rule__Substraction__Group__1 ;
+    // InternalLegoLang.g:1873:1: rule__Substraction__Group__0 : rule__Substraction__Group__0__Impl rule__Substraction__Group__1 ;
     public final void rule__Substraction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1823:1: ( rule__Substraction__Group__0__Impl rule__Substraction__Group__1 )
-            // InternalLegoLang.g:1824:2: rule__Substraction__Group__0__Impl rule__Substraction__Group__1
+            // InternalLegoLang.g:1877:1: ( rule__Substraction__Group__0__Impl rule__Substraction__Group__1 )
+            // InternalLegoLang.g:1878:2: rule__Substraction__Group__0__Impl rule__Substraction__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Substraction__Group__0__Impl();
@@ -6211,22 +6375,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__0__Impl"
-    // InternalLegoLang.g:1831:1: rule__Substraction__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:1885:1: rule__Substraction__Group__0__Impl : ( '(' ) ;
     public final void rule__Substraction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1835:1: ( ( '(' ) )
-            // InternalLegoLang.g:1836:1: ( '(' )
+            // InternalLegoLang.g:1889:1: ( ( '(' ) )
+            // InternalLegoLang.g:1890:1: ( '(' )
             {
-            // InternalLegoLang.g:1836:1: ( '(' )
-            // InternalLegoLang.g:1837:2: '('
+            // InternalLegoLang.g:1890:1: ( '(' )
+            // InternalLegoLang.g:1891:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSubstractionAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -6252,16 +6416,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__1"
-    // InternalLegoLang.g:1846:1: rule__Substraction__Group__1 : rule__Substraction__Group__1__Impl rule__Substraction__Group__2 ;
+    // InternalLegoLang.g:1900:1: rule__Substraction__Group__1 : rule__Substraction__Group__1__Impl rule__Substraction__Group__2 ;
     public final void rule__Substraction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1850:1: ( rule__Substraction__Group__1__Impl rule__Substraction__Group__2 )
-            // InternalLegoLang.g:1851:2: rule__Substraction__Group__1__Impl rule__Substraction__Group__2
+            // InternalLegoLang.g:1904:1: ( rule__Substraction__Group__1__Impl rule__Substraction__Group__2 )
+            // InternalLegoLang.g:1905:2: rule__Substraction__Group__1__Impl rule__Substraction__Group__2
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Substraction__Group__1__Impl();
 
             state._fsp--;
@@ -6290,23 +6454,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__1__Impl"
-    // InternalLegoLang.g:1858:1: rule__Substraction__Group__1__Impl : ( ( rule__Substraction__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:1912:1: rule__Substraction__Group__1__Impl : ( ( rule__Substraction__LeftAssignment_1 ) ) ;
     public final void rule__Substraction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1862:1: ( ( ( rule__Substraction__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:1863:1: ( ( rule__Substraction__LeftAssignment_1 ) )
+            // InternalLegoLang.g:1916:1: ( ( ( rule__Substraction__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:1917:1: ( ( rule__Substraction__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:1863:1: ( ( rule__Substraction__LeftAssignment_1 ) )
-            // InternalLegoLang.g:1864:2: ( rule__Substraction__LeftAssignment_1 )
+            // InternalLegoLang.g:1917:1: ( ( rule__Substraction__LeftAssignment_1 ) )
+            // InternalLegoLang.g:1918:2: ( rule__Substraction__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:1865:2: ( rule__Substraction__LeftAssignment_1 )
-            // InternalLegoLang.g:1865:3: rule__Substraction__LeftAssignment_1
+            // InternalLegoLang.g:1919:2: ( rule__Substraction__LeftAssignment_1 )
+            // InternalLegoLang.g:1919:3: rule__Substraction__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Substraction__LeftAssignment_1();
@@ -6341,14 +6505,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__2"
-    // InternalLegoLang.g:1873:1: rule__Substraction__Group__2 : rule__Substraction__Group__2__Impl rule__Substraction__Group__3 ;
+    // InternalLegoLang.g:1927:1: rule__Substraction__Group__2 : rule__Substraction__Group__2__Impl rule__Substraction__Group__3 ;
     public final void rule__Substraction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1877:1: ( rule__Substraction__Group__2__Impl rule__Substraction__Group__3 )
-            // InternalLegoLang.g:1878:2: rule__Substraction__Group__2__Impl rule__Substraction__Group__3
+            // InternalLegoLang.g:1931:1: ( rule__Substraction__Group__2__Impl rule__Substraction__Group__3 )
+            // InternalLegoLang.g:1932:2: rule__Substraction__Group__2__Impl rule__Substraction__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Substraction__Group__2__Impl();
@@ -6379,22 +6543,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__2__Impl"
-    // InternalLegoLang.g:1885:1: rule__Substraction__Group__2__Impl : ( '-' ) ;
+    // InternalLegoLang.g:1939:1: rule__Substraction__Group__2__Impl : ( '-' ) ;
     public final void rule__Substraction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1889:1: ( ( '-' ) )
-            // InternalLegoLang.g:1890:1: ( '-' )
+            // InternalLegoLang.g:1943:1: ( ( '-' ) )
+            // InternalLegoLang.g:1944:1: ( '-' )
             {
-            // InternalLegoLang.g:1890:1: ( '-' )
-            // InternalLegoLang.g:1891:2: '-'
+            // InternalLegoLang.g:1944:1: ( '-' )
+            // InternalLegoLang.g:1945:2: '-'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getHyphenMinusKeyword_2()); 
             }
-            match(input,22,FOLLOW_2); if (state.failed) return ;
+            match(input,23,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSubstractionAccess().getHyphenMinusKeyword_2()); 
             }
@@ -6420,16 +6584,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__3"
-    // InternalLegoLang.g:1900:1: rule__Substraction__Group__3 : rule__Substraction__Group__3__Impl rule__Substraction__Group__4 ;
+    // InternalLegoLang.g:1954:1: rule__Substraction__Group__3 : rule__Substraction__Group__3__Impl rule__Substraction__Group__4 ;
     public final void rule__Substraction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1904:1: ( rule__Substraction__Group__3__Impl rule__Substraction__Group__4 )
-            // InternalLegoLang.g:1905:2: rule__Substraction__Group__3__Impl rule__Substraction__Group__4
+            // InternalLegoLang.g:1958:1: ( rule__Substraction__Group__3__Impl rule__Substraction__Group__4 )
+            // InternalLegoLang.g:1959:2: rule__Substraction__Group__3__Impl rule__Substraction__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Substraction__Group__3__Impl();
 
             state._fsp--;
@@ -6458,23 +6622,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__3__Impl"
-    // InternalLegoLang.g:1912:1: rule__Substraction__Group__3__Impl : ( ( rule__Substraction__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:1966:1: rule__Substraction__Group__3__Impl : ( ( rule__Substraction__RightAssignment_3 ) ) ;
     public final void rule__Substraction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1916:1: ( ( ( rule__Substraction__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:1917:1: ( ( rule__Substraction__RightAssignment_3 ) )
+            // InternalLegoLang.g:1970:1: ( ( ( rule__Substraction__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:1971:1: ( ( rule__Substraction__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:1917:1: ( ( rule__Substraction__RightAssignment_3 ) )
-            // InternalLegoLang.g:1918:2: ( rule__Substraction__RightAssignment_3 )
+            // InternalLegoLang.g:1971:1: ( ( rule__Substraction__RightAssignment_3 ) )
+            // InternalLegoLang.g:1972:2: ( rule__Substraction__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:1919:2: ( rule__Substraction__RightAssignment_3 )
-            // InternalLegoLang.g:1919:3: rule__Substraction__RightAssignment_3
+            // InternalLegoLang.g:1973:2: ( rule__Substraction__RightAssignment_3 )
+            // InternalLegoLang.g:1973:3: rule__Substraction__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Substraction__RightAssignment_3();
@@ -6509,14 +6673,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__4"
-    // InternalLegoLang.g:1927:1: rule__Substraction__Group__4 : rule__Substraction__Group__4__Impl ;
+    // InternalLegoLang.g:1981:1: rule__Substraction__Group__4 : rule__Substraction__Group__4__Impl ;
     public final void rule__Substraction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1931:1: ( rule__Substraction__Group__4__Impl )
-            // InternalLegoLang.g:1932:2: rule__Substraction__Group__4__Impl
+            // InternalLegoLang.g:1985:1: ( rule__Substraction__Group__4__Impl )
+            // InternalLegoLang.g:1986:2: rule__Substraction__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Substraction__Group__4__Impl();
@@ -6542,22 +6706,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__Group__4__Impl"
-    // InternalLegoLang.g:1938:1: rule__Substraction__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:1992:1: rule__Substraction__Group__4__Impl : ( ')' ) ;
     public final void rule__Substraction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1942:1: ( ( ')' ) )
-            // InternalLegoLang.g:1943:1: ( ')' )
+            // InternalLegoLang.g:1996:1: ( ( ')' ) )
+            // InternalLegoLang.g:1997:1: ( ')' )
             {
-            // InternalLegoLang.g:1943:1: ( ')' )
-            // InternalLegoLang.g:1944:2: ')'
+            // InternalLegoLang.g:1997:1: ( ')' )
+            // InternalLegoLang.g:1998:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSubstractionAccess().getRightParenthesisKeyword_4()); 
             }
@@ -6583,14 +6747,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__0"
-    // InternalLegoLang.g:1954:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
+    // InternalLegoLang.g:2008:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
     public final void rule__Addition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1958:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
-            // InternalLegoLang.g:1959:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
+            // InternalLegoLang.g:2012:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
+            // InternalLegoLang.g:2013:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Addition__Group__0__Impl();
@@ -6621,22 +6785,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__0__Impl"
-    // InternalLegoLang.g:1966:1: rule__Addition__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2020:1: rule__Addition__Group__0__Impl : ( '(' ) ;
     public final void rule__Addition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1970:1: ( ( '(' ) )
-            // InternalLegoLang.g:1971:1: ( '(' )
+            // InternalLegoLang.g:2024:1: ( ( '(' ) )
+            // InternalLegoLang.g:2025:1: ( '(' )
             {
-            // InternalLegoLang.g:1971:1: ( '(' )
-            // InternalLegoLang.g:1972:2: '('
+            // InternalLegoLang.g:2025:1: ( '(' )
+            // InternalLegoLang.g:2026:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -6662,16 +6826,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__1"
-    // InternalLegoLang.g:1981:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl rule__Addition__Group__2 ;
+    // InternalLegoLang.g:2035:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl rule__Addition__Group__2 ;
     public final void rule__Addition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1985:1: ( rule__Addition__Group__1__Impl rule__Addition__Group__2 )
-            // InternalLegoLang.g:1986:2: rule__Addition__Group__1__Impl rule__Addition__Group__2
+            // InternalLegoLang.g:2039:1: ( rule__Addition__Group__1__Impl rule__Addition__Group__2 )
+            // InternalLegoLang.g:2040:2: rule__Addition__Group__1__Impl rule__Addition__Group__2
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Addition__Group__1__Impl();
 
             state._fsp--;
@@ -6700,23 +6864,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__1__Impl"
-    // InternalLegoLang.g:1993:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2047:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__LeftAssignment_1 ) ) ;
     public final void rule__Addition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:1997:1: ( ( ( rule__Addition__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:1998:1: ( ( rule__Addition__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2051:1: ( ( ( rule__Addition__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2052:1: ( ( rule__Addition__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:1998:1: ( ( rule__Addition__LeftAssignment_1 ) )
-            // InternalLegoLang.g:1999:2: ( rule__Addition__LeftAssignment_1 )
+            // InternalLegoLang.g:2052:1: ( ( rule__Addition__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2053:2: ( rule__Addition__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2000:2: ( rule__Addition__LeftAssignment_1 )
-            // InternalLegoLang.g:2000:3: rule__Addition__LeftAssignment_1
+            // InternalLegoLang.g:2054:2: ( rule__Addition__LeftAssignment_1 )
+            // InternalLegoLang.g:2054:3: rule__Addition__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Addition__LeftAssignment_1();
@@ -6751,14 +6915,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__2"
-    // InternalLegoLang.g:2008:1: rule__Addition__Group__2 : rule__Addition__Group__2__Impl rule__Addition__Group__3 ;
+    // InternalLegoLang.g:2062:1: rule__Addition__Group__2 : rule__Addition__Group__2__Impl rule__Addition__Group__3 ;
     public final void rule__Addition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2012:1: ( rule__Addition__Group__2__Impl rule__Addition__Group__3 )
-            // InternalLegoLang.g:2013:2: rule__Addition__Group__2__Impl rule__Addition__Group__3
+            // InternalLegoLang.g:2066:1: ( rule__Addition__Group__2__Impl rule__Addition__Group__3 )
+            // InternalLegoLang.g:2067:2: rule__Addition__Group__2__Impl rule__Addition__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Addition__Group__2__Impl();
@@ -6789,22 +6953,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__2__Impl"
-    // InternalLegoLang.g:2020:1: rule__Addition__Group__2__Impl : ( '+' ) ;
+    // InternalLegoLang.g:2074:1: rule__Addition__Group__2__Impl : ( '+' ) ;
     public final void rule__Addition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2024:1: ( ( '+' ) )
-            // InternalLegoLang.g:2025:1: ( '+' )
+            // InternalLegoLang.g:2078:1: ( ( '+' ) )
+            // InternalLegoLang.g:2079:1: ( '+' )
             {
-            // InternalLegoLang.g:2025:1: ( '+' )
-            // InternalLegoLang.g:2026:2: '+'
+            // InternalLegoLang.g:2079:1: ( '+' )
+            // InternalLegoLang.g:2080:2: '+'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getPlusSignKeyword_2()); 
             }
-            match(input,24,FOLLOW_2); if (state.failed) return ;
+            match(input,25,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionAccess().getPlusSignKeyword_2()); 
             }
@@ -6830,16 +6994,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__3"
-    // InternalLegoLang.g:2035:1: rule__Addition__Group__3 : rule__Addition__Group__3__Impl rule__Addition__Group__4 ;
+    // InternalLegoLang.g:2089:1: rule__Addition__Group__3 : rule__Addition__Group__3__Impl rule__Addition__Group__4 ;
     public final void rule__Addition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2039:1: ( rule__Addition__Group__3__Impl rule__Addition__Group__4 )
-            // InternalLegoLang.g:2040:2: rule__Addition__Group__3__Impl rule__Addition__Group__4
+            // InternalLegoLang.g:2093:1: ( rule__Addition__Group__3__Impl rule__Addition__Group__4 )
+            // InternalLegoLang.g:2094:2: rule__Addition__Group__3__Impl rule__Addition__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Addition__Group__3__Impl();
 
             state._fsp--;
@@ -6868,23 +7032,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__3__Impl"
-    // InternalLegoLang.g:2047:1: rule__Addition__Group__3__Impl : ( ( rule__Addition__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2101:1: rule__Addition__Group__3__Impl : ( ( rule__Addition__RightAssignment_3 ) ) ;
     public final void rule__Addition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2051:1: ( ( ( rule__Addition__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2052:1: ( ( rule__Addition__RightAssignment_3 ) )
+            // InternalLegoLang.g:2105:1: ( ( ( rule__Addition__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2106:1: ( ( rule__Addition__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2052:1: ( ( rule__Addition__RightAssignment_3 ) )
-            // InternalLegoLang.g:2053:2: ( rule__Addition__RightAssignment_3 )
+            // InternalLegoLang.g:2106:1: ( ( rule__Addition__RightAssignment_3 ) )
+            // InternalLegoLang.g:2107:2: ( rule__Addition__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2054:2: ( rule__Addition__RightAssignment_3 )
-            // InternalLegoLang.g:2054:3: rule__Addition__RightAssignment_3
+            // InternalLegoLang.g:2108:2: ( rule__Addition__RightAssignment_3 )
+            // InternalLegoLang.g:2108:3: rule__Addition__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Addition__RightAssignment_3();
@@ -6919,14 +7083,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__4"
-    // InternalLegoLang.g:2062:1: rule__Addition__Group__4 : rule__Addition__Group__4__Impl ;
+    // InternalLegoLang.g:2116:1: rule__Addition__Group__4 : rule__Addition__Group__4__Impl ;
     public final void rule__Addition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2066:1: ( rule__Addition__Group__4__Impl )
-            // InternalLegoLang.g:2067:2: rule__Addition__Group__4__Impl
+            // InternalLegoLang.g:2120:1: ( rule__Addition__Group__4__Impl )
+            // InternalLegoLang.g:2121:2: rule__Addition__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Addition__Group__4__Impl();
@@ -6952,22 +7116,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__Group__4__Impl"
-    // InternalLegoLang.g:2073:1: rule__Addition__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2127:1: rule__Addition__Group__4__Impl : ( ')' ) ;
     public final void rule__Addition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2077:1: ( ( ')' ) )
-            // InternalLegoLang.g:2078:1: ( ')' )
+            // InternalLegoLang.g:2131:1: ( ( ')' ) )
+            // InternalLegoLang.g:2132:1: ( ')' )
             {
-            // InternalLegoLang.g:2078:1: ( ')' )
-            // InternalLegoLang.g:2079:2: ')'
+            // InternalLegoLang.g:2132:1: ( ')' )
+            // InternalLegoLang.g:2133:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionAccess().getRightParenthesisKeyword_4()); 
             }
@@ -6993,14 +7157,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__0"
-    // InternalLegoLang.g:2089:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
+    // InternalLegoLang.g:2143:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
     public final void rule__Multiplication__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2093:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
-            // InternalLegoLang.g:2094:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
+            // InternalLegoLang.g:2147:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
+            // InternalLegoLang.g:2148:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Multiplication__Group__0__Impl();
@@ -7031,22 +7195,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__0__Impl"
-    // InternalLegoLang.g:2101:1: rule__Multiplication__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2155:1: rule__Multiplication__Group__0__Impl : ( '(' ) ;
     public final void rule__Multiplication__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2105:1: ( ( '(' ) )
-            // InternalLegoLang.g:2106:1: ( '(' )
+            // InternalLegoLang.g:2159:1: ( ( '(' ) )
+            // InternalLegoLang.g:2160:1: ( '(' )
             {
-            // InternalLegoLang.g:2106:1: ( '(' )
-            // InternalLegoLang.g:2107:2: '('
+            // InternalLegoLang.g:2160:1: ( '(' )
+            // InternalLegoLang.g:2161:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -7072,16 +7236,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__1"
-    // InternalLegoLang.g:2116:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2 ;
+    // InternalLegoLang.g:2170:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2 ;
     public final void rule__Multiplication__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2120:1: ( rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2 )
-            // InternalLegoLang.g:2121:2: rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2
+            // InternalLegoLang.g:2174:1: ( rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2 )
+            // InternalLegoLang.g:2175:2: rule__Multiplication__Group__1__Impl rule__Multiplication__Group__2
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             rule__Multiplication__Group__1__Impl();
 
             state._fsp--;
@@ -7110,23 +7274,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__1__Impl"
-    // InternalLegoLang.g:2128:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2182:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__LeftAssignment_1 ) ) ;
     public final void rule__Multiplication__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2132:1: ( ( ( rule__Multiplication__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2133:1: ( ( rule__Multiplication__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2186:1: ( ( ( rule__Multiplication__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2187:1: ( ( rule__Multiplication__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2133:1: ( ( rule__Multiplication__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2134:2: ( rule__Multiplication__LeftAssignment_1 )
+            // InternalLegoLang.g:2187:1: ( ( rule__Multiplication__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2188:2: ( rule__Multiplication__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2135:2: ( rule__Multiplication__LeftAssignment_1 )
-            // InternalLegoLang.g:2135:3: rule__Multiplication__LeftAssignment_1
+            // InternalLegoLang.g:2189:2: ( rule__Multiplication__LeftAssignment_1 )
+            // InternalLegoLang.g:2189:3: rule__Multiplication__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__LeftAssignment_1();
@@ -7161,14 +7325,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__2"
-    // InternalLegoLang.g:2143:1: rule__Multiplication__Group__2 : rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3 ;
+    // InternalLegoLang.g:2197:1: rule__Multiplication__Group__2 : rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3 ;
     public final void rule__Multiplication__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2147:1: ( rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3 )
-            // InternalLegoLang.g:2148:2: rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3
+            // InternalLegoLang.g:2201:1: ( rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3 )
+            // InternalLegoLang.g:2202:2: rule__Multiplication__Group__2__Impl rule__Multiplication__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Multiplication__Group__2__Impl();
@@ -7199,22 +7363,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__2__Impl"
-    // InternalLegoLang.g:2155:1: rule__Multiplication__Group__2__Impl : ( '*' ) ;
+    // InternalLegoLang.g:2209:1: rule__Multiplication__Group__2__Impl : ( '*' ) ;
     public final void rule__Multiplication__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2159:1: ( ( '*' ) )
-            // InternalLegoLang.g:2160:1: ( '*' )
+            // InternalLegoLang.g:2213:1: ( ( '*' ) )
+            // InternalLegoLang.g:2214:1: ( '*' )
             {
-            // InternalLegoLang.g:2160:1: ( '*' )
-            // InternalLegoLang.g:2161:2: '*'
+            // InternalLegoLang.g:2214:1: ( '*' )
+            // InternalLegoLang.g:2215:2: '*'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getAsteriskKeyword_2()); 
             }
-            match(input,25,FOLLOW_2); if (state.failed) return ;
+            match(input,26,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationAccess().getAsteriskKeyword_2()); 
             }
@@ -7240,16 +7404,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__3"
-    // InternalLegoLang.g:2170:1: rule__Multiplication__Group__3 : rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4 ;
+    // InternalLegoLang.g:2224:1: rule__Multiplication__Group__3 : rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4 ;
     public final void rule__Multiplication__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2174:1: ( rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4 )
-            // InternalLegoLang.g:2175:2: rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4
+            // InternalLegoLang.g:2228:1: ( rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4 )
+            // InternalLegoLang.g:2229:2: rule__Multiplication__Group__3__Impl rule__Multiplication__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Multiplication__Group__3__Impl();
 
             state._fsp--;
@@ -7278,23 +7442,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__3__Impl"
-    // InternalLegoLang.g:2182:1: rule__Multiplication__Group__3__Impl : ( ( rule__Multiplication__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2236:1: rule__Multiplication__Group__3__Impl : ( ( rule__Multiplication__RightAssignment_3 ) ) ;
     public final void rule__Multiplication__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2186:1: ( ( ( rule__Multiplication__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2187:1: ( ( rule__Multiplication__RightAssignment_3 ) )
+            // InternalLegoLang.g:2240:1: ( ( ( rule__Multiplication__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2241:1: ( ( rule__Multiplication__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2187:1: ( ( rule__Multiplication__RightAssignment_3 ) )
-            // InternalLegoLang.g:2188:2: ( rule__Multiplication__RightAssignment_3 )
+            // InternalLegoLang.g:2241:1: ( ( rule__Multiplication__RightAssignment_3 ) )
+            // InternalLegoLang.g:2242:2: ( rule__Multiplication__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2189:2: ( rule__Multiplication__RightAssignment_3 )
-            // InternalLegoLang.g:2189:3: rule__Multiplication__RightAssignment_3
+            // InternalLegoLang.g:2243:2: ( rule__Multiplication__RightAssignment_3 )
+            // InternalLegoLang.g:2243:3: rule__Multiplication__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__RightAssignment_3();
@@ -7329,14 +7493,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__4"
-    // InternalLegoLang.g:2197:1: rule__Multiplication__Group__4 : rule__Multiplication__Group__4__Impl ;
+    // InternalLegoLang.g:2251:1: rule__Multiplication__Group__4 : rule__Multiplication__Group__4__Impl ;
     public final void rule__Multiplication__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2201:1: ( rule__Multiplication__Group__4__Impl )
-            // InternalLegoLang.g:2202:2: rule__Multiplication__Group__4__Impl
+            // InternalLegoLang.g:2255:1: ( rule__Multiplication__Group__4__Impl )
+            // InternalLegoLang.g:2256:2: rule__Multiplication__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__Group__4__Impl();
@@ -7362,22 +7526,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__Group__4__Impl"
-    // InternalLegoLang.g:2208:1: rule__Multiplication__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2262:1: rule__Multiplication__Group__4__Impl : ( ')' ) ;
     public final void rule__Multiplication__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2212:1: ( ( ')' ) )
-            // InternalLegoLang.g:2213:1: ( ')' )
+            // InternalLegoLang.g:2266:1: ( ( ')' ) )
+            // InternalLegoLang.g:2267:1: ( ')' )
             {
-            // InternalLegoLang.g:2213:1: ( ')' )
-            // InternalLegoLang.g:2214:2: ')'
+            // InternalLegoLang.g:2267:1: ( ')' )
+            // InternalLegoLang.g:2268:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationAccess().getRightParenthesisKeyword_4()); 
             }
@@ -7403,14 +7567,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__0"
-    // InternalLegoLang.g:2224:1: rule__Division__Group__0 : rule__Division__Group__0__Impl rule__Division__Group__1 ;
+    // InternalLegoLang.g:2278:1: rule__Division__Group__0 : rule__Division__Group__0__Impl rule__Division__Group__1 ;
     public final void rule__Division__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2228:1: ( rule__Division__Group__0__Impl rule__Division__Group__1 )
-            // InternalLegoLang.g:2229:2: rule__Division__Group__0__Impl rule__Division__Group__1
+            // InternalLegoLang.g:2282:1: ( rule__Division__Group__0__Impl rule__Division__Group__1 )
+            // InternalLegoLang.g:2283:2: rule__Division__Group__0__Impl rule__Division__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Division__Group__0__Impl();
@@ -7441,22 +7605,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__0__Impl"
-    // InternalLegoLang.g:2236:1: rule__Division__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2290:1: rule__Division__Group__0__Impl : ( '(' ) ;
     public final void rule__Division__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2240:1: ( ( '(' ) )
-            // InternalLegoLang.g:2241:1: ( '(' )
+            // InternalLegoLang.g:2294:1: ( ( '(' ) )
+            // InternalLegoLang.g:2295:1: ( '(' )
             {
-            // InternalLegoLang.g:2241:1: ( '(' )
-            // InternalLegoLang.g:2242:2: '('
+            // InternalLegoLang.g:2295:1: ( '(' )
+            // InternalLegoLang.g:2296:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDivisionAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -7482,16 +7646,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__1"
-    // InternalLegoLang.g:2251:1: rule__Division__Group__1 : rule__Division__Group__1__Impl rule__Division__Group__2 ;
+    // InternalLegoLang.g:2305:1: rule__Division__Group__1 : rule__Division__Group__1__Impl rule__Division__Group__2 ;
     public final void rule__Division__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2255:1: ( rule__Division__Group__1__Impl rule__Division__Group__2 )
-            // InternalLegoLang.g:2256:2: rule__Division__Group__1__Impl rule__Division__Group__2
+            // InternalLegoLang.g:2309:1: ( rule__Division__Group__1__Impl rule__Division__Group__2 )
+            // InternalLegoLang.g:2310:2: rule__Division__Group__1__Impl rule__Division__Group__2
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Division__Group__1__Impl();
 
             state._fsp--;
@@ -7520,23 +7684,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__1__Impl"
-    // InternalLegoLang.g:2263:1: rule__Division__Group__1__Impl : ( ( rule__Division__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2317:1: rule__Division__Group__1__Impl : ( ( rule__Division__LeftAssignment_1 ) ) ;
     public final void rule__Division__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2267:1: ( ( ( rule__Division__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2268:1: ( ( rule__Division__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2321:1: ( ( ( rule__Division__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2322:1: ( ( rule__Division__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2268:1: ( ( rule__Division__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2269:2: ( rule__Division__LeftAssignment_1 )
+            // InternalLegoLang.g:2322:1: ( ( rule__Division__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2323:2: ( rule__Division__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2270:2: ( rule__Division__LeftAssignment_1 )
-            // InternalLegoLang.g:2270:3: rule__Division__LeftAssignment_1
+            // InternalLegoLang.g:2324:2: ( rule__Division__LeftAssignment_1 )
+            // InternalLegoLang.g:2324:3: rule__Division__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Division__LeftAssignment_1();
@@ -7571,14 +7735,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__2"
-    // InternalLegoLang.g:2278:1: rule__Division__Group__2 : rule__Division__Group__2__Impl rule__Division__Group__3 ;
+    // InternalLegoLang.g:2332:1: rule__Division__Group__2 : rule__Division__Group__2__Impl rule__Division__Group__3 ;
     public final void rule__Division__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2282:1: ( rule__Division__Group__2__Impl rule__Division__Group__3 )
-            // InternalLegoLang.g:2283:2: rule__Division__Group__2__Impl rule__Division__Group__3
+            // InternalLegoLang.g:2336:1: ( rule__Division__Group__2__Impl rule__Division__Group__3 )
+            // InternalLegoLang.g:2337:2: rule__Division__Group__2__Impl rule__Division__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Division__Group__2__Impl();
@@ -7609,22 +7773,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__2__Impl"
-    // InternalLegoLang.g:2290:1: rule__Division__Group__2__Impl : ( '/' ) ;
+    // InternalLegoLang.g:2344:1: rule__Division__Group__2__Impl : ( '/' ) ;
     public final void rule__Division__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2294:1: ( ( '/' ) )
-            // InternalLegoLang.g:2295:1: ( '/' )
+            // InternalLegoLang.g:2348:1: ( ( '/' ) )
+            // InternalLegoLang.g:2349:1: ( '/' )
             {
-            // InternalLegoLang.g:2295:1: ( '/' )
-            // InternalLegoLang.g:2296:2: '/'
+            // InternalLegoLang.g:2349:1: ( '/' )
+            // InternalLegoLang.g:2350:2: '/'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getSolidusKeyword_2()); 
             }
-            match(input,26,FOLLOW_2); if (state.failed) return ;
+            match(input,27,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDivisionAccess().getSolidusKeyword_2()); 
             }
@@ -7650,16 +7814,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__3"
-    // InternalLegoLang.g:2305:1: rule__Division__Group__3 : rule__Division__Group__3__Impl rule__Division__Group__4 ;
+    // InternalLegoLang.g:2359:1: rule__Division__Group__3 : rule__Division__Group__3__Impl rule__Division__Group__4 ;
     public final void rule__Division__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2309:1: ( rule__Division__Group__3__Impl rule__Division__Group__4 )
-            // InternalLegoLang.g:2310:2: rule__Division__Group__3__Impl rule__Division__Group__4
+            // InternalLegoLang.g:2363:1: ( rule__Division__Group__3__Impl rule__Division__Group__4 )
+            // InternalLegoLang.g:2364:2: rule__Division__Group__3__Impl rule__Division__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Division__Group__3__Impl();
 
             state._fsp--;
@@ -7688,23 +7852,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__3__Impl"
-    // InternalLegoLang.g:2317:1: rule__Division__Group__3__Impl : ( ( rule__Division__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2371:1: rule__Division__Group__3__Impl : ( ( rule__Division__RightAssignment_3 ) ) ;
     public final void rule__Division__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2321:1: ( ( ( rule__Division__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2322:1: ( ( rule__Division__RightAssignment_3 ) )
+            // InternalLegoLang.g:2375:1: ( ( ( rule__Division__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2376:1: ( ( rule__Division__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2322:1: ( ( rule__Division__RightAssignment_3 ) )
-            // InternalLegoLang.g:2323:2: ( rule__Division__RightAssignment_3 )
+            // InternalLegoLang.g:2376:1: ( ( rule__Division__RightAssignment_3 ) )
+            // InternalLegoLang.g:2377:2: ( rule__Division__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2324:2: ( rule__Division__RightAssignment_3 )
-            // InternalLegoLang.g:2324:3: rule__Division__RightAssignment_3
+            // InternalLegoLang.g:2378:2: ( rule__Division__RightAssignment_3 )
+            // InternalLegoLang.g:2378:3: rule__Division__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Division__RightAssignment_3();
@@ -7739,14 +7903,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__4"
-    // InternalLegoLang.g:2332:1: rule__Division__Group__4 : rule__Division__Group__4__Impl ;
+    // InternalLegoLang.g:2386:1: rule__Division__Group__4 : rule__Division__Group__4__Impl ;
     public final void rule__Division__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2336:1: ( rule__Division__Group__4__Impl )
-            // InternalLegoLang.g:2337:2: rule__Division__Group__4__Impl
+            // InternalLegoLang.g:2390:1: ( rule__Division__Group__4__Impl )
+            // InternalLegoLang.g:2391:2: rule__Division__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Division__Group__4__Impl();
@@ -7772,22 +7936,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__Group__4__Impl"
-    // InternalLegoLang.g:2343:1: rule__Division__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2397:1: rule__Division__Group__4__Impl : ( ')' ) ;
     public final void rule__Division__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2347:1: ( ( ')' ) )
-            // InternalLegoLang.g:2348:1: ( ')' )
+            // InternalLegoLang.g:2401:1: ( ( ')' ) )
+            // InternalLegoLang.g:2402:1: ( ')' )
             {
-            // InternalLegoLang.g:2348:1: ( ')' )
-            // InternalLegoLang.g:2349:2: ')'
+            // InternalLegoLang.g:2402:1: ( ')' )
+            // InternalLegoLang.g:2403:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDivisionAccess().getRightParenthesisKeyword_4()); 
             }
@@ -7813,14 +7977,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__0"
-    // InternalLegoLang.g:2359:1: rule__GT__Group__0 : rule__GT__Group__0__Impl rule__GT__Group__1 ;
+    // InternalLegoLang.g:2413:1: rule__GT__Group__0 : rule__GT__Group__0__Impl rule__GT__Group__1 ;
     public final void rule__GT__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2363:1: ( rule__GT__Group__0__Impl rule__GT__Group__1 )
-            // InternalLegoLang.g:2364:2: rule__GT__Group__0__Impl rule__GT__Group__1
+            // InternalLegoLang.g:2417:1: ( rule__GT__Group__0__Impl rule__GT__Group__1 )
+            // InternalLegoLang.g:2418:2: rule__GT__Group__0__Impl rule__GT__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__GT__Group__0__Impl();
@@ -7851,22 +8015,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__0__Impl"
-    // InternalLegoLang.g:2371:1: rule__GT__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2425:1: rule__GT__Group__0__Impl : ( '(' ) ;
     public final void rule__GT__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2375:1: ( ( '(' ) )
-            // InternalLegoLang.g:2376:1: ( '(' )
+            // InternalLegoLang.g:2429:1: ( ( '(' ) )
+            // InternalLegoLang.g:2430:1: ( '(' )
             {
-            // InternalLegoLang.g:2376:1: ( '(' )
-            // InternalLegoLang.g:2377:2: '('
+            // InternalLegoLang.g:2430:1: ( '(' )
+            // InternalLegoLang.g:2431:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -7892,16 +8056,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__1"
-    // InternalLegoLang.g:2386:1: rule__GT__Group__1 : rule__GT__Group__1__Impl rule__GT__Group__2 ;
+    // InternalLegoLang.g:2440:1: rule__GT__Group__1 : rule__GT__Group__1__Impl rule__GT__Group__2 ;
     public final void rule__GT__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2390:1: ( rule__GT__Group__1__Impl rule__GT__Group__2 )
-            // InternalLegoLang.g:2391:2: rule__GT__Group__1__Impl rule__GT__Group__2
+            // InternalLegoLang.g:2444:1: ( rule__GT__Group__1__Impl rule__GT__Group__2 )
+            // InternalLegoLang.g:2445:2: rule__GT__Group__1__Impl rule__GT__Group__2
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__GT__Group__1__Impl();
 
             state._fsp--;
@@ -7930,23 +8094,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__1__Impl"
-    // InternalLegoLang.g:2398:1: rule__GT__Group__1__Impl : ( ( rule__GT__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2452:1: rule__GT__Group__1__Impl : ( ( rule__GT__LeftAssignment_1 ) ) ;
     public final void rule__GT__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2402:1: ( ( ( rule__GT__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2403:1: ( ( rule__GT__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2456:1: ( ( ( rule__GT__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2457:1: ( ( rule__GT__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2403:1: ( ( rule__GT__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2404:2: ( rule__GT__LeftAssignment_1 )
+            // InternalLegoLang.g:2457:1: ( ( rule__GT__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2458:2: ( rule__GT__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2405:2: ( rule__GT__LeftAssignment_1 )
-            // InternalLegoLang.g:2405:3: rule__GT__LeftAssignment_1
+            // InternalLegoLang.g:2459:2: ( rule__GT__LeftAssignment_1 )
+            // InternalLegoLang.g:2459:3: rule__GT__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__GT__LeftAssignment_1();
@@ -7981,14 +8145,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__2"
-    // InternalLegoLang.g:2413:1: rule__GT__Group__2 : rule__GT__Group__2__Impl rule__GT__Group__3 ;
+    // InternalLegoLang.g:2467:1: rule__GT__Group__2 : rule__GT__Group__2__Impl rule__GT__Group__3 ;
     public final void rule__GT__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2417:1: ( rule__GT__Group__2__Impl rule__GT__Group__3 )
-            // InternalLegoLang.g:2418:2: rule__GT__Group__2__Impl rule__GT__Group__3
+            // InternalLegoLang.g:2471:1: ( rule__GT__Group__2__Impl rule__GT__Group__3 )
+            // InternalLegoLang.g:2472:2: rule__GT__Group__2__Impl rule__GT__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__GT__Group__2__Impl();
@@ -8019,22 +8183,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__2__Impl"
-    // InternalLegoLang.g:2425:1: rule__GT__Group__2__Impl : ( '>' ) ;
+    // InternalLegoLang.g:2479:1: rule__GT__Group__2__Impl : ( '>' ) ;
     public final void rule__GT__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2429:1: ( ( '>' ) )
-            // InternalLegoLang.g:2430:1: ( '>' )
+            // InternalLegoLang.g:2483:1: ( ( '>' ) )
+            // InternalLegoLang.g:2484:1: ( '>' )
             {
-            // InternalLegoLang.g:2430:1: ( '>' )
-            // InternalLegoLang.g:2431:2: '>'
+            // InternalLegoLang.g:2484:1: ( '>' )
+            // InternalLegoLang.g:2485:2: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getGreaterThanSignKeyword_2()); 
             }
-            match(input,27,FOLLOW_2); if (state.failed) return ;
+            match(input,28,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTAccess().getGreaterThanSignKeyword_2()); 
             }
@@ -8060,16 +8224,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__3"
-    // InternalLegoLang.g:2440:1: rule__GT__Group__3 : rule__GT__Group__3__Impl rule__GT__Group__4 ;
+    // InternalLegoLang.g:2494:1: rule__GT__Group__3 : rule__GT__Group__3__Impl rule__GT__Group__4 ;
     public final void rule__GT__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2444:1: ( rule__GT__Group__3__Impl rule__GT__Group__4 )
-            // InternalLegoLang.g:2445:2: rule__GT__Group__3__Impl rule__GT__Group__4
+            // InternalLegoLang.g:2498:1: ( rule__GT__Group__3__Impl rule__GT__Group__4 )
+            // InternalLegoLang.g:2499:2: rule__GT__Group__3__Impl rule__GT__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__GT__Group__3__Impl();
 
             state._fsp--;
@@ -8098,23 +8262,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__3__Impl"
-    // InternalLegoLang.g:2452:1: rule__GT__Group__3__Impl : ( ( rule__GT__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2506:1: rule__GT__Group__3__Impl : ( ( rule__GT__RightAssignment_3 ) ) ;
     public final void rule__GT__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2456:1: ( ( ( rule__GT__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2457:1: ( ( rule__GT__RightAssignment_3 ) )
+            // InternalLegoLang.g:2510:1: ( ( ( rule__GT__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2511:1: ( ( rule__GT__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2457:1: ( ( rule__GT__RightAssignment_3 ) )
-            // InternalLegoLang.g:2458:2: ( rule__GT__RightAssignment_3 )
+            // InternalLegoLang.g:2511:1: ( ( rule__GT__RightAssignment_3 ) )
+            // InternalLegoLang.g:2512:2: ( rule__GT__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2459:2: ( rule__GT__RightAssignment_3 )
-            // InternalLegoLang.g:2459:3: rule__GT__RightAssignment_3
+            // InternalLegoLang.g:2513:2: ( rule__GT__RightAssignment_3 )
+            // InternalLegoLang.g:2513:3: rule__GT__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__GT__RightAssignment_3();
@@ -8149,14 +8313,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__4"
-    // InternalLegoLang.g:2467:1: rule__GT__Group__4 : rule__GT__Group__4__Impl ;
+    // InternalLegoLang.g:2521:1: rule__GT__Group__4 : rule__GT__Group__4__Impl ;
     public final void rule__GT__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2471:1: ( rule__GT__Group__4__Impl )
-            // InternalLegoLang.g:2472:2: rule__GT__Group__4__Impl
+            // InternalLegoLang.g:2525:1: ( rule__GT__Group__4__Impl )
+            // InternalLegoLang.g:2526:2: rule__GT__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__GT__Group__4__Impl();
@@ -8182,22 +8346,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__Group__4__Impl"
-    // InternalLegoLang.g:2478:1: rule__GT__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2532:1: rule__GT__Group__4__Impl : ( ')' ) ;
     public final void rule__GT__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2482:1: ( ( ')' ) )
-            // InternalLegoLang.g:2483:1: ( ')' )
+            // InternalLegoLang.g:2536:1: ( ( ')' ) )
+            // InternalLegoLang.g:2537:1: ( ')' )
             {
-            // InternalLegoLang.g:2483:1: ( ')' )
-            // InternalLegoLang.g:2484:2: ')'
+            // InternalLegoLang.g:2537:1: ( ')' )
+            // InternalLegoLang.g:2538:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTAccess().getRightParenthesisKeyword_4()); 
             }
@@ -8223,14 +8387,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__0"
-    // InternalLegoLang.g:2494:1: rule__LT__Group__0 : rule__LT__Group__0__Impl rule__LT__Group__1 ;
+    // InternalLegoLang.g:2548:1: rule__LT__Group__0 : rule__LT__Group__0__Impl rule__LT__Group__1 ;
     public final void rule__LT__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2498:1: ( rule__LT__Group__0__Impl rule__LT__Group__1 )
-            // InternalLegoLang.g:2499:2: rule__LT__Group__0__Impl rule__LT__Group__1
+            // InternalLegoLang.g:2552:1: ( rule__LT__Group__0__Impl rule__LT__Group__1 )
+            // InternalLegoLang.g:2553:2: rule__LT__Group__0__Impl rule__LT__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__LT__Group__0__Impl();
@@ -8261,22 +8425,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__0__Impl"
-    // InternalLegoLang.g:2506:1: rule__LT__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2560:1: rule__LT__Group__0__Impl : ( '(' ) ;
     public final void rule__LT__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2510:1: ( ( '(' ) )
-            // InternalLegoLang.g:2511:1: ( '(' )
+            // InternalLegoLang.g:2564:1: ( ( '(' ) )
+            // InternalLegoLang.g:2565:1: ( '(' )
             {
-            // InternalLegoLang.g:2511:1: ( '(' )
-            // InternalLegoLang.g:2512:2: '('
+            // InternalLegoLang.g:2565:1: ( '(' )
+            // InternalLegoLang.g:2566:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -8302,16 +8466,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__1"
-    // InternalLegoLang.g:2521:1: rule__LT__Group__1 : rule__LT__Group__1__Impl rule__LT__Group__2 ;
+    // InternalLegoLang.g:2575:1: rule__LT__Group__1 : rule__LT__Group__1__Impl rule__LT__Group__2 ;
     public final void rule__LT__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2525:1: ( rule__LT__Group__1__Impl rule__LT__Group__2 )
-            // InternalLegoLang.g:2526:2: rule__LT__Group__1__Impl rule__LT__Group__2
+            // InternalLegoLang.g:2579:1: ( rule__LT__Group__1__Impl rule__LT__Group__2 )
+            // InternalLegoLang.g:2580:2: rule__LT__Group__1__Impl rule__LT__Group__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__LT__Group__1__Impl();
 
             state._fsp--;
@@ -8340,23 +8504,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__1__Impl"
-    // InternalLegoLang.g:2533:1: rule__LT__Group__1__Impl : ( ( rule__LT__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2587:1: rule__LT__Group__1__Impl : ( ( rule__LT__LeftAssignment_1 ) ) ;
     public final void rule__LT__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2537:1: ( ( ( rule__LT__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2538:1: ( ( rule__LT__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2591:1: ( ( ( rule__LT__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2592:1: ( ( rule__LT__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2538:1: ( ( rule__LT__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2539:2: ( rule__LT__LeftAssignment_1 )
+            // InternalLegoLang.g:2592:1: ( ( rule__LT__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2593:2: ( rule__LT__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2540:2: ( rule__LT__LeftAssignment_1 )
-            // InternalLegoLang.g:2540:3: rule__LT__LeftAssignment_1
+            // InternalLegoLang.g:2594:2: ( rule__LT__LeftAssignment_1 )
+            // InternalLegoLang.g:2594:3: rule__LT__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__LT__LeftAssignment_1();
@@ -8391,14 +8555,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__2"
-    // InternalLegoLang.g:2548:1: rule__LT__Group__2 : rule__LT__Group__2__Impl rule__LT__Group__3 ;
+    // InternalLegoLang.g:2602:1: rule__LT__Group__2 : rule__LT__Group__2__Impl rule__LT__Group__3 ;
     public final void rule__LT__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2552:1: ( rule__LT__Group__2__Impl rule__LT__Group__3 )
-            // InternalLegoLang.g:2553:2: rule__LT__Group__2__Impl rule__LT__Group__3
+            // InternalLegoLang.g:2606:1: ( rule__LT__Group__2__Impl rule__LT__Group__3 )
+            // InternalLegoLang.g:2607:2: rule__LT__Group__2__Impl rule__LT__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__LT__Group__2__Impl();
@@ -8429,22 +8593,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__2__Impl"
-    // InternalLegoLang.g:2560:1: rule__LT__Group__2__Impl : ( '<' ) ;
+    // InternalLegoLang.g:2614:1: rule__LT__Group__2__Impl : ( '<' ) ;
     public final void rule__LT__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2564:1: ( ( '<' ) )
-            // InternalLegoLang.g:2565:1: ( '<' )
+            // InternalLegoLang.g:2618:1: ( ( '<' ) )
+            // InternalLegoLang.g:2619:1: ( '<' )
             {
-            // InternalLegoLang.g:2565:1: ( '<' )
-            // InternalLegoLang.g:2566:2: '<'
+            // InternalLegoLang.g:2619:1: ( '<' )
+            // InternalLegoLang.g:2620:2: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getLessThanSignKeyword_2()); 
             }
-            match(input,28,FOLLOW_2); if (state.failed) return ;
+            match(input,29,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTAccess().getLessThanSignKeyword_2()); 
             }
@@ -8470,16 +8634,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__3"
-    // InternalLegoLang.g:2575:1: rule__LT__Group__3 : rule__LT__Group__3__Impl rule__LT__Group__4 ;
+    // InternalLegoLang.g:2629:1: rule__LT__Group__3 : rule__LT__Group__3__Impl rule__LT__Group__4 ;
     public final void rule__LT__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2579:1: ( rule__LT__Group__3__Impl rule__LT__Group__4 )
-            // InternalLegoLang.g:2580:2: rule__LT__Group__3__Impl rule__LT__Group__4
+            // InternalLegoLang.g:2633:1: ( rule__LT__Group__3__Impl rule__LT__Group__4 )
+            // InternalLegoLang.g:2634:2: rule__LT__Group__3__Impl rule__LT__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__LT__Group__3__Impl();
 
             state._fsp--;
@@ -8508,23 +8672,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__3__Impl"
-    // InternalLegoLang.g:2587:1: rule__LT__Group__3__Impl : ( ( rule__LT__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2641:1: rule__LT__Group__3__Impl : ( ( rule__LT__RightAssignment_3 ) ) ;
     public final void rule__LT__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2591:1: ( ( ( rule__LT__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2592:1: ( ( rule__LT__RightAssignment_3 ) )
+            // InternalLegoLang.g:2645:1: ( ( ( rule__LT__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2646:1: ( ( rule__LT__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2592:1: ( ( rule__LT__RightAssignment_3 ) )
-            // InternalLegoLang.g:2593:2: ( rule__LT__RightAssignment_3 )
+            // InternalLegoLang.g:2646:1: ( ( rule__LT__RightAssignment_3 ) )
+            // InternalLegoLang.g:2647:2: ( rule__LT__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2594:2: ( rule__LT__RightAssignment_3 )
-            // InternalLegoLang.g:2594:3: rule__LT__RightAssignment_3
+            // InternalLegoLang.g:2648:2: ( rule__LT__RightAssignment_3 )
+            // InternalLegoLang.g:2648:3: rule__LT__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__LT__RightAssignment_3();
@@ -8559,14 +8723,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__4"
-    // InternalLegoLang.g:2602:1: rule__LT__Group__4 : rule__LT__Group__4__Impl ;
+    // InternalLegoLang.g:2656:1: rule__LT__Group__4 : rule__LT__Group__4__Impl ;
     public final void rule__LT__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2606:1: ( rule__LT__Group__4__Impl )
-            // InternalLegoLang.g:2607:2: rule__LT__Group__4__Impl
+            // InternalLegoLang.g:2660:1: ( rule__LT__Group__4__Impl )
+            // InternalLegoLang.g:2661:2: rule__LT__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LT__Group__4__Impl();
@@ -8592,22 +8756,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__Group__4__Impl"
-    // InternalLegoLang.g:2613:1: rule__LT__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2667:1: rule__LT__Group__4__Impl : ( ')' ) ;
     public final void rule__LT__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2617:1: ( ( ')' ) )
-            // InternalLegoLang.g:2618:1: ( ')' )
+            // InternalLegoLang.g:2671:1: ( ( ')' ) )
+            // InternalLegoLang.g:2672:1: ( ')' )
             {
-            // InternalLegoLang.g:2618:1: ( ')' )
-            // InternalLegoLang.g:2619:2: ')'
+            // InternalLegoLang.g:2672:1: ( ')' )
+            // InternalLegoLang.g:2673:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTAccess().getRightParenthesisKeyword_4()); 
             }
@@ -8633,14 +8797,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__0"
-    // InternalLegoLang.g:2629:1: rule__Equal__Group__0 : rule__Equal__Group__0__Impl rule__Equal__Group__1 ;
+    // InternalLegoLang.g:2683:1: rule__Equal__Group__0 : rule__Equal__Group__0__Impl rule__Equal__Group__1 ;
     public final void rule__Equal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2633:1: ( rule__Equal__Group__0__Impl rule__Equal__Group__1 )
-            // InternalLegoLang.g:2634:2: rule__Equal__Group__0__Impl rule__Equal__Group__1
+            // InternalLegoLang.g:2687:1: ( rule__Equal__Group__0__Impl rule__Equal__Group__1 )
+            // InternalLegoLang.g:2688:2: rule__Equal__Group__0__Impl rule__Equal__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Equal__Group__0__Impl();
@@ -8671,22 +8835,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__0__Impl"
-    // InternalLegoLang.g:2641:1: rule__Equal__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2695:1: rule__Equal__Group__0__Impl : ( '(' ) ;
     public final void rule__Equal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2645:1: ( ( '(' ) )
-            // InternalLegoLang.g:2646:1: ( '(' )
+            // InternalLegoLang.g:2699:1: ( ( '(' ) )
+            // InternalLegoLang.g:2700:1: ( '(' )
             {
-            // InternalLegoLang.g:2646:1: ( '(' )
-            // InternalLegoLang.g:2647:2: '('
+            // InternalLegoLang.g:2700:1: ( '(' )
+            // InternalLegoLang.g:2701:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEqualAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -8712,16 +8876,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__1"
-    // InternalLegoLang.g:2656:1: rule__Equal__Group__1 : rule__Equal__Group__1__Impl rule__Equal__Group__2 ;
+    // InternalLegoLang.g:2710:1: rule__Equal__Group__1 : rule__Equal__Group__1__Impl rule__Equal__Group__2 ;
     public final void rule__Equal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2660:1: ( rule__Equal__Group__1__Impl rule__Equal__Group__2 )
-            // InternalLegoLang.g:2661:2: rule__Equal__Group__1__Impl rule__Equal__Group__2
+            // InternalLegoLang.g:2714:1: ( rule__Equal__Group__1__Impl rule__Equal__Group__2 )
+            // InternalLegoLang.g:2715:2: rule__Equal__Group__1__Impl rule__Equal__Group__2
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__Equal__Group__1__Impl();
 
             state._fsp--;
@@ -8750,23 +8914,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__1__Impl"
-    // InternalLegoLang.g:2668:1: rule__Equal__Group__1__Impl : ( ( rule__Equal__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2722:1: rule__Equal__Group__1__Impl : ( ( rule__Equal__LeftAssignment_1 ) ) ;
     public final void rule__Equal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2672:1: ( ( ( rule__Equal__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2673:1: ( ( rule__Equal__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2726:1: ( ( ( rule__Equal__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2727:1: ( ( rule__Equal__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2673:1: ( ( rule__Equal__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2674:2: ( rule__Equal__LeftAssignment_1 )
+            // InternalLegoLang.g:2727:1: ( ( rule__Equal__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2728:2: ( rule__Equal__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2675:2: ( rule__Equal__LeftAssignment_1 )
-            // InternalLegoLang.g:2675:3: rule__Equal__LeftAssignment_1
+            // InternalLegoLang.g:2729:2: ( rule__Equal__LeftAssignment_1 )
+            // InternalLegoLang.g:2729:3: rule__Equal__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Equal__LeftAssignment_1();
@@ -8801,14 +8965,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__2"
-    // InternalLegoLang.g:2683:1: rule__Equal__Group__2 : rule__Equal__Group__2__Impl rule__Equal__Group__3 ;
+    // InternalLegoLang.g:2737:1: rule__Equal__Group__2 : rule__Equal__Group__2__Impl rule__Equal__Group__3 ;
     public final void rule__Equal__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2687:1: ( rule__Equal__Group__2__Impl rule__Equal__Group__3 )
-            // InternalLegoLang.g:2688:2: rule__Equal__Group__2__Impl rule__Equal__Group__3
+            // InternalLegoLang.g:2741:1: ( rule__Equal__Group__2__Impl rule__Equal__Group__3 )
+            // InternalLegoLang.g:2742:2: rule__Equal__Group__2__Impl rule__Equal__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Equal__Group__2__Impl();
@@ -8839,22 +9003,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__2__Impl"
-    // InternalLegoLang.g:2695:1: rule__Equal__Group__2__Impl : ( '==' ) ;
+    // InternalLegoLang.g:2749:1: rule__Equal__Group__2__Impl : ( '==' ) ;
     public final void rule__Equal__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2699:1: ( ( '==' ) )
-            // InternalLegoLang.g:2700:1: ( '==' )
+            // InternalLegoLang.g:2753:1: ( ( '==' ) )
+            // InternalLegoLang.g:2754:1: ( '==' )
             {
-            // InternalLegoLang.g:2700:1: ( '==' )
-            // InternalLegoLang.g:2701:2: '=='
+            // InternalLegoLang.g:2754:1: ( '==' )
+            // InternalLegoLang.g:2755:2: '=='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getEqualsSignEqualsSignKeyword_2()); 
             }
-            match(input,29,FOLLOW_2); if (state.failed) return ;
+            match(input,30,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEqualAccess().getEqualsSignEqualsSignKeyword_2()); 
             }
@@ -8880,16 +9044,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__3"
-    // InternalLegoLang.g:2710:1: rule__Equal__Group__3 : rule__Equal__Group__3__Impl rule__Equal__Group__4 ;
+    // InternalLegoLang.g:2764:1: rule__Equal__Group__3 : rule__Equal__Group__3__Impl rule__Equal__Group__4 ;
     public final void rule__Equal__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2714:1: ( rule__Equal__Group__3__Impl rule__Equal__Group__4 )
-            // InternalLegoLang.g:2715:2: rule__Equal__Group__3__Impl rule__Equal__Group__4
+            // InternalLegoLang.g:2768:1: ( rule__Equal__Group__3__Impl rule__Equal__Group__4 )
+            // InternalLegoLang.g:2769:2: rule__Equal__Group__3__Impl rule__Equal__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Equal__Group__3__Impl();
 
             state._fsp--;
@@ -8918,23 +9082,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__3__Impl"
-    // InternalLegoLang.g:2722:1: rule__Equal__Group__3__Impl : ( ( rule__Equal__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2776:1: rule__Equal__Group__3__Impl : ( ( rule__Equal__RightAssignment_3 ) ) ;
     public final void rule__Equal__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2726:1: ( ( ( rule__Equal__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2727:1: ( ( rule__Equal__RightAssignment_3 ) )
+            // InternalLegoLang.g:2780:1: ( ( ( rule__Equal__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2781:1: ( ( rule__Equal__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2727:1: ( ( rule__Equal__RightAssignment_3 ) )
-            // InternalLegoLang.g:2728:2: ( rule__Equal__RightAssignment_3 )
+            // InternalLegoLang.g:2781:1: ( ( rule__Equal__RightAssignment_3 ) )
+            // InternalLegoLang.g:2782:2: ( rule__Equal__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2729:2: ( rule__Equal__RightAssignment_3 )
-            // InternalLegoLang.g:2729:3: rule__Equal__RightAssignment_3
+            // InternalLegoLang.g:2783:2: ( rule__Equal__RightAssignment_3 )
+            // InternalLegoLang.g:2783:3: rule__Equal__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Equal__RightAssignment_3();
@@ -8969,14 +9133,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__4"
-    // InternalLegoLang.g:2737:1: rule__Equal__Group__4 : rule__Equal__Group__4__Impl ;
+    // InternalLegoLang.g:2791:1: rule__Equal__Group__4 : rule__Equal__Group__4__Impl ;
     public final void rule__Equal__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2741:1: ( rule__Equal__Group__4__Impl )
-            // InternalLegoLang.g:2742:2: rule__Equal__Group__4__Impl
+            // InternalLegoLang.g:2795:1: ( rule__Equal__Group__4__Impl )
+            // InternalLegoLang.g:2796:2: rule__Equal__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Equal__Group__4__Impl();
@@ -9002,22 +9166,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__Group__4__Impl"
-    // InternalLegoLang.g:2748:1: rule__Equal__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2802:1: rule__Equal__Group__4__Impl : ( ')' ) ;
     public final void rule__Equal__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2752:1: ( ( ')' ) )
-            // InternalLegoLang.g:2753:1: ( ')' )
+            // InternalLegoLang.g:2806:1: ( ( ')' ) )
+            // InternalLegoLang.g:2807:1: ( ')' )
             {
-            // InternalLegoLang.g:2753:1: ( ')' )
-            // InternalLegoLang.g:2754:2: ')'
+            // InternalLegoLang.g:2807:1: ( ')' )
+            // InternalLegoLang.g:2808:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEqualAccess().getRightParenthesisKeyword_4()); 
             }
@@ -9043,14 +9207,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__0"
-    // InternalLegoLang.g:2764:1: rule__Different__Group__0 : rule__Different__Group__0__Impl rule__Different__Group__1 ;
+    // InternalLegoLang.g:2818:1: rule__Different__Group__0 : rule__Different__Group__0__Impl rule__Different__Group__1 ;
     public final void rule__Different__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2768:1: ( rule__Different__Group__0__Impl rule__Different__Group__1 )
-            // InternalLegoLang.g:2769:2: rule__Different__Group__0__Impl rule__Different__Group__1
+            // InternalLegoLang.g:2822:1: ( rule__Different__Group__0__Impl rule__Different__Group__1 )
+            // InternalLegoLang.g:2823:2: rule__Different__Group__0__Impl rule__Different__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Different__Group__0__Impl();
@@ -9081,22 +9245,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__0__Impl"
-    // InternalLegoLang.g:2776:1: rule__Different__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2830:1: rule__Different__Group__0__Impl : ( '(' ) ;
     public final void rule__Different__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2780:1: ( ( '(' ) )
-            // InternalLegoLang.g:2781:1: ( '(' )
+            // InternalLegoLang.g:2834:1: ( ( '(' ) )
+            // InternalLegoLang.g:2835:1: ( '(' )
             {
-            // InternalLegoLang.g:2781:1: ( '(' )
-            // InternalLegoLang.g:2782:2: '('
+            // InternalLegoLang.g:2835:1: ( '(' )
+            // InternalLegoLang.g:2836:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDifferentAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -9122,16 +9286,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__1"
-    // InternalLegoLang.g:2791:1: rule__Different__Group__1 : rule__Different__Group__1__Impl rule__Different__Group__2 ;
+    // InternalLegoLang.g:2845:1: rule__Different__Group__1 : rule__Different__Group__1__Impl rule__Different__Group__2 ;
     public final void rule__Different__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2795:1: ( rule__Different__Group__1__Impl rule__Different__Group__2 )
-            // InternalLegoLang.g:2796:2: rule__Different__Group__1__Impl rule__Different__Group__2
+            // InternalLegoLang.g:2849:1: ( rule__Different__Group__1__Impl rule__Different__Group__2 )
+            // InternalLegoLang.g:2850:2: rule__Different__Group__1__Impl rule__Different__Group__2
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Different__Group__1__Impl();
 
             state._fsp--;
@@ -9160,23 +9324,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__1__Impl"
-    // InternalLegoLang.g:2803:1: rule__Different__Group__1__Impl : ( ( rule__Different__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2857:1: rule__Different__Group__1__Impl : ( ( rule__Different__LeftAssignment_1 ) ) ;
     public final void rule__Different__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2807:1: ( ( ( rule__Different__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2808:1: ( ( rule__Different__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2861:1: ( ( ( rule__Different__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2862:1: ( ( rule__Different__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2808:1: ( ( rule__Different__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2809:2: ( rule__Different__LeftAssignment_1 )
+            // InternalLegoLang.g:2862:1: ( ( rule__Different__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2863:2: ( rule__Different__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2810:2: ( rule__Different__LeftAssignment_1 )
-            // InternalLegoLang.g:2810:3: rule__Different__LeftAssignment_1
+            // InternalLegoLang.g:2864:2: ( rule__Different__LeftAssignment_1 )
+            // InternalLegoLang.g:2864:3: rule__Different__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Different__LeftAssignment_1();
@@ -9211,14 +9375,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__2"
-    // InternalLegoLang.g:2818:1: rule__Different__Group__2 : rule__Different__Group__2__Impl rule__Different__Group__3 ;
+    // InternalLegoLang.g:2872:1: rule__Different__Group__2 : rule__Different__Group__2__Impl rule__Different__Group__3 ;
     public final void rule__Different__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2822:1: ( rule__Different__Group__2__Impl rule__Different__Group__3 )
-            // InternalLegoLang.g:2823:2: rule__Different__Group__2__Impl rule__Different__Group__3
+            // InternalLegoLang.g:2876:1: ( rule__Different__Group__2__Impl rule__Different__Group__3 )
+            // InternalLegoLang.g:2877:2: rule__Different__Group__2__Impl rule__Different__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Different__Group__2__Impl();
@@ -9249,22 +9413,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__2__Impl"
-    // InternalLegoLang.g:2830:1: rule__Different__Group__2__Impl : ( '!=' ) ;
+    // InternalLegoLang.g:2884:1: rule__Different__Group__2__Impl : ( '!=' ) ;
     public final void rule__Different__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2834:1: ( ( '!=' ) )
-            // InternalLegoLang.g:2835:1: ( '!=' )
+            // InternalLegoLang.g:2888:1: ( ( '!=' ) )
+            // InternalLegoLang.g:2889:1: ( '!=' )
             {
-            // InternalLegoLang.g:2835:1: ( '!=' )
-            // InternalLegoLang.g:2836:2: '!='
+            // InternalLegoLang.g:2889:1: ( '!=' )
+            // InternalLegoLang.g:2890:2: '!='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getExclamationMarkEqualsSignKeyword_2()); 
             }
-            match(input,30,FOLLOW_2); if (state.failed) return ;
+            match(input,31,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDifferentAccess().getExclamationMarkEqualsSignKeyword_2()); 
             }
@@ -9290,16 +9454,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__3"
-    // InternalLegoLang.g:2845:1: rule__Different__Group__3 : rule__Different__Group__3__Impl rule__Different__Group__4 ;
+    // InternalLegoLang.g:2899:1: rule__Different__Group__3 : rule__Different__Group__3__Impl rule__Different__Group__4 ;
     public final void rule__Different__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2849:1: ( rule__Different__Group__3__Impl rule__Different__Group__4 )
-            // InternalLegoLang.g:2850:2: rule__Different__Group__3__Impl rule__Different__Group__4
+            // InternalLegoLang.g:2903:1: ( rule__Different__Group__3__Impl rule__Different__Group__4 )
+            // InternalLegoLang.g:2904:2: rule__Different__Group__3__Impl rule__Different__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Different__Group__3__Impl();
 
             state._fsp--;
@@ -9328,23 +9492,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__3__Impl"
-    // InternalLegoLang.g:2857:1: rule__Different__Group__3__Impl : ( ( rule__Different__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:2911:1: rule__Different__Group__3__Impl : ( ( rule__Different__RightAssignment_3 ) ) ;
     public final void rule__Different__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2861:1: ( ( ( rule__Different__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2862:1: ( ( rule__Different__RightAssignment_3 ) )
+            // InternalLegoLang.g:2915:1: ( ( ( rule__Different__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:2916:1: ( ( rule__Different__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2862:1: ( ( rule__Different__RightAssignment_3 ) )
-            // InternalLegoLang.g:2863:2: ( rule__Different__RightAssignment_3 )
+            // InternalLegoLang.g:2916:1: ( ( rule__Different__RightAssignment_3 ) )
+            // InternalLegoLang.g:2917:2: ( rule__Different__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2864:2: ( rule__Different__RightAssignment_3 )
-            // InternalLegoLang.g:2864:3: rule__Different__RightAssignment_3
+            // InternalLegoLang.g:2918:2: ( rule__Different__RightAssignment_3 )
+            // InternalLegoLang.g:2918:3: rule__Different__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Different__RightAssignment_3();
@@ -9379,14 +9543,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__4"
-    // InternalLegoLang.g:2872:1: rule__Different__Group__4 : rule__Different__Group__4__Impl ;
+    // InternalLegoLang.g:2926:1: rule__Different__Group__4 : rule__Different__Group__4__Impl ;
     public final void rule__Different__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2876:1: ( rule__Different__Group__4__Impl )
-            // InternalLegoLang.g:2877:2: rule__Different__Group__4__Impl
+            // InternalLegoLang.g:2930:1: ( rule__Different__Group__4__Impl )
+            // InternalLegoLang.g:2931:2: rule__Different__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Different__Group__4__Impl();
@@ -9412,22 +9576,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__Group__4__Impl"
-    // InternalLegoLang.g:2883:1: rule__Different__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:2937:1: rule__Different__Group__4__Impl : ( ')' ) ;
     public final void rule__Different__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2887:1: ( ( ')' ) )
-            // InternalLegoLang.g:2888:1: ( ')' )
+            // InternalLegoLang.g:2941:1: ( ( ')' ) )
+            // InternalLegoLang.g:2942:1: ( ')' )
             {
-            // InternalLegoLang.g:2888:1: ( ')' )
-            // InternalLegoLang.g:2889:2: ')'
+            // InternalLegoLang.g:2942:1: ( ')' )
+            // InternalLegoLang.g:2943:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDifferentAccess().getRightParenthesisKeyword_4()); 
             }
@@ -9453,14 +9617,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__0"
-    // InternalLegoLang.g:2899:1: rule__LTorEqual__Group__0 : rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1 ;
+    // InternalLegoLang.g:2953:1: rule__LTorEqual__Group__0 : rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1 ;
     public final void rule__LTorEqual__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2903:1: ( rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1 )
-            // InternalLegoLang.g:2904:2: rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1
+            // InternalLegoLang.g:2957:1: ( rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1 )
+            // InternalLegoLang.g:2958:2: rule__LTorEqual__Group__0__Impl rule__LTorEqual__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__LTorEqual__Group__0__Impl();
@@ -9491,22 +9655,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__0__Impl"
-    // InternalLegoLang.g:2911:1: rule__LTorEqual__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:2965:1: rule__LTorEqual__Group__0__Impl : ( '(' ) ;
     public final void rule__LTorEqual__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2915:1: ( ( '(' ) )
-            // InternalLegoLang.g:2916:1: ( '(' )
+            // InternalLegoLang.g:2969:1: ( ( '(' ) )
+            // InternalLegoLang.g:2970:1: ( '(' )
             {
-            // InternalLegoLang.g:2916:1: ( '(' )
-            // InternalLegoLang.g:2917:2: '('
+            // InternalLegoLang.g:2970:1: ( '(' )
+            // InternalLegoLang.g:2971:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTorEqualAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -9532,16 +9696,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__1"
-    // InternalLegoLang.g:2926:1: rule__LTorEqual__Group__1 : rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2 ;
+    // InternalLegoLang.g:2980:1: rule__LTorEqual__Group__1 : rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2 ;
     public final void rule__LTorEqual__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2930:1: ( rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2 )
-            // InternalLegoLang.g:2931:2: rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2
+            // InternalLegoLang.g:2984:1: ( rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2 )
+            // InternalLegoLang.g:2985:2: rule__LTorEqual__Group__1__Impl rule__LTorEqual__Group__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__LTorEqual__Group__1__Impl();
 
             state._fsp--;
@@ -9570,23 +9734,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__1__Impl"
-    // InternalLegoLang.g:2938:1: rule__LTorEqual__Group__1__Impl : ( ( rule__LTorEqual__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:2992:1: rule__LTorEqual__Group__1__Impl : ( ( rule__LTorEqual__LeftAssignment_1 ) ) ;
     public final void rule__LTorEqual__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2942:1: ( ( ( rule__LTorEqual__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:2943:1: ( ( rule__LTorEqual__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2996:1: ( ( ( rule__LTorEqual__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:2997:1: ( ( rule__LTorEqual__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:2943:1: ( ( rule__LTorEqual__LeftAssignment_1 ) )
-            // InternalLegoLang.g:2944:2: ( rule__LTorEqual__LeftAssignment_1 )
+            // InternalLegoLang.g:2997:1: ( ( rule__LTorEqual__LeftAssignment_1 ) )
+            // InternalLegoLang.g:2998:2: ( rule__LTorEqual__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:2945:2: ( rule__LTorEqual__LeftAssignment_1 )
-            // InternalLegoLang.g:2945:3: rule__LTorEqual__LeftAssignment_1
+            // InternalLegoLang.g:2999:2: ( rule__LTorEqual__LeftAssignment_1 )
+            // InternalLegoLang.g:2999:3: rule__LTorEqual__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__LTorEqual__LeftAssignment_1();
@@ -9621,14 +9785,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__2"
-    // InternalLegoLang.g:2953:1: rule__LTorEqual__Group__2 : rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3 ;
+    // InternalLegoLang.g:3007:1: rule__LTorEqual__Group__2 : rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3 ;
     public final void rule__LTorEqual__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2957:1: ( rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3 )
-            // InternalLegoLang.g:2958:2: rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3
+            // InternalLegoLang.g:3011:1: ( rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3 )
+            // InternalLegoLang.g:3012:2: rule__LTorEqual__Group__2__Impl rule__LTorEqual__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__LTorEqual__Group__2__Impl();
@@ -9659,22 +9823,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__2__Impl"
-    // InternalLegoLang.g:2965:1: rule__LTorEqual__Group__2__Impl : ( '<=' ) ;
+    // InternalLegoLang.g:3019:1: rule__LTorEqual__Group__2__Impl : ( '<=' ) ;
     public final void rule__LTorEqual__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2969:1: ( ( '<=' ) )
-            // InternalLegoLang.g:2970:1: ( '<=' )
+            // InternalLegoLang.g:3023:1: ( ( '<=' ) )
+            // InternalLegoLang.g:3024:1: ( '<=' )
             {
-            // InternalLegoLang.g:2970:1: ( '<=' )
-            // InternalLegoLang.g:2971:2: '<='
+            // InternalLegoLang.g:3024:1: ( '<=' )
+            // InternalLegoLang.g:3025:2: '<='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getLessThanSignEqualsSignKeyword_2()); 
             }
-            match(input,31,FOLLOW_2); if (state.failed) return ;
+            match(input,32,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTorEqualAccess().getLessThanSignEqualsSignKeyword_2()); 
             }
@@ -9700,16 +9864,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__3"
-    // InternalLegoLang.g:2980:1: rule__LTorEqual__Group__3 : rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4 ;
+    // InternalLegoLang.g:3034:1: rule__LTorEqual__Group__3 : rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4 ;
     public final void rule__LTorEqual__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2984:1: ( rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4 )
-            // InternalLegoLang.g:2985:2: rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4
+            // InternalLegoLang.g:3038:1: ( rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4 )
+            // InternalLegoLang.g:3039:2: rule__LTorEqual__Group__3__Impl rule__LTorEqual__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__LTorEqual__Group__3__Impl();
 
             state._fsp--;
@@ -9738,23 +9902,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__3__Impl"
-    // InternalLegoLang.g:2992:1: rule__LTorEqual__Group__3__Impl : ( ( rule__LTorEqual__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:3046:1: rule__LTorEqual__Group__3__Impl : ( ( rule__LTorEqual__RightAssignment_3 ) ) ;
     public final void rule__LTorEqual__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:2996:1: ( ( ( rule__LTorEqual__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:2997:1: ( ( rule__LTorEqual__RightAssignment_3 ) )
+            // InternalLegoLang.g:3050:1: ( ( ( rule__LTorEqual__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:3051:1: ( ( rule__LTorEqual__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:2997:1: ( ( rule__LTorEqual__RightAssignment_3 ) )
-            // InternalLegoLang.g:2998:2: ( rule__LTorEqual__RightAssignment_3 )
+            // InternalLegoLang.g:3051:1: ( ( rule__LTorEqual__RightAssignment_3 ) )
+            // InternalLegoLang.g:3052:2: ( rule__LTorEqual__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:2999:2: ( rule__LTorEqual__RightAssignment_3 )
-            // InternalLegoLang.g:2999:3: rule__LTorEqual__RightAssignment_3
+            // InternalLegoLang.g:3053:2: ( rule__LTorEqual__RightAssignment_3 )
+            // InternalLegoLang.g:3053:3: rule__LTorEqual__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__LTorEqual__RightAssignment_3();
@@ -9789,14 +9953,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__4"
-    // InternalLegoLang.g:3007:1: rule__LTorEqual__Group__4 : rule__LTorEqual__Group__4__Impl ;
+    // InternalLegoLang.g:3061:1: rule__LTorEqual__Group__4 : rule__LTorEqual__Group__4__Impl ;
     public final void rule__LTorEqual__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3011:1: ( rule__LTorEqual__Group__4__Impl )
-            // InternalLegoLang.g:3012:2: rule__LTorEqual__Group__4__Impl
+            // InternalLegoLang.g:3065:1: ( rule__LTorEqual__Group__4__Impl )
+            // InternalLegoLang.g:3066:2: rule__LTorEqual__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LTorEqual__Group__4__Impl();
@@ -9822,22 +9986,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__Group__4__Impl"
-    // InternalLegoLang.g:3018:1: rule__LTorEqual__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:3072:1: rule__LTorEqual__Group__4__Impl : ( ')' ) ;
     public final void rule__LTorEqual__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3022:1: ( ( ')' ) )
-            // InternalLegoLang.g:3023:1: ( ')' )
+            // InternalLegoLang.g:3076:1: ( ( ')' ) )
+            // InternalLegoLang.g:3077:1: ( ')' )
             {
-            // InternalLegoLang.g:3023:1: ( ')' )
-            // InternalLegoLang.g:3024:2: ')'
+            // InternalLegoLang.g:3077:1: ( ')' )
+            // InternalLegoLang.g:3078:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLTorEqualAccess().getRightParenthesisKeyword_4()); 
             }
@@ -9863,14 +10027,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__0"
-    // InternalLegoLang.g:3034:1: rule__GTorEqual__Group__0 : rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1 ;
+    // InternalLegoLang.g:3088:1: rule__GTorEqual__Group__0 : rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1 ;
     public final void rule__GTorEqual__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3038:1: ( rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1 )
-            // InternalLegoLang.g:3039:2: rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1
+            // InternalLegoLang.g:3092:1: ( rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1 )
+            // InternalLegoLang.g:3093:2: rule__GTorEqual__Group__0__Impl rule__GTorEqual__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__GTorEqual__Group__0__Impl();
@@ -9901,22 +10065,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__0__Impl"
-    // InternalLegoLang.g:3046:1: rule__GTorEqual__Group__0__Impl : ( '(' ) ;
+    // InternalLegoLang.g:3100:1: rule__GTorEqual__Group__0__Impl : ( '(' ) ;
     public final void rule__GTorEqual__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3050:1: ( ( '(' ) )
-            // InternalLegoLang.g:3051:1: ( '(' )
+            // InternalLegoLang.g:3104:1: ( ( '(' ) )
+            // InternalLegoLang.g:3105:1: ( '(' )
             {
-            // InternalLegoLang.g:3051:1: ( '(' )
-            // InternalLegoLang.g:3052:2: '('
+            // InternalLegoLang.g:3105:1: ( '(' )
+            // InternalLegoLang.g:3106:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTorEqualAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -9942,16 +10106,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__1"
-    // InternalLegoLang.g:3061:1: rule__GTorEqual__Group__1 : rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2 ;
+    // InternalLegoLang.g:3115:1: rule__GTorEqual__Group__1 : rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2 ;
     public final void rule__GTorEqual__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3065:1: ( rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2 )
-            // InternalLegoLang.g:3066:2: rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2
+            // InternalLegoLang.g:3119:1: ( rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2 )
+            // InternalLegoLang.g:3120:2: rule__GTorEqual__Group__1__Impl rule__GTorEqual__Group__2
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__GTorEqual__Group__1__Impl();
 
             state._fsp--;
@@ -9980,23 +10144,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__1__Impl"
-    // InternalLegoLang.g:3073:1: rule__GTorEqual__Group__1__Impl : ( ( rule__GTorEqual__LeftAssignment_1 ) ) ;
+    // InternalLegoLang.g:3127:1: rule__GTorEqual__Group__1__Impl : ( ( rule__GTorEqual__LeftAssignment_1 ) ) ;
     public final void rule__GTorEqual__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3077:1: ( ( ( rule__GTorEqual__LeftAssignment_1 ) ) )
-            // InternalLegoLang.g:3078:1: ( ( rule__GTorEqual__LeftAssignment_1 ) )
+            // InternalLegoLang.g:3131:1: ( ( ( rule__GTorEqual__LeftAssignment_1 ) ) )
+            // InternalLegoLang.g:3132:1: ( ( rule__GTorEqual__LeftAssignment_1 ) )
             {
-            // InternalLegoLang.g:3078:1: ( ( rule__GTorEqual__LeftAssignment_1 ) )
-            // InternalLegoLang.g:3079:2: ( rule__GTorEqual__LeftAssignment_1 )
+            // InternalLegoLang.g:3132:1: ( ( rule__GTorEqual__LeftAssignment_1 ) )
+            // InternalLegoLang.g:3133:2: ( rule__GTorEqual__LeftAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getLeftAssignment_1()); 
             }
-            // InternalLegoLang.g:3080:2: ( rule__GTorEqual__LeftAssignment_1 )
-            // InternalLegoLang.g:3080:3: rule__GTorEqual__LeftAssignment_1
+            // InternalLegoLang.g:3134:2: ( rule__GTorEqual__LeftAssignment_1 )
+            // InternalLegoLang.g:3134:3: rule__GTorEqual__LeftAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__GTorEqual__LeftAssignment_1();
@@ -10031,14 +10195,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__2"
-    // InternalLegoLang.g:3088:1: rule__GTorEqual__Group__2 : rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3 ;
+    // InternalLegoLang.g:3142:1: rule__GTorEqual__Group__2 : rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3 ;
     public final void rule__GTorEqual__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3092:1: ( rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3 )
-            // InternalLegoLang.g:3093:2: rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3
+            // InternalLegoLang.g:3146:1: ( rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3 )
+            // InternalLegoLang.g:3147:2: rule__GTorEqual__Group__2__Impl rule__GTorEqual__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__GTorEqual__Group__2__Impl();
@@ -10069,22 +10233,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__2__Impl"
-    // InternalLegoLang.g:3100:1: rule__GTorEqual__Group__2__Impl : ( '>=' ) ;
+    // InternalLegoLang.g:3154:1: rule__GTorEqual__Group__2__Impl : ( '>=' ) ;
     public final void rule__GTorEqual__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3104:1: ( ( '>=' ) )
-            // InternalLegoLang.g:3105:1: ( '>=' )
+            // InternalLegoLang.g:3158:1: ( ( '>=' ) )
+            // InternalLegoLang.g:3159:1: ( '>=' )
             {
-            // InternalLegoLang.g:3105:1: ( '>=' )
-            // InternalLegoLang.g:3106:2: '>='
+            // InternalLegoLang.g:3159:1: ( '>=' )
+            // InternalLegoLang.g:3160:2: '>='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getGreaterThanSignEqualsSignKeyword_2()); 
             }
-            match(input,32,FOLLOW_2); if (state.failed) return ;
+            match(input,33,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTorEqualAccess().getGreaterThanSignEqualsSignKeyword_2()); 
             }
@@ -10110,16 +10274,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__3"
-    // InternalLegoLang.g:3115:1: rule__GTorEqual__Group__3 : rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4 ;
+    // InternalLegoLang.g:3169:1: rule__GTorEqual__Group__3 : rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4 ;
     public final void rule__GTorEqual__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3119:1: ( rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4 )
-            // InternalLegoLang.g:3120:2: rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4
+            // InternalLegoLang.g:3173:1: ( rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4 )
+            // InternalLegoLang.g:3174:2: rule__GTorEqual__Group__3__Impl rule__GTorEqual__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__GTorEqual__Group__3__Impl();
 
             state._fsp--;
@@ -10148,23 +10312,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__3__Impl"
-    // InternalLegoLang.g:3127:1: rule__GTorEqual__Group__3__Impl : ( ( rule__GTorEqual__RightAssignment_3 ) ) ;
+    // InternalLegoLang.g:3181:1: rule__GTorEqual__Group__3__Impl : ( ( rule__GTorEqual__RightAssignment_3 ) ) ;
     public final void rule__GTorEqual__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3131:1: ( ( ( rule__GTorEqual__RightAssignment_3 ) ) )
-            // InternalLegoLang.g:3132:1: ( ( rule__GTorEqual__RightAssignment_3 ) )
+            // InternalLegoLang.g:3185:1: ( ( ( rule__GTorEqual__RightAssignment_3 ) ) )
+            // InternalLegoLang.g:3186:1: ( ( rule__GTorEqual__RightAssignment_3 ) )
             {
-            // InternalLegoLang.g:3132:1: ( ( rule__GTorEqual__RightAssignment_3 ) )
-            // InternalLegoLang.g:3133:2: ( rule__GTorEqual__RightAssignment_3 )
+            // InternalLegoLang.g:3186:1: ( ( rule__GTorEqual__RightAssignment_3 ) )
+            // InternalLegoLang.g:3187:2: ( rule__GTorEqual__RightAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getRightAssignment_3()); 
             }
-            // InternalLegoLang.g:3134:2: ( rule__GTorEqual__RightAssignment_3 )
-            // InternalLegoLang.g:3134:3: rule__GTorEqual__RightAssignment_3
+            // InternalLegoLang.g:3188:2: ( rule__GTorEqual__RightAssignment_3 )
+            // InternalLegoLang.g:3188:3: rule__GTorEqual__RightAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__GTorEqual__RightAssignment_3();
@@ -10199,14 +10363,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__4"
-    // InternalLegoLang.g:3142:1: rule__GTorEqual__Group__4 : rule__GTorEqual__Group__4__Impl ;
+    // InternalLegoLang.g:3196:1: rule__GTorEqual__Group__4 : rule__GTorEqual__Group__4__Impl ;
     public final void rule__GTorEqual__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3146:1: ( rule__GTorEqual__Group__4__Impl )
-            // InternalLegoLang.g:3147:2: rule__GTorEqual__Group__4__Impl
+            // InternalLegoLang.g:3200:1: ( rule__GTorEqual__Group__4__Impl )
+            // InternalLegoLang.g:3201:2: rule__GTorEqual__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__GTorEqual__Group__4__Impl();
@@ -10232,22 +10396,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__Group__4__Impl"
-    // InternalLegoLang.g:3153:1: rule__GTorEqual__Group__4__Impl : ( ')' ) ;
+    // InternalLegoLang.g:3207:1: rule__GTorEqual__Group__4__Impl : ( ')' ) ;
     public final void rule__GTorEqual__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3157:1: ( ( ')' ) )
-            // InternalLegoLang.g:3158:1: ( ')' )
+            // InternalLegoLang.g:3211:1: ( ( ')' ) )
+            // InternalLegoLang.g:3212:1: ( ')' )
             {
-            // InternalLegoLang.g:3158:1: ( ')' )
-            // InternalLegoLang.g:3159:2: ')'
+            // InternalLegoLang.g:3212:1: ( ')' )
+            // InternalLegoLang.g:3213:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGTorEqualAccess().getRightParenthesisKeyword_4()); 
             }
@@ -10273,14 +10437,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__0"
-    // InternalLegoLang.g:3169:1: rule__Assignement__Group__0 : rule__Assignement__Group__0__Impl rule__Assignement__Group__1 ;
+    // InternalLegoLang.g:3223:1: rule__Assignement__Group__0 : rule__Assignement__Group__0__Impl rule__Assignement__Group__1 ;
     public final void rule__Assignement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3173:1: ( rule__Assignement__Group__0__Impl rule__Assignement__Group__1 )
-            // InternalLegoLang.g:3174:2: rule__Assignement__Group__0__Impl rule__Assignement__Group__1
+            // InternalLegoLang.g:3227:1: ( rule__Assignement__Group__0__Impl rule__Assignement__Group__1 )
+            // InternalLegoLang.g:3228:2: rule__Assignement__Group__0__Impl rule__Assignement__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__Assignement__Group__0__Impl();
@@ -10311,23 +10475,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__0__Impl"
-    // InternalLegoLang.g:3181:1: rule__Assignement__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:3235:1: rule__Assignement__Group__0__Impl : ( () ) ;
     public final void rule__Assignement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3185:1: ( ( () ) )
-            // InternalLegoLang.g:3186:1: ( () )
+            // InternalLegoLang.g:3239:1: ( ( () ) )
+            // InternalLegoLang.g:3240:1: ( () )
             {
-            // InternalLegoLang.g:3186:1: ( () )
-            // InternalLegoLang.g:3187:2: ()
+            // InternalLegoLang.g:3240:1: ( () )
+            // InternalLegoLang.g:3241:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getAssignementAction_0()); 
             }
-            // InternalLegoLang.g:3188:2: ()
-            // InternalLegoLang.g:3188:3: 
+            // InternalLegoLang.g:3242:2: ()
+            // InternalLegoLang.g:3242:3: 
             {
             }
 
@@ -10352,14 +10516,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__1"
-    // InternalLegoLang.g:3196:1: rule__Assignement__Group__1 : rule__Assignement__Group__1__Impl rule__Assignement__Group__2 ;
+    // InternalLegoLang.g:3250:1: rule__Assignement__Group__1 : rule__Assignement__Group__1__Impl rule__Assignement__Group__2 ;
     public final void rule__Assignement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3200:1: ( rule__Assignement__Group__1__Impl rule__Assignement__Group__2 )
-            // InternalLegoLang.g:3201:2: rule__Assignement__Group__1__Impl rule__Assignement__Group__2
+            // InternalLegoLang.g:3254:1: ( rule__Assignement__Group__1__Impl rule__Assignement__Group__2 )
+            // InternalLegoLang.g:3255:2: rule__Assignement__Group__1__Impl rule__Assignement__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__Assignement__Group__1__Impl();
@@ -10390,22 +10554,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__1__Impl"
-    // InternalLegoLang.g:3208:1: rule__Assignement__Group__1__Impl : ( '(' ) ;
+    // InternalLegoLang.g:3262:1: rule__Assignement__Group__1__Impl : ( '(' ) ;
     public final void rule__Assignement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3212:1: ( ( '(' ) )
-            // InternalLegoLang.g:3213:1: ( '(' )
+            // InternalLegoLang.g:3266:1: ( ( '(' ) )
+            // InternalLegoLang.g:3267:1: ( '(' )
             {
-            // InternalLegoLang.g:3213:1: ( '(' )
-            // InternalLegoLang.g:3214:2: '('
+            // InternalLegoLang.g:3267:1: ( '(' )
+            // InternalLegoLang.g:3268:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssignementAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -10431,16 +10595,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__2"
-    // InternalLegoLang.g:3223:1: rule__Assignement__Group__2 : rule__Assignement__Group__2__Impl rule__Assignement__Group__3 ;
+    // InternalLegoLang.g:3277:1: rule__Assignement__Group__2 : rule__Assignement__Group__2__Impl rule__Assignement__Group__3 ;
     public final void rule__Assignement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3227:1: ( rule__Assignement__Group__2__Impl rule__Assignement__Group__3 )
-            // InternalLegoLang.g:3228:2: rule__Assignement__Group__2__Impl rule__Assignement__Group__3
+            // InternalLegoLang.g:3281:1: ( rule__Assignement__Group__2__Impl rule__Assignement__Group__3 )
+            // InternalLegoLang.g:3282:2: rule__Assignement__Group__2__Impl rule__Assignement__Group__3
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__Assignement__Group__2__Impl();
 
             state._fsp--;
@@ -10469,23 +10633,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__2__Impl"
-    // InternalLegoLang.g:3235:1: rule__Assignement__Group__2__Impl : ( ( rule__Assignement__LeftAssignment_2 ) ) ;
+    // InternalLegoLang.g:3289:1: rule__Assignement__Group__2__Impl : ( ( rule__Assignement__LeftAssignment_2 ) ) ;
     public final void rule__Assignement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3239:1: ( ( ( rule__Assignement__LeftAssignment_2 ) ) )
-            // InternalLegoLang.g:3240:1: ( ( rule__Assignement__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3293:1: ( ( ( rule__Assignement__LeftAssignment_2 ) ) )
+            // InternalLegoLang.g:3294:1: ( ( rule__Assignement__LeftAssignment_2 ) )
             {
-            // InternalLegoLang.g:3240:1: ( ( rule__Assignement__LeftAssignment_2 ) )
-            // InternalLegoLang.g:3241:2: ( rule__Assignement__LeftAssignment_2 )
+            // InternalLegoLang.g:3294:1: ( ( rule__Assignement__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3295:2: ( rule__Assignement__LeftAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getLeftAssignment_2()); 
             }
-            // InternalLegoLang.g:3242:2: ( rule__Assignement__LeftAssignment_2 )
-            // InternalLegoLang.g:3242:3: rule__Assignement__LeftAssignment_2
+            // InternalLegoLang.g:3296:2: ( rule__Assignement__LeftAssignment_2 )
+            // InternalLegoLang.g:3296:3: rule__Assignement__LeftAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Assignement__LeftAssignment_2();
@@ -10520,14 +10684,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__3"
-    // InternalLegoLang.g:3250:1: rule__Assignement__Group__3 : rule__Assignement__Group__3__Impl rule__Assignement__Group__4 ;
+    // InternalLegoLang.g:3304:1: rule__Assignement__Group__3 : rule__Assignement__Group__3__Impl rule__Assignement__Group__4 ;
     public final void rule__Assignement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3254:1: ( rule__Assignement__Group__3__Impl rule__Assignement__Group__4 )
-            // InternalLegoLang.g:3255:2: rule__Assignement__Group__3__Impl rule__Assignement__Group__4
+            // InternalLegoLang.g:3308:1: ( rule__Assignement__Group__3__Impl rule__Assignement__Group__4 )
+            // InternalLegoLang.g:3309:2: rule__Assignement__Group__3__Impl rule__Assignement__Group__4
             {
             pushFollow(FOLLOW_12);
             rule__Assignement__Group__3__Impl();
@@ -10558,22 +10722,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__3__Impl"
-    // InternalLegoLang.g:3262:1: rule__Assignement__Group__3__Impl : ( '=' ) ;
+    // InternalLegoLang.g:3316:1: rule__Assignement__Group__3__Impl : ( '=' ) ;
     public final void rule__Assignement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3266:1: ( ( '=' ) )
-            // InternalLegoLang.g:3267:1: ( '=' )
+            // InternalLegoLang.g:3320:1: ( ( '=' ) )
+            // InternalLegoLang.g:3321:1: ( '=' )
             {
-            // InternalLegoLang.g:3267:1: ( '=' )
-            // InternalLegoLang.g:3268:2: '='
+            // InternalLegoLang.g:3321:1: ( '=' )
+            // InternalLegoLang.g:3322:2: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getEqualsSignKeyword_3()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAssignementAccess().getEqualsSignKeyword_3()); 
             }
@@ -10599,14 +10763,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__4"
-    // InternalLegoLang.g:3277:1: rule__Assignement__Group__4 : rule__Assignement__Group__4__Impl rule__Assignement__Group__5 ;
+    // InternalLegoLang.g:3331:1: rule__Assignement__Group__4 : rule__Assignement__Group__4__Impl rule__Assignement__Group__5 ;
     public final void rule__Assignement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3281:1: ( rule__Assignement__Group__4__Impl rule__Assignement__Group__5 )
-            // InternalLegoLang.g:3282:2: rule__Assignement__Group__4__Impl rule__Assignement__Group__5
+            // InternalLegoLang.g:3335:1: ( rule__Assignement__Group__4__Impl rule__Assignement__Group__5 )
+            // InternalLegoLang.g:3336:2: rule__Assignement__Group__4__Impl rule__Assignement__Group__5
             {
             pushFollow(FOLLOW_13);
             rule__Assignement__Group__4__Impl();
@@ -10637,23 +10801,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__4__Impl"
-    // InternalLegoLang.g:3289:1: rule__Assignement__Group__4__Impl : ( ( rule__Assignement__RightAssignment_4 ) ) ;
+    // InternalLegoLang.g:3343:1: rule__Assignement__Group__4__Impl : ( ( rule__Assignement__RightAssignment_4 ) ) ;
     public final void rule__Assignement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3293:1: ( ( ( rule__Assignement__RightAssignment_4 ) ) )
-            // InternalLegoLang.g:3294:1: ( ( rule__Assignement__RightAssignment_4 ) )
+            // InternalLegoLang.g:3347:1: ( ( ( rule__Assignement__RightAssignment_4 ) ) )
+            // InternalLegoLang.g:3348:1: ( ( rule__Assignement__RightAssignment_4 ) )
             {
-            // InternalLegoLang.g:3294:1: ( ( rule__Assignement__RightAssignment_4 ) )
-            // InternalLegoLang.g:3295:2: ( rule__Assignement__RightAssignment_4 )
+            // InternalLegoLang.g:3348:1: ( ( rule__Assignement__RightAssignment_4 ) )
+            // InternalLegoLang.g:3349:2: ( rule__Assignement__RightAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getRightAssignment_4()); 
             }
-            // InternalLegoLang.g:3296:2: ( rule__Assignement__RightAssignment_4 )
-            // InternalLegoLang.g:3296:3: rule__Assignement__RightAssignment_4
+            // InternalLegoLang.g:3350:2: ( rule__Assignement__RightAssignment_4 )
+            // InternalLegoLang.g:3350:3: rule__Assignement__RightAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Assignement__RightAssignment_4();
@@ -10688,14 +10852,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__5"
-    // InternalLegoLang.g:3304:1: rule__Assignement__Group__5 : rule__Assignement__Group__5__Impl ;
+    // InternalLegoLang.g:3358:1: rule__Assignement__Group__5 : rule__Assignement__Group__5__Impl ;
     public final void rule__Assignement__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3308:1: ( rule__Assignement__Group__5__Impl )
-            // InternalLegoLang.g:3309:2: rule__Assignement__Group__5__Impl
+            // InternalLegoLang.g:3362:1: ( rule__Assignement__Group__5__Impl )
+            // InternalLegoLang.g:3363:2: rule__Assignement__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Assignement__Group__5__Impl();
@@ -10721,17 +10885,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__Group__5__Impl"
-    // InternalLegoLang.g:3315:1: rule__Assignement__Group__5__Impl : ( ');' ) ;
+    // InternalLegoLang.g:3369:1: rule__Assignement__Group__5__Impl : ( ');' ) ;
     public final void rule__Assignement__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3319:1: ( ( ');' ) )
-            // InternalLegoLang.g:3320:1: ( ');' )
+            // InternalLegoLang.g:3373:1: ( ( ');' ) )
+            // InternalLegoLang.g:3374:1: ( ');' )
             {
-            // InternalLegoLang.g:3320:1: ( ');' )
-            // InternalLegoLang.g:3321:2: ');'
+            // InternalLegoLang.g:3374:1: ( ');' )
+            // InternalLegoLang.g:3375:2: ');'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getRightParenthesisSemicolonKeyword_5()); 
@@ -10762,14 +10926,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__0"
-    // InternalLegoLang.g:3331:1: rule__PlusEqual__Group__0 : rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1 ;
+    // InternalLegoLang.g:3385:1: rule__PlusEqual__Group__0 : rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1 ;
     public final void rule__PlusEqual__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3335:1: ( rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1 )
-            // InternalLegoLang.g:3336:2: rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1
+            // InternalLegoLang.g:3389:1: ( rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1 )
+            // InternalLegoLang.g:3390:2: rule__PlusEqual__Group__0__Impl rule__PlusEqual__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__PlusEqual__Group__0__Impl();
@@ -10800,23 +10964,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__0__Impl"
-    // InternalLegoLang.g:3343:1: rule__PlusEqual__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:3397:1: rule__PlusEqual__Group__0__Impl : ( () ) ;
     public final void rule__PlusEqual__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3347:1: ( ( () ) )
-            // InternalLegoLang.g:3348:1: ( () )
+            // InternalLegoLang.g:3401:1: ( ( () ) )
+            // InternalLegoLang.g:3402:1: ( () )
             {
-            // InternalLegoLang.g:3348:1: ( () )
-            // InternalLegoLang.g:3349:2: ()
+            // InternalLegoLang.g:3402:1: ( () )
+            // InternalLegoLang.g:3403:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getPlusEqualAction_0()); 
             }
-            // InternalLegoLang.g:3350:2: ()
-            // InternalLegoLang.g:3350:3: 
+            // InternalLegoLang.g:3404:2: ()
+            // InternalLegoLang.g:3404:3: 
             {
             }
 
@@ -10841,14 +11005,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__1"
-    // InternalLegoLang.g:3358:1: rule__PlusEqual__Group__1 : rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2 ;
+    // InternalLegoLang.g:3412:1: rule__PlusEqual__Group__1 : rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2 ;
     public final void rule__PlusEqual__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3362:1: ( rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2 )
-            // InternalLegoLang.g:3363:2: rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2
+            // InternalLegoLang.g:3416:1: ( rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2 )
+            // InternalLegoLang.g:3417:2: rule__PlusEqual__Group__1__Impl rule__PlusEqual__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__PlusEqual__Group__1__Impl();
@@ -10879,22 +11043,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__1__Impl"
-    // InternalLegoLang.g:3370:1: rule__PlusEqual__Group__1__Impl : ( '(' ) ;
+    // InternalLegoLang.g:3424:1: rule__PlusEqual__Group__1__Impl : ( '(' ) ;
     public final void rule__PlusEqual__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3374:1: ( ( '(' ) )
-            // InternalLegoLang.g:3375:1: ( '(' )
+            // InternalLegoLang.g:3428:1: ( ( '(' ) )
+            // InternalLegoLang.g:3429:1: ( '(' )
             {
-            // InternalLegoLang.g:3375:1: ( '(' )
-            // InternalLegoLang.g:3376:2: '('
+            // InternalLegoLang.g:3429:1: ( '(' )
+            // InternalLegoLang.g:3430:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPlusEqualAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -10920,16 +11084,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__2"
-    // InternalLegoLang.g:3385:1: rule__PlusEqual__Group__2 : rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3 ;
+    // InternalLegoLang.g:3439:1: rule__PlusEqual__Group__2 : rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3 ;
     public final void rule__PlusEqual__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3389:1: ( rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3 )
-            // InternalLegoLang.g:3390:2: rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3
+            // InternalLegoLang.g:3443:1: ( rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3 )
+            // InternalLegoLang.g:3444:2: rule__PlusEqual__Group__2__Impl rule__PlusEqual__Group__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             rule__PlusEqual__Group__2__Impl();
 
             state._fsp--;
@@ -10958,23 +11122,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__2__Impl"
-    // InternalLegoLang.g:3397:1: rule__PlusEqual__Group__2__Impl : ( ( rule__PlusEqual__LeftAssignment_2 ) ) ;
+    // InternalLegoLang.g:3451:1: rule__PlusEqual__Group__2__Impl : ( ( rule__PlusEqual__LeftAssignment_2 ) ) ;
     public final void rule__PlusEqual__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3401:1: ( ( ( rule__PlusEqual__LeftAssignment_2 ) ) )
-            // InternalLegoLang.g:3402:1: ( ( rule__PlusEqual__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3455:1: ( ( ( rule__PlusEqual__LeftAssignment_2 ) ) )
+            // InternalLegoLang.g:3456:1: ( ( rule__PlusEqual__LeftAssignment_2 ) )
             {
-            // InternalLegoLang.g:3402:1: ( ( rule__PlusEqual__LeftAssignment_2 ) )
-            // InternalLegoLang.g:3403:2: ( rule__PlusEqual__LeftAssignment_2 )
+            // InternalLegoLang.g:3456:1: ( ( rule__PlusEqual__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3457:2: ( rule__PlusEqual__LeftAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getLeftAssignment_2()); 
             }
-            // InternalLegoLang.g:3404:2: ( rule__PlusEqual__LeftAssignment_2 )
-            // InternalLegoLang.g:3404:3: rule__PlusEqual__LeftAssignment_2
+            // InternalLegoLang.g:3458:2: ( rule__PlusEqual__LeftAssignment_2 )
+            // InternalLegoLang.g:3458:3: rule__PlusEqual__LeftAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__PlusEqual__LeftAssignment_2();
@@ -11009,14 +11173,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__3"
-    // InternalLegoLang.g:3412:1: rule__PlusEqual__Group__3 : rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4 ;
+    // InternalLegoLang.g:3466:1: rule__PlusEqual__Group__3 : rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4 ;
     public final void rule__PlusEqual__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3416:1: ( rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4 )
-            // InternalLegoLang.g:3417:2: rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4
+            // InternalLegoLang.g:3470:1: ( rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4 )
+            // InternalLegoLang.g:3471:2: rule__PlusEqual__Group__3__Impl rule__PlusEqual__Group__4
             {
             pushFollow(FOLLOW_12);
             rule__PlusEqual__Group__3__Impl();
@@ -11047,22 +11211,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__3__Impl"
-    // InternalLegoLang.g:3424:1: rule__PlusEqual__Group__3__Impl : ( '+=' ) ;
+    // InternalLegoLang.g:3478:1: rule__PlusEqual__Group__3__Impl : ( '+=' ) ;
     public final void rule__PlusEqual__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3428:1: ( ( '+=' ) )
-            // InternalLegoLang.g:3429:1: ( '+=' )
+            // InternalLegoLang.g:3482:1: ( ( '+=' ) )
+            // InternalLegoLang.g:3483:1: ( '+=' )
             {
-            // InternalLegoLang.g:3429:1: ( '+=' )
-            // InternalLegoLang.g:3430:2: '+='
+            // InternalLegoLang.g:3483:1: ( '+=' )
+            // InternalLegoLang.g:3484:2: '+='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getPlusSignEqualsSignKeyword_3()); 
             }
-            match(input,34,FOLLOW_2); if (state.failed) return ;
+            match(input,35,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPlusEqualAccess().getPlusSignEqualsSignKeyword_3()); 
             }
@@ -11088,14 +11252,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__4"
-    // InternalLegoLang.g:3439:1: rule__PlusEqual__Group__4 : rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5 ;
+    // InternalLegoLang.g:3493:1: rule__PlusEqual__Group__4 : rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5 ;
     public final void rule__PlusEqual__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3443:1: ( rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5 )
-            // InternalLegoLang.g:3444:2: rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5
+            // InternalLegoLang.g:3497:1: ( rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5 )
+            // InternalLegoLang.g:3498:2: rule__PlusEqual__Group__4__Impl rule__PlusEqual__Group__5
             {
             pushFollow(FOLLOW_13);
             rule__PlusEqual__Group__4__Impl();
@@ -11126,23 +11290,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__4__Impl"
-    // InternalLegoLang.g:3451:1: rule__PlusEqual__Group__4__Impl : ( ( rule__PlusEqual__RightAssignment_4 ) ) ;
+    // InternalLegoLang.g:3505:1: rule__PlusEqual__Group__4__Impl : ( ( rule__PlusEqual__RightAssignment_4 ) ) ;
     public final void rule__PlusEqual__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3455:1: ( ( ( rule__PlusEqual__RightAssignment_4 ) ) )
-            // InternalLegoLang.g:3456:1: ( ( rule__PlusEqual__RightAssignment_4 ) )
+            // InternalLegoLang.g:3509:1: ( ( ( rule__PlusEqual__RightAssignment_4 ) ) )
+            // InternalLegoLang.g:3510:1: ( ( rule__PlusEqual__RightAssignment_4 ) )
             {
-            // InternalLegoLang.g:3456:1: ( ( rule__PlusEqual__RightAssignment_4 ) )
-            // InternalLegoLang.g:3457:2: ( rule__PlusEqual__RightAssignment_4 )
+            // InternalLegoLang.g:3510:1: ( ( rule__PlusEqual__RightAssignment_4 ) )
+            // InternalLegoLang.g:3511:2: ( rule__PlusEqual__RightAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getRightAssignment_4()); 
             }
-            // InternalLegoLang.g:3458:2: ( rule__PlusEqual__RightAssignment_4 )
-            // InternalLegoLang.g:3458:3: rule__PlusEqual__RightAssignment_4
+            // InternalLegoLang.g:3512:2: ( rule__PlusEqual__RightAssignment_4 )
+            // InternalLegoLang.g:3512:3: rule__PlusEqual__RightAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__PlusEqual__RightAssignment_4();
@@ -11177,14 +11341,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__5"
-    // InternalLegoLang.g:3466:1: rule__PlusEqual__Group__5 : rule__PlusEqual__Group__5__Impl ;
+    // InternalLegoLang.g:3520:1: rule__PlusEqual__Group__5 : rule__PlusEqual__Group__5__Impl ;
     public final void rule__PlusEqual__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3470:1: ( rule__PlusEqual__Group__5__Impl )
-            // InternalLegoLang.g:3471:2: rule__PlusEqual__Group__5__Impl
+            // InternalLegoLang.g:3524:1: ( rule__PlusEqual__Group__5__Impl )
+            // InternalLegoLang.g:3525:2: rule__PlusEqual__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__PlusEqual__Group__5__Impl();
@@ -11210,17 +11374,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__Group__5__Impl"
-    // InternalLegoLang.g:3477:1: rule__PlusEqual__Group__5__Impl : ( ');' ) ;
+    // InternalLegoLang.g:3531:1: rule__PlusEqual__Group__5__Impl : ( ');' ) ;
     public final void rule__PlusEqual__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3481:1: ( ( ');' ) )
-            // InternalLegoLang.g:3482:1: ( ');' )
+            // InternalLegoLang.g:3535:1: ( ( ');' ) )
+            // InternalLegoLang.g:3536:1: ( ');' )
             {
-            // InternalLegoLang.g:3482:1: ( ');' )
-            // InternalLegoLang.g:3483:2: ');'
+            // InternalLegoLang.g:3536:1: ( ');' )
+            // InternalLegoLang.g:3537:2: ');'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getRightParenthesisSemicolonKeyword_5()); 
@@ -11251,14 +11415,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__0"
-    // InternalLegoLang.g:3493:1: rule__MinusEqual__Group__0 : rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1 ;
+    // InternalLegoLang.g:3547:1: rule__MinusEqual__Group__0 : rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1 ;
     public final void rule__MinusEqual__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3497:1: ( rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1 )
-            // InternalLegoLang.g:3498:2: rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1
+            // InternalLegoLang.g:3551:1: ( rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1 )
+            // InternalLegoLang.g:3552:2: rule__MinusEqual__Group__0__Impl rule__MinusEqual__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__MinusEqual__Group__0__Impl();
@@ -11289,23 +11453,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__0__Impl"
-    // InternalLegoLang.g:3505:1: rule__MinusEqual__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:3559:1: rule__MinusEqual__Group__0__Impl : ( () ) ;
     public final void rule__MinusEqual__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3509:1: ( ( () ) )
-            // InternalLegoLang.g:3510:1: ( () )
+            // InternalLegoLang.g:3563:1: ( ( () ) )
+            // InternalLegoLang.g:3564:1: ( () )
             {
-            // InternalLegoLang.g:3510:1: ( () )
-            // InternalLegoLang.g:3511:2: ()
+            // InternalLegoLang.g:3564:1: ( () )
+            // InternalLegoLang.g:3565:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getMinusEqualAction_0()); 
             }
-            // InternalLegoLang.g:3512:2: ()
-            // InternalLegoLang.g:3512:3: 
+            // InternalLegoLang.g:3566:2: ()
+            // InternalLegoLang.g:3566:3: 
             {
             }
 
@@ -11330,14 +11494,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__1"
-    // InternalLegoLang.g:3520:1: rule__MinusEqual__Group__1 : rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2 ;
+    // InternalLegoLang.g:3574:1: rule__MinusEqual__Group__1 : rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2 ;
     public final void rule__MinusEqual__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3524:1: ( rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2 )
-            // InternalLegoLang.g:3525:2: rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2
+            // InternalLegoLang.g:3578:1: ( rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2 )
+            // InternalLegoLang.g:3579:2: rule__MinusEqual__Group__1__Impl rule__MinusEqual__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__MinusEqual__Group__1__Impl();
@@ -11368,22 +11532,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__1__Impl"
-    // InternalLegoLang.g:3532:1: rule__MinusEqual__Group__1__Impl : ( '(' ) ;
+    // InternalLegoLang.g:3586:1: rule__MinusEqual__Group__1__Impl : ( '(' ) ;
     public final void rule__MinusEqual__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3536:1: ( ( '(' ) )
-            // InternalLegoLang.g:3537:1: ( '(' )
+            // InternalLegoLang.g:3590:1: ( ( '(' ) )
+            // InternalLegoLang.g:3591:1: ( '(' )
             {
-            // InternalLegoLang.g:3537:1: ( '(' )
-            // InternalLegoLang.g:3538:2: '('
+            // InternalLegoLang.g:3591:1: ( '(' )
+            // InternalLegoLang.g:3592:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMinusEqualAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -11409,16 +11573,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__2"
-    // InternalLegoLang.g:3547:1: rule__MinusEqual__Group__2 : rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3 ;
+    // InternalLegoLang.g:3601:1: rule__MinusEqual__Group__2 : rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3 ;
     public final void rule__MinusEqual__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3551:1: ( rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3 )
-            // InternalLegoLang.g:3552:2: rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3
+            // InternalLegoLang.g:3605:1: ( rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3 )
+            // InternalLegoLang.g:3606:2: rule__MinusEqual__Group__2__Impl rule__MinusEqual__Group__3
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__MinusEqual__Group__2__Impl();
 
             state._fsp--;
@@ -11447,23 +11611,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__2__Impl"
-    // InternalLegoLang.g:3559:1: rule__MinusEqual__Group__2__Impl : ( ( rule__MinusEqual__LeftAssignment_2 ) ) ;
+    // InternalLegoLang.g:3613:1: rule__MinusEqual__Group__2__Impl : ( ( rule__MinusEqual__LeftAssignment_2 ) ) ;
     public final void rule__MinusEqual__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3563:1: ( ( ( rule__MinusEqual__LeftAssignment_2 ) ) )
-            // InternalLegoLang.g:3564:1: ( ( rule__MinusEqual__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3617:1: ( ( ( rule__MinusEqual__LeftAssignment_2 ) ) )
+            // InternalLegoLang.g:3618:1: ( ( rule__MinusEqual__LeftAssignment_2 ) )
             {
-            // InternalLegoLang.g:3564:1: ( ( rule__MinusEqual__LeftAssignment_2 ) )
-            // InternalLegoLang.g:3565:2: ( rule__MinusEqual__LeftAssignment_2 )
+            // InternalLegoLang.g:3618:1: ( ( rule__MinusEqual__LeftAssignment_2 ) )
+            // InternalLegoLang.g:3619:2: ( rule__MinusEqual__LeftAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getLeftAssignment_2()); 
             }
-            // InternalLegoLang.g:3566:2: ( rule__MinusEqual__LeftAssignment_2 )
-            // InternalLegoLang.g:3566:3: rule__MinusEqual__LeftAssignment_2
+            // InternalLegoLang.g:3620:2: ( rule__MinusEqual__LeftAssignment_2 )
+            // InternalLegoLang.g:3620:3: rule__MinusEqual__LeftAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__MinusEqual__LeftAssignment_2();
@@ -11498,14 +11662,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__3"
-    // InternalLegoLang.g:3574:1: rule__MinusEqual__Group__3 : rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4 ;
+    // InternalLegoLang.g:3628:1: rule__MinusEqual__Group__3 : rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4 ;
     public final void rule__MinusEqual__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3578:1: ( rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4 )
-            // InternalLegoLang.g:3579:2: rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4
+            // InternalLegoLang.g:3632:1: ( rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4 )
+            // InternalLegoLang.g:3633:2: rule__MinusEqual__Group__3__Impl rule__MinusEqual__Group__4
             {
             pushFollow(FOLLOW_12);
             rule__MinusEqual__Group__3__Impl();
@@ -11536,22 +11700,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__3__Impl"
-    // InternalLegoLang.g:3586:1: rule__MinusEqual__Group__3__Impl : ( '-=' ) ;
+    // InternalLegoLang.g:3640:1: rule__MinusEqual__Group__3__Impl : ( '-=' ) ;
     public final void rule__MinusEqual__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3590:1: ( ( '-=' ) )
-            // InternalLegoLang.g:3591:1: ( '-=' )
+            // InternalLegoLang.g:3644:1: ( ( '-=' ) )
+            // InternalLegoLang.g:3645:1: ( '-=' )
             {
-            // InternalLegoLang.g:3591:1: ( '-=' )
-            // InternalLegoLang.g:3592:2: '-='
+            // InternalLegoLang.g:3645:1: ( '-=' )
+            // InternalLegoLang.g:3646:2: '-='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getHyphenMinusEqualsSignKeyword_3()); 
             }
-            match(input,35,FOLLOW_2); if (state.failed) return ;
+            match(input,36,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMinusEqualAccess().getHyphenMinusEqualsSignKeyword_3()); 
             }
@@ -11577,14 +11741,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__4"
-    // InternalLegoLang.g:3601:1: rule__MinusEqual__Group__4 : rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5 ;
+    // InternalLegoLang.g:3655:1: rule__MinusEqual__Group__4 : rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5 ;
     public final void rule__MinusEqual__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3605:1: ( rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5 )
-            // InternalLegoLang.g:3606:2: rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5
+            // InternalLegoLang.g:3659:1: ( rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5 )
+            // InternalLegoLang.g:3660:2: rule__MinusEqual__Group__4__Impl rule__MinusEqual__Group__5
             {
             pushFollow(FOLLOW_13);
             rule__MinusEqual__Group__4__Impl();
@@ -11615,23 +11779,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__4__Impl"
-    // InternalLegoLang.g:3613:1: rule__MinusEqual__Group__4__Impl : ( ( rule__MinusEqual__RightAssignment_4 ) ) ;
+    // InternalLegoLang.g:3667:1: rule__MinusEqual__Group__4__Impl : ( ( rule__MinusEqual__RightAssignment_4 ) ) ;
     public final void rule__MinusEqual__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3617:1: ( ( ( rule__MinusEqual__RightAssignment_4 ) ) )
-            // InternalLegoLang.g:3618:1: ( ( rule__MinusEqual__RightAssignment_4 ) )
+            // InternalLegoLang.g:3671:1: ( ( ( rule__MinusEqual__RightAssignment_4 ) ) )
+            // InternalLegoLang.g:3672:1: ( ( rule__MinusEqual__RightAssignment_4 ) )
             {
-            // InternalLegoLang.g:3618:1: ( ( rule__MinusEqual__RightAssignment_4 ) )
-            // InternalLegoLang.g:3619:2: ( rule__MinusEqual__RightAssignment_4 )
+            // InternalLegoLang.g:3672:1: ( ( rule__MinusEqual__RightAssignment_4 ) )
+            // InternalLegoLang.g:3673:2: ( rule__MinusEqual__RightAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getRightAssignment_4()); 
             }
-            // InternalLegoLang.g:3620:2: ( rule__MinusEqual__RightAssignment_4 )
-            // InternalLegoLang.g:3620:3: rule__MinusEqual__RightAssignment_4
+            // InternalLegoLang.g:3674:2: ( rule__MinusEqual__RightAssignment_4 )
+            // InternalLegoLang.g:3674:3: rule__MinusEqual__RightAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__MinusEqual__RightAssignment_4();
@@ -11666,14 +11830,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__5"
-    // InternalLegoLang.g:3628:1: rule__MinusEqual__Group__5 : rule__MinusEqual__Group__5__Impl ;
+    // InternalLegoLang.g:3682:1: rule__MinusEqual__Group__5 : rule__MinusEqual__Group__5__Impl ;
     public final void rule__MinusEqual__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3632:1: ( rule__MinusEqual__Group__5__Impl )
-            // InternalLegoLang.g:3633:2: rule__MinusEqual__Group__5__Impl
+            // InternalLegoLang.g:3686:1: ( rule__MinusEqual__Group__5__Impl )
+            // InternalLegoLang.g:3687:2: rule__MinusEqual__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MinusEqual__Group__5__Impl();
@@ -11699,17 +11863,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__Group__5__Impl"
-    // InternalLegoLang.g:3639:1: rule__MinusEqual__Group__5__Impl : ( ');' ) ;
+    // InternalLegoLang.g:3693:1: rule__MinusEqual__Group__5__Impl : ( ');' ) ;
     public final void rule__MinusEqual__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3643:1: ( ( ');' ) )
-            // InternalLegoLang.g:3644:1: ( ');' )
+            // InternalLegoLang.g:3697:1: ( ( ');' ) )
+            // InternalLegoLang.g:3698:1: ( ');' )
             {
-            // InternalLegoLang.g:3644:1: ( ');' )
-            // InternalLegoLang.g:3645:2: ');'
+            // InternalLegoLang.g:3698:1: ( ');' )
+            // InternalLegoLang.g:3699:2: ');'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getRightParenthesisSemicolonKeyword_5()); 
@@ -11740,16 +11904,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__0"
-    // InternalLegoLang.g:3655:1: rule__UnInteger__Group__0 : rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1 ;
+    // InternalLegoLang.g:3709:1: rule__UnInteger__Group__0 : rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1 ;
     public final void rule__UnInteger__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3659:1: ( rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1 )
-            // InternalLegoLang.g:3660:2: rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1
+            // InternalLegoLang.g:3713:1: ( rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1 )
+            // InternalLegoLang.g:3714:2: rule__UnInteger__Group__0__Impl rule__UnInteger__Group__1
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__UnInteger__Group__0__Impl();
 
             state._fsp--;
@@ -11778,23 +11942,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__0__Impl"
-    // InternalLegoLang.g:3667:1: rule__UnInteger__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:3721:1: rule__UnInteger__Group__0__Impl : ( () ) ;
     public final void rule__UnInteger__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3671:1: ( ( () ) )
-            // InternalLegoLang.g:3672:1: ( () )
+            // InternalLegoLang.g:3725:1: ( ( () ) )
+            // InternalLegoLang.g:3726:1: ( () )
             {
-            // InternalLegoLang.g:3672:1: ( () )
-            // InternalLegoLang.g:3673:2: ()
+            // InternalLegoLang.g:3726:1: ( () )
+            // InternalLegoLang.g:3727:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getUnIntegerAction_0()); 
             }
-            // InternalLegoLang.g:3674:2: ()
-            // InternalLegoLang.g:3674:3: 
+            // InternalLegoLang.g:3728:2: ()
+            // InternalLegoLang.g:3728:3: 
             {
             }
 
@@ -11819,16 +11983,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__1"
-    // InternalLegoLang.g:3682:1: rule__UnInteger__Group__1 : rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2 ;
+    // InternalLegoLang.g:3736:1: rule__UnInteger__Group__1 : rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2 ;
     public final void rule__UnInteger__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3686:1: ( rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2 )
-            // InternalLegoLang.g:3687:2: rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2
+            // InternalLegoLang.g:3740:1: ( rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2 )
+            // InternalLegoLang.g:3741:2: rule__UnInteger__Group__1__Impl rule__UnInteger__Group__2
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__UnInteger__Group__1__Impl();
 
             state._fsp--;
@@ -11857,31 +12021,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__1__Impl"
-    // InternalLegoLang.g:3694:1: rule__UnInteger__Group__1__Impl : ( ( rule__UnInteger__IsConstAssignment_1 )? ) ;
+    // InternalLegoLang.g:3748:1: rule__UnInteger__Group__1__Impl : ( ( rule__UnInteger__IsConstAssignment_1 )? ) ;
     public final void rule__UnInteger__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3698:1: ( ( ( rule__UnInteger__IsConstAssignment_1 )? ) )
-            // InternalLegoLang.g:3699:1: ( ( rule__UnInteger__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:3752:1: ( ( ( rule__UnInteger__IsConstAssignment_1 )? ) )
+            // InternalLegoLang.g:3753:1: ( ( rule__UnInteger__IsConstAssignment_1 )? )
             {
-            // InternalLegoLang.g:3699:1: ( ( rule__UnInteger__IsConstAssignment_1 )? )
-            // InternalLegoLang.g:3700:2: ( rule__UnInteger__IsConstAssignment_1 )?
+            // InternalLegoLang.g:3753:1: ( ( rule__UnInteger__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:3754:2: ( rule__UnInteger__IsConstAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getIsConstAssignment_1()); 
             }
-            // InternalLegoLang.g:3701:2: ( rule__UnInteger__IsConstAssignment_1 )?
+            // InternalLegoLang.g:3755:2: ( rule__UnInteger__IsConstAssignment_1 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==42) ) {
+            if ( (LA13_0==43) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // InternalLegoLang.g:3701:3: rule__UnInteger__IsConstAssignment_1
+                    // InternalLegoLang.g:3755:3: rule__UnInteger__IsConstAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnInteger__IsConstAssignment_1();
@@ -11919,14 +12083,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__2"
-    // InternalLegoLang.g:3709:1: rule__UnInteger__Group__2 : rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3 ;
+    // InternalLegoLang.g:3763:1: rule__UnInteger__Group__2 : rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3 ;
     public final void rule__UnInteger__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3713:1: ( rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3 )
-            // InternalLegoLang.g:3714:2: rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3
+            // InternalLegoLang.g:3767:1: ( rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3 )
+            // InternalLegoLang.g:3768:2: rule__UnInteger__Group__2__Impl rule__UnInteger__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__UnInteger__Group__2__Impl();
@@ -11957,22 +12121,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__2__Impl"
-    // InternalLegoLang.g:3721:1: rule__UnInteger__Group__2__Impl : ( 'int' ) ;
+    // InternalLegoLang.g:3775:1: rule__UnInteger__Group__2__Impl : ( 'int' ) ;
     public final void rule__UnInteger__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3725:1: ( ( 'int' ) )
-            // InternalLegoLang.g:3726:1: ( 'int' )
+            // InternalLegoLang.g:3779:1: ( ( 'int' ) )
+            // InternalLegoLang.g:3780:1: ( 'int' )
             {
-            // InternalLegoLang.g:3726:1: ( 'int' )
-            // InternalLegoLang.g:3727:2: 'int'
+            // InternalLegoLang.g:3780:1: ( 'int' )
+            // InternalLegoLang.g:3781:2: 'int'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getIntKeyword_2()); 
             }
-            match(input,36,FOLLOW_2); if (state.failed) return ;
+            match(input,37,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnIntegerAccess().getIntKeyword_2()); 
             }
@@ -11998,16 +12162,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__3"
-    // InternalLegoLang.g:3736:1: rule__UnInteger__Group__3 : rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4 ;
+    // InternalLegoLang.g:3790:1: rule__UnInteger__Group__3 : rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4 ;
     public final void rule__UnInteger__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3740:1: ( rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4 )
-            // InternalLegoLang.g:3741:2: rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4
+            // InternalLegoLang.g:3794:1: ( rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4 )
+            // InternalLegoLang.g:3795:2: rule__UnInteger__Group__3__Impl rule__UnInteger__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnInteger__Group__3__Impl();
 
             state._fsp--;
@@ -12036,23 +12200,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__3__Impl"
-    // InternalLegoLang.g:3748:1: rule__UnInteger__Group__3__Impl : ( ( rule__UnInteger__NameAssignment_3 ) ) ;
+    // InternalLegoLang.g:3802:1: rule__UnInteger__Group__3__Impl : ( ( rule__UnInteger__NameAssignment_3 ) ) ;
     public final void rule__UnInteger__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3752:1: ( ( ( rule__UnInteger__NameAssignment_3 ) ) )
-            // InternalLegoLang.g:3753:1: ( ( rule__UnInteger__NameAssignment_3 ) )
+            // InternalLegoLang.g:3806:1: ( ( ( rule__UnInteger__NameAssignment_3 ) ) )
+            // InternalLegoLang.g:3807:1: ( ( rule__UnInteger__NameAssignment_3 ) )
             {
-            // InternalLegoLang.g:3753:1: ( ( rule__UnInteger__NameAssignment_3 ) )
-            // InternalLegoLang.g:3754:2: ( rule__UnInteger__NameAssignment_3 )
+            // InternalLegoLang.g:3807:1: ( ( rule__UnInteger__NameAssignment_3 ) )
+            // InternalLegoLang.g:3808:2: ( rule__UnInteger__NameAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getNameAssignment_3()); 
             }
-            // InternalLegoLang.g:3755:2: ( rule__UnInteger__NameAssignment_3 )
-            // InternalLegoLang.g:3755:3: rule__UnInteger__NameAssignment_3
+            // InternalLegoLang.g:3809:2: ( rule__UnInteger__NameAssignment_3 )
+            // InternalLegoLang.g:3809:3: rule__UnInteger__NameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__UnInteger__NameAssignment_3();
@@ -12087,16 +12251,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__4"
-    // InternalLegoLang.g:3763:1: rule__UnInteger__Group__4 : rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5 ;
+    // InternalLegoLang.g:3817:1: rule__UnInteger__Group__4 : rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5 ;
     public final void rule__UnInteger__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3767:1: ( rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5 )
-            // InternalLegoLang.g:3768:2: rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5
+            // InternalLegoLang.g:3821:1: ( rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5 )
+            // InternalLegoLang.g:3822:2: rule__UnInteger__Group__4__Impl rule__UnInteger__Group__5
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnInteger__Group__4__Impl();
 
             state._fsp--;
@@ -12125,31 +12289,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__4__Impl"
-    // InternalLegoLang.g:3775:1: rule__UnInteger__Group__4__Impl : ( ( rule__UnInteger__Group_4__0 )? ) ;
+    // InternalLegoLang.g:3829:1: rule__UnInteger__Group__4__Impl : ( ( rule__UnInteger__Group_4__0 )? ) ;
     public final void rule__UnInteger__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3779:1: ( ( ( rule__UnInteger__Group_4__0 )? ) )
-            // InternalLegoLang.g:3780:1: ( ( rule__UnInteger__Group_4__0 )? )
+            // InternalLegoLang.g:3833:1: ( ( ( rule__UnInteger__Group_4__0 )? ) )
+            // InternalLegoLang.g:3834:1: ( ( rule__UnInteger__Group_4__0 )? )
             {
-            // InternalLegoLang.g:3780:1: ( ( rule__UnInteger__Group_4__0 )? )
-            // InternalLegoLang.g:3781:2: ( rule__UnInteger__Group_4__0 )?
+            // InternalLegoLang.g:3834:1: ( ( rule__UnInteger__Group_4__0 )? )
+            // InternalLegoLang.g:3835:2: ( rule__UnInteger__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getGroup_4()); 
             }
-            // InternalLegoLang.g:3782:2: ( rule__UnInteger__Group_4__0 )?
+            // InternalLegoLang.g:3836:2: ( rule__UnInteger__Group_4__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==33) ) {
+            if ( (LA14_0==34) ) {
                 alt14=1;
             }
             switch (alt14) {
                 case 1 :
-                    // InternalLegoLang.g:3782:3: rule__UnInteger__Group_4__0
+                    // InternalLegoLang.g:3836:3: rule__UnInteger__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnInteger__Group_4__0();
@@ -12187,14 +12351,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__5"
-    // InternalLegoLang.g:3790:1: rule__UnInteger__Group__5 : rule__UnInteger__Group__5__Impl ;
+    // InternalLegoLang.g:3844:1: rule__UnInteger__Group__5 : rule__UnInteger__Group__5__Impl ;
     public final void rule__UnInteger__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3794:1: ( rule__UnInteger__Group__5__Impl )
-            // InternalLegoLang.g:3795:2: rule__UnInteger__Group__5__Impl
+            // InternalLegoLang.g:3848:1: ( rule__UnInteger__Group__5__Impl )
+            // InternalLegoLang.g:3849:2: rule__UnInteger__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnInteger__Group__5__Impl();
@@ -12220,22 +12384,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group__5__Impl"
-    // InternalLegoLang.g:3801:1: rule__UnInteger__Group__5__Impl : ( ';' ) ;
+    // InternalLegoLang.g:3855:1: rule__UnInteger__Group__5__Impl : ( ';' ) ;
     public final void rule__UnInteger__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3805:1: ( ( ';' ) )
-            // InternalLegoLang.g:3806:1: ( ';' )
+            // InternalLegoLang.g:3859:1: ( ( ';' ) )
+            // InternalLegoLang.g:3860:1: ( ';' )
             {
-            // InternalLegoLang.g:3806:1: ( ';' )
-            // InternalLegoLang.g:3807:2: ';'
+            // InternalLegoLang.g:3860:1: ( ';' )
+            // InternalLegoLang.g:3861:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getSemicolonKeyword_5()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnIntegerAccess().getSemicolonKeyword_5()); 
             }
@@ -12261,16 +12425,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group_4__0"
-    // InternalLegoLang.g:3817:1: rule__UnInteger__Group_4__0 : rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1 ;
+    // InternalLegoLang.g:3871:1: rule__UnInteger__Group_4__0 : rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1 ;
     public final void rule__UnInteger__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3821:1: ( rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1 )
-            // InternalLegoLang.g:3822:2: rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1
+            // InternalLegoLang.g:3875:1: ( rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1 )
+            // InternalLegoLang.g:3876:2: rule__UnInteger__Group_4__0__Impl rule__UnInteger__Group_4__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__UnInteger__Group_4__0__Impl();
 
             state._fsp--;
@@ -12299,22 +12463,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group_4__0__Impl"
-    // InternalLegoLang.g:3829:1: rule__UnInteger__Group_4__0__Impl : ( '=' ) ;
+    // InternalLegoLang.g:3883:1: rule__UnInteger__Group_4__0__Impl : ( '=' ) ;
     public final void rule__UnInteger__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3833:1: ( ( '=' ) )
-            // InternalLegoLang.g:3834:1: ( '=' )
+            // InternalLegoLang.g:3887:1: ( ( '=' ) )
+            // InternalLegoLang.g:3888:1: ( '=' )
             {
-            // InternalLegoLang.g:3834:1: ( '=' )
-            // InternalLegoLang.g:3835:2: '='
+            // InternalLegoLang.g:3888:1: ( '=' )
+            // InternalLegoLang.g:3889:2: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getEqualsSignKeyword_4_0()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnIntegerAccess().getEqualsSignKeyword_4_0()); 
             }
@@ -12340,14 +12504,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group_4__1"
-    // InternalLegoLang.g:3844:1: rule__UnInteger__Group_4__1 : rule__UnInteger__Group_4__1__Impl ;
+    // InternalLegoLang.g:3898:1: rule__UnInteger__Group_4__1 : rule__UnInteger__Group_4__1__Impl ;
     public final void rule__UnInteger__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3848:1: ( rule__UnInteger__Group_4__1__Impl )
-            // InternalLegoLang.g:3849:2: rule__UnInteger__Group_4__1__Impl
+            // InternalLegoLang.g:3902:1: ( rule__UnInteger__Group_4__1__Impl )
+            // InternalLegoLang.g:3903:2: rule__UnInteger__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnInteger__Group_4__1__Impl();
@@ -12373,23 +12537,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__Group_4__1__Impl"
-    // InternalLegoLang.g:3855:1: rule__UnInteger__Group_4__1__Impl : ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) ) ;
+    // InternalLegoLang.g:3909:1: rule__UnInteger__Group_4__1__Impl : ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) ) ;
     public final void rule__UnInteger__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3859:1: ( ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) ) )
-            // InternalLegoLang.g:3860:1: ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:3913:1: ( ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) ) )
+            // InternalLegoLang.g:3914:1: ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) )
             {
-            // InternalLegoLang.g:3860:1: ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) )
-            // InternalLegoLang.g:3861:2: ( rule__UnInteger__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:3914:1: ( ( rule__UnInteger__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:3915:2: ( rule__UnInteger__InitialeValueAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getInitialeValueAssignment_4_1()); 
             }
-            // InternalLegoLang.g:3862:2: ( rule__UnInteger__InitialeValueAssignment_4_1 )
-            // InternalLegoLang.g:3862:3: rule__UnInteger__InitialeValueAssignment_4_1
+            // InternalLegoLang.g:3916:2: ( rule__UnInteger__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:3916:3: rule__UnInteger__InitialeValueAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__UnInteger__InitialeValueAssignment_4_1();
@@ -12424,16 +12588,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__0"
-    // InternalLegoLang.g:3871:1: rule__UnDouble__Group__0 : rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1 ;
+    // InternalLegoLang.g:3925:1: rule__UnDouble__Group__0 : rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1 ;
     public final void rule__UnDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3875:1: ( rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1 )
-            // InternalLegoLang.g:3876:2: rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1
+            // InternalLegoLang.g:3929:1: ( rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1 )
+            // InternalLegoLang.g:3930:2: rule__UnDouble__Group__0__Impl rule__UnDouble__Group__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__UnDouble__Group__0__Impl();
 
             state._fsp--;
@@ -12462,23 +12626,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__0__Impl"
-    // InternalLegoLang.g:3883:1: rule__UnDouble__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:3937:1: rule__UnDouble__Group__0__Impl : ( () ) ;
     public final void rule__UnDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3887:1: ( ( () ) )
-            // InternalLegoLang.g:3888:1: ( () )
+            // InternalLegoLang.g:3941:1: ( ( () ) )
+            // InternalLegoLang.g:3942:1: ( () )
             {
-            // InternalLegoLang.g:3888:1: ( () )
-            // InternalLegoLang.g:3889:2: ()
+            // InternalLegoLang.g:3942:1: ( () )
+            // InternalLegoLang.g:3943:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getUnDoubleAction_0()); 
             }
-            // InternalLegoLang.g:3890:2: ()
-            // InternalLegoLang.g:3890:3: 
+            // InternalLegoLang.g:3944:2: ()
+            // InternalLegoLang.g:3944:3: 
             {
             }
 
@@ -12503,16 +12667,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__1"
-    // InternalLegoLang.g:3898:1: rule__UnDouble__Group__1 : rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2 ;
+    // InternalLegoLang.g:3952:1: rule__UnDouble__Group__1 : rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2 ;
     public final void rule__UnDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3902:1: ( rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2 )
-            // InternalLegoLang.g:3903:2: rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2
+            // InternalLegoLang.g:3956:1: ( rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2 )
+            // InternalLegoLang.g:3957:2: rule__UnDouble__Group__1__Impl rule__UnDouble__Group__2
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__UnDouble__Group__1__Impl();
 
             state._fsp--;
@@ -12541,31 +12705,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__1__Impl"
-    // InternalLegoLang.g:3910:1: rule__UnDouble__Group__1__Impl : ( ( rule__UnDouble__IsConstAssignment_1 )? ) ;
+    // InternalLegoLang.g:3964:1: rule__UnDouble__Group__1__Impl : ( ( rule__UnDouble__IsConstAssignment_1 )? ) ;
     public final void rule__UnDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3914:1: ( ( ( rule__UnDouble__IsConstAssignment_1 )? ) )
-            // InternalLegoLang.g:3915:1: ( ( rule__UnDouble__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:3968:1: ( ( ( rule__UnDouble__IsConstAssignment_1 )? ) )
+            // InternalLegoLang.g:3969:1: ( ( rule__UnDouble__IsConstAssignment_1 )? )
             {
-            // InternalLegoLang.g:3915:1: ( ( rule__UnDouble__IsConstAssignment_1 )? )
-            // InternalLegoLang.g:3916:2: ( rule__UnDouble__IsConstAssignment_1 )?
+            // InternalLegoLang.g:3969:1: ( ( rule__UnDouble__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:3970:2: ( rule__UnDouble__IsConstAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getIsConstAssignment_1()); 
             }
-            // InternalLegoLang.g:3917:2: ( rule__UnDouble__IsConstAssignment_1 )?
+            // InternalLegoLang.g:3971:2: ( rule__UnDouble__IsConstAssignment_1 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==42) ) {
+            if ( (LA15_0==43) ) {
                 alt15=1;
             }
             switch (alt15) {
                 case 1 :
-                    // InternalLegoLang.g:3917:3: rule__UnDouble__IsConstAssignment_1
+                    // InternalLegoLang.g:3971:3: rule__UnDouble__IsConstAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnDouble__IsConstAssignment_1();
@@ -12603,14 +12767,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__2"
-    // InternalLegoLang.g:3925:1: rule__UnDouble__Group__2 : rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3 ;
+    // InternalLegoLang.g:3979:1: rule__UnDouble__Group__2 : rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3 ;
     public final void rule__UnDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3929:1: ( rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3 )
-            // InternalLegoLang.g:3930:2: rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3
+            // InternalLegoLang.g:3983:1: ( rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3 )
+            // InternalLegoLang.g:3984:2: rule__UnDouble__Group__2__Impl rule__UnDouble__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__UnDouble__Group__2__Impl();
@@ -12641,22 +12805,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__2__Impl"
-    // InternalLegoLang.g:3937:1: rule__UnDouble__Group__2__Impl : ( 'double' ) ;
+    // InternalLegoLang.g:3991:1: rule__UnDouble__Group__2__Impl : ( 'double' ) ;
     public final void rule__UnDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3941:1: ( ( 'double' ) )
-            // InternalLegoLang.g:3942:1: ( 'double' )
+            // InternalLegoLang.g:3995:1: ( ( 'double' ) )
+            // InternalLegoLang.g:3996:1: ( 'double' )
             {
-            // InternalLegoLang.g:3942:1: ( 'double' )
-            // InternalLegoLang.g:3943:2: 'double'
+            // InternalLegoLang.g:3996:1: ( 'double' )
+            // InternalLegoLang.g:3997:2: 'double'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getDoubleKeyword_2()); 
             }
-            match(input,38,FOLLOW_2); if (state.failed) return ;
+            match(input,39,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnDoubleAccess().getDoubleKeyword_2()); 
             }
@@ -12682,16 +12846,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__3"
-    // InternalLegoLang.g:3952:1: rule__UnDouble__Group__3 : rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4 ;
+    // InternalLegoLang.g:4006:1: rule__UnDouble__Group__3 : rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4 ;
     public final void rule__UnDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3956:1: ( rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4 )
-            // InternalLegoLang.g:3957:2: rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4
+            // InternalLegoLang.g:4010:1: ( rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4 )
+            // InternalLegoLang.g:4011:2: rule__UnDouble__Group__3__Impl rule__UnDouble__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnDouble__Group__3__Impl();
 
             state._fsp--;
@@ -12720,23 +12884,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__3__Impl"
-    // InternalLegoLang.g:3964:1: rule__UnDouble__Group__3__Impl : ( ( rule__UnDouble__NameAssignment_3 ) ) ;
+    // InternalLegoLang.g:4018:1: rule__UnDouble__Group__3__Impl : ( ( rule__UnDouble__NameAssignment_3 ) ) ;
     public final void rule__UnDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3968:1: ( ( ( rule__UnDouble__NameAssignment_3 ) ) )
-            // InternalLegoLang.g:3969:1: ( ( rule__UnDouble__NameAssignment_3 ) )
+            // InternalLegoLang.g:4022:1: ( ( ( rule__UnDouble__NameAssignment_3 ) ) )
+            // InternalLegoLang.g:4023:1: ( ( rule__UnDouble__NameAssignment_3 ) )
             {
-            // InternalLegoLang.g:3969:1: ( ( rule__UnDouble__NameAssignment_3 ) )
-            // InternalLegoLang.g:3970:2: ( rule__UnDouble__NameAssignment_3 )
+            // InternalLegoLang.g:4023:1: ( ( rule__UnDouble__NameAssignment_3 ) )
+            // InternalLegoLang.g:4024:2: ( rule__UnDouble__NameAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getNameAssignment_3()); 
             }
-            // InternalLegoLang.g:3971:2: ( rule__UnDouble__NameAssignment_3 )
-            // InternalLegoLang.g:3971:3: rule__UnDouble__NameAssignment_3
+            // InternalLegoLang.g:4025:2: ( rule__UnDouble__NameAssignment_3 )
+            // InternalLegoLang.g:4025:3: rule__UnDouble__NameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__NameAssignment_3();
@@ -12771,16 +12935,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__4"
-    // InternalLegoLang.g:3979:1: rule__UnDouble__Group__4 : rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5 ;
+    // InternalLegoLang.g:4033:1: rule__UnDouble__Group__4 : rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5 ;
     public final void rule__UnDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3983:1: ( rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5 )
-            // InternalLegoLang.g:3984:2: rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5
+            // InternalLegoLang.g:4037:1: ( rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5 )
+            // InternalLegoLang.g:4038:2: rule__UnDouble__Group__4__Impl rule__UnDouble__Group__5
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnDouble__Group__4__Impl();
 
             state._fsp--;
@@ -12809,31 +12973,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__4__Impl"
-    // InternalLegoLang.g:3991:1: rule__UnDouble__Group__4__Impl : ( ( rule__UnDouble__Group_4__0 )? ) ;
+    // InternalLegoLang.g:4045:1: rule__UnDouble__Group__4__Impl : ( ( rule__UnDouble__Group_4__0 )? ) ;
     public final void rule__UnDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:3995:1: ( ( ( rule__UnDouble__Group_4__0 )? ) )
-            // InternalLegoLang.g:3996:1: ( ( rule__UnDouble__Group_4__0 )? )
+            // InternalLegoLang.g:4049:1: ( ( ( rule__UnDouble__Group_4__0 )? ) )
+            // InternalLegoLang.g:4050:1: ( ( rule__UnDouble__Group_4__0 )? )
             {
-            // InternalLegoLang.g:3996:1: ( ( rule__UnDouble__Group_4__0 )? )
-            // InternalLegoLang.g:3997:2: ( rule__UnDouble__Group_4__0 )?
+            // InternalLegoLang.g:4050:1: ( ( rule__UnDouble__Group_4__0 )? )
+            // InternalLegoLang.g:4051:2: ( rule__UnDouble__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getGroup_4()); 
             }
-            // InternalLegoLang.g:3998:2: ( rule__UnDouble__Group_4__0 )?
+            // InternalLegoLang.g:4052:2: ( rule__UnDouble__Group_4__0 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==33) ) {
+            if ( (LA16_0==34) ) {
                 alt16=1;
             }
             switch (alt16) {
                 case 1 :
-                    // InternalLegoLang.g:3998:3: rule__UnDouble__Group_4__0
+                    // InternalLegoLang.g:4052:3: rule__UnDouble__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnDouble__Group_4__0();
@@ -12871,14 +13035,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__5"
-    // InternalLegoLang.g:4006:1: rule__UnDouble__Group__5 : rule__UnDouble__Group__5__Impl ;
+    // InternalLegoLang.g:4060:1: rule__UnDouble__Group__5 : rule__UnDouble__Group__5__Impl ;
     public final void rule__UnDouble__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4010:1: ( rule__UnDouble__Group__5__Impl )
-            // InternalLegoLang.g:4011:2: rule__UnDouble__Group__5__Impl
+            // InternalLegoLang.g:4064:1: ( rule__UnDouble__Group__5__Impl )
+            // InternalLegoLang.g:4065:2: rule__UnDouble__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__Group__5__Impl();
@@ -12904,22 +13068,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group__5__Impl"
-    // InternalLegoLang.g:4017:1: rule__UnDouble__Group__5__Impl : ( ';' ) ;
+    // InternalLegoLang.g:4071:1: rule__UnDouble__Group__5__Impl : ( ';' ) ;
     public final void rule__UnDouble__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4021:1: ( ( ';' ) )
-            // InternalLegoLang.g:4022:1: ( ';' )
+            // InternalLegoLang.g:4075:1: ( ( ';' ) )
+            // InternalLegoLang.g:4076:1: ( ';' )
             {
-            // InternalLegoLang.g:4022:1: ( ';' )
-            // InternalLegoLang.g:4023:2: ';'
+            // InternalLegoLang.g:4076:1: ( ';' )
+            // InternalLegoLang.g:4077:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getSemicolonKeyword_5()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnDoubleAccess().getSemicolonKeyword_5()); 
             }
@@ -12945,16 +13109,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__0"
-    // InternalLegoLang.g:4033:1: rule__UnDouble__Group_4__0 : rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1 ;
+    // InternalLegoLang.g:4087:1: rule__UnDouble__Group_4__0 : rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1 ;
     public final void rule__UnDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4037:1: ( rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1 )
-            // InternalLegoLang.g:4038:2: rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1
+            // InternalLegoLang.g:4091:1: ( rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1 )
+            // InternalLegoLang.g:4092:2: rule__UnDouble__Group_4__0__Impl rule__UnDouble__Group_4__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__UnDouble__Group_4__0__Impl();
 
             state._fsp--;
@@ -12983,22 +13147,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__0__Impl"
-    // InternalLegoLang.g:4045:1: rule__UnDouble__Group_4__0__Impl : ( '=' ) ;
+    // InternalLegoLang.g:4099:1: rule__UnDouble__Group_4__0__Impl : ( '=' ) ;
     public final void rule__UnDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4049:1: ( ( '=' ) )
-            // InternalLegoLang.g:4050:1: ( '=' )
+            // InternalLegoLang.g:4103:1: ( ( '=' ) )
+            // InternalLegoLang.g:4104:1: ( '=' )
             {
-            // InternalLegoLang.g:4050:1: ( '=' )
-            // InternalLegoLang.g:4051:2: '='
+            // InternalLegoLang.g:4104:1: ( '=' )
+            // InternalLegoLang.g:4105:2: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getEqualsSignKeyword_4_0()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnDoubleAccess().getEqualsSignKeyword_4_0()); 
             }
@@ -13024,16 +13188,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__1"
-    // InternalLegoLang.g:4060:1: rule__UnDouble__Group_4__1 : rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2 ;
+    // InternalLegoLang.g:4114:1: rule__UnDouble__Group_4__1 : rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2 ;
     public final void rule__UnDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4064:1: ( rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2 )
-            // InternalLegoLang.g:4065:2: rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2
+            // InternalLegoLang.g:4118:1: ( rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2 )
+            // InternalLegoLang.g:4119:2: rule__UnDouble__Group_4__1__Impl rule__UnDouble__Group_4__2
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             rule__UnDouble__Group_4__1__Impl();
 
             state._fsp--;
@@ -13062,23 +13226,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__1__Impl"
-    // InternalLegoLang.g:4072:1: rule__UnDouble__Group_4__1__Impl : ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) ) ;
+    // InternalLegoLang.g:4126:1: rule__UnDouble__Group_4__1__Impl : ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) ) ;
     public final void rule__UnDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4076:1: ( ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) ) )
-            // InternalLegoLang.g:4077:1: ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) )
+            // InternalLegoLang.g:4130:1: ( ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) ) )
+            // InternalLegoLang.g:4131:1: ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) )
             {
-            // InternalLegoLang.g:4077:1: ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) )
-            // InternalLegoLang.g:4078:2: ( rule__UnDouble__InitialeValue1Assignment_4_1 )
+            // InternalLegoLang.g:4131:1: ( ( rule__UnDouble__InitialeValue1Assignment_4_1 ) )
+            // InternalLegoLang.g:4132:2: ( rule__UnDouble__InitialeValue1Assignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getInitialeValue1Assignment_4_1()); 
             }
-            // InternalLegoLang.g:4079:2: ( rule__UnDouble__InitialeValue1Assignment_4_1 )
-            // InternalLegoLang.g:4079:3: rule__UnDouble__InitialeValue1Assignment_4_1
+            // InternalLegoLang.g:4133:2: ( rule__UnDouble__InitialeValue1Assignment_4_1 )
+            // InternalLegoLang.g:4133:3: rule__UnDouble__InitialeValue1Assignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__InitialeValue1Assignment_4_1();
@@ -13113,14 +13277,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__2"
-    // InternalLegoLang.g:4087:1: rule__UnDouble__Group_4__2 : rule__UnDouble__Group_4__2__Impl ;
+    // InternalLegoLang.g:4141:1: rule__UnDouble__Group_4__2 : rule__UnDouble__Group_4__2__Impl ;
     public final void rule__UnDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4091:1: ( rule__UnDouble__Group_4__2__Impl )
-            // InternalLegoLang.g:4092:2: rule__UnDouble__Group_4__2__Impl
+            // InternalLegoLang.g:4145:1: ( rule__UnDouble__Group_4__2__Impl )
+            // InternalLegoLang.g:4146:2: rule__UnDouble__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__Group_4__2__Impl();
@@ -13146,31 +13310,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4__2__Impl"
-    // InternalLegoLang.g:4098:1: rule__UnDouble__Group_4__2__Impl : ( ( rule__UnDouble__Group_4_2__0 )? ) ;
+    // InternalLegoLang.g:4152:1: rule__UnDouble__Group_4__2__Impl : ( ( rule__UnDouble__Group_4_2__0 )? ) ;
     public final void rule__UnDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4102:1: ( ( ( rule__UnDouble__Group_4_2__0 )? ) )
-            // InternalLegoLang.g:4103:1: ( ( rule__UnDouble__Group_4_2__0 )? )
+            // InternalLegoLang.g:4156:1: ( ( ( rule__UnDouble__Group_4_2__0 )? ) )
+            // InternalLegoLang.g:4157:1: ( ( rule__UnDouble__Group_4_2__0 )? )
             {
-            // InternalLegoLang.g:4103:1: ( ( rule__UnDouble__Group_4_2__0 )? )
-            // InternalLegoLang.g:4104:2: ( rule__UnDouble__Group_4_2__0 )?
+            // InternalLegoLang.g:4157:1: ( ( rule__UnDouble__Group_4_2__0 )? )
+            // InternalLegoLang.g:4158:2: ( rule__UnDouble__Group_4_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getGroup_4_2()); 
             }
-            // InternalLegoLang.g:4105:2: ( rule__UnDouble__Group_4_2__0 )?
+            // InternalLegoLang.g:4159:2: ( rule__UnDouble__Group_4_2__0 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==39) ) {
+            if ( (LA17_0==40) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
-                    // InternalLegoLang.g:4105:3: rule__UnDouble__Group_4_2__0
+                    // InternalLegoLang.g:4159:3: rule__UnDouble__Group_4_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnDouble__Group_4_2__0();
@@ -13208,16 +13372,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4_2__0"
-    // InternalLegoLang.g:4114:1: rule__UnDouble__Group_4_2__0 : rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1 ;
+    // InternalLegoLang.g:4168:1: rule__UnDouble__Group_4_2__0 : rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1 ;
     public final void rule__UnDouble__Group_4_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4118:1: ( rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1 )
-            // InternalLegoLang.g:4119:2: rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1
+            // InternalLegoLang.g:4172:1: ( rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1 )
+            // InternalLegoLang.g:4173:2: rule__UnDouble__Group_4_2__0__Impl rule__UnDouble__Group_4_2__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__UnDouble__Group_4_2__0__Impl();
 
             state._fsp--;
@@ -13246,22 +13410,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4_2__0__Impl"
-    // InternalLegoLang.g:4126:1: rule__UnDouble__Group_4_2__0__Impl : ( '.' ) ;
+    // InternalLegoLang.g:4180:1: rule__UnDouble__Group_4_2__0__Impl : ( '.' ) ;
     public final void rule__UnDouble__Group_4_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4130:1: ( ( '.' ) )
-            // InternalLegoLang.g:4131:1: ( '.' )
+            // InternalLegoLang.g:4184:1: ( ( '.' ) )
+            // InternalLegoLang.g:4185:1: ( '.' )
             {
-            // InternalLegoLang.g:4131:1: ( '.' )
-            // InternalLegoLang.g:4132:2: '.'
+            // InternalLegoLang.g:4185:1: ( '.' )
+            // InternalLegoLang.g:4186:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getFullStopKeyword_4_2_0()); 
             }
-            match(input,39,FOLLOW_2); if (state.failed) return ;
+            match(input,40,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnDoubleAccess().getFullStopKeyword_4_2_0()); 
             }
@@ -13287,14 +13451,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4_2__1"
-    // InternalLegoLang.g:4141:1: rule__UnDouble__Group_4_2__1 : rule__UnDouble__Group_4_2__1__Impl ;
+    // InternalLegoLang.g:4195:1: rule__UnDouble__Group_4_2__1 : rule__UnDouble__Group_4_2__1__Impl ;
     public final void rule__UnDouble__Group_4_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4145:1: ( rule__UnDouble__Group_4_2__1__Impl )
-            // InternalLegoLang.g:4146:2: rule__UnDouble__Group_4_2__1__Impl
+            // InternalLegoLang.g:4199:1: ( rule__UnDouble__Group_4_2__1__Impl )
+            // InternalLegoLang.g:4200:2: rule__UnDouble__Group_4_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__Group_4_2__1__Impl();
@@ -13320,23 +13484,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__Group_4_2__1__Impl"
-    // InternalLegoLang.g:4152:1: rule__UnDouble__Group_4_2__1__Impl : ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) ) ;
+    // InternalLegoLang.g:4206:1: rule__UnDouble__Group_4_2__1__Impl : ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) ) ;
     public final void rule__UnDouble__Group_4_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4156:1: ( ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) ) )
-            // InternalLegoLang.g:4157:1: ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) )
+            // InternalLegoLang.g:4210:1: ( ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) ) )
+            // InternalLegoLang.g:4211:1: ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) )
             {
-            // InternalLegoLang.g:4157:1: ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) )
-            // InternalLegoLang.g:4158:2: ( rule__UnDouble__InitialeValue2Assignment_4_2_1 )
+            // InternalLegoLang.g:4211:1: ( ( rule__UnDouble__InitialeValue2Assignment_4_2_1 ) )
+            // InternalLegoLang.g:4212:2: ( rule__UnDouble__InitialeValue2Assignment_4_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getInitialeValue2Assignment_4_2_1()); 
             }
-            // InternalLegoLang.g:4159:2: ( rule__UnDouble__InitialeValue2Assignment_4_2_1 )
-            // InternalLegoLang.g:4159:3: rule__UnDouble__InitialeValue2Assignment_4_2_1
+            // InternalLegoLang.g:4213:2: ( rule__UnDouble__InitialeValue2Assignment_4_2_1 )
+            // InternalLegoLang.g:4213:3: rule__UnDouble__InitialeValue2Assignment_4_2_1
             {
             pushFollow(FOLLOW_2);
             rule__UnDouble__InitialeValue2Assignment_4_2_1();
@@ -13371,16 +13535,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__0"
-    // InternalLegoLang.g:4168:1: rule__UnBoolean__Group__0 : rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1 ;
+    // InternalLegoLang.g:4222:1: rule__UnBoolean__Group__0 : rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1 ;
     public final void rule__UnBoolean__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4172:1: ( rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1 )
-            // InternalLegoLang.g:4173:2: rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1
+            // InternalLegoLang.g:4226:1: ( rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1 )
+            // InternalLegoLang.g:4227:2: rule__UnBoolean__Group__0__Impl rule__UnBoolean__Group__1
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__UnBoolean__Group__0__Impl();
 
             state._fsp--;
@@ -13409,23 +13573,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__0__Impl"
-    // InternalLegoLang.g:4180:1: rule__UnBoolean__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4234:1: rule__UnBoolean__Group__0__Impl : ( () ) ;
     public final void rule__UnBoolean__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4184:1: ( ( () ) )
-            // InternalLegoLang.g:4185:1: ( () )
+            // InternalLegoLang.g:4238:1: ( ( () ) )
+            // InternalLegoLang.g:4239:1: ( () )
             {
-            // InternalLegoLang.g:4185:1: ( () )
-            // InternalLegoLang.g:4186:2: ()
+            // InternalLegoLang.g:4239:1: ( () )
+            // InternalLegoLang.g:4240:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getUnBooleanAction_0()); 
             }
-            // InternalLegoLang.g:4187:2: ()
-            // InternalLegoLang.g:4187:3: 
+            // InternalLegoLang.g:4241:2: ()
+            // InternalLegoLang.g:4241:3: 
             {
             }
 
@@ -13450,16 +13614,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__1"
-    // InternalLegoLang.g:4195:1: rule__UnBoolean__Group__1 : rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2 ;
+    // InternalLegoLang.g:4249:1: rule__UnBoolean__Group__1 : rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2 ;
     public final void rule__UnBoolean__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4199:1: ( rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2 )
-            // InternalLegoLang.g:4200:2: rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2
+            // InternalLegoLang.g:4253:1: ( rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2 )
+            // InternalLegoLang.g:4254:2: rule__UnBoolean__Group__1__Impl rule__UnBoolean__Group__2
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__UnBoolean__Group__1__Impl();
 
             state._fsp--;
@@ -13488,31 +13652,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__1__Impl"
-    // InternalLegoLang.g:4207:1: rule__UnBoolean__Group__1__Impl : ( ( rule__UnBoolean__IsConstAssignment_1 )? ) ;
+    // InternalLegoLang.g:4261:1: rule__UnBoolean__Group__1__Impl : ( ( rule__UnBoolean__IsConstAssignment_1 )? ) ;
     public final void rule__UnBoolean__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4211:1: ( ( ( rule__UnBoolean__IsConstAssignment_1 )? ) )
-            // InternalLegoLang.g:4212:1: ( ( rule__UnBoolean__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:4265:1: ( ( ( rule__UnBoolean__IsConstAssignment_1 )? ) )
+            // InternalLegoLang.g:4266:1: ( ( rule__UnBoolean__IsConstAssignment_1 )? )
             {
-            // InternalLegoLang.g:4212:1: ( ( rule__UnBoolean__IsConstAssignment_1 )? )
-            // InternalLegoLang.g:4213:2: ( rule__UnBoolean__IsConstAssignment_1 )?
+            // InternalLegoLang.g:4266:1: ( ( rule__UnBoolean__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:4267:2: ( rule__UnBoolean__IsConstAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getIsConstAssignment_1()); 
             }
-            // InternalLegoLang.g:4214:2: ( rule__UnBoolean__IsConstAssignment_1 )?
+            // InternalLegoLang.g:4268:2: ( rule__UnBoolean__IsConstAssignment_1 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==42) ) {
+            if ( (LA18_0==43) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
-                    // InternalLegoLang.g:4214:3: rule__UnBoolean__IsConstAssignment_1
+                    // InternalLegoLang.g:4268:3: rule__UnBoolean__IsConstAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnBoolean__IsConstAssignment_1();
@@ -13550,14 +13714,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__2"
-    // InternalLegoLang.g:4222:1: rule__UnBoolean__Group__2 : rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3 ;
+    // InternalLegoLang.g:4276:1: rule__UnBoolean__Group__2 : rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3 ;
     public final void rule__UnBoolean__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4226:1: ( rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3 )
-            // InternalLegoLang.g:4227:2: rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3
+            // InternalLegoLang.g:4280:1: ( rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3 )
+            // InternalLegoLang.g:4281:2: rule__UnBoolean__Group__2__Impl rule__UnBoolean__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__UnBoolean__Group__2__Impl();
@@ -13588,22 +13752,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__2__Impl"
-    // InternalLegoLang.g:4234:1: rule__UnBoolean__Group__2__Impl : ( 'bool' ) ;
+    // InternalLegoLang.g:4288:1: rule__UnBoolean__Group__2__Impl : ( 'bool' ) ;
     public final void rule__UnBoolean__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4238:1: ( ( 'bool' ) )
-            // InternalLegoLang.g:4239:1: ( 'bool' )
+            // InternalLegoLang.g:4292:1: ( ( 'bool' ) )
+            // InternalLegoLang.g:4293:1: ( 'bool' )
             {
-            // InternalLegoLang.g:4239:1: ( 'bool' )
-            // InternalLegoLang.g:4240:2: 'bool'
+            // InternalLegoLang.g:4293:1: ( 'bool' )
+            // InternalLegoLang.g:4294:2: 'bool'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getBoolKeyword_2()); 
             }
-            match(input,40,FOLLOW_2); if (state.failed) return ;
+            match(input,41,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnBooleanAccess().getBoolKeyword_2()); 
             }
@@ -13629,16 +13793,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__3"
-    // InternalLegoLang.g:4249:1: rule__UnBoolean__Group__3 : rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4 ;
+    // InternalLegoLang.g:4303:1: rule__UnBoolean__Group__3 : rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4 ;
     public final void rule__UnBoolean__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4253:1: ( rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4 )
-            // InternalLegoLang.g:4254:2: rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4
+            // InternalLegoLang.g:4307:1: ( rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4 )
+            // InternalLegoLang.g:4308:2: rule__UnBoolean__Group__3__Impl rule__UnBoolean__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnBoolean__Group__3__Impl();
 
             state._fsp--;
@@ -13667,23 +13831,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__3__Impl"
-    // InternalLegoLang.g:4261:1: rule__UnBoolean__Group__3__Impl : ( ( rule__UnBoolean__NameAssignment_3 ) ) ;
+    // InternalLegoLang.g:4315:1: rule__UnBoolean__Group__3__Impl : ( ( rule__UnBoolean__NameAssignment_3 ) ) ;
     public final void rule__UnBoolean__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4265:1: ( ( ( rule__UnBoolean__NameAssignment_3 ) ) )
-            // InternalLegoLang.g:4266:1: ( ( rule__UnBoolean__NameAssignment_3 ) )
+            // InternalLegoLang.g:4319:1: ( ( ( rule__UnBoolean__NameAssignment_3 ) ) )
+            // InternalLegoLang.g:4320:1: ( ( rule__UnBoolean__NameAssignment_3 ) )
             {
-            // InternalLegoLang.g:4266:1: ( ( rule__UnBoolean__NameAssignment_3 ) )
-            // InternalLegoLang.g:4267:2: ( rule__UnBoolean__NameAssignment_3 )
+            // InternalLegoLang.g:4320:1: ( ( rule__UnBoolean__NameAssignment_3 ) )
+            // InternalLegoLang.g:4321:2: ( rule__UnBoolean__NameAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getNameAssignment_3()); 
             }
-            // InternalLegoLang.g:4268:2: ( rule__UnBoolean__NameAssignment_3 )
-            // InternalLegoLang.g:4268:3: rule__UnBoolean__NameAssignment_3
+            // InternalLegoLang.g:4322:2: ( rule__UnBoolean__NameAssignment_3 )
+            // InternalLegoLang.g:4322:3: rule__UnBoolean__NameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__UnBoolean__NameAssignment_3();
@@ -13718,16 +13882,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__4"
-    // InternalLegoLang.g:4276:1: rule__UnBoolean__Group__4 : rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5 ;
+    // InternalLegoLang.g:4330:1: rule__UnBoolean__Group__4 : rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5 ;
     public final void rule__UnBoolean__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4280:1: ( rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5 )
-            // InternalLegoLang.g:4281:2: rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5
+            // InternalLegoLang.g:4334:1: ( rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5 )
+            // InternalLegoLang.g:4335:2: rule__UnBoolean__Group__4__Impl rule__UnBoolean__Group__5
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnBoolean__Group__4__Impl();
 
             state._fsp--;
@@ -13756,31 +13920,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__4__Impl"
-    // InternalLegoLang.g:4288:1: rule__UnBoolean__Group__4__Impl : ( ( rule__UnBoolean__Group_4__0 )? ) ;
+    // InternalLegoLang.g:4342:1: rule__UnBoolean__Group__4__Impl : ( ( rule__UnBoolean__Group_4__0 )? ) ;
     public final void rule__UnBoolean__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4292:1: ( ( ( rule__UnBoolean__Group_4__0 )? ) )
-            // InternalLegoLang.g:4293:1: ( ( rule__UnBoolean__Group_4__0 )? )
+            // InternalLegoLang.g:4346:1: ( ( ( rule__UnBoolean__Group_4__0 )? ) )
+            // InternalLegoLang.g:4347:1: ( ( rule__UnBoolean__Group_4__0 )? )
             {
-            // InternalLegoLang.g:4293:1: ( ( rule__UnBoolean__Group_4__0 )? )
-            // InternalLegoLang.g:4294:2: ( rule__UnBoolean__Group_4__0 )?
+            // InternalLegoLang.g:4347:1: ( ( rule__UnBoolean__Group_4__0 )? )
+            // InternalLegoLang.g:4348:2: ( rule__UnBoolean__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getGroup_4()); 
             }
-            // InternalLegoLang.g:4295:2: ( rule__UnBoolean__Group_4__0 )?
+            // InternalLegoLang.g:4349:2: ( rule__UnBoolean__Group_4__0 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==33) ) {
+            if ( (LA19_0==34) ) {
                 alt19=1;
             }
             switch (alt19) {
                 case 1 :
-                    // InternalLegoLang.g:4295:3: rule__UnBoolean__Group_4__0
+                    // InternalLegoLang.g:4349:3: rule__UnBoolean__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnBoolean__Group_4__0();
@@ -13818,14 +13982,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__5"
-    // InternalLegoLang.g:4303:1: rule__UnBoolean__Group__5 : rule__UnBoolean__Group__5__Impl ;
+    // InternalLegoLang.g:4357:1: rule__UnBoolean__Group__5 : rule__UnBoolean__Group__5__Impl ;
     public final void rule__UnBoolean__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4307:1: ( rule__UnBoolean__Group__5__Impl )
-            // InternalLegoLang.g:4308:2: rule__UnBoolean__Group__5__Impl
+            // InternalLegoLang.g:4361:1: ( rule__UnBoolean__Group__5__Impl )
+            // InternalLegoLang.g:4362:2: rule__UnBoolean__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnBoolean__Group__5__Impl();
@@ -13851,22 +14015,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group__5__Impl"
-    // InternalLegoLang.g:4314:1: rule__UnBoolean__Group__5__Impl : ( ';' ) ;
+    // InternalLegoLang.g:4368:1: rule__UnBoolean__Group__5__Impl : ( ';' ) ;
     public final void rule__UnBoolean__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4318:1: ( ( ';' ) )
-            // InternalLegoLang.g:4319:1: ( ';' )
+            // InternalLegoLang.g:4372:1: ( ( ';' ) )
+            // InternalLegoLang.g:4373:1: ( ';' )
             {
-            // InternalLegoLang.g:4319:1: ( ';' )
-            // InternalLegoLang.g:4320:2: ';'
+            // InternalLegoLang.g:4373:1: ( ';' )
+            // InternalLegoLang.g:4374:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getSemicolonKeyword_5()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnBooleanAccess().getSemicolonKeyword_5()); 
             }
@@ -13892,14 +14056,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group_4__0"
-    // InternalLegoLang.g:4330:1: rule__UnBoolean__Group_4__0 : rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1 ;
+    // InternalLegoLang.g:4384:1: rule__UnBoolean__Group_4__0 : rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1 ;
     public final void rule__UnBoolean__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4334:1: ( rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1 )
-            // InternalLegoLang.g:4335:2: rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1
+            // InternalLegoLang.g:4388:1: ( rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1 )
+            // InternalLegoLang.g:4389:2: rule__UnBoolean__Group_4__0__Impl rule__UnBoolean__Group_4__1
             {
             pushFollow(FOLLOW_12);
             rule__UnBoolean__Group_4__0__Impl();
@@ -13930,22 +14094,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group_4__0__Impl"
-    // InternalLegoLang.g:4342:1: rule__UnBoolean__Group_4__0__Impl : ( '=' ) ;
+    // InternalLegoLang.g:4396:1: rule__UnBoolean__Group_4__0__Impl : ( '=' ) ;
     public final void rule__UnBoolean__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4346:1: ( ( '=' ) )
-            // InternalLegoLang.g:4347:1: ( '=' )
+            // InternalLegoLang.g:4400:1: ( ( '=' ) )
+            // InternalLegoLang.g:4401:1: ( '=' )
             {
-            // InternalLegoLang.g:4347:1: ( '=' )
-            // InternalLegoLang.g:4348:2: '='
+            // InternalLegoLang.g:4401:1: ( '=' )
+            // InternalLegoLang.g:4402:2: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getEqualsSignKeyword_4_0()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnBooleanAccess().getEqualsSignKeyword_4_0()); 
             }
@@ -13971,14 +14135,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group_4__1"
-    // InternalLegoLang.g:4357:1: rule__UnBoolean__Group_4__1 : rule__UnBoolean__Group_4__1__Impl ;
+    // InternalLegoLang.g:4411:1: rule__UnBoolean__Group_4__1 : rule__UnBoolean__Group_4__1__Impl ;
     public final void rule__UnBoolean__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4361:1: ( rule__UnBoolean__Group_4__1__Impl )
-            // InternalLegoLang.g:4362:2: rule__UnBoolean__Group_4__1__Impl
+            // InternalLegoLang.g:4415:1: ( rule__UnBoolean__Group_4__1__Impl )
+            // InternalLegoLang.g:4416:2: rule__UnBoolean__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnBoolean__Group_4__1__Impl();
@@ -14004,23 +14168,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__Group_4__1__Impl"
-    // InternalLegoLang.g:4368:1: rule__UnBoolean__Group_4__1__Impl : ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) ) ;
+    // InternalLegoLang.g:4422:1: rule__UnBoolean__Group_4__1__Impl : ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) ) ;
     public final void rule__UnBoolean__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4372:1: ( ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) ) )
-            // InternalLegoLang.g:4373:1: ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:4426:1: ( ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) ) )
+            // InternalLegoLang.g:4427:1: ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) )
             {
-            // InternalLegoLang.g:4373:1: ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) )
-            // InternalLegoLang.g:4374:2: ( rule__UnBoolean__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:4427:1: ( ( rule__UnBoolean__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:4428:2: ( rule__UnBoolean__InitialeValueAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getInitialeValueAssignment_4_1()); 
             }
-            // InternalLegoLang.g:4375:2: ( rule__UnBoolean__InitialeValueAssignment_4_1 )
-            // InternalLegoLang.g:4375:3: rule__UnBoolean__InitialeValueAssignment_4_1
+            // InternalLegoLang.g:4429:2: ( rule__UnBoolean__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:4429:3: rule__UnBoolean__InitialeValueAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__UnBoolean__InitialeValueAssignment_4_1();
@@ -14055,16 +14219,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__0"
-    // InternalLegoLang.g:4384:1: rule__UnString__Group__0 : rule__UnString__Group__0__Impl rule__UnString__Group__1 ;
+    // InternalLegoLang.g:4438:1: rule__UnString__Group__0 : rule__UnString__Group__0__Impl rule__UnString__Group__1 ;
     public final void rule__UnString__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4388:1: ( rule__UnString__Group__0__Impl rule__UnString__Group__1 )
-            // InternalLegoLang.g:4389:2: rule__UnString__Group__0__Impl rule__UnString__Group__1
+            // InternalLegoLang.g:4442:1: ( rule__UnString__Group__0__Impl rule__UnString__Group__1 )
+            // InternalLegoLang.g:4443:2: rule__UnString__Group__0__Impl rule__UnString__Group__1
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__UnString__Group__0__Impl();
 
             state._fsp--;
@@ -14093,23 +14257,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__0__Impl"
-    // InternalLegoLang.g:4396:1: rule__UnString__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4450:1: rule__UnString__Group__0__Impl : ( () ) ;
     public final void rule__UnString__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4400:1: ( ( () ) )
-            // InternalLegoLang.g:4401:1: ( () )
+            // InternalLegoLang.g:4454:1: ( ( () ) )
+            // InternalLegoLang.g:4455:1: ( () )
             {
-            // InternalLegoLang.g:4401:1: ( () )
-            // InternalLegoLang.g:4402:2: ()
+            // InternalLegoLang.g:4455:1: ( () )
+            // InternalLegoLang.g:4456:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getUnStringAction_0()); 
             }
-            // InternalLegoLang.g:4403:2: ()
-            // InternalLegoLang.g:4403:3: 
+            // InternalLegoLang.g:4457:2: ()
+            // InternalLegoLang.g:4457:3: 
             {
             }
 
@@ -14134,16 +14298,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__1"
-    // InternalLegoLang.g:4411:1: rule__UnString__Group__1 : rule__UnString__Group__1__Impl rule__UnString__Group__2 ;
+    // InternalLegoLang.g:4465:1: rule__UnString__Group__1 : rule__UnString__Group__1__Impl rule__UnString__Group__2 ;
     public final void rule__UnString__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4415:1: ( rule__UnString__Group__1__Impl rule__UnString__Group__2 )
-            // InternalLegoLang.g:4416:2: rule__UnString__Group__1__Impl rule__UnString__Group__2
+            // InternalLegoLang.g:4469:1: ( rule__UnString__Group__1__Impl rule__UnString__Group__2 )
+            // InternalLegoLang.g:4470:2: rule__UnString__Group__1__Impl rule__UnString__Group__2
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__UnString__Group__1__Impl();
 
             state._fsp--;
@@ -14172,31 +14336,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__1__Impl"
-    // InternalLegoLang.g:4423:1: rule__UnString__Group__1__Impl : ( ( rule__UnString__IsConstAssignment_1 )? ) ;
+    // InternalLegoLang.g:4477:1: rule__UnString__Group__1__Impl : ( ( rule__UnString__IsConstAssignment_1 )? ) ;
     public final void rule__UnString__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4427:1: ( ( ( rule__UnString__IsConstAssignment_1 )? ) )
-            // InternalLegoLang.g:4428:1: ( ( rule__UnString__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:4481:1: ( ( ( rule__UnString__IsConstAssignment_1 )? ) )
+            // InternalLegoLang.g:4482:1: ( ( rule__UnString__IsConstAssignment_1 )? )
             {
-            // InternalLegoLang.g:4428:1: ( ( rule__UnString__IsConstAssignment_1 )? )
-            // InternalLegoLang.g:4429:2: ( rule__UnString__IsConstAssignment_1 )?
+            // InternalLegoLang.g:4482:1: ( ( rule__UnString__IsConstAssignment_1 )? )
+            // InternalLegoLang.g:4483:2: ( rule__UnString__IsConstAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getIsConstAssignment_1()); 
             }
-            // InternalLegoLang.g:4430:2: ( rule__UnString__IsConstAssignment_1 )?
+            // InternalLegoLang.g:4484:2: ( rule__UnString__IsConstAssignment_1 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==42) ) {
+            if ( (LA20_0==43) ) {
                 alt20=1;
             }
             switch (alt20) {
                 case 1 :
-                    // InternalLegoLang.g:4430:3: rule__UnString__IsConstAssignment_1
+                    // InternalLegoLang.g:4484:3: rule__UnString__IsConstAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnString__IsConstAssignment_1();
@@ -14234,14 +14398,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__2"
-    // InternalLegoLang.g:4438:1: rule__UnString__Group__2 : rule__UnString__Group__2__Impl rule__UnString__Group__3 ;
+    // InternalLegoLang.g:4492:1: rule__UnString__Group__2 : rule__UnString__Group__2__Impl rule__UnString__Group__3 ;
     public final void rule__UnString__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4442:1: ( rule__UnString__Group__2__Impl rule__UnString__Group__3 )
-            // InternalLegoLang.g:4443:2: rule__UnString__Group__2__Impl rule__UnString__Group__3
+            // InternalLegoLang.g:4496:1: ( rule__UnString__Group__2__Impl rule__UnString__Group__3 )
+            // InternalLegoLang.g:4497:2: rule__UnString__Group__2__Impl rule__UnString__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__UnString__Group__2__Impl();
@@ -14272,22 +14436,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__2__Impl"
-    // InternalLegoLang.g:4450:1: rule__UnString__Group__2__Impl : ( 'string' ) ;
+    // InternalLegoLang.g:4504:1: rule__UnString__Group__2__Impl : ( 'string' ) ;
     public final void rule__UnString__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4454:1: ( ( 'string' ) )
-            // InternalLegoLang.g:4455:1: ( 'string' )
+            // InternalLegoLang.g:4508:1: ( ( 'string' ) )
+            // InternalLegoLang.g:4509:1: ( 'string' )
             {
-            // InternalLegoLang.g:4455:1: ( 'string' )
-            // InternalLegoLang.g:4456:2: 'string'
+            // InternalLegoLang.g:4509:1: ( 'string' )
+            // InternalLegoLang.g:4510:2: 'string'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getStringKeyword_2()); 
             }
-            match(input,41,FOLLOW_2); if (state.failed) return ;
+            match(input,42,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnStringAccess().getStringKeyword_2()); 
             }
@@ -14313,16 +14477,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__3"
-    // InternalLegoLang.g:4465:1: rule__UnString__Group__3 : rule__UnString__Group__3__Impl rule__UnString__Group__4 ;
+    // InternalLegoLang.g:4519:1: rule__UnString__Group__3 : rule__UnString__Group__3__Impl rule__UnString__Group__4 ;
     public final void rule__UnString__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4469:1: ( rule__UnString__Group__3__Impl rule__UnString__Group__4 )
-            // InternalLegoLang.g:4470:2: rule__UnString__Group__3__Impl rule__UnString__Group__4
+            // InternalLegoLang.g:4523:1: ( rule__UnString__Group__3__Impl rule__UnString__Group__4 )
+            // InternalLegoLang.g:4524:2: rule__UnString__Group__3__Impl rule__UnString__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnString__Group__3__Impl();
 
             state._fsp--;
@@ -14351,23 +14515,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__3__Impl"
-    // InternalLegoLang.g:4477:1: rule__UnString__Group__3__Impl : ( ( rule__UnString__NameAssignment_3 ) ) ;
+    // InternalLegoLang.g:4531:1: rule__UnString__Group__3__Impl : ( ( rule__UnString__NameAssignment_3 ) ) ;
     public final void rule__UnString__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4481:1: ( ( ( rule__UnString__NameAssignment_3 ) ) )
-            // InternalLegoLang.g:4482:1: ( ( rule__UnString__NameAssignment_3 ) )
+            // InternalLegoLang.g:4535:1: ( ( ( rule__UnString__NameAssignment_3 ) ) )
+            // InternalLegoLang.g:4536:1: ( ( rule__UnString__NameAssignment_3 ) )
             {
-            // InternalLegoLang.g:4482:1: ( ( rule__UnString__NameAssignment_3 ) )
-            // InternalLegoLang.g:4483:2: ( rule__UnString__NameAssignment_3 )
+            // InternalLegoLang.g:4536:1: ( ( rule__UnString__NameAssignment_3 ) )
+            // InternalLegoLang.g:4537:2: ( rule__UnString__NameAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getNameAssignment_3()); 
             }
-            // InternalLegoLang.g:4484:2: ( rule__UnString__NameAssignment_3 )
-            // InternalLegoLang.g:4484:3: rule__UnString__NameAssignment_3
+            // InternalLegoLang.g:4538:2: ( rule__UnString__NameAssignment_3 )
+            // InternalLegoLang.g:4538:3: rule__UnString__NameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__UnString__NameAssignment_3();
@@ -14402,16 +14566,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__4"
-    // InternalLegoLang.g:4492:1: rule__UnString__Group__4 : rule__UnString__Group__4__Impl rule__UnString__Group__5 ;
+    // InternalLegoLang.g:4546:1: rule__UnString__Group__4 : rule__UnString__Group__4__Impl rule__UnString__Group__5 ;
     public final void rule__UnString__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4496:1: ( rule__UnString__Group__4__Impl rule__UnString__Group__5 )
-            // InternalLegoLang.g:4497:2: rule__UnString__Group__4__Impl rule__UnString__Group__5
+            // InternalLegoLang.g:4550:1: ( rule__UnString__Group__4__Impl rule__UnString__Group__5 )
+            // InternalLegoLang.g:4551:2: rule__UnString__Group__4__Impl rule__UnString__Group__5
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_31);
             rule__UnString__Group__4__Impl();
 
             state._fsp--;
@@ -14440,31 +14604,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__4__Impl"
-    // InternalLegoLang.g:4504:1: rule__UnString__Group__4__Impl : ( ( rule__UnString__Group_4__0 )? ) ;
+    // InternalLegoLang.g:4558:1: rule__UnString__Group__4__Impl : ( ( rule__UnString__Group_4__0 )? ) ;
     public final void rule__UnString__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4508:1: ( ( ( rule__UnString__Group_4__0 )? ) )
-            // InternalLegoLang.g:4509:1: ( ( rule__UnString__Group_4__0 )? )
+            // InternalLegoLang.g:4562:1: ( ( ( rule__UnString__Group_4__0 )? ) )
+            // InternalLegoLang.g:4563:1: ( ( rule__UnString__Group_4__0 )? )
             {
-            // InternalLegoLang.g:4509:1: ( ( rule__UnString__Group_4__0 )? )
-            // InternalLegoLang.g:4510:2: ( rule__UnString__Group_4__0 )?
+            // InternalLegoLang.g:4563:1: ( ( rule__UnString__Group_4__0 )? )
+            // InternalLegoLang.g:4564:2: ( rule__UnString__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getGroup_4()); 
             }
-            // InternalLegoLang.g:4511:2: ( rule__UnString__Group_4__0 )?
+            // InternalLegoLang.g:4565:2: ( rule__UnString__Group_4__0 )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==33) ) {
+            if ( (LA21_0==34) ) {
                 alt21=1;
             }
             switch (alt21) {
                 case 1 :
-                    // InternalLegoLang.g:4511:3: rule__UnString__Group_4__0
+                    // InternalLegoLang.g:4565:3: rule__UnString__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__UnString__Group_4__0();
@@ -14502,14 +14666,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__5"
-    // InternalLegoLang.g:4519:1: rule__UnString__Group__5 : rule__UnString__Group__5__Impl ;
+    // InternalLegoLang.g:4573:1: rule__UnString__Group__5 : rule__UnString__Group__5__Impl ;
     public final void rule__UnString__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4523:1: ( rule__UnString__Group__5__Impl )
-            // InternalLegoLang.g:4524:2: rule__UnString__Group__5__Impl
+            // InternalLegoLang.g:4577:1: ( rule__UnString__Group__5__Impl )
+            // InternalLegoLang.g:4578:2: rule__UnString__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnString__Group__5__Impl();
@@ -14535,22 +14699,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group__5__Impl"
-    // InternalLegoLang.g:4530:1: rule__UnString__Group__5__Impl : ( ';' ) ;
+    // InternalLegoLang.g:4584:1: rule__UnString__Group__5__Impl : ( ';' ) ;
     public final void rule__UnString__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4534:1: ( ( ';' ) )
-            // InternalLegoLang.g:4535:1: ( ';' )
+            // InternalLegoLang.g:4588:1: ( ( ';' ) )
+            // InternalLegoLang.g:4589:1: ( ';' )
             {
-            // InternalLegoLang.g:4535:1: ( ';' )
-            // InternalLegoLang.g:4536:2: ';'
+            // InternalLegoLang.g:4589:1: ( ';' )
+            // InternalLegoLang.g:4590:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getSemicolonKeyword_5()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnStringAccess().getSemicolonKeyword_5()); 
             }
@@ -14576,14 +14740,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group_4__0"
-    // InternalLegoLang.g:4546:1: rule__UnString__Group_4__0 : rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1 ;
+    // InternalLegoLang.g:4600:1: rule__UnString__Group_4__0 : rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1 ;
     public final void rule__UnString__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4550:1: ( rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1 )
-            // InternalLegoLang.g:4551:2: rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1
+            // InternalLegoLang.g:4604:1: ( rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1 )
+            // InternalLegoLang.g:4605:2: rule__UnString__Group_4__0__Impl rule__UnString__Group_4__1
             {
             pushFollow(FOLLOW_4);
             rule__UnString__Group_4__0__Impl();
@@ -14614,22 +14778,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group_4__0__Impl"
-    // InternalLegoLang.g:4558:1: rule__UnString__Group_4__0__Impl : ( '=' ) ;
+    // InternalLegoLang.g:4612:1: rule__UnString__Group_4__0__Impl : ( '=' ) ;
     public final void rule__UnString__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4562:1: ( ( '=' ) )
-            // InternalLegoLang.g:4563:1: ( '=' )
+            // InternalLegoLang.g:4616:1: ( ( '=' ) )
+            // InternalLegoLang.g:4617:1: ( '=' )
             {
-            // InternalLegoLang.g:4563:1: ( '=' )
-            // InternalLegoLang.g:4564:2: '='
+            // InternalLegoLang.g:4617:1: ( '=' )
+            // InternalLegoLang.g:4618:2: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getEqualsSignKeyword_4_0()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnStringAccess().getEqualsSignKeyword_4_0()); 
             }
@@ -14655,14 +14819,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group_4__1"
-    // InternalLegoLang.g:4573:1: rule__UnString__Group_4__1 : rule__UnString__Group_4__1__Impl ;
+    // InternalLegoLang.g:4627:1: rule__UnString__Group_4__1 : rule__UnString__Group_4__1__Impl ;
     public final void rule__UnString__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4577:1: ( rule__UnString__Group_4__1__Impl )
-            // InternalLegoLang.g:4578:2: rule__UnString__Group_4__1__Impl
+            // InternalLegoLang.g:4631:1: ( rule__UnString__Group_4__1__Impl )
+            // InternalLegoLang.g:4632:2: rule__UnString__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__UnString__Group_4__1__Impl();
@@ -14688,23 +14852,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__Group_4__1__Impl"
-    // InternalLegoLang.g:4584:1: rule__UnString__Group_4__1__Impl : ( ( rule__UnString__InitialeValueAssignment_4_1 ) ) ;
+    // InternalLegoLang.g:4638:1: rule__UnString__Group_4__1__Impl : ( ( rule__UnString__InitialeValueAssignment_4_1 ) ) ;
     public final void rule__UnString__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4588:1: ( ( ( rule__UnString__InitialeValueAssignment_4_1 ) ) )
-            // InternalLegoLang.g:4589:1: ( ( rule__UnString__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:4642:1: ( ( ( rule__UnString__InitialeValueAssignment_4_1 ) ) )
+            // InternalLegoLang.g:4643:1: ( ( rule__UnString__InitialeValueAssignment_4_1 ) )
             {
-            // InternalLegoLang.g:4589:1: ( ( rule__UnString__InitialeValueAssignment_4_1 ) )
-            // InternalLegoLang.g:4590:2: ( rule__UnString__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:4643:1: ( ( rule__UnString__InitialeValueAssignment_4_1 ) )
+            // InternalLegoLang.g:4644:2: ( rule__UnString__InitialeValueAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getInitialeValueAssignment_4_1()); 
             }
-            // InternalLegoLang.g:4591:2: ( rule__UnString__InitialeValueAssignment_4_1 )
-            // InternalLegoLang.g:4591:3: rule__UnString__InitialeValueAssignment_4_1
+            // InternalLegoLang.g:4645:2: ( rule__UnString__InitialeValueAssignment_4_1 )
+            // InternalLegoLang.g:4645:3: rule__UnString__InitialeValueAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__UnString__InitialeValueAssignment_4_1();
@@ -14739,16 +14903,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__0"
-    // InternalLegoLang.g:4600:1: rule__TheDouble__Group__0 : rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1 ;
+    // InternalLegoLang.g:4654:1: rule__TheDouble__Group__0 : rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1 ;
     public final void rule__TheDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4604:1: ( rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1 )
-            // InternalLegoLang.g:4605:2: rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1
+            // InternalLegoLang.g:4658:1: ( rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1 )
+            // InternalLegoLang.g:4659:2: rule__TheDouble__Group__0__Impl rule__TheDouble__Group__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__TheDouble__Group__0__Impl();
 
             state._fsp--;
@@ -14777,23 +14941,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__0__Impl"
-    // InternalLegoLang.g:4612:1: rule__TheDouble__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4666:1: rule__TheDouble__Group__0__Impl : ( () ) ;
     public final void rule__TheDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4616:1: ( ( () ) )
-            // InternalLegoLang.g:4617:1: ( () )
+            // InternalLegoLang.g:4670:1: ( ( () ) )
+            // InternalLegoLang.g:4671:1: ( () )
             {
-            // InternalLegoLang.g:4617:1: ( () )
-            // InternalLegoLang.g:4618:2: ()
+            // InternalLegoLang.g:4671:1: ( () )
+            // InternalLegoLang.g:4672:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getTheDoubleAction_0()); 
             }
-            // InternalLegoLang.g:4619:2: ()
-            // InternalLegoLang.g:4619:3: 
+            // InternalLegoLang.g:4673:2: ()
+            // InternalLegoLang.g:4673:3: 
             {
             }
 
@@ -14818,16 +14982,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__1"
-    // InternalLegoLang.g:4627:1: rule__TheDouble__Group__1 : rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2 ;
+    // InternalLegoLang.g:4681:1: rule__TheDouble__Group__1 : rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2 ;
     public final void rule__TheDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4631:1: ( rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2 )
-            // InternalLegoLang.g:4632:2: rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2
+            // InternalLegoLang.g:4685:1: ( rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2 )
+            // InternalLegoLang.g:4686:2: rule__TheDouble__Group__1__Impl rule__TheDouble__Group__2
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             rule__TheDouble__Group__1__Impl();
 
             state._fsp--;
@@ -14856,23 +15020,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__1__Impl"
-    // InternalLegoLang.g:4639:1: rule__TheDouble__Group__1__Impl : ( ( rule__TheDouble__Value1Assignment_1 ) ) ;
+    // InternalLegoLang.g:4693:1: rule__TheDouble__Group__1__Impl : ( ( rule__TheDouble__Value1Assignment_1 ) ) ;
     public final void rule__TheDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4643:1: ( ( ( rule__TheDouble__Value1Assignment_1 ) ) )
-            // InternalLegoLang.g:4644:1: ( ( rule__TheDouble__Value1Assignment_1 ) )
+            // InternalLegoLang.g:4697:1: ( ( ( rule__TheDouble__Value1Assignment_1 ) ) )
+            // InternalLegoLang.g:4698:1: ( ( rule__TheDouble__Value1Assignment_1 ) )
             {
-            // InternalLegoLang.g:4644:1: ( ( rule__TheDouble__Value1Assignment_1 ) )
-            // InternalLegoLang.g:4645:2: ( rule__TheDouble__Value1Assignment_1 )
+            // InternalLegoLang.g:4698:1: ( ( rule__TheDouble__Value1Assignment_1 ) )
+            // InternalLegoLang.g:4699:2: ( rule__TheDouble__Value1Assignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getValue1Assignment_1()); 
             }
-            // InternalLegoLang.g:4646:2: ( rule__TheDouble__Value1Assignment_1 )
-            // InternalLegoLang.g:4646:3: rule__TheDouble__Value1Assignment_1
+            // InternalLegoLang.g:4700:2: ( rule__TheDouble__Value1Assignment_1 )
+            // InternalLegoLang.g:4700:3: rule__TheDouble__Value1Assignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TheDouble__Value1Assignment_1();
@@ -14907,14 +15071,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__2"
-    // InternalLegoLang.g:4654:1: rule__TheDouble__Group__2 : rule__TheDouble__Group__2__Impl ;
+    // InternalLegoLang.g:4708:1: rule__TheDouble__Group__2 : rule__TheDouble__Group__2__Impl ;
     public final void rule__TheDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4658:1: ( rule__TheDouble__Group__2__Impl )
-            // InternalLegoLang.g:4659:2: rule__TheDouble__Group__2__Impl
+            // InternalLegoLang.g:4712:1: ( rule__TheDouble__Group__2__Impl )
+            // InternalLegoLang.g:4713:2: rule__TheDouble__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TheDouble__Group__2__Impl();
@@ -14940,31 +15104,31 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group__2__Impl"
-    // InternalLegoLang.g:4665:1: rule__TheDouble__Group__2__Impl : ( ( rule__TheDouble__Group_2__0 )? ) ;
+    // InternalLegoLang.g:4719:1: rule__TheDouble__Group__2__Impl : ( ( rule__TheDouble__Group_2__0 )? ) ;
     public final void rule__TheDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4669:1: ( ( ( rule__TheDouble__Group_2__0 )? ) )
-            // InternalLegoLang.g:4670:1: ( ( rule__TheDouble__Group_2__0 )? )
+            // InternalLegoLang.g:4723:1: ( ( ( rule__TheDouble__Group_2__0 )? ) )
+            // InternalLegoLang.g:4724:1: ( ( rule__TheDouble__Group_2__0 )? )
             {
-            // InternalLegoLang.g:4670:1: ( ( rule__TheDouble__Group_2__0 )? )
-            // InternalLegoLang.g:4671:2: ( rule__TheDouble__Group_2__0 )?
+            // InternalLegoLang.g:4724:1: ( ( rule__TheDouble__Group_2__0 )? )
+            // InternalLegoLang.g:4725:2: ( rule__TheDouble__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getGroup_2()); 
             }
-            // InternalLegoLang.g:4672:2: ( rule__TheDouble__Group_2__0 )?
+            // InternalLegoLang.g:4726:2: ( rule__TheDouble__Group_2__0 )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
-            if ( (LA22_0==39) ) {
+            if ( (LA22_0==40) ) {
                 alt22=1;
             }
             switch (alt22) {
                 case 1 :
-                    // InternalLegoLang.g:4672:3: rule__TheDouble__Group_2__0
+                    // InternalLegoLang.g:4726:3: rule__TheDouble__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TheDouble__Group_2__0();
@@ -15002,16 +15166,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group_2__0"
-    // InternalLegoLang.g:4681:1: rule__TheDouble__Group_2__0 : rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1 ;
+    // InternalLegoLang.g:4735:1: rule__TheDouble__Group_2__0 : rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1 ;
     public final void rule__TheDouble__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4685:1: ( rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1 )
-            // InternalLegoLang.g:4686:2: rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1
+            // InternalLegoLang.g:4739:1: ( rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1 )
+            // InternalLegoLang.g:4740:2: rule__TheDouble__Group_2__0__Impl rule__TheDouble__Group_2__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__TheDouble__Group_2__0__Impl();
 
             state._fsp--;
@@ -15040,22 +15204,22 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group_2__0__Impl"
-    // InternalLegoLang.g:4693:1: rule__TheDouble__Group_2__0__Impl : ( '.' ) ;
+    // InternalLegoLang.g:4747:1: rule__TheDouble__Group_2__0__Impl : ( '.' ) ;
     public final void rule__TheDouble__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4697:1: ( ( '.' ) )
-            // InternalLegoLang.g:4698:1: ( '.' )
+            // InternalLegoLang.g:4751:1: ( ( '.' ) )
+            // InternalLegoLang.g:4752:1: ( '.' )
             {
-            // InternalLegoLang.g:4698:1: ( '.' )
-            // InternalLegoLang.g:4699:2: '.'
+            // InternalLegoLang.g:4752:1: ( '.' )
+            // InternalLegoLang.g:4753:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getFullStopKeyword_2_0()); 
             }
-            match(input,39,FOLLOW_2); if (state.failed) return ;
+            match(input,40,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTheDoubleAccess().getFullStopKeyword_2_0()); 
             }
@@ -15081,14 +15245,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group_2__1"
-    // InternalLegoLang.g:4708:1: rule__TheDouble__Group_2__1 : rule__TheDouble__Group_2__1__Impl ;
+    // InternalLegoLang.g:4762:1: rule__TheDouble__Group_2__1 : rule__TheDouble__Group_2__1__Impl ;
     public final void rule__TheDouble__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4712:1: ( rule__TheDouble__Group_2__1__Impl )
-            // InternalLegoLang.g:4713:2: rule__TheDouble__Group_2__1__Impl
+            // InternalLegoLang.g:4766:1: ( rule__TheDouble__Group_2__1__Impl )
+            // InternalLegoLang.g:4767:2: rule__TheDouble__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TheDouble__Group_2__1__Impl();
@@ -15114,23 +15278,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Group_2__1__Impl"
-    // InternalLegoLang.g:4719:1: rule__TheDouble__Group_2__1__Impl : ( ( rule__TheDouble__Value2Assignment_2_1 ) ) ;
+    // InternalLegoLang.g:4773:1: rule__TheDouble__Group_2__1__Impl : ( ( rule__TheDouble__Value2Assignment_2_1 ) ) ;
     public final void rule__TheDouble__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4723:1: ( ( ( rule__TheDouble__Value2Assignment_2_1 ) ) )
-            // InternalLegoLang.g:4724:1: ( ( rule__TheDouble__Value2Assignment_2_1 ) )
+            // InternalLegoLang.g:4777:1: ( ( ( rule__TheDouble__Value2Assignment_2_1 ) ) )
+            // InternalLegoLang.g:4778:1: ( ( rule__TheDouble__Value2Assignment_2_1 ) )
             {
-            // InternalLegoLang.g:4724:1: ( ( rule__TheDouble__Value2Assignment_2_1 ) )
-            // InternalLegoLang.g:4725:2: ( rule__TheDouble__Value2Assignment_2_1 )
+            // InternalLegoLang.g:4778:1: ( ( rule__TheDouble__Value2Assignment_2_1 ) )
+            // InternalLegoLang.g:4779:2: ( rule__TheDouble__Value2Assignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getValue2Assignment_2_1()); 
             }
-            // InternalLegoLang.g:4726:2: ( rule__TheDouble__Value2Assignment_2_1 )
-            // InternalLegoLang.g:4726:3: rule__TheDouble__Value2Assignment_2_1
+            // InternalLegoLang.g:4780:2: ( rule__TheDouble__Value2Assignment_2_1 )
+            // InternalLegoLang.g:4780:3: rule__TheDouble__Value2Assignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__TheDouble__Value2Assignment_2_1();
@@ -15165,16 +15329,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheInt__Group__0"
-    // InternalLegoLang.g:4735:1: rule__TheInt__Group__0 : rule__TheInt__Group__0__Impl rule__TheInt__Group__1 ;
+    // InternalLegoLang.g:4789:1: rule__TheInt__Group__0 : rule__TheInt__Group__0__Impl rule__TheInt__Group__1 ;
     public final void rule__TheInt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4739:1: ( rule__TheInt__Group__0__Impl rule__TheInt__Group__1 )
-            // InternalLegoLang.g:4740:2: rule__TheInt__Group__0__Impl rule__TheInt__Group__1
+            // InternalLegoLang.g:4793:1: ( rule__TheInt__Group__0__Impl rule__TheInt__Group__1 )
+            // InternalLegoLang.g:4794:2: rule__TheInt__Group__0__Impl rule__TheInt__Group__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__TheInt__Group__0__Impl();
 
             state._fsp--;
@@ -15203,23 +15367,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheInt__Group__0__Impl"
-    // InternalLegoLang.g:4747:1: rule__TheInt__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4801:1: rule__TheInt__Group__0__Impl : ( () ) ;
     public final void rule__TheInt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4751:1: ( ( () ) )
-            // InternalLegoLang.g:4752:1: ( () )
+            // InternalLegoLang.g:4805:1: ( ( () ) )
+            // InternalLegoLang.g:4806:1: ( () )
             {
-            // InternalLegoLang.g:4752:1: ( () )
-            // InternalLegoLang.g:4753:2: ()
+            // InternalLegoLang.g:4806:1: ( () )
+            // InternalLegoLang.g:4807:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheIntAccess().getTheIntAction_0()); 
             }
-            // InternalLegoLang.g:4754:2: ()
-            // InternalLegoLang.g:4754:3: 
+            // InternalLegoLang.g:4808:2: ()
+            // InternalLegoLang.g:4808:3: 
             {
             }
 
@@ -15244,14 +15408,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheInt__Group__1"
-    // InternalLegoLang.g:4762:1: rule__TheInt__Group__1 : rule__TheInt__Group__1__Impl ;
+    // InternalLegoLang.g:4816:1: rule__TheInt__Group__1 : rule__TheInt__Group__1__Impl ;
     public final void rule__TheInt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4766:1: ( rule__TheInt__Group__1__Impl )
-            // InternalLegoLang.g:4767:2: rule__TheInt__Group__1__Impl
+            // InternalLegoLang.g:4820:1: ( rule__TheInt__Group__1__Impl )
+            // InternalLegoLang.g:4821:2: rule__TheInt__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TheInt__Group__1__Impl();
@@ -15277,23 +15441,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheInt__Group__1__Impl"
-    // InternalLegoLang.g:4773:1: rule__TheInt__Group__1__Impl : ( ( rule__TheInt__ValueAssignment_1 ) ) ;
+    // InternalLegoLang.g:4827:1: rule__TheInt__Group__1__Impl : ( ( rule__TheInt__ValueAssignment_1 ) ) ;
     public final void rule__TheInt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4777:1: ( ( ( rule__TheInt__ValueAssignment_1 ) ) )
-            // InternalLegoLang.g:4778:1: ( ( rule__TheInt__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4831:1: ( ( ( rule__TheInt__ValueAssignment_1 ) ) )
+            // InternalLegoLang.g:4832:1: ( ( rule__TheInt__ValueAssignment_1 ) )
             {
-            // InternalLegoLang.g:4778:1: ( ( rule__TheInt__ValueAssignment_1 ) )
-            // InternalLegoLang.g:4779:2: ( rule__TheInt__ValueAssignment_1 )
+            // InternalLegoLang.g:4832:1: ( ( rule__TheInt__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4833:2: ( rule__TheInt__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheIntAccess().getValueAssignment_1()); 
             }
-            // InternalLegoLang.g:4780:2: ( rule__TheInt__ValueAssignment_1 )
-            // InternalLegoLang.g:4780:3: rule__TheInt__ValueAssignment_1
+            // InternalLegoLang.g:4834:2: ( rule__TheInt__ValueAssignment_1 )
+            // InternalLegoLang.g:4834:3: rule__TheInt__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TheInt__ValueAssignment_1();
@@ -15328,14 +15492,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheBoolean__Group__0"
-    // InternalLegoLang.g:4789:1: rule__TheBoolean__Group__0 : rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1 ;
+    // InternalLegoLang.g:4843:1: rule__TheBoolean__Group__0 : rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1 ;
     public final void rule__TheBoolean__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4793:1: ( rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1 )
-            // InternalLegoLang.g:4794:2: rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1
+            // InternalLegoLang.g:4847:1: ( rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1 )
+            // InternalLegoLang.g:4848:2: rule__TheBoolean__Group__0__Impl rule__TheBoolean__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__TheBoolean__Group__0__Impl();
@@ -15366,23 +15530,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheBoolean__Group__0__Impl"
-    // InternalLegoLang.g:4801:1: rule__TheBoolean__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4855:1: rule__TheBoolean__Group__0__Impl : ( () ) ;
     public final void rule__TheBoolean__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4805:1: ( ( () ) )
-            // InternalLegoLang.g:4806:1: ( () )
+            // InternalLegoLang.g:4859:1: ( ( () ) )
+            // InternalLegoLang.g:4860:1: ( () )
             {
-            // InternalLegoLang.g:4806:1: ( () )
-            // InternalLegoLang.g:4807:2: ()
+            // InternalLegoLang.g:4860:1: ( () )
+            // InternalLegoLang.g:4861:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheBooleanAccess().getTheBooleanAction_0()); 
             }
-            // InternalLegoLang.g:4808:2: ()
-            // InternalLegoLang.g:4808:3: 
+            // InternalLegoLang.g:4862:2: ()
+            // InternalLegoLang.g:4862:3: 
             {
             }
 
@@ -15407,14 +15571,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheBoolean__Group__1"
-    // InternalLegoLang.g:4816:1: rule__TheBoolean__Group__1 : rule__TheBoolean__Group__1__Impl ;
+    // InternalLegoLang.g:4870:1: rule__TheBoolean__Group__1 : rule__TheBoolean__Group__1__Impl ;
     public final void rule__TheBoolean__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4820:1: ( rule__TheBoolean__Group__1__Impl )
-            // InternalLegoLang.g:4821:2: rule__TheBoolean__Group__1__Impl
+            // InternalLegoLang.g:4874:1: ( rule__TheBoolean__Group__1__Impl )
+            // InternalLegoLang.g:4875:2: rule__TheBoolean__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TheBoolean__Group__1__Impl();
@@ -15440,23 +15604,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheBoolean__Group__1__Impl"
-    // InternalLegoLang.g:4827:1: rule__TheBoolean__Group__1__Impl : ( ( rule__TheBoolean__ValueAssignment_1 ) ) ;
+    // InternalLegoLang.g:4881:1: rule__TheBoolean__Group__1__Impl : ( ( rule__TheBoolean__ValueAssignment_1 ) ) ;
     public final void rule__TheBoolean__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4831:1: ( ( ( rule__TheBoolean__ValueAssignment_1 ) ) )
-            // InternalLegoLang.g:4832:1: ( ( rule__TheBoolean__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4885:1: ( ( ( rule__TheBoolean__ValueAssignment_1 ) ) )
+            // InternalLegoLang.g:4886:1: ( ( rule__TheBoolean__ValueAssignment_1 ) )
             {
-            // InternalLegoLang.g:4832:1: ( ( rule__TheBoolean__ValueAssignment_1 ) )
-            // InternalLegoLang.g:4833:2: ( rule__TheBoolean__ValueAssignment_1 )
+            // InternalLegoLang.g:4886:1: ( ( rule__TheBoolean__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4887:2: ( rule__TheBoolean__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheBooleanAccess().getValueAssignment_1()); 
             }
-            // InternalLegoLang.g:4834:2: ( rule__TheBoolean__ValueAssignment_1 )
-            // InternalLegoLang.g:4834:3: rule__TheBoolean__ValueAssignment_1
+            // InternalLegoLang.g:4888:2: ( rule__TheBoolean__ValueAssignment_1 )
+            // InternalLegoLang.g:4888:3: rule__TheBoolean__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TheBoolean__ValueAssignment_1();
@@ -15491,14 +15655,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheString__Group__0"
-    // InternalLegoLang.g:4843:1: rule__TheString__Group__0 : rule__TheString__Group__0__Impl rule__TheString__Group__1 ;
+    // InternalLegoLang.g:4897:1: rule__TheString__Group__0 : rule__TheString__Group__0__Impl rule__TheString__Group__1 ;
     public final void rule__TheString__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4847:1: ( rule__TheString__Group__0__Impl rule__TheString__Group__1 )
-            // InternalLegoLang.g:4848:2: rule__TheString__Group__0__Impl rule__TheString__Group__1
+            // InternalLegoLang.g:4901:1: ( rule__TheString__Group__0__Impl rule__TheString__Group__1 )
+            // InternalLegoLang.g:4902:2: rule__TheString__Group__0__Impl rule__TheString__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__TheString__Group__0__Impl();
@@ -15529,23 +15693,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheString__Group__0__Impl"
-    // InternalLegoLang.g:4855:1: rule__TheString__Group__0__Impl : ( () ) ;
+    // InternalLegoLang.g:4909:1: rule__TheString__Group__0__Impl : ( () ) ;
     public final void rule__TheString__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4859:1: ( ( () ) )
-            // InternalLegoLang.g:4860:1: ( () )
+            // InternalLegoLang.g:4913:1: ( ( () ) )
+            // InternalLegoLang.g:4914:1: ( () )
             {
-            // InternalLegoLang.g:4860:1: ( () )
-            // InternalLegoLang.g:4861:2: ()
+            // InternalLegoLang.g:4914:1: ( () )
+            // InternalLegoLang.g:4915:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheStringAccess().getTheStringAction_0()); 
             }
-            // InternalLegoLang.g:4862:2: ()
-            // InternalLegoLang.g:4862:3: 
+            // InternalLegoLang.g:4916:2: ()
+            // InternalLegoLang.g:4916:3: 
             {
             }
 
@@ -15570,14 +15734,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheString__Group__1"
-    // InternalLegoLang.g:4870:1: rule__TheString__Group__1 : rule__TheString__Group__1__Impl ;
+    // InternalLegoLang.g:4924:1: rule__TheString__Group__1 : rule__TheString__Group__1__Impl ;
     public final void rule__TheString__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4874:1: ( rule__TheString__Group__1__Impl )
-            // InternalLegoLang.g:4875:2: rule__TheString__Group__1__Impl
+            // InternalLegoLang.g:4928:1: ( rule__TheString__Group__1__Impl )
+            // InternalLegoLang.g:4929:2: rule__TheString__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TheString__Group__1__Impl();
@@ -15603,23 +15767,23 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheString__Group__1__Impl"
-    // InternalLegoLang.g:4881:1: rule__TheString__Group__1__Impl : ( ( rule__TheString__ValueAssignment_1 ) ) ;
+    // InternalLegoLang.g:4935:1: rule__TheString__Group__1__Impl : ( ( rule__TheString__ValueAssignment_1 ) ) ;
     public final void rule__TheString__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4885:1: ( ( ( rule__TheString__ValueAssignment_1 ) ) )
-            // InternalLegoLang.g:4886:1: ( ( rule__TheString__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4939:1: ( ( ( rule__TheString__ValueAssignment_1 ) ) )
+            // InternalLegoLang.g:4940:1: ( ( rule__TheString__ValueAssignment_1 ) )
             {
-            // InternalLegoLang.g:4886:1: ( ( rule__TheString__ValueAssignment_1 ) )
-            // InternalLegoLang.g:4887:2: ( rule__TheString__ValueAssignment_1 )
+            // InternalLegoLang.g:4940:1: ( ( rule__TheString__ValueAssignment_1 ) )
+            // InternalLegoLang.g:4941:2: ( rule__TheString__ValueAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheStringAccess().getValueAssignment_1()); 
             }
-            // InternalLegoLang.g:4888:2: ( rule__TheString__ValueAssignment_1 )
-            // InternalLegoLang.g:4888:3: rule__TheString__ValueAssignment_1
+            // InternalLegoLang.g:4942:2: ( rule__TheString__ValueAssignment_1 )
+            // InternalLegoLang.g:4942:3: rule__TheString__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TheString__ValueAssignment_1();
@@ -15654,16 +15818,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__EInt__Group__0"
-    // InternalLegoLang.g:4897:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
+    // InternalLegoLang.g:4951:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
     public final void rule__EInt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4901:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
-            // InternalLegoLang.g:4902:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
+            // InternalLegoLang.g:4955:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
+            // InternalLegoLang.g:4956:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__EInt__Group__0__Impl();
 
             state._fsp--;
@@ -15692,33 +15856,33 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__EInt__Group__0__Impl"
-    // InternalLegoLang.g:4909:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalLegoLang.g:4963:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EInt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4913:1: ( ( ( '-' )? ) )
-            // InternalLegoLang.g:4914:1: ( ( '-' )? )
+            // InternalLegoLang.g:4967:1: ( ( ( '-' )? ) )
+            // InternalLegoLang.g:4968:1: ( ( '-' )? )
             {
-            // InternalLegoLang.g:4914:1: ( ( '-' )? )
-            // InternalLegoLang.g:4915:2: ( '-' )?
+            // InternalLegoLang.g:4968:1: ( ( '-' )? )
+            // InternalLegoLang.g:4969:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
             }
-            // InternalLegoLang.g:4916:2: ( '-' )?
+            // InternalLegoLang.g:4970:2: ( '-' )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==22) ) {
+            if ( (LA23_0==23) ) {
                 alt23=1;
             }
             switch (alt23) {
                 case 1 :
-                    // InternalLegoLang.g:4916:3: '-'
+                    // InternalLegoLang.g:4970:3: '-'
                     {
-                    match(input,22,FOLLOW_2); if (state.failed) return ;
+                    match(input,23,FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -15750,14 +15914,14 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__EInt__Group__1"
-    // InternalLegoLang.g:4924:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
+    // InternalLegoLang.g:4978:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
     public final void rule__EInt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4928:1: ( rule__EInt__Group__1__Impl )
-            // InternalLegoLang.g:4929:2: rule__EInt__Group__1__Impl
+            // InternalLegoLang.g:4982:1: ( rule__EInt__Group__1__Impl )
+            // InternalLegoLang.g:4983:2: rule__EInt__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EInt__Group__1__Impl();
@@ -15783,17 +15947,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__EInt__Group__1__Impl"
-    // InternalLegoLang.g:4935:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
+    // InternalLegoLang.g:4989:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
     public final void rule__EInt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4939:1: ( ( RULE_INT ) )
-            // InternalLegoLang.g:4940:1: ( RULE_INT )
+            // InternalLegoLang.g:4993:1: ( ( RULE_INT ) )
+            // InternalLegoLang.g:4994:1: ( RULE_INT )
             {
-            // InternalLegoLang.g:4940:1: ( RULE_INT )
-            // InternalLegoLang.g:4941:2: RULE_INT
+            // InternalLegoLang.g:4994:1: ( RULE_INT )
+            // InternalLegoLang.g:4995:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
@@ -15824,17 +15988,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Program__NameAssignment_2"
-    // InternalLegoLang.g:4951:1: rule__Program__NameAssignment_2 : ( ruleEString ) ;
+    // InternalLegoLang.g:5005:1: rule__Program__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Program__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4955:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:4956:2: ( ruleEString )
+            // InternalLegoLang.g:5009:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5010:2: ( ruleEString )
             {
-            // InternalLegoLang.g:4956:2: ( ruleEString )
-            // InternalLegoLang.g:4957:3: ruleEString
+            // InternalLegoLang.g:5010:2: ( ruleEString )
+            // InternalLegoLang.g:5011:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getNameEStringParserRuleCall_2_0()); 
@@ -15869,17 +16033,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Program__StatementAssignment_4"
-    // InternalLegoLang.g:4966:1: rule__Program__StatementAssignment_4 : ( ruleStatement ) ;
+    // InternalLegoLang.g:5020:1: rule__Program__StatementAssignment_4 : ( ruleStatement ) ;
     public final void rule__Program__StatementAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4970:1: ( ( ruleStatement ) )
-            // InternalLegoLang.g:4971:2: ( ruleStatement )
+            // InternalLegoLang.g:5024:1: ( ( ruleStatement ) )
+            // InternalLegoLang.g:5025:2: ( ruleStatement )
             {
-            // InternalLegoLang.g:4971:2: ( ruleStatement )
-            // InternalLegoLang.g:4972:3: ruleStatement
+            // InternalLegoLang.g:5025:2: ( ruleStatement )
+            // InternalLegoLang.g:5026:3: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getStatementStatementParserRuleCall_4_0()); 
@@ -15914,17 +16078,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ConditionEtat__ConditionAssignment_1"
-    // InternalLegoLang.g:4981:1: rule__ConditionEtat__ConditionAssignment_1 : ( ruleComparaison ) ;
+    // InternalLegoLang.g:5035:1: rule__ConditionEtat__ConditionAssignment_1 : ( ruleComparaison ) ;
     public final void rule__ConditionEtat__ConditionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:4985:1: ( ( ruleComparaison ) )
-            // InternalLegoLang.g:4986:2: ( ruleComparaison )
+            // InternalLegoLang.g:5039:1: ( ( ruleComparaison ) )
+            // InternalLegoLang.g:5040:2: ( ruleComparaison )
             {
-            // InternalLegoLang.g:4986:2: ( ruleComparaison )
-            // InternalLegoLang.g:4987:3: ruleComparaison
+            // InternalLegoLang.g:5040:2: ( ruleComparaison )
+            // InternalLegoLang.g:5041:3: ruleComparaison
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionEtatAccess().getConditionComparaisonParserRuleCall_1_0()); 
@@ -15959,17 +16123,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ConditionEtat__ThenAssignment_3"
-    // InternalLegoLang.g:4996:1: rule__ConditionEtat__ThenAssignment_3 : ( ruleStatement ) ;
+    // InternalLegoLang.g:5050:1: rule__ConditionEtat__ThenAssignment_3 : ( ruleStatement ) ;
     public final void rule__ConditionEtat__ThenAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5000:1: ( ( ruleStatement ) )
-            // InternalLegoLang.g:5001:2: ( ruleStatement )
+            // InternalLegoLang.g:5054:1: ( ( ruleStatement ) )
+            // InternalLegoLang.g:5055:2: ( ruleStatement )
             {
-            // InternalLegoLang.g:5001:2: ( ruleStatement )
-            // InternalLegoLang.g:5002:3: ruleStatement
+            // InternalLegoLang.g:5055:2: ( ruleStatement )
+            // InternalLegoLang.g:5056:3: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionEtatAccess().getThenStatementParserRuleCall_3_0()); 
@@ -16004,17 +16168,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ConditionEtat__ElseAssignment_5_1"
-    // InternalLegoLang.g:5011:1: rule__ConditionEtat__ElseAssignment_5_1 : ( ruleStatement ) ;
+    // InternalLegoLang.g:5065:1: rule__ConditionEtat__ElseAssignment_5_1 : ( ruleStatement ) ;
     public final void rule__ConditionEtat__ElseAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5015:1: ( ( ruleStatement ) )
-            // InternalLegoLang.g:5016:2: ( ruleStatement )
+            // InternalLegoLang.g:5069:1: ( ( ruleStatement ) )
+            // InternalLegoLang.g:5070:2: ( ruleStatement )
             {
-            // InternalLegoLang.g:5016:2: ( ruleStatement )
-            // InternalLegoLang.g:5017:3: ruleStatement
+            // InternalLegoLang.g:5070:2: ( ruleStatement )
+            // InternalLegoLang.g:5071:3: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionEtatAccess().getElseStatementParserRuleCall_5_1_0()); 
@@ -16049,17 +16213,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__WhileLoop__LoopConditionAssignment_1"
-    // InternalLegoLang.g:5026:1: rule__WhileLoop__LoopConditionAssignment_1 : ( ruleComparaison ) ;
+    // InternalLegoLang.g:5080:1: rule__WhileLoop__LoopConditionAssignment_1 : ( ruleComparaison ) ;
     public final void rule__WhileLoop__LoopConditionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5030:1: ( ( ruleComparaison ) )
-            // InternalLegoLang.g:5031:2: ( ruleComparaison )
+            // InternalLegoLang.g:5084:1: ( ( ruleComparaison ) )
+            // InternalLegoLang.g:5085:2: ( ruleComparaison )
             {
-            // InternalLegoLang.g:5031:2: ( ruleComparaison )
-            // InternalLegoLang.g:5032:3: ruleComparaison
+            // InternalLegoLang.g:5085:2: ( ruleComparaison )
+            // InternalLegoLang.g:5086:3: ruleComparaison
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWhileLoopAccess().getLoopConditionComparaisonParserRuleCall_1_0()); 
@@ -16094,17 +16258,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__WhileLoop__StatementAssignment_3"
-    // InternalLegoLang.g:5041:1: rule__WhileLoop__StatementAssignment_3 : ( ruleStatement ) ;
+    // InternalLegoLang.g:5095:1: rule__WhileLoop__StatementAssignment_3 : ( ruleStatement ) ;
     public final void rule__WhileLoop__StatementAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5045:1: ( ( ruleStatement ) )
-            // InternalLegoLang.g:5046:2: ( ruleStatement )
+            // InternalLegoLang.g:5099:1: ( ( ruleStatement ) )
+            // InternalLegoLang.g:5100:2: ( ruleStatement )
             {
-            // InternalLegoLang.g:5046:2: ( ruleStatement )
-            // InternalLegoLang.g:5047:3: ruleStatement
+            // InternalLegoLang.g:5100:2: ( ruleStatement )
+            // InternalLegoLang.g:5101:3: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWhileLoopAccess().getStatementStatementParserRuleCall_3_0()); 
@@ -16138,21 +16302,21 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__WhileLoop__StatementAssignment_3"
 
 
-    // $ANTLR start "rule__MethodePrint__ExpressionAssignment_2"
-    // InternalLegoLang.g:5056:1: rule__MethodePrint__ExpressionAssignment_2 : ( ruleExpression ) ;
-    public final void rule__MethodePrint__ExpressionAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MethodePrint__ExpressionAssignment_2_0"
+    // InternalLegoLang.g:5110:1: rule__MethodePrint__ExpressionAssignment_2_0 : ( ruleExpression ) ;
+    public final void rule__MethodePrint__ExpressionAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5060:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5061:2: ( ruleExpression )
+            // InternalLegoLang.g:5114:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5115:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5061:2: ( ruleExpression )
-            // InternalLegoLang.g:5062:3: ruleExpression
+            // InternalLegoLang.g:5115:2: ( ruleExpression )
+            // InternalLegoLang.g:5116:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0()); 
+               before(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0_0()); 
             }
             pushFollow(FOLLOW_2);
             ruleExpression();
@@ -16160,7 +16324,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0()); 
+               after(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0_0()); 
             }
 
             }
@@ -16180,27 +16344,27 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__MethodePrint__ExpressionAssignment_2"
+    // $ANTLR end "rule__MethodePrint__ExpressionAssignment_2_0"
 
 
     // $ANTLR start "rule__VariableRef__VariableAssignment"
-    // InternalLegoLang.g:5071:1: rule__VariableRef__VariableAssignment : ( ( ruleEString ) ) ;
+    // InternalLegoLang.g:5125:1: rule__VariableRef__VariableAssignment : ( ( ruleEString ) ) ;
     public final void rule__VariableRef__VariableAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5075:1: ( ( ( ruleEString ) ) )
-            // InternalLegoLang.g:5076:2: ( ( ruleEString ) )
+            // InternalLegoLang.g:5129:1: ( ( ( ruleEString ) ) )
+            // InternalLegoLang.g:5130:2: ( ( ruleEString ) )
             {
-            // InternalLegoLang.g:5076:2: ( ( ruleEString ) )
-            // InternalLegoLang.g:5077:3: ( ruleEString )
+            // InternalLegoLang.g:5130:2: ( ( ruleEString ) )
+            // InternalLegoLang.g:5131:3: ( ruleEString )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableRefAccess().getVariableVariableCrossReference_0()); 
             }
-            // InternalLegoLang.g:5078:3: ( ruleEString )
-            // InternalLegoLang.g:5079:4: ruleEString
+            // InternalLegoLang.g:5132:3: ( ruleEString )
+            // InternalLegoLang.g:5133:4: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableRefAccess().getVariableVariableEStringParserRuleCall_0_1()); 
@@ -16241,17 +16405,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__LeftAssignment_1"
-    // InternalLegoLang.g:5090:1: rule__Substraction__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5144:1: rule__Substraction__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Substraction__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5094:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5095:2: ( ruleExpression )
+            // InternalLegoLang.g:5148:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5149:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5095:2: ( ruleExpression )
-            // InternalLegoLang.g:5096:3: ruleExpression
+            // InternalLegoLang.g:5149:2: ( ruleExpression )
+            // InternalLegoLang.g:5150:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16286,17 +16450,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Substraction__RightAssignment_3"
-    // InternalLegoLang.g:5105:1: rule__Substraction__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5159:1: rule__Substraction__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Substraction__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5109:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5110:2: ( ruleExpression )
+            // InternalLegoLang.g:5163:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5164:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5110:2: ( ruleExpression )
-            // InternalLegoLang.g:5111:3: ruleExpression
+            // InternalLegoLang.g:5164:2: ( ruleExpression )
+            // InternalLegoLang.g:5165:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubstractionAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16331,17 +16495,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__LeftAssignment_1"
-    // InternalLegoLang.g:5120:1: rule__Addition__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5174:1: rule__Addition__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Addition__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5124:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5125:2: ( ruleExpression )
+            // InternalLegoLang.g:5178:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5179:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5125:2: ( ruleExpression )
-            // InternalLegoLang.g:5126:3: ruleExpression
+            // InternalLegoLang.g:5179:2: ( ruleExpression )
+            // InternalLegoLang.g:5180:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16376,17 +16540,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Addition__RightAssignment_3"
-    // InternalLegoLang.g:5135:1: rule__Addition__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5189:1: rule__Addition__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Addition__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5139:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5140:2: ( ruleExpression )
+            // InternalLegoLang.g:5193:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5194:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5140:2: ( ruleExpression )
-            // InternalLegoLang.g:5141:3: ruleExpression
+            // InternalLegoLang.g:5194:2: ( ruleExpression )
+            // InternalLegoLang.g:5195:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16421,17 +16585,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__LeftAssignment_1"
-    // InternalLegoLang.g:5150:1: rule__Multiplication__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5204:1: rule__Multiplication__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Multiplication__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5154:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5155:2: ( ruleExpression )
+            // InternalLegoLang.g:5208:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5209:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5155:2: ( ruleExpression )
-            // InternalLegoLang.g:5156:3: ruleExpression
+            // InternalLegoLang.g:5209:2: ( ruleExpression )
+            // InternalLegoLang.g:5210:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16466,17 +16630,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Multiplication__RightAssignment_3"
-    // InternalLegoLang.g:5165:1: rule__Multiplication__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5219:1: rule__Multiplication__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Multiplication__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5169:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5170:2: ( ruleExpression )
+            // InternalLegoLang.g:5223:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5224:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5170:2: ( ruleExpression )
-            // InternalLegoLang.g:5171:3: ruleExpression
+            // InternalLegoLang.g:5224:2: ( ruleExpression )
+            // InternalLegoLang.g:5225:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16511,17 +16675,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__LeftAssignment_1"
-    // InternalLegoLang.g:5180:1: rule__Division__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5234:1: rule__Division__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Division__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5184:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5185:2: ( ruleExpression )
+            // InternalLegoLang.g:5238:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5239:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5185:2: ( ruleExpression )
-            // InternalLegoLang.g:5186:3: ruleExpression
+            // InternalLegoLang.g:5239:2: ( ruleExpression )
+            // InternalLegoLang.g:5240:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16556,17 +16720,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Division__RightAssignment_3"
-    // InternalLegoLang.g:5195:1: rule__Division__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5249:1: rule__Division__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Division__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5199:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5200:2: ( ruleExpression )
+            // InternalLegoLang.g:5253:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5254:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5200:2: ( ruleExpression )
-            // InternalLegoLang.g:5201:3: ruleExpression
+            // InternalLegoLang.g:5254:2: ( ruleExpression )
+            // InternalLegoLang.g:5255:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16601,17 +16765,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__LeftAssignment_1"
-    // InternalLegoLang.g:5210:1: rule__GT__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5264:1: rule__GT__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__GT__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5214:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5215:2: ( ruleExpression )
+            // InternalLegoLang.g:5268:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5269:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5215:2: ( ruleExpression )
-            // InternalLegoLang.g:5216:3: ruleExpression
+            // InternalLegoLang.g:5269:2: ( ruleExpression )
+            // InternalLegoLang.g:5270:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16646,17 +16810,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GT__RightAssignment_3"
-    // InternalLegoLang.g:5225:1: rule__GT__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5279:1: rule__GT__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__GT__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5229:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5230:2: ( ruleExpression )
+            // InternalLegoLang.g:5283:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5284:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5230:2: ( ruleExpression )
-            // InternalLegoLang.g:5231:3: ruleExpression
+            // InternalLegoLang.g:5284:2: ( ruleExpression )
+            // InternalLegoLang.g:5285:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16691,17 +16855,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__LeftAssignment_1"
-    // InternalLegoLang.g:5240:1: rule__LT__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5294:1: rule__LT__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__LT__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5244:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5245:2: ( ruleExpression )
+            // InternalLegoLang.g:5298:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5299:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5245:2: ( ruleExpression )
-            // InternalLegoLang.g:5246:3: ruleExpression
+            // InternalLegoLang.g:5299:2: ( ruleExpression )
+            // InternalLegoLang.g:5300:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16736,17 +16900,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LT__RightAssignment_3"
-    // InternalLegoLang.g:5255:1: rule__LT__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5309:1: rule__LT__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__LT__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5259:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5260:2: ( ruleExpression )
+            // InternalLegoLang.g:5313:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5314:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5260:2: ( ruleExpression )
-            // InternalLegoLang.g:5261:3: ruleExpression
+            // InternalLegoLang.g:5314:2: ( ruleExpression )
+            // InternalLegoLang.g:5315:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16781,17 +16945,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__LeftAssignment_1"
-    // InternalLegoLang.g:5270:1: rule__Equal__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5324:1: rule__Equal__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Equal__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5274:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5275:2: ( ruleExpression )
+            // InternalLegoLang.g:5328:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5329:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5275:2: ( ruleExpression )
-            // InternalLegoLang.g:5276:3: ruleExpression
+            // InternalLegoLang.g:5329:2: ( ruleExpression )
+            // InternalLegoLang.g:5330:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16826,17 +16990,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Equal__RightAssignment_3"
-    // InternalLegoLang.g:5285:1: rule__Equal__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5339:1: rule__Equal__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Equal__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5289:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5290:2: ( ruleExpression )
+            // InternalLegoLang.g:5343:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5344:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5290:2: ( ruleExpression )
-            // InternalLegoLang.g:5291:3: ruleExpression
+            // InternalLegoLang.g:5344:2: ( ruleExpression )
+            // InternalLegoLang.g:5345:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEqualAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16871,17 +17035,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__LeftAssignment_1"
-    // InternalLegoLang.g:5300:1: rule__Different__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5354:1: rule__Different__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__Different__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5304:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5305:2: ( ruleExpression )
+            // InternalLegoLang.g:5358:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5359:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5305:2: ( ruleExpression )
-            // InternalLegoLang.g:5306:3: ruleExpression
+            // InternalLegoLang.g:5359:2: ( ruleExpression )
+            // InternalLegoLang.g:5360:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -16916,17 +17080,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Different__RightAssignment_3"
-    // InternalLegoLang.g:5315:1: rule__Different__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5369:1: rule__Different__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__Different__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5319:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5320:2: ( ruleExpression )
+            // InternalLegoLang.g:5373:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5374:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5320:2: ( ruleExpression )
-            // InternalLegoLang.g:5321:3: ruleExpression
+            // InternalLegoLang.g:5374:2: ( ruleExpression )
+            // InternalLegoLang.g:5375:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDifferentAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -16961,17 +17125,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__LeftAssignment_1"
-    // InternalLegoLang.g:5330:1: rule__LTorEqual__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5384:1: rule__LTorEqual__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__LTorEqual__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5334:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5335:2: ( ruleExpression )
+            // InternalLegoLang.g:5388:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5389:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5335:2: ( ruleExpression )
-            // InternalLegoLang.g:5336:3: ruleExpression
+            // InternalLegoLang.g:5389:2: ( ruleExpression )
+            // InternalLegoLang.g:5390:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -17006,17 +17170,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LTorEqual__RightAssignment_3"
-    // InternalLegoLang.g:5345:1: rule__LTorEqual__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5399:1: rule__LTorEqual__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__LTorEqual__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5349:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5350:2: ( ruleExpression )
+            // InternalLegoLang.g:5403:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5404:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5350:2: ( ruleExpression )
-            // InternalLegoLang.g:5351:3: ruleExpression
+            // InternalLegoLang.g:5404:2: ( ruleExpression )
+            // InternalLegoLang.g:5405:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLTorEqualAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -17051,17 +17215,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__LeftAssignment_1"
-    // InternalLegoLang.g:5360:1: rule__GTorEqual__LeftAssignment_1 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5414:1: rule__GTorEqual__LeftAssignment_1 : ( ruleExpression ) ;
     public final void rule__GTorEqual__LeftAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5364:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5365:2: ( ruleExpression )
+            // InternalLegoLang.g:5418:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5419:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5365:2: ( ruleExpression )
-            // InternalLegoLang.g:5366:3: ruleExpression
+            // InternalLegoLang.g:5419:2: ( ruleExpression )
+            // InternalLegoLang.g:5420:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getLeftExpressionParserRuleCall_1_0()); 
@@ -17096,17 +17260,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GTorEqual__RightAssignment_3"
-    // InternalLegoLang.g:5375:1: rule__GTorEqual__RightAssignment_3 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5429:1: rule__GTorEqual__RightAssignment_3 : ( ruleExpression ) ;
     public final void rule__GTorEqual__RightAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5379:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5380:2: ( ruleExpression )
+            // InternalLegoLang.g:5433:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5434:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5380:2: ( ruleExpression )
-            // InternalLegoLang.g:5381:3: ruleExpression
+            // InternalLegoLang.g:5434:2: ( ruleExpression )
+            // InternalLegoLang.g:5435:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGTorEqualAccess().getRightExpressionParserRuleCall_3_0()); 
@@ -17141,17 +17305,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__LeftAssignment_2"
-    // InternalLegoLang.g:5390:1: rule__Assignement__LeftAssignment_2 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5444:1: rule__Assignement__LeftAssignment_2 : ( ruleExpression ) ;
     public final void rule__Assignement__LeftAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5394:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5395:2: ( ruleExpression )
+            // InternalLegoLang.g:5448:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5449:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5395:2: ( ruleExpression )
-            // InternalLegoLang.g:5396:3: ruleExpression
+            // InternalLegoLang.g:5449:2: ( ruleExpression )
+            // InternalLegoLang.g:5450:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getLeftExpressionParserRuleCall_2_0()); 
@@ -17186,17 +17350,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignement__RightAssignment_4"
-    // InternalLegoLang.g:5405:1: rule__Assignement__RightAssignment_4 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5459:1: rule__Assignement__RightAssignment_4 : ( ruleExpression ) ;
     public final void rule__Assignement__RightAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5409:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5410:2: ( ruleExpression )
+            // InternalLegoLang.g:5463:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5464:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5410:2: ( ruleExpression )
-            // InternalLegoLang.g:5411:3: ruleExpression
+            // InternalLegoLang.g:5464:2: ( ruleExpression )
+            // InternalLegoLang.g:5465:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignementAccess().getRightExpressionParserRuleCall_4_0()); 
@@ -17231,17 +17395,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__LeftAssignment_2"
-    // InternalLegoLang.g:5420:1: rule__PlusEqual__LeftAssignment_2 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5474:1: rule__PlusEqual__LeftAssignment_2 : ( ruleExpression ) ;
     public final void rule__PlusEqual__LeftAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5424:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5425:2: ( ruleExpression )
+            // InternalLegoLang.g:5478:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5479:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5425:2: ( ruleExpression )
-            // InternalLegoLang.g:5426:3: ruleExpression
+            // InternalLegoLang.g:5479:2: ( ruleExpression )
+            // InternalLegoLang.g:5480:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getLeftExpressionParserRuleCall_2_0()); 
@@ -17276,17 +17440,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PlusEqual__RightAssignment_4"
-    // InternalLegoLang.g:5435:1: rule__PlusEqual__RightAssignment_4 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5489:1: rule__PlusEqual__RightAssignment_4 : ( ruleExpression ) ;
     public final void rule__PlusEqual__RightAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5439:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5440:2: ( ruleExpression )
+            // InternalLegoLang.g:5493:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5494:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5440:2: ( ruleExpression )
-            // InternalLegoLang.g:5441:3: ruleExpression
+            // InternalLegoLang.g:5494:2: ( ruleExpression )
+            // InternalLegoLang.g:5495:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPlusEqualAccess().getRightExpressionParserRuleCall_4_0()); 
@@ -17321,17 +17485,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__LeftAssignment_2"
-    // InternalLegoLang.g:5450:1: rule__MinusEqual__LeftAssignment_2 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5504:1: rule__MinusEqual__LeftAssignment_2 : ( ruleExpression ) ;
     public final void rule__MinusEqual__LeftAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5454:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5455:2: ( ruleExpression )
+            // InternalLegoLang.g:5508:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5509:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5455:2: ( ruleExpression )
-            // InternalLegoLang.g:5456:3: ruleExpression
+            // InternalLegoLang.g:5509:2: ( ruleExpression )
+            // InternalLegoLang.g:5510:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getLeftExpressionParserRuleCall_2_0()); 
@@ -17366,17 +17530,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MinusEqual__RightAssignment_4"
-    // InternalLegoLang.g:5465:1: rule__MinusEqual__RightAssignment_4 : ( ruleExpression ) ;
+    // InternalLegoLang.g:5519:1: rule__MinusEqual__RightAssignment_4 : ( ruleExpression ) ;
     public final void rule__MinusEqual__RightAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5469:1: ( ( ruleExpression ) )
-            // InternalLegoLang.g:5470:2: ( ruleExpression )
+            // InternalLegoLang.g:5523:1: ( ( ruleExpression ) )
+            // InternalLegoLang.g:5524:2: ( ruleExpression )
             {
-            // InternalLegoLang.g:5470:2: ( ruleExpression )
-            // InternalLegoLang.g:5471:3: ruleExpression
+            // InternalLegoLang.g:5524:2: ( ruleExpression )
+            // InternalLegoLang.g:5525:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMinusEqualAccess().getRightExpressionParserRuleCall_4_0()); 
@@ -17411,28 +17575,28 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__IsConstAssignment_1"
-    // InternalLegoLang.g:5480:1: rule__UnInteger__IsConstAssignment_1 : ( ( 'const' ) ) ;
+    // InternalLegoLang.g:5534:1: rule__UnInteger__IsConstAssignment_1 : ( ( 'const' ) ) ;
     public final void rule__UnInteger__IsConstAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5484:1: ( ( ( 'const' ) ) )
-            // InternalLegoLang.g:5485:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5538:1: ( ( ( 'const' ) ) )
+            // InternalLegoLang.g:5539:2: ( ( 'const' ) )
             {
-            // InternalLegoLang.g:5485:2: ( ( 'const' ) )
-            // InternalLegoLang.g:5486:3: ( 'const' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnIntegerAccess().getIsConstConstKeyword_1_0()); 
-            }
-            // InternalLegoLang.g:5487:3: ( 'const' )
-            // InternalLegoLang.g:5488:4: 'const'
+            // InternalLegoLang.g:5539:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5540:3: ( 'const' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getIsConstConstKeyword_1_0()); 
             }
-            match(input,42,FOLLOW_2); if (state.failed) return ;
+            // InternalLegoLang.g:5541:3: ( 'const' )
+            // InternalLegoLang.g:5542:4: 'const'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getUnIntegerAccess().getIsConstConstKeyword_1_0()); 
+            }
+            match(input,43,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnIntegerAccess().getIsConstConstKeyword_1_0()); 
             }
@@ -17464,17 +17628,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__NameAssignment_3"
-    // InternalLegoLang.g:5499:1: rule__UnInteger__NameAssignment_3 : ( ruleEString ) ;
+    // InternalLegoLang.g:5553:1: rule__UnInteger__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__UnInteger__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5503:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5504:2: ( ruleEString )
+            // InternalLegoLang.g:5557:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5558:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5504:2: ( ruleEString )
-            // InternalLegoLang.g:5505:3: ruleEString
+            // InternalLegoLang.g:5558:2: ( ruleEString )
+            // InternalLegoLang.g:5559:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getNameEStringParserRuleCall_3_0()); 
@@ -17509,17 +17673,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnInteger__InitialeValueAssignment_4_1"
-    // InternalLegoLang.g:5514:1: rule__UnInteger__InitialeValueAssignment_4_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5568:1: rule__UnInteger__InitialeValueAssignment_4_1 : ( ruleEInt ) ;
     public final void rule__UnInteger__InitialeValueAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5518:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5519:2: ( ruleEInt )
+            // InternalLegoLang.g:5572:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5573:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5519:2: ( ruleEInt )
-            // InternalLegoLang.g:5520:3: ruleEInt
+            // InternalLegoLang.g:5573:2: ( ruleEInt )
+            // InternalLegoLang.g:5574:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnIntegerAccess().getInitialeValueEIntParserRuleCall_4_1_0()); 
@@ -17554,28 +17718,28 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__IsConstAssignment_1"
-    // InternalLegoLang.g:5529:1: rule__UnDouble__IsConstAssignment_1 : ( ( 'const' ) ) ;
+    // InternalLegoLang.g:5583:1: rule__UnDouble__IsConstAssignment_1 : ( ( 'const' ) ) ;
     public final void rule__UnDouble__IsConstAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5533:1: ( ( ( 'const' ) ) )
-            // InternalLegoLang.g:5534:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5587:1: ( ( ( 'const' ) ) )
+            // InternalLegoLang.g:5588:2: ( ( 'const' ) )
             {
-            // InternalLegoLang.g:5534:2: ( ( 'const' ) )
-            // InternalLegoLang.g:5535:3: ( 'const' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnDoubleAccess().getIsConstConstKeyword_1_0()); 
-            }
-            // InternalLegoLang.g:5536:3: ( 'const' )
-            // InternalLegoLang.g:5537:4: 'const'
+            // InternalLegoLang.g:5588:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5589:3: ( 'const' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getIsConstConstKeyword_1_0()); 
             }
-            match(input,42,FOLLOW_2); if (state.failed) return ;
+            // InternalLegoLang.g:5590:3: ( 'const' )
+            // InternalLegoLang.g:5591:4: 'const'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getUnDoubleAccess().getIsConstConstKeyword_1_0()); 
+            }
+            match(input,43,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnDoubleAccess().getIsConstConstKeyword_1_0()); 
             }
@@ -17607,17 +17771,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__NameAssignment_3"
-    // InternalLegoLang.g:5548:1: rule__UnDouble__NameAssignment_3 : ( ruleEString ) ;
+    // InternalLegoLang.g:5602:1: rule__UnDouble__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__UnDouble__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5552:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5553:2: ( ruleEString )
+            // InternalLegoLang.g:5606:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5607:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5553:2: ( ruleEString )
-            // InternalLegoLang.g:5554:3: ruleEString
+            // InternalLegoLang.g:5607:2: ( ruleEString )
+            // InternalLegoLang.g:5608:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getNameEStringParserRuleCall_3_0()); 
@@ -17652,17 +17816,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__InitialeValue1Assignment_4_1"
-    // InternalLegoLang.g:5563:1: rule__UnDouble__InitialeValue1Assignment_4_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5617:1: rule__UnDouble__InitialeValue1Assignment_4_1 : ( ruleEInt ) ;
     public final void rule__UnDouble__InitialeValue1Assignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5567:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5568:2: ( ruleEInt )
+            // InternalLegoLang.g:5621:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5622:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5568:2: ( ruleEInt )
-            // InternalLegoLang.g:5569:3: ruleEInt
+            // InternalLegoLang.g:5622:2: ( ruleEInt )
+            // InternalLegoLang.g:5623:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getInitialeValue1EIntParserRuleCall_4_1_0()); 
@@ -17697,17 +17861,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnDouble__InitialeValue2Assignment_4_2_1"
-    // InternalLegoLang.g:5578:1: rule__UnDouble__InitialeValue2Assignment_4_2_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5632:1: rule__UnDouble__InitialeValue2Assignment_4_2_1 : ( ruleEInt ) ;
     public final void rule__UnDouble__InitialeValue2Assignment_4_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5582:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5583:2: ( ruleEInt )
+            // InternalLegoLang.g:5636:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5637:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5583:2: ( ruleEInt )
-            // InternalLegoLang.g:5584:3: ruleEInt
+            // InternalLegoLang.g:5637:2: ( ruleEInt )
+            // InternalLegoLang.g:5638:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnDoubleAccess().getInitialeValue2EIntParserRuleCall_4_2_1_0()); 
@@ -17742,28 +17906,28 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__IsConstAssignment_1"
-    // InternalLegoLang.g:5593:1: rule__UnBoolean__IsConstAssignment_1 : ( ( 'const' ) ) ;
+    // InternalLegoLang.g:5647:1: rule__UnBoolean__IsConstAssignment_1 : ( ( 'const' ) ) ;
     public final void rule__UnBoolean__IsConstAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5597:1: ( ( ( 'const' ) ) )
-            // InternalLegoLang.g:5598:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5651:1: ( ( ( 'const' ) ) )
+            // InternalLegoLang.g:5652:2: ( ( 'const' ) )
             {
-            // InternalLegoLang.g:5598:2: ( ( 'const' ) )
-            // InternalLegoLang.g:5599:3: ( 'const' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnBooleanAccess().getIsConstConstKeyword_1_0()); 
-            }
-            // InternalLegoLang.g:5600:3: ( 'const' )
-            // InternalLegoLang.g:5601:4: 'const'
+            // InternalLegoLang.g:5652:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5653:3: ( 'const' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getIsConstConstKeyword_1_0()); 
             }
-            match(input,42,FOLLOW_2); if (state.failed) return ;
+            // InternalLegoLang.g:5654:3: ( 'const' )
+            // InternalLegoLang.g:5655:4: 'const'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getUnBooleanAccess().getIsConstConstKeyword_1_0()); 
+            }
+            match(input,43,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnBooleanAccess().getIsConstConstKeyword_1_0()); 
             }
@@ -17795,17 +17959,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__NameAssignment_3"
-    // InternalLegoLang.g:5612:1: rule__UnBoolean__NameAssignment_3 : ( ruleEString ) ;
+    // InternalLegoLang.g:5666:1: rule__UnBoolean__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__UnBoolean__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5616:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5617:2: ( ruleEString )
+            // InternalLegoLang.g:5670:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5671:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5617:2: ( ruleEString )
-            // InternalLegoLang.g:5618:3: ruleEString
+            // InternalLegoLang.g:5671:2: ( ruleEString )
+            // InternalLegoLang.g:5672:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getNameEStringParserRuleCall_3_0()); 
@@ -17840,17 +18004,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnBoolean__InitialeValueAssignment_4_1"
-    // InternalLegoLang.g:5627:1: rule__UnBoolean__InitialeValueAssignment_4_1 : ( ruleEBoolean ) ;
+    // InternalLegoLang.g:5681:1: rule__UnBoolean__InitialeValueAssignment_4_1 : ( ruleEBoolean ) ;
     public final void rule__UnBoolean__InitialeValueAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5631:1: ( ( ruleEBoolean ) )
-            // InternalLegoLang.g:5632:2: ( ruleEBoolean )
+            // InternalLegoLang.g:5685:1: ( ( ruleEBoolean ) )
+            // InternalLegoLang.g:5686:2: ( ruleEBoolean )
             {
-            // InternalLegoLang.g:5632:2: ( ruleEBoolean )
-            // InternalLegoLang.g:5633:3: ruleEBoolean
+            // InternalLegoLang.g:5686:2: ( ruleEBoolean )
+            // InternalLegoLang.g:5687:3: ruleEBoolean
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnBooleanAccess().getInitialeValueEBooleanParserRuleCall_4_1_0()); 
@@ -17885,28 +18049,28 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__IsConstAssignment_1"
-    // InternalLegoLang.g:5642:1: rule__UnString__IsConstAssignment_1 : ( ( 'const' ) ) ;
+    // InternalLegoLang.g:5696:1: rule__UnString__IsConstAssignment_1 : ( ( 'const' ) ) ;
     public final void rule__UnString__IsConstAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5646:1: ( ( ( 'const' ) ) )
-            // InternalLegoLang.g:5647:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5700:1: ( ( ( 'const' ) ) )
+            // InternalLegoLang.g:5701:2: ( ( 'const' ) )
             {
-            // InternalLegoLang.g:5647:2: ( ( 'const' ) )
-            // InternalLegoLang.g:5648:3: ( 'const' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnStringAccess().getIsConstConstKeyword_1_0()); 
-            }
-            // InternalLegoLang.g:5649:3: ( 'const' )
-            // InternalLegoLang.g:5650:4: 'const'
+            // InternalLegoLang.g:5701:2: ( ( 'const' ) )
+            // InternalLegoLang.g:5702:3: ( 'const' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getIsConstConstKeyword_1_0()); 
             }
-            match(input,42,FOLLOW_2); if (state.failed) return ;
+            // InternalLegoLang.g:5703:3: ( 'const' )
+            // InternalLegoLang.g:5704:4: 'const'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getUnStringAccess().getIsConstConstKeyword_1_0()); 
+            }
+            match(input,43,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnStringAccess().getIsConstConstKeyword_1_0()); 
             }
@@ -17938,17 +18102,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__NameAssignment_3"
-    // InternalLegoLang.g:5661:1: rule__UnString__NameAssignment_3 : ( ruleEString ) ;
+    // InternalLegoLang.g:5715:1: rule__UnString__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__UnString__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5665:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5666:2: ( ruleEString )
+            // InternalLegoLang.g:5719:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5720:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5666:2: ( ruleEString )
-            // InternalLegoLang.g:5667:3: ruleEString
+            // InternalLegoLang.g:5720:2: ( ruleEString )
+            // InternalLegoLang.g:5721:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getNameEStringParserRuleCall_3_0()); 
@@ -17983,17 +18147,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnString__InitialeValueAssignment_4_1"
-    // InternalLegoLang.g:5676:1: rule__UnString__InitialeValueAssignment_4_1 : ( ruleEString ) ;
+    // InternalLegoLang.g:5730:1: rule__UnString__InitialeValueAssignment_4_1 : ( ruleEString ) ;
     public final void rule__UnString__InitialeValueAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5680:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5681:2: ( ruleEString )
+            // InternalLegoLang.g:5734:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5735:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5681:2: ( ruleEString )
-            // InternalLegoLang.g:5682:3: ruleEString
+            // InternalLegoLang.g:5735:2: ( ruleEString )
+            // InternalLegoLang.g:5736:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnStringAccess().getInitialeValueEStringParserRuleCall_4_1_0()); 
@@ -18028,17 +18192,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Value1Assignment_1"
-    // InternalLegoLang.g:5691:1: rule__TheDouble__Value1Assignment_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5745:1: rule__TheDouble__Value1Assignment_1 : ( ruleEInt ) ;
     public final void rule__TheDouble__Value1Assignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5695:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5696:2: ( ruleEInt )
+            // InternalLegoLang.g:5749:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5750:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5696:2: ( ruleEInt )
-            // InternalLegoLang.g:5697:3: ruleEInt
+            // InternalLegoLang.g:5750:2: ( ruleEInt )
+            // InternalLegoLang.g:5751:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getValue1EIntParserRuleCall_1_0()); 
@@ -18073,17 +18237,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheDouble__Value2Assignment_2_1"
-    // InternalLegoLang.g:5706:1: rule__TheDouble__Value2Assignment_2_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5760:1: rule__TheDouble__Value2Assignment_2_1 : ( ruleEInt ) ;
     public final void rule__TheDouble__Value2Assignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5710:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5711:2: ( ruleEInt )
+            // InternalLegoLang.g:5764:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5765:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5711:2: ( ruleEInt )
-            // InternalLegoLang.g:5712:3: ruleEInt
+            // InternalLegoLang.g:5765:2: ( ruleEInt )
+            // InternalLegoLang.g:5766:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheDoubleAccess().getValue2EIntParserRuleCall_2_1_0()); 
@@ -18118,17 +18282,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheInt__ValueAssignment_1"
-    // InternalLegoLang.g:5721:1: rule__TheInt__ValueAssignment_1 : ( ruleEInt ) ;
+    // InternalLegoLang.g:5775:1: rule__TheInt__ValueAssignment_1 : ( ruleEInt ) ;
     public final void rule__TheInt__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5725:1: ( ( ruleEInt ) )
-            // InternalLegoLang.g:5726:2: ( ruleEInt )
+            // InternalLegoLang.g:5779:1: ( ( ruleEInt ) )
+            // InternalLegoLang.g:5780:2: ( ruleEInt )
             {
-            // InternalLegoLang.g:5726:2: ( ruleEInt )
-            // InternalLegoLang.g:5727:3: ruleEInt
+            // InternalLegoLang.g:5780:2: ( ruleEInt )
+            // InternalLegoLang.g:5781:3: ruleEInt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheIntAccess().getValueEIntParserRuleCall_1_0()); 
@@ -18163,17 +18327,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheBoolean__ValueAssignment_1"
-    // InternalLegoLang.g:5736:1: rule__TheBoolean__ValueAssignment_1 : ( ruleEBoolean ) ;
+    // InternalLegoLang.g:5790:1: rule__TheBoolean__ValueAssignment_1 : ( ruleEBoolean ) ;
     public final void rule__TheBoolean__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5740:1: ( ( ruleEBoolean ) )
-            // InternalLegoLang.g:5741:2: ( ruleEBoolean )
+            // InternalLegoLang.g:5794:1: ( ( ruleEBoolean ) )
+            // InternalLegoLang.g:5795:2: ( ruleEBoolean )
             {
-            // InternalLegoLang.g:5741:2: ( ruleEBoolean )
-            // InternalLegoLang.g:5742:3: ruleEBoolean
+            // InternalLegoLang.g:5795:2: ( ruleEBoolean )
+            // InternalLegoLang.g:5796:3: ruleEBoolean
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheBooleanAccess().getValueEBooleanParserRuleCall_1_0()); 
@@ -18208,17 +18372,17 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TheString__ValueAssignment_1"
-    // InternalLegoLang.g:5751:1: rule__TheString__ValueAssignment_1 : ( ruleEString ) ;
+    // InternalLegoLang.g:5805:1: rule__TheString__ValueAssignment_1 : ( ruleEString ) ;
     public final void rule__TheString__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalLegoLang.g:5755:1: ( ( ruleEString ) )
-            // InternalLegoLang.g:5756:2: ( ruleEString )
+            // InternalLegoLang.g:5809:1: ( ( ruleEString ) )
+            // InternalLegoLang.g:5810:2: ( ruleEString )
             {
-            // InternalLegoLang.g:5756:2: ( ruleEString )
-            // InternalLegoLang.g:5757:3: ruleEString
+            // InternalLegoLang.g:5810:2: ( ruleEString )
+            // InternalLegoLang.g:5811:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTheStringAccess().getValueEStringParserRuleCall_1_0()); 
@@ -18867,11 +19031,11 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     protected DFA3 dfa3 = new DFA3(this);
     static final String dfa_1s = "\13\uffff";
     static final String dfa_2s = "\1\4\2\0\1\uffff\1\6\1\0\5\uffff";
-    static final String dfa_3s = "\1\26\2\0\1\uffff\1\6\1\0\5\uffff";
+    static final String dfa_3s = "\1\27\2\0\1\uffff\1\6\1\0\5\uffff";
     static final String dfa_4s = "\3\uffff\1\2\2\uffff\1\6\1\1\1\3\1\4\1\5";
     static final String dfa_5s = "\1\uffff\1\2\1\0\2\uffff\1\1\5\uffff}>";
     static final String[] dfa_6s = {
-            "\1\1\1\2\1\5\4\uffff\2\6\10\uffff\1\3\1\4",
+            "\1\1\1\2\1\5\4\uffff\2\6\11\uffff\1\3\1\4",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -18965,7 +19129,7 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
         }
     }
     static final String dfa_7s = "\12\uffff";
-    static final String dfa_8s = "\1\25\1\0\10\uffff";
+    static final String dfa_8s = "\1\26\1\0\10\uffff";
     static final String dfa_9s = "\2\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10";
     static final String dfa_10s = "\1\uffff\1\0\10\uffff}>";
     static final String[] dfa_11s = {
@@ -19049,16 +19213,16 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000750006D9870L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000750006D1872L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000EA000CD9870L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000EA000CD1872L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000750006D1870L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000EA000CD1870L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000601870L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000C01870L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000601872L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000C01872L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
@@ -19072,12 +19236,13 @@ public class InternalLegoLangParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000041000000000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000002200000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000400040L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000075000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000050000000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000060000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000082000000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000004400000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000800040L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00000EA000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x00000A0000000000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x00000C0000000000L});
 
 }

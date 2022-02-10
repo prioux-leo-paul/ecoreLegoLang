@@ -152,10 +152,10 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createAssignement()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createunInteger()));
+				LangageCompilationFactory.eINSTANCE.createUnInteger()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createunString()));
+				LangageCompilationFactory.eINSTANCE.createUnString()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createLT()));
@@ -179,7 +179,7 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createunBoolean()));
+				LangageCompilationFactory.eINSTANCE.createUnBoolean()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createDifferent()));
@@ -191,7 +191,7 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMethodePrint()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createunDouble()));
+				LangageCompilationFactory.eINSTANCE.createUnDouble()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createTheBoolean()));
@@ -227,10 +227,10 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createAssignement()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createunInteger()));
+				LangageCompilationFactory.eINSTANCE.createUnInteger()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createunString()));
+				LangageCompilationFactory.eINSTANCE.createUnString()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createLT()));
@@ -254,7 +254,7 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createunBoolean()));
+				LangageCompilationFactory.eINSTANCE.createUnBoolean()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createDifferent()));
@@ -266,7 +266,7 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMethodePrint()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createunDouble()));
+				LangageCompilationFactory.eINSTANCE.createUnDouble()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createTheBoolean()));

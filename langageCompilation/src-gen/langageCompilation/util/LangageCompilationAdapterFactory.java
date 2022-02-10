@@ -127,13 +127,13 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseunInteger(unInteger object) {
-			return createunIntegerAdapter();
+		public Adapter caseUnInteger(UnInteger object) {
+			return createUnIntegerAdapter();
 		}
 
 		@Override
-		public Adapter caseunString(unString object) {
-			return createunStringAdapter();
+		public Adapter caseUnString(UnString object) {
+			return createUnStringAdapter();
 		}
 
 		@Override
@@ -172,8 +172,8 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseunBoolean(unBoolean object) {
-			return createunBooleanAdapter();
+		public Adapter caseUnBoolean(UnBoolean object) {
+			return createUnBooleanAdapter();
 		}
 
 		@Override
@@ -192,8 +192,8 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseunDouble(unDouble object) {
-			return createunDoubleAdapter();
+		public Adapter caseUnDouble(UnDouble object) {
+			return createUnDoubleAdapter();
 		}
 
 		@Override
@@ -414,30 +414,30 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.unInteger <em>un Integer</em>}'.
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UnInteger <em>Un Integer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see langageCompilation.unInteger
+	 * @see langageCompilation.UnInteger
 	 * @generated
 	 */
-	public Adapter createunIntegerAdapter() {
+	public Adapter createUnIntegerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.unString <em>un String</em>}'.
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UnString <em>Un String</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see langageCompilation.unString
+	 * @see langageCompilation.UnString
 	 * @generated
 	 */
-	public Adapter createunStringAdapter() {
+	public Adapter createUnStringAdapter() {
 		return null;
 	}
 
@@ -540,16 +540,16 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.unBoolean <em>un Boolean</em>}'.
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UnBoolean <em>Un Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see langageCompilation.unBoolean
+	 * @see langageCompilation.UnBoolean
 	 * @generated
 	 */
-	public Adapter createunBooleanAdapter() {
+	public Adapter createUnBooleanAdapter() {
 		return null;
 	}
 
@@ -596,16 +596,16 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.unDouble <em>un Double</em>}'.
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UnDouble <em>Un Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see langageCompilation.unDouble
+	 * @see langageCompilation.UnDouble
 	 * @generated
 	 */
-	public Adapter createunDoubleAdapter() {
+	public Adapter createUnDoubleAdapter() {
 		return null;
 	}
 

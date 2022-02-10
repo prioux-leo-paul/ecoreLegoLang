@@ -3,10 +3,43 @@
  */
 package langageCompilation.concrete.syntax.generator
 
+import langageCompilation.Program
+import langageCompilation.Variable
+
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import langageCompilation.UnInteger
+import langageCompilation.UnString
+import langageCompilation.UnBoolean
+import langageCompilation.UnDouble
+import langageCompilation.Expression
+import langageCompilation.VariableRef
+import langageCompilation.TheInt
+import langageCompilation.TheBoolean
+import langageCompilation.TheString
+import langageCompilation.TheDouble
+import langageCompilation.BinaryOperation
+import langageCompilation.Multiplication
+import langageCompilation.Addition
+import langageCompilation.Division
+import langageCompilation.Substraction
+import langageCompilation.Assignement
+import langageCompilation.MinusEqual
+import langageCompilation.PlusEqual
+import langageCompilation.Comparaison
+import langageCompilation.GT
+import langageCompilation.LT
+import langageCompilation.LTorEqual
+import langageCompilation.GTorEqual
+import langageCompilation.Equal
+import langageCompilation.Different
+import langageCompilation.Loop
+import langageCompilation.WhileLoop
+import langageCompilation.ConditionEtat
+import langageCompilation.MethodePrint
+import langageCompilation.Statement
 
 /**
  * Generates code from your model files on save.
@@ -16,10 +49,155 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class LegoLangGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+		var Program prog = resource.allContents.head as Program
+		var String fileContent = ''
+		for (v : prog.statement){
+			fileContent += statementToPython(v)
+			fileContent += '\n'
+		}
+		fsa.generateFile(prog.name+'.py','#!/usr/bin/env python3
+
+# Import the necessary libraries
+import time
+import math
+from ev3dev2.motor import *
+from ev3dev2.sound import Sound
+from ev3dev2.button import Button
+from ev3dev2.sensor import *
+from ev3dev2.sensor.lego import *
+from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 	}
+	
+	
+	def String statementToPython(Statement v){
+			if (v instanceof Variable) {
+				return varToPython(v)
+			}
+			if (v instanceof Expression) {
+				return v.expressionToPython()
+			}
+			if (v instanceof Loop) {
+				return v.loopToPython()
+			}
+			if (v instanceof ConditionEtat) {
+				var String tmp = 'if(' + comparaisonPython(v.condition) + '):'
+				for(s : v.then){
+						tmp += '\n\t' + statementToPython(s)
+					}
+				if( v.^else !== null){
+					tmp += '\nelse :'
+					for(s : v.^else){
+						tmp += '\n\t' + statementToPython(s)
+					}
+				}	
+				return tmp
+			}
+			if(v instanceof MethodePrint){
+				var String tmp =  'print('
+				for(s : v.expression){
+					tmp +=expressionToPython(s) + ','
+				}
+				return tmp + ')'
+			}
+		}
+	def String varToPython(Variable v){
+		if (v instanceof UnInteger){
+			return v.name + ":int=" + v.initialeValue
+		}
+		if (v instanceof UnString){
+			return v.name + ":str=" + v.initialeValue
+		}
+		if (v instanceof UnBoolean){
+			return v.name + ":bool=" + v.initialeValue
+		}
+		if (v instanceof UnDouble){
+			return v.name + ":double=" + v.initialeValue1 + "." + v.initialeValue2
+		}
+	}
+	
+	def String expressionToPython(Expression v){
+		if(v instanceof VariableRef){
+			return v.variable.name
+		}
+		if(v instanceof TheInt){
+			return v.value.toString()
+		}
+		if(v instanceof TheBoolean){
+			return v.value.toString()
+		}
+		if(v instanceof TheString){
+			return v.value
+		}
+		if(v instanceof TheDouble){
+			return v.value1.toString() + '.' + v.value2.toString()
+		}
+		if(v instanceof BinaryOperation){
+			return binaryOperationPython(v)
+		}	
+	}
+	
+	
+	def String binaryOperationPython(BinaryOperation v){
+		if(v instanceof Multiplication){
+			return expressionToPython(v.left) + '*' + expressionToPython(v.right)
+		}
+		if(v instanceof Addition){
+			return expressionToPython(v.left) + '+' + expressionToPython(v.right)
+		}	
+		if(v instanceof Division){
+			return expressionToPython(v.left) + '/' + expressionToPython(v.right)
+		}
+		if(v instanceof Assignement){
+			return expressionToPython(v.left) + '=' + expressionToPython(v.right)
+		}
+		if(v instanceof MinusEqual){
+			return expressionToPython(v.left) + '-=' + expressionToPython(v.right)
+		}
+		if(v instanceof PlusEqual){
+			return expressionToPython(v.left) + '+=' + expressionToPython(v.right)
+		}
+		if(v instanceof Substraction){
+			return expressionToPython(v.left) + '-' + expressionToPython(v.right)
+		}
+		if(v instanceof Comparaison){
+			return comparaisonPython(v)
+		}	
+	}
+	
+	def String comparaisonPython(Comparaison v){
+		if(v instanceof GT){
+			return expressionToPython(v.left) + '>' + expressionToPython(v.right)
+		}
+		if(v instanceof LT){
+			return expressionToPython(v.left) + '<' + expressionToPython(v.right)
+		}
+		if(v instanceof LTorEqual){
+			return expressionToPython(v.left) + '<=' + expressionToPython(v.right)
+		}
+		if(v instanceof GTorEqual){
+			return expressionToPython(v.left) + '>=' + expressionToPython(v.right)
+		}
+		if(v instanceof Equal){
+			return expressionToPython(v.left) + '==' + expressionToPython(v.right)
+		}
+		if(v instanceof Different){
+			return expressionToPython(v.left) + '!=' + expressionToPython(v.right)
+		}
+	}
+	
+	def String loopToPython(Loop v){
+		if( v instanceof WhileLoop){
+			var String tmp ='while(' + comparaisonPython(v.loopCondition) + '): '
+			for(s : v.statement){
+				tmp += '\n\t' + statementToPython(s)
+			}
+			return tmp
+		}
+	}
+	
 }
+	
+
+	
+	
+

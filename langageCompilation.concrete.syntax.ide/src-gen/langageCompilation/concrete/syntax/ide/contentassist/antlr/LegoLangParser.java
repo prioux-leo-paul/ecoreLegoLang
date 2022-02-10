@@ -43,6 +43,7 @@ public class LegoLangParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionEtatAccess().getGroup_5(), "rule__ConditionEtat__Group_5__0");
 			builder.put(grammarAccess.getWhileLoopAccess().getGroup(), "rule__WhileLoop__Group__0");
 			builder.put(grammarAccess.getMethodePrintAccess().getGroup(), "rule__MethodePrint__Group__0");
+			builder.put(grammarAccess.getMethodePrintAccess().getGroup_2(), "rule__MethodePrint__Group_2__0");
 			builder.put(grammarAccess.getSubstractionAccess().getGroup(), "rule__Substraction__Group__0");
 			builder.put(grammarAccess.getAdditionAccess().getGroup(), "rule__Addition__Group__0");
 			builder.put(grammarAccess.getMultiplicationAccess().getGroup(), "rule__Multiplication__Group__0");
@@ -78,7 +79,7 @@ public class LegoLangParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionEtatAccess().getElseAssignment_5_1(), "rule__ConditionEtat__ElseAssignment_5_1");
 			builder.put(grammarAccess.getWhileLoopAccess().getLoopConditionAssignment_1(), "rule__WhileLoop__LoopConditionAssignment_1");
 			builder.put(grammarAccess.getWhileLoopAccess().getStatementAssignment_3(), "rule__WhileLoop__StatementAssignment_3");
-			builder.put(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2(), "rule__MethodePrint__ExpressionAssignment_2");
+			builder.put(grammarAccess.getMethodePrintAccess().getExpressionAssignment_2_0(), "rule__MethodePrint__ExpressionAssignment_2_0");
 			builder.put(grammarAccess.getVariableRefAccess().getVariableAssignment(), "rule__VariableRef__VariableAssignment");
 			builder.put(grammarAccess.getSubstractionAccess().getLeftAssignment_1(), "rule__Substraction__LeftAssignment_1");
 			builder.put(grammarAccess.getSubstractionAccess().getRightAssignment_3(), "rule__Substraction__RightAssignment_3");

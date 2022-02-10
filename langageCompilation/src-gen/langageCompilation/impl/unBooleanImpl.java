@@ -3,7 +3,7 @@
 package langageCompilation.impl;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unBoolean;
+import langageCompilation.UnBoolean;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,18 +13,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>un Boolean</b></em>'.
+ * An implementation of the model object '<em><b>Un Boolean</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link langageCompilation.impl.unBooleanImpl#isInitialeValue <em>Initiale Value</em>}</li>
+ *   <li>{@link langageCompilation.impl.UnBooleanImpl#isInitialeValue <em>Initiale Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class unBooleanImpl extends VariableImpl implements unBoolean {
+public class UnBooleanImpl extends VariableImpl implements UnBoolean {
 	/**
 	 * The default value of the '{@link #isInitialeValue() <em>Initiale Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class unBooleanImpl extends VariableImpl implements unBoolean {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unBooleanImpl() {
+	protected UnBooleanImpl() {
 		super();
 	}
 
@@ -161,4 +161,4 @@ public class unBooleanImpl extends VariableImpl implements unBoolean {
 		return result.toString();
 	}
 
-} //unBooleanImpl
+} //UnBooleanImpl

@@ -76,22 +76,22 @@ public interface LangageCompilationFactory extends EFactory {
 	Assignement createAssignement();
 
 	/**
-	 * Returns a new object of class '<em>un Integer</em>'.
+	 * Returns a new object of class '<em>Un Integer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>un Integer</em>'.
+	 * @return a new object of class '<em>Un Integer</em>'.
 	 * @generated
 	 */
-	unInteger createunInteger();
+	UnInteger createUnInteger();
 
 	/**
-	 * Returns a new object of class '<em>un String</em>'.
+	 * Returns a new object of class '<em>Un String</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>un String</em>'.
+	 * @return a new object of class '<em>Un String</em>'.
 	 * @generated
 	 */
-	unString createunString();
+	UnString createUnString();
 
 	/**
 	 * Returns a new object of class '<em>LT</em>'.
@@ -157,13 +157,13 @@ public interface LangageCompilationFactory extends EFactory {
 	GTorEqual createGTorEqual();
 
 	/**
-	 * Returns a new object of class '<em>un Boolean</em>'.
+	 * Returns a new object of class '<em>Un Boolean</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>un Boolean</em>'.
+	 * @return a new object of class '<em>Un Boolean</em>'.
 	 * @generated
 	 */
-	unBoolean createunBoolean();
+	UnBoolean createUnBoolean();
 
 	/**
 	 * Returns a new object of class '<em>Different</em>'.
@@ -193,13 +193,13 @@ public interface LangageCompilationFactory extends EFactory {
 	MethodePrint createMethodePrint();
 
 	/**
-	 * Returns a new object of class '<em>un Double</em>'.
+	 * Returns a new object of class '<em>Un Double</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>un Double</em>'.
+	 * @return a new object of class '<em>Un Double</em>'.
 	 * @generated
 	 */
-	unDouble createunDouble();
+	UnDouble createUnDouble();
 
 	/**
 	 * Returns a new object of class '<em>The Boolean</em>'.

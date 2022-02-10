@@ -26,13 +26,13 @@ import langageCompilation.TheBoolean;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
+import langageCompilation.UnBoolean;
+import langageCompilation.UnDouble;
+import langageCompilation.UnInteger;
+import langageCompilation.UnString;
 import langageCompilation.VariableRef;
 import langageCompilation.WhileLoop;
 import langageCompilation.concrete.syntax.services.LegoLangGrammarAccess;
-import langageCompilation.unBoolean;
-import langageCompilation.unDouble;
-import langageCompilation.unInteger;
-import langageCompilation.unString;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.Action;
@@ -117,23 +117,23 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.THE_STRING:
 				sequence_TheString(context, (TheString) semanticObject); 
 				return; 
+			case LangageCompilationPackage.UN_BOOLEAN:
+				sequence_UnBoolean(context, (UnBoolean) semanticObject); 
+				return; 
+			case LangageCompilationPackage.UN_DOUBLE:
+				sequence_UnDouble(context, (UnDouble) semanticObject); 
+				return; 
+			case LangageCompilationPackage.UN_INTEGER:
+				sequence_UnInteger(context, (UnInteger) semanticObject); 
+				return; 
+			case LangageCompilationPackage.UN_STRING:
+				sequence_UnString(context, (UnString) semanticObject); 
+				return; 
 			case LangageCompilationPackage.VARIABLE_REF:
 				sequence_VariableRef(context, (VariableRef) semanticObject); 
 				return; 
 			case LangageCompilationPackage.WHILE_LOOP:
 				sequence_WhileLoop(context, (WhileLoop) semanticObject); 
-				return; 
-			case LangageCompilationPackage.UN_BOOLEAN:
-				sequence_unBoolean(context, (unBoolean) semanticObject); 
-				return; 
-			case LangageCompilationPackage.UN_DOUBLE:
-				sequence_unDouble(context, (unDouble) semanticObject); 
-				return; 
-			case LangageCompilationPackage.UN_INTEGER:
-				sequence_unInteger(context, (unInteger) semanticObject); 
-				return; 
-			case LangageCompilationPackage.UN_STRING:
-				sequence_unString(context, (unString) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -572,6 +572,62 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns UnBoolean
+	 *     Variable returns UnBoolean
+	 *     UnBoolean returns UnBoolean
+	 *
+	 * Constraint:
+	 *     (isConst?='const'? name=EString initialeValue=EBoolean?)
+	 */
+	protected void sequence_UnBoolean(ISerializationContext context, UnBoolean semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns UnDouble
+	 *     Variable returns UnDouble
+	 *     UnDouble returns UnDouble
+	 *
+	 * Constraint:
+	 *     (isConst?='const'? name=EString (initialeValue1=EInt initialeValue2=EInt?)?)
+	 */
+	protected void sequence_UnDouble(ISerializationContext context, UnDouble semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns UnInteger
+	 *     Variable returns UnInteger
+	 *     UnInteger returns UnInteger
+	 *
+	 * Constraint:
+	 *     (isConst?='const'? name=EString initialeValue=EInt?)
+	 */
+	protected void sequence_UnInteger(ISerializationContext context, UnInteger semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns UnString
+	 *     Variable returns UnString
+	 *     UnString returns UnString
+	 *
+	 * Constraint:
+	 *     (isConst?='const'? name=EString initialeValue=EString?)
+	 */
+	protected void sequence_UnString(ISerializationContext context, UnString semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns VariableRef
 	 *     Expression returns VariableRef
 	 *     VariableRef returns VariableRef
@@ -599,62 +655,6 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     (LoopCondition=Comparaison statement+=Statement*)
 	 */
 	protected void sequence_WhileLoop(ISerializationContext context, WhileLoop semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns unBoolean
-	 *     Variable returns unBoolean
-	 *     unBoolean returns unBoolean
-	 *
-	 * Constraint:
-	 *     (isConst?='const'? name=EString initialeValue=EBoolean?)
-	 */
-	protected void sequence_unBoolean(ISerializationContext context, unBoolean semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns unDouble
-	 *     Variable returns unDouble
-	 *     unDouble returns unDouble
-	 *
-	 * Constraint:
-	 *     (isConst?='const'? name=EString (initialeValue1=EInt initialeValue2=EInt?)?)
-	 */
-	protected void sequence_unDouble(ISerializationContext context, unDouble semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns unInteger
-	 *     Variable returns unInteger
-	 *     unInteger returns unInteger
-	 *
-	 * Constraint:
-	 *     (isConst?='const'? name=EString initialeValue=EInt?)
-	 */
-	protected void sequence_unInteger(ISerializationContext context, unInteger semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns unString
-	 *     Variable returns unString
-	 *     unString returns unString
-	 *
-	 * Constraint:
-	 *     (isConst?='const'? name=EString initialeValue=EString?)
-	 */
-	protected void sequence_unString(ISerializationContext context, unString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

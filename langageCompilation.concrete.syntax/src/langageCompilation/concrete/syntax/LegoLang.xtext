@@ -22,7 +22,7 @@ BinaryOperation returns BinaryOperation:
 	Substraction | Comparaison | Assignement | Division | Multiplication | Addition | MinusEqual | PlusEqual;
 	
 Variable returns Variable:
-	unInteger | unString | unBoolean | unDouble;
+	UnInteger | UnString | UnBoolean | UnDouble;
 
 Comparaison returns Comparaison:
 	  GT | Equal | LT | Different | GTorEqual | LTorEqual ;
@@ -48,7 +48,7 @@ WhileLoop returns WhileLoop:
 MethodePrint returns MethodePrint:
 	{MethodePrint}
 	'print('
-	(expression+=Expression)+
+	(expression+=Expression ",")+
 	');';
 	
 VariableRef returns VariableRef:
@@ -121,29 +121,29 @@ MinusEqual returns MinusEqual:
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
-unInteger returns unInteger:
-	{unInteger}
+UnInteger returns UnInteger:
+	{UnInteger}
 	(isConst?='const')?
 	'int'
 	name=EString
 	('=' initialeValue=EInt)? ";";
 
-unDouble returns unDouble:
-	{unDouble}
+UnDouble returns UnDouble:
+	{UnDouble}
 	(isConst?='const')?
 	'double'
 	name=EString
 	('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";";
 
-unBoolean returns unBoolean:
-	{unBoolean}
+UnBoolean returns UnBoolean:
+	{UnBoolean}
 	(isConst?='const')?
 	'bool'
 	name=EString
 	('=' initialeValue=EBoolean)? ";"; 
 	
-unString returns unString:
-	{unString}
+UnString returns UnString:
+	{UnString}
 	(isConst?='const')?
 	'string'
 	name=EString

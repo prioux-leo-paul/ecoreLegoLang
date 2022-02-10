@@ -36,6 +36,18 @@ public interface ConditionEtat extends Statement {
 	EList<Statement> getThen();
 
 	/**
+	 * Returns the value of the '<em><b>Else</b></em>' containment reference list.
+	 * The list contents are of type {@link langageCompilation.Statement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Else</em>' containment reference list.
+	 * @see langageCompilation.LangageCompilationPackage#getConditionEtat_Else()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Statement> getElse();
+
+	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,17 +68,5 @@ public interface ConditionEtat extends Statement {
 	 * @generated
 	 */
 	void setCondition(Comparaison value);
-
-	/**
-	 * Returns the value of the '<em><b>Else</b></em>' containment reference list.
-	 * The list contents are of type {@link langageCompilation.Statement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Else</em>' containment reference list.
-	 * @see langageCompilation.LangageCompilationPackage#getConditionEtat_Else()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Statement> getElse();
 
 } // ConditionEtat

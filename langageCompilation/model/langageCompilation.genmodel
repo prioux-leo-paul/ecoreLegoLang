@@ -37,11 +37,11 @@
     <genClasses ecoreClass="langageCompilation.ecore#//Comparaison"/>
     <genClasses ecoreClass="langageCompilation.ecore#//GT"/>
     <genClasses ecoreClass="langageCompilation.ecore#//Assignement"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//unInteger">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//unInteger/initialeValue"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//UnInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnInteger/initialeValue"/>
     </genClasses>
-    <genClasses ecoreClass="langageCompilation.ecore#//unString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//unString/initialeValue"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//UnString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnString/initialeValue"/>
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//LT"/>
     <genClasses ecoreClass="langageCompilation.ecore#//Equal"/>
@@ -50,8 +50,8 @@
     <genClasses ecoreClass="langageCompilation.ecore#//Multiplication"/>
     <genClasses ecoreClass="langageCompilation.ecore#//LTorEqual"/>
     <genClasses ecoreClass="langageCompilation.ecore#//GTorEqual"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//unBoolean">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//unBoolean/initialeValue"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//UnBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnBoolean/initialeValue"/>
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//Different"/>
     <genClasses image="false" ecoreClass="langageCompilation.ecore#//ConditionEtat">
@@ -62,9 +62,9 @@
     <genClasses ecoreClass="langageCompilation.ecore#//MethodePrint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//MethodePrint/expression"/>
     </genClasses>
-    <genClasses ecoreClass="langageCompilation.ecore#//unDouble">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//unDouble/initialeValue1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//unDouble/initialeValue2"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//UnDouble">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnDouble/initialeValue1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnDouble/initialeValue2"/>
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//TheBoolean">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//TheBoolean/value"/>

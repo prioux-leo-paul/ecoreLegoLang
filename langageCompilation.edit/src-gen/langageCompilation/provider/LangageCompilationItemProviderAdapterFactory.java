@@ -211,46 +211,46 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.unInteger} instances.
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UnInteger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unIntegerItemProvider unIntegerItemProvider;
+	protected UnIntegerItemProvider unIntegerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link langageCompilation.unInteger}.
+	 * This creates an adapter for a {@link langageCompilation.UnInteger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createunIntegerAdapter() {
+	public Adapter createUnIntegerAdapter() {
 		if (unIntegerItemProvider == null) {
-			unIntegerItemProvider = new unIntegerItemProvider(this);
+			unIntegerItemProvider = new UnIntegerItemProvider(this);
 		}
 
 		return unIntegerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.unString} instances.
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UnString} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unStringItemProvider unStringItemProvider;
+	protected UnStringItemProvider unStringItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link langageCompilation.unString}.
+	 * This creates an adapter for a {@link langageCompilation.UnString}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createunStringAdapter() {
+	public Adapter createUnStringAdapter() {
 		if (unStringItemProvider == null) {
-			unStringItemProvider = new unStringItemProvider(this);
+			unStringItemProvider = new UnStringItemProvider(this);
 		}
 
 		return unStringItemProvider;
@@ -418,23 +418,23 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.unBoolean} instances.
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UnBoolean} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unBooleanItemProvider unBooleanItemProvider;
+	protected UnBooleanItemProvider unBooleanItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link langageCompilation.unBoolean}.
+	 * This creates an adapter for a {@link langageCompilation.UnBoolean}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createunBooleanAdapter() {
+	public Adapter createUnBooleanAdapter() {
 		if (unBooleanItemProvider == null) {
-			unBooleanItemProvider = new unBooleanItemProvider(this);
+			unBooleanItemProvider = new UnBooleanItemProvider(this);
 		}
 
 		return unBooleanItemProvider;
@@ -510,23 +510,23 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.unDouble} instances.
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UnDouble} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unDoubleItemProvider unDoubleItemProvider;
+	protected UnDoubleItemProvider unDoubleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link langageCompilation.unDouble}.
+	 * This creates an adapter for a {@link langageCompilation.UnDouble}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createunDoubleAdapter() {
+	public Adapter createUnDoubleAdapter() {
 		if (unDoubleItemProvider == null) {
-			unDoubleItemProvider = new unDoubleItemProvider(this);
+			unDoubleItemProvider = new UnDoubleItemProvider(this);
 		}
 
 		return unDoubleItemProvider;

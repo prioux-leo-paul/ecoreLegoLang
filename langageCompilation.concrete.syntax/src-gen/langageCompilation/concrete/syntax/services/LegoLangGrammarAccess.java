@@ -195,22 +195,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cUnDoubleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Variable returns Variable:
-		//    unInteger | unString | unBoolean | unDouble;
+		//    UnInteger | UnString | UnBoolean | UnDouble;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//unInteger | unString | unBoolean | unDouble
+		//UnInteger | UnString | UnBoolean | UnDouble
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//unInteger
+		//UnInteger
 		public RuleCall getUnIntegerParserRuleCall_0() { return cUnIntegerParserRuleCall_0; }
 		
-		//unString
+		//UnString
 		public RuleCall getUnStringParserRuleCall_1() { return cUnStringParserRuleCall_1; }
 		
-		//unBoolean
+		//UnBoolean
 		public RuleCall getUnBooleanParserRuleCall_2() { return cUnBooleanParserRuleCall_2; }
 		
-		//unDouble
+		//UnDouble
 		public RuleCall getUnDoubleParserRuleCall_3() { return cUnDoubleParserRuleCall_3; }
 	}
 	public class ComparaisonElements extends AbstractParserRuleElementFinder {
@@ -387,20 +387,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMethodePrintAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPrintKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cExpressionExpressionParserRuleCall_2_0 = (RuleCall)cExpressionAssignment_2.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cExpressionAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cExpressionExpressionParserRuleCall_2_0_0 = (RuleCall)cExpressionAssignment_2_0.eContents().get(0);
+		private final Keyword cCommaKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Keyword cRightParenthesisSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//MethodePrint returns MethodePrint:
 		//    {MethodePrint}
 		//    'print('
-		//    (expression+=Expression)+
+		//    (expression+=Expression ",")+
 		//    ');';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{MethodePrint}
 		//'print('
-		//(expression+=Expression)+
+		//(expression+=Expression ",")+
 		//');'
 		public Group getGroup() { return cGroup; }
 		
@@ -410,11 +412,17 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'print('
 		public Keyword getPrintKeyword_1() { return cPrintKeyword_1; }
 		
-		//(expression+=Expression)+
-		public Assignment getExpressionAssignment_2() { return cExpressionAssignment_2; }
+		//(expression+=Expression ",")+
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//expression+=Expression
+		public Assignment getExpressionAssignment_2_0() { return cExpressionAssignment_2_0; }
 		
 		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_2_0() { return cExpressionExpressionParserRuleCall_2_0; }
+		public RuleCall getExpressionExpressionParserRuleCall_2_0_0() { return cExpressionExpressionParserRuleCall_2_0_0; }
+		
+		//","
+		public Keyword getCommaKeyword_2_1() { return cCommaKeyword_2_1; }
 		
 		//');'
 		public Keyword getRightParenthesisSemicolonKeyword_3() { return cRightParenthesisSemicolonKeyword_3; }
@@ -1017,7 +1025,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
 	}
 	public class UnIntegerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.unInteger");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnInteger");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cUnIntegerAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cIsConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1031,22 +1039,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cInitialeValueEIntParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//unInteger returns unInteger:
-		//    {unInteger}
+		//UnInteger returns UnInteger:
+		//    {UnInteger}
 		//    (isConst?='const')?
 		//    'int'
 		//    name=EString
 		//    ('=' initialeValue=EInt)? ";";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{unInteger}
+		//{UnInteger}
 		//(isConst?='const')?
 		//'int'
 		//name=EString
 		//('=' initialeValue=EInt)? ";"
 		public Group getGroup() { return cGroup; }
 		
-		//{unInteger}
+		//{UnInteger}
 		public Action getUnIntegerAction_0() { return cUnIntegerAction_0; }
 		
 		//(isConst?='const')?
@@ -1080,7 +1088,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class UnDoubleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.unDouble");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnDouble");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cUnDoubleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cIsConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1098,22 +1106,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cInitialeValue2EIntParserRuleCall_4_2_1_0 = (RuleCall)cInitialeValue2Assignment_4_2_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//unDouble returns unDouble:
-		//    {unDouble}
+		//UnDouble returns UnDouble:
+		//    {UnDouble}
 		//    (isConst?='const')?
 		//    'double'
 		//    name=EString
 		//    ('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{unDouble}
+		//{UnDouble}
 		//(isConst?='const')?
 		//'double'
 		//name=EString
 		//('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";"
 		public Group getGroup() { return cGroup; }
 		
-		//{unDouble}
+		//{UnDouble}
 		public Action getUnDoubleAction_0() { return cUnDoubleAction_0; }
 		
 		//(isConst?='const')?
@@ -1159,7 +1167,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class UnBooleanElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.unBoolean");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnBoolean");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cUnBooleanAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cIsConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1173,22 +1181,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cInitialeValueEBooleanParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//unBoolean returns unBoolean:
-		//    {unBoolean}
+		//UnBoolean returns UnBoolean:
+		//    {UnBoolean}
 		//    (isConst?='const')?
 		//    'bool'
 		//    name=EString
 		//    ('=' initialeValue=EBoolean)? ";";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{unBoolean}
+		//{UnBoolean}
 		//(isConst?='const')?
 		//'bool'
 		//name=EString
 		//('=' initialeValue=EBoolean)? ";"
 		public Group getGroup() { return cGroup; }
 		
-		//{unBoolean}
+		//{UnBoolean}
 		public Action getUnBooleanAction_0() { return cUnBooleanAction_0; }
 		
 		//(isConst?='const')?
@@ -1222,7 +1230,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class UnStringElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.unString");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnString");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cUnStringAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cIsConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1236,22 +1244,22 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cInitialeValueEStringParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//unString returns unString:
-		//    {unString}
+		//UnString returns UnString:
+		//    {UnString}
 		//    (isConst?='const')?
 		//    'string'
 		//    name=EString
 		//    ('=' initialeValue=EString)? ";";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{unString}
+		//{UnString}
 		//(isConst?='const')?
 		//'string'
 		//name=EString
 		//('=' initialeValue=EString)? ";"
 		public Group getGroup() { return cGroup; }
 		
-		//{unString}
+		//{UnString}
 		public Action getUnStringAction_0() { return cUnStringAction_0; }
 		
 		//(isConst?='const')?
@@ -1574,7 +1582,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Variable returns Variable:
-	//    unInteger | unString | unBoolean | unDouble;
+	//    UnInteger | UnString | UnBoolean | UnDouble;
 	public VariableElements getVariableAccess() {
 		return pVariable;
 	}
@@ -1635,7 +1643,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//MethodePrint returns MethodePrint:
 	//    {MethodePrint}
 	//    'print('
-	//    (expression+=Expression)+
+	//    (expression+=Expression ",")+
 	//    ');';
 	public MethodePrintElements getMethodePrintAccess() {
 		return pMethodePrint;
@@ -1819,8 +1827,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getEBooleanAccess().getRule();
 	}
 	
-	//unInteger returns unInteger:
-	//    {unInteger}
+	//UnInteger returns UnInteger:
+	//    {UnInteger}
 	//    (isConst?='const')?
 	//    'int'
 	//    name=EString
@@ -1833,8 +1841,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getUnIntegerAccess().getRule();
 	}
 	
-	//unDouble returns unDouble:
-	//    {unDouble}
+	//UnDouble returns UnDouble:
+	//    {UnDouble}
 	//    (isConst?='const')?
 	//    'double'
 	//    name=EString
@@ -1847,8 +1855,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getUnDoubleAccess().getRule();
 	}
 	
-	//unBoolean returns unBoolean:
-	//    {unBoolean}
+	//UnBoolean returns UnBoolean:
+	//    {UnBoolean}
 	//    (isConst?='const')?
 	//    'bool'
 	//    name=EString
@@ -1861,8 +1869,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getUnBooleanAccess().getRule();
 	}
 	
-	//unString returns unString:
-	//    {unString}
+	//UnString returns UnString:
+	//    {UnString}
 	//    (isConst?='const')?
 	//    'string'
 	//    name=EString

@@ -69,9 +69,9 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 		case LangageCompilationPackage.ASSIGNEMENT:
 			return createAssignement();
 		case LangageCompilationPackage.UN_INTEGER:
-			return createunInteger();
+			return createUnInteger();
 		case LangageCompilationPackage.UN_STRING:
-			return createunString();
+			return createUnString();
 		case LangageCompilationPackage.LT:
 			return createLT();
 		case LangageCompilationPackage.EQUAL:
@@ -87,7 +87,7 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 		case LangageCompilationPackage.GTOR_EQUAL:
 			return createGTorEqual();
 		case LangageCompilationPackage.UN_BOOLEAN:
-			return createunBoolean();
+			return createUnBoolean();
 		case LangageCompilationPackage.DIFFERENT:
 			return createDifferent();
 		case LangageCompilationPackage.CONDITION_ETAT:
@@ -95,7 +95,7 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 		case LangageCompilationPackage.METHODE_PRINT:
 			return createMethodePrint();
 		case LangageCompilationPackage.UN_DOUBLE:
-			return createunDouble();
+			return createUnDouble();
 		case LangageCompilationPackage.THE_BOOLEAN:
 			return createTheBoolean();
 		case LangageCompilationPackage.THE_DOUBLE:
@@ -178,8 +178,8 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unInteger createunInteger() {
-		unIntegerImpl unInteger = new unIntegerImpl();
+	public UnInteger createUnInteger() {
+		UnIntegerImpl unInteger = new UnIntegerImpl();
 		return unInteger;
 	}
 
@@ -188,8 +188,8 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unString createunString() {
-		unStringImpl unString = new unStringImpl();
+	public UnString createUnString() {
+		UnStringImpl unString = new UnStringImpl();
 		return unString;
 	}
 
@@ -268,8 +268,8 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unBoolean createunBoolean() {
-		unBooleanImpl unBoolean = new unBooleanImpl();
+	public UnBoolean createUnBoolean() {
+		UnBooleanImpl unBoolean = new UnBooleanImpl();
 		return unBoolean;
 	}
 
@@ -308,8 +308,8 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unDouble createunDouble() {
-		unDoubleImpl unDouble = new unDoubleImpl();
+	public UnDouble createUnDouble() {
+		UnDoubleImpl unDouble = new UnDoubleImpl();
 		return unDouble;
 	}
 

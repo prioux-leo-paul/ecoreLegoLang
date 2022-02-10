@@ -3,7 +3,7 @@
 package langageCompilation.impl;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unString;
+import langageCompilation.UnString;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,18 +13,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>un String</b></em>'.
+ * An implementation of the model object '<em><b>Un String</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link langageCompilation.impl.unStringImpl#getInitialeValue <em>Initiale Value</em>}</li>
+ *   <li>{@link langageCompilation.impl.UnStringImpl#getInitialeValue <em>Initiale Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class unStringImpl extends VariableImpl implements unString {
+public class UnStringImpl extends VariableImpl implements UnString {
 	/**
 	 * The default value of the '{@link #getInitialeValue() <em>Initiale Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class unStringImpl extends VariableImpl implements unString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unStringImpl() {
+	protected UnStringImpl() {
 		super();
 	}
 
@@ -162,4 +162,4 @@ public class unStringImpl extends VariableImpl implements unString {
 		return result.toString();
 	}
 
-} //unStringImpl
+} //UnStringImpl

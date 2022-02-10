@@ -189,10 +189,10 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 				LangageCompilationFactory.eINSTANCE.createAssignement()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunInteger()));
+				LangageCompilationFactory.eINSTANCE.createUnInteger()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunString()));
+				LangageCompilationFactory.eINSTANCE.createUnString()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createLT()));
@@ -216,7 +216,7 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunBoolean()));
+				LangageCompilationFactory.eINSTANCE.createUnBoolean()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createDifferent()));
@@ -228,7 +228,7 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 				LangageCompilationFactory.eINSTANCE.createMethodePrint()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunDouble()));
+				LangageCompilationFactory.eINSTANCE.createUnDouble()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createTheBoolean()));

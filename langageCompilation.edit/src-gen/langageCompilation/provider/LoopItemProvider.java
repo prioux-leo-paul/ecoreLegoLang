@@ -159,10 +159,10 @@ public class LoopItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createAssignement()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunInteger()));
+				LangageCompilationFactory.eINSTANCE.createUnInteger()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunString()));
+				LangageCompilationFactory.eINSTANCE.createUnString()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createLT()));
@@ -186,7 +186,7 @@ public class LoopItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunBoolean()));
+				LangageCompilationFactory.eINSTANCE.createUnBoolean()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createDifferent()));
@@ -198,7 +198,7 @@ public class LoopItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMethodePrint()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createunDouble()));
+				LangageCompilationFactory.eINSTANCE.createUnDouble()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createTheBoolean()));

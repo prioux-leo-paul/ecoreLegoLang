@@ -195,8 +195,8 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 			return result;
 		}
 		case LangageCompilationPackage.UN_INTEGER: {
-			unInteger unInteger = (unInteger) theEObject;
-			T result = caseunInteger(unInteger);
+			UnInteger unInteger = (UnInteger) theEObject;
+			T result = caseUnInteger(unInteger);
 			if (result == null)
 				result = caseVariable(unInteger);
 			if (result == null)
@@ -206,8 +206,8 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 			return result;
 		}
 		case LangageCompilationPackage.UN_STRING: {
-			unString unString = (unString) theEObject;
-			T result = caseunString(unString);
+			UnString unString = (UnString) theEObject;
+			T result = caseUnString(unString);
 			if (result == null)
 				result = caseVariable(unString);
 			if (result == null)
@@ -316,8 +316,8 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 			return result;
 		}
 		case LangageCompilationPackage.UN_BOOLEAN: {
-			unBoolean unBoolean = (unBoolean) theEObject;
-			T result = caseunBoolean(unBoolean);
+			UnBoolean unBoolean = (UnBoolean) theEObject;
+			T result = caseUnBoolean(unBoolean);
 			if (result == null)
 				result = caseVariable(unBoolean);
 			if (result == null)
@@ -360,8 +360,8 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 			return result;
 		}
 		case LangageCompilationPackage.UN_DOUBLE: {
-			unDouble unDouble = (unDouble) theEObject;
-			T result = caseunDouble(unDouble);
+			UnDouble unDouble = (UnDouble) theEObject;
+			T result = caseUnDouble(unDouble);
 			if (result == null)
 				result = caseVariable(unDouble);
 			if (result == null)
@@ -626,32 +626,32 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>un Integer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Un Integer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>un Integer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Un Integer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseunInteger(unInteger object) {
+	public T caseUnInteger(UnInteger object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>un String</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Un String</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>un String</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Un String</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseunString(unString object) {
+	public T caseUnString(UnString object) {
 		return null;
 	}
 
@@ -761,17 +761,17 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>un Boolean</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Un Boolean</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>un Boolean</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Un Boolean</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseunBoolean(unBoolean object) {
+	public T caseUnBoolean(UnBoolean object) {
 		return null;
 	}
 
@@ -821,17 +821,17 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>un Double</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Un Double</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>un Double</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Un Double</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseunDouble(unDouble object) {
+	public T caseUnDouble(UnDouble object) {
 		return null;
 	}
 

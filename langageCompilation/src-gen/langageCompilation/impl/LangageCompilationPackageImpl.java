@@ -27,13 +27,13 @@ import langageCompilation.TheBoolean;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
+import langageCompilation.UnBoolean;
+import langageCompilation.UnDouble;
+import langageCompilation.UnInteger;
+import langageCompilation.UnString;
 import langageCompilation.Variable;
 import langageCompilation.VariableRef;
 import langageCompilation.WhileLoop;
-import langageCompilation.unBoolean;
-import langageCompilation.unDouble;
-import langageCompilation.unInteger;
-import langageCompilation.unString;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -532,7 +532,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getunInteger() {
+	public EClass getUnInteger() {
 		return unIntegerEClass;
 	}
 
@@ -541,7 +541,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getunInteger_InitialeValue() {
+	public EAttribute getUnInteger_InitialeValue() {
 		return (EAttribute) unIntegerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -550,7 +550,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getunString() {
+	public EClass getUnString() {
 		return unStringEClass;
 	}
 
@@ -559,7 +559,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getunString_InitialeValue() {
+	public EAttribute getUnString_InitialeValue() {
 		return (EAttribute) unStringEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -631,7 +631,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getunBoolean() {
+	public EClass getUnBoolean() {
 		return unBooleanEClass;
 	}
 
@@ -640,7 +640,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getunBoolean_InitialeValue() {
+	public EAttribute getUnBoolean_InitialeValue() {
 		return (EAttribute) unBooleanEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -676,6 +676,15 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConditionEtat_Else() {
+		return (EReference) conditionEtatEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getConditionEtat_Condition() {
 		return (EReference) conditionEtatEClass.getEStructuralFeatures().get(2);
 	}
@@ -703,7 +712,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getunDouble() {
+	public EClass getUnDouble() {
 		return unDoubleEClass;
 	}
 
@@ -712,7 +721,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getunDouble_InitialeValue1() {
+	public EAttribute getUnDouble_InitialeValue1() {
 		return (EAttribute) unDoubleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -721,7 +730,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getunDouble_InitialeValue2() {
+	public EAttribute getUnDouble_InitialeValue2() {
 		return (EAttribute) unDoubleEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -822,15 +831,6 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 */
 	public EClass getMinusEqual() {
 		return minusEqualEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConditionEtat_Else() {
-		return (EReference) conditionEtatEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1068,16 +1068,16 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEClass(assignementEClass, Assignement.class, "Assignement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(unIntegerEClass, unInteger.class, "unInteger", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(unIntegerEClass, UnInteger.class, "UnInteger", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getunInteger_InitialeValue(), ecorePackage.getEInt(), "initialeValue", null, 0, 1,
-				unInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getUnInteger_InitialeValue(), ecorePackage.getEInt(), "initialeValue", null, 0, 1,
+				UnInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(unStringEClass, unString.class, "unString", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(unStringEClass, UnString.class, "UnString", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getunString_InitialeValue(), ecorePackage.getEString(), "initialeValue", null, 0, 1,
-				unString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getUnString_InitialeValue(), ecorePackage.getEString(), "initialeValue", null, 0, 1,
+				UnString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(ltEClass, langageCompilation.LT.class, "LT", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1100,10 +1100,10 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEClass(gTorEqualEClass, GTorEqual.class, "GTorEqual", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(unBooleanEClass, unBoolean.class, "unBoolean", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(unBooleanEClass, UnBoolean.class, "UnBoolean", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getunBoolean_InitialeValue(), ecorePackage.getEBoolean(), "initialeValue", null, 0, 1,
-				unBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getUnBoolean_InitialeValue(), ecorePackage.getEBoolean(), "initialeValue", null, 0, 1,
+				UnBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(differentEClass, Different.class, "Different", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1127,13 +1127,13 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 				MethodePrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(unDoubleEClass, unDouble.class, "unDouble", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(unDoubleEClass, UnDouble.class, "UnDouble", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getunDouble_InitialeValue1(), ecorePackage.getEInt(), "initialeValue1", null, 0, 1,
-				unDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getUnDouble_InitialeValue1(), ecorePackage.getEInt(), "initialeValue1", null, 0, 1,
+				UnDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getunDouble_InitialeValue2(), ecorePackage.getEInt(), "initialeValue2", null, 0, 1,
-				unDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getUnDouble_InitialeValue2(), ecorePackage.getEInt(), "initialeValue2", null, 0, 1,
+				UnDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(theBooleanEClass, TheBoolean.class, "TheBoolean", !IS_ABSTRACT, !IS_INTERFACE,

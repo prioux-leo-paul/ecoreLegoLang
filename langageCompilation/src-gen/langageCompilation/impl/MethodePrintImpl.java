@@ -7,6 +7,7 @@ import java.util.Collection;
 import langageCompilation.Expression;
 import langageCompilation.LangageCompilationPackage;
 import langageCompilation.MethodePrint;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;

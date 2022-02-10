@@ -645,11 +645,11 @@ public interface LangageCompilationPackage extends EPackage {
 	int ASSIGNEMENT_OPERATION_COUNT = BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.unIntegerImpl <em>un Integer</em>}' class.
+	 * The meta object id for the '{@link langageCompilation.impl.UnIntegerImpl <em>Un Integer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.unIntegerImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunInteger()
+	 * @see langageCompilation.impl.UnIntegerImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnInteger()
 	 * @generated
 	 */
 	int UN_INTEGER = 12;
@@ -682,7 +682,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_INTEGER__INITIALE_VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>un Integer</em>' class.
+	 * The number of structural features of the '<em>Un Integer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -691,7 +691,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_INTEGER_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>un Integer</em>' class.
+	 * The number of operations of the '<em>Un Integer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -700,11 +700,11 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_INTEGER_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.unStringImpl <em>un String</em>}' class.
+	 * The meta object id for the '{@link langageCompilation.impl.UnStringImpl <em>Un String</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.unStringImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunString()
+	 * @see langageCompilation.impl.UnStringImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnString()
 	 * @generated
 	 */
 	int UN_STRING = 13;
@@ -737,7 +737,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_STRING__INITIALE_VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>un String</em>' class.
+	 * The number of structural features of the '<em>Un String</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -746,7 +746,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_STRING_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>un String</em>' class.
+	 * The number of operations of the '<em>Un String</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1140,11 +1140,11 @@ public interface LangageCompilationPackage extends EPackage {
 	int GTOR_EQUAL_OPERATION_COUNT = COMPARAISON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.unBooleanImpl <em>un Boolean</em>}' class.
+	 * The meta object id for the '{@link langageCompilation.impl.UnBooleanImpl <em>Un Boolean</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.unBooleanImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunBoolean()
+	 * @see langageCompilation.impl.UnBooleanImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnBoolean()
 	 * @generated
 	 */
 	int UN_BOOLEAN = 21;
@@ -1177,7 +1177,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_BOOLEAN__INITIALE_VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>un Boolean</em>' class.
+	 * The number of structural features of the '<em>Un Boolean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1186,7 +1186,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_BOOLEAN_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>un Boolean</em>' class.
+	 * The number of operations of the '<em>Un Boolean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1360,11 +1360,11 @@ public interface LangageCompilationPackage extends EPackage {
 	int METHODE_PRINT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.unDoubleImpl <em>un Double</em>}' class.
+	 * The meta object id for the '{@link langageCompilation.impl.UnDoubleImpl <em>Un Double</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.unDoubleImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunDouble()
+	 * @see langageCompilation.impl.UnDoubleImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnDouble()
 	 * @generated
 	 */
 	int UN_DOUBLE = 25;
@@ -1406,7 +1406,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_DOUBLE__INITIALE_VALUE2 = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>un Double</em>' class.
+	 * The number of structural features of the '<em>Un Double</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1415,7 +1415,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int UN_DOUBLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>un Double</em>' class.
+	 * The number of operations of the '<em>Un Double</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1946,46 +1946,46 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getAssignement();
 
 	/**
-	 * Returns the meta object for class '{@link langageCompilation.unInteger <em>un Integer</em>}'.
+	 * Returns the meta object for class '{@link langageCompilation.UnInteger <em>Un Integer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>un Integer</em>'.
-	 * @see langageCompilation.unInteger
+	 * @return the meta object for class '<em>Un Integer</em>'.
+	 * @see langageCompilation.UnInteger
 	 * @generated
 	 */
-	EClass getunInteger();
+	EClass getUnInteger();
 
 	/**
-	 * Returns the meta object for the attribute '{@link langageCompilation.unInteger#getInitialeValue <em>Initiale Value</em>}'.
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnInteger#getInitialeValue <em>Initiale Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initiale Value</em>'.
-	 * @see langageCompilation.unInteger#getInitialeValue()
-	 * @see #getunInteger()
+	 * @see langageCompilation.UnInteger#getInitialeValue()
+	 * @see #getUnInteger()
 	 * @generated
 	 */
-	EAttribute getunInteger_InitialeValue();
+	EAttribute getUnInteger_InitialeValue();
 
 	/**
-	 * Returns the meta object for class '{@link langageCompilation.unString <em>un String</em>}'.
+	 * Returns the meta object for class '{@link langageCompilation.UnString <em>Un String</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>un String</em>'.
-	 * @see langageCompilation.unString
+	 * @return the meta object for class '<em>Un String</em>'.
+	 * @see langageCompilation.UnString
 	 * @generated
 	 */
-	EClass getunString();
+	EClass getUnString();
 
 	/**
-	 * Returns the meta object for the attribute '{@link langageCompilation.unString#getInitialeValue <em>Initiale Value</em>}'.
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnString#getInitialeValue <em>Initiale Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initiale Value</em>'.
-	 * @see langageCompilation.unString#getInitialeValue()
-	 * @see #getunString()
+	 * @see langageCompilation.UnString#getInitialeValue()
+	 * @see #getUnString()
 	 * @generated
 	 */
-	EAttribute getunString_InitialeValue();
+	EAttribute getUnString_InitialeValue();
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.LT <em>LT</em>}'.
@@ -2058,25 +2058,25 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getGTorEqual();
 
 	/**
-	 * Returns the meta object for class '{@link langageCompilation.unBoolean <em>un Boolean</em>}'.
+	 * Returns the meta object for class '{@link langageCompilation.UnBoolean <em>Un Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>un Boolean</em>'.
-	 * @see langageCompilation.unBoolean
+	 * @return the meta object for class '<em>Un Boolean</em>'.
+	 * @see langageCompilation.UnBoolean
 	 * @generated
 	 */
-	EClass getunBoolean();
+	EClass getUnBoolean();
 
 	/**
-	 * Returns the meta object for the attribute '{@link langageCompilation.unBoolean#isInitialeValue <em>Initiale Value</em>}'.
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnBoolean#isInitialeValue <em>Initiale Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initiale Value</em>'.
-	 * @see langageCompilation.unBoolean#isInitialeValue()
-	 * @see #getunBoolean()
+	 * @see langageCompilation.UnBoolean#isInitialeValue()
+	 * @see #getUnBoolean()
 	 * @generated
 	 */
-	EAttribute getunBoolean_InitialeValue();
+	EAttribute getUnBoolean_InitialeValue();
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.Different <em>Different</em>}'.
@@ -2108,6 +2108,17 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConditionEtat_Then();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link langageCompilation.ConditionEtat#getElse <em>Else</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Else</em>'.
+	 * @see langageCompilation.ConditionEtat#getElse()
+	 * @see #getConditionEtat()
+	 * @generated
+	 */
+	EReference getConditionEtat_Else();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}'.
@@ -2142,36 +2153,36 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getMethodePrint_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link langageCompilation.unDouble <em>un Double</em>}'.
+	 * Returns the meta object for class '{@link langageCompilation.UnDouble <em>Un Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>un Double</em>'.
-	 * @see langageCompilation.unDouble
+	 * @return the meta object for class '<em>Un Double</em>'.
+	 * @see langageCompilation.UnDouble
 	 * @generated
 	 */
-	EClass getunDouble();
+	EClass getUnDouble();
 
 	/**
-	 * Returns the meta object for the attribute '{@link langageCompilation.unDouble#getInitialeValue1 <em>Initiale Value1</em>}'.
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnDouble#getInitialeValue1 <em>Initiale Value1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initiale Value1</em>'.
-	 * @see langageCompilation.unDouble#getInitialeValue1()
-	 * @see #getunDouble()
+	 * @see langageCompilation.UnDouble#getInitialeValue1()
+	 * @see #getUnDouble()
 	 * @generated
 	 */
-	EAttribute getunDouble_InitialeValue1();
+	EAttribute getUnDouble_InitialeValue1();
 
 	/**
-	 * Returns the meta object for the attribute '{@link langageCompilation.unDouble#getInitialeValue2 <em>Initiale Value2</em>}'.
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnDouble#getInitialeValue2 <em>Initiale Value2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initiale Value2</em>'.
-	 * @see langageCompilation.unDouble#getInitialeValue2()
-	 * @see #getunDouble()
+	 * @see langageCompilation.UnDouble#getInitialeValue2()
+	 * @see #getUnDouble()
 	 * @generated
 	 */
-	EAttribute getunDouble_InitialeValue2();
+	EAttribute getUnDouble_InitialeValue2();
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.TheBoolean <em>The Boolean</em>}'.
@@ -2287,17 +2298,6 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMinusEqual();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link langageCompilation.ConditionEtat#getElse <em>Else</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Else</em>'.
-	 * @see langageCompilation.ConditionEtat#getElse()
-	 * @see #getConditionEtat()
-	 * @generated
-	 */
-	EReference getConditionEtat_Else();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2515,14 +2515,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EClass ASSIGNEMENT = eINSTANCE.getAssignement();
 
 		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.unIntegerImpl <em>un Integer</em>}' class.
+		 * The meta object literal for the '{@link langageCompilation.impl.UnIntegerImpl <em>Un Integer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.unIntegerImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunInteger()
+		 * @see langageCompilation.impl.UnIntegerImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnInteger()
 		 * @generated
 		 */
-		EClass UN_INTEGER = eINSTANCE.getunInteger();
+		EClass UN_INTEGER = eINSTANCE.getUnInteger();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiale Value</b></em>' attribute feature.
@@ -2530,17 +2530,17 @@ public interface LangageCompilationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UN_INTEGER__INITIALE_VALUE = eINSTANCE.getunInteger_InitialeValue();
+		EAttribute UN_INTEGER__INITIALE_VALUE = eINSTANCE.getUnInteger_InitialeValue();
 
 		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.unStringImpl <em>un String</em>}' class.
+		 * The meta object literal for the '{@link langageCompilation.impl.UnStringImpl <em>Un String</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.unStringImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunString()
+		 * @see langageCompilation.impl.UnStringImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnString()
 		 * @generated
 		 */
-		EClass UN_STRING = eINSTANCE.getunString();
+		EClass UN_STRING = eINSTANCE.getUnString();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiale Value</b></em>' attribute feature.
@@ -2548,7 +2548,7 @@ public interface LangageCompilationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UN_STRING__INITIALE_VALUE = eINSTANCE.getunString_InitialeValue();
+		EAttribute UN_STRING__INITIALE_VALUE = eINSTANCE.getUnString_InitialeValue();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.LTImpl <em>LT</em>}' class.
@@ -2621,14 +2621,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EClass GTOR_EQUAL = eINSTANCE.getGTorEqual();
 
 		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.unBooleanImpl <em>un Boolean</em>}' class.
+		 * The meta object literal for the '{@link langageCompilation.impl.UnBooleanImpl <em>Un Boolean</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.unBooleanImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunBoolean()
+		 * @see langageCompilation.impl.UnBooleanImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnBoolean()
 		 * @generated
 		 */
-		EClass UN_BOOLEAN = eINSTANCE.getunBoolean();
+		EClass UN_BOOLEAN = eINSTANCE.getUnBoolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiale Value</b></em>' attribute feature.
@@ -2636,7 +2636,7 @@ public interface LangageCompilationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UN_BOOLEAN__INITIALE_VALUE = eINSTANCE.getunBoolean_InitialeValue();
+		EAttribute UN_BOOLEAN__INITIALE_VALUE = eINSTANCE.getUnBoolean_InitialeValue();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.DifferentImpl <em>Different</em>}' class.
@@ -2667,6 +2667,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference CONDITION_ETAT__THEN = eINSTANCE.getConditionEtat_Then();
 
 		/**
+		 * The meta object literal for the '<em><b>Else</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_ETAT__ELSE = eINSTANCE.getConditionEtat_Else();
+
+		/**
 		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2693,14 +2701,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference METHODE_PRINT__EXPRESSION = eINSTANCE.getMethodePrint_Expression();
 
 		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.unDoubleImpl <em>un Double</em>}' class.
+		 * The meta object literal for the '{@link langageCompilation.impl.UnDoubleImpl <em>Un Double</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.unDoubleImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getunDouble()
+		 * @see langageCompilation.impl.UnDoubleImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnDouble()
 		 * @generated
 		 */
-		EClass UN_DOUBLE = eINSTANCE.getunDouble();
+		EClass UN_DOUBLE = eINSTANCE.getUnDouble();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiale Value1</b></em>' attribute feature.
@@ -2708,7 +2716,7 @@ public interface LangageCompilationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UN_DOUBLE__INITIALE_VALUE1 = eINSTANCE.getunDouble_InitialeValue1();
+		EAttribute UN_DOUBLE__INITIALE_VALUE1 = eINSTANCE.getUnDouble_InitialeValue1();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiale Value2</b></em>' attribute feature.
@@ -2716,7 +2724,7 @@ public interface LangageCompilationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UN_DOUBLE__INITIALE_VALUE2 = eINSTANCE.getunDouble_InitialeValue2();
+		EAttribute UN_DOUBLE__INITIALE_VALUE2 = eINSTANCE.getUnDouble_InitialeValue2();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.TheBooleanImpl <em>The Boolean</em>}' class.
@@ -2817,14 +2825,6 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MINUS_EQUAL = eINSTANCE.getMinusEqual();
-
-		/**
-		 * The meta object literal for the '<em><b>Else</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION_ETAT__ELSE = eINSTANCE.getConditionEtat_Else();
 
 	}
 

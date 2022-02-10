@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -104,6 +105,19 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Statement> getElse() {
+		if (else_ == null) {
+			else_ = new EObjectContainmentEList<Statement>(Statement.class, this,
+					LangageCompilationPackage.CONDITION_ETAT__ELSE);
+		}
+		return else_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Comparaison getCondition() {
 		return condition;
 	}
@@ -147,19 +161,6 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LangageCompilationPackage.CONDITION_ETAT__CONDITION,
 					newCondition, newCondition));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Statement> getElse() {
-		if (else_ == null) {
-			else_ = new EObjectContainmentEList<Statement>(Statement.class, this,
-					LangageCompilationPackage.CONDITION_ETAT__ELSE);
-		}
-		return else_;
 	}
 
 	/**

@@ -3,7 +3,7 @@
 package langageCompilation.impl;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unDouble;
+import langageCompilation.UnDouble;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,19 +13,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>un Double</b></em>'.
+ * An implementation of the model object '<em><b>Un Double</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link langageCompilation.impl.unDoubleImpl#getInitialeValue1 <em>Initiale Value1</em>}</li>
- *   <li>{@link langageCompilation.impl.unDoubleImpl#getInitialeValue2 <em>Initiale Value2</em>}</li>
+ *   <li>{@link langageCompilation.impl.UnDoubleImpl#getInitialeValue1 <em>Initiale Value1</em>}</li>
+ *   <li>{@link langageCompilation.impl.UnDoubleImpl#getInitialeValue2 <em>Initiale Value2</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class unDoubleImpl extends VariableImpl implements unDouble {
+public class UnDoubleImpl extends VariableImpl implements UnDouble {
 	/**
 	 * The default value of the '{@link #getInitialeValue1() <em>Initiale Value1</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class unDoubleImpl extends VariableImpl implements unDouble {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unDoubleImpl() {
+	protected UnDoubleImpl() {
 		super();
 	}
 
@@ -216,4 +216,4 @@ public class unDoubleImpl extends VariableImpl implements unDouble {
 		return result.toString();
 	}
 
-} //unDoubleImpl
+} //UnDoubleImpl

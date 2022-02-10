@@ -3,7 +3,7 @@
 package langageCompilation.impl;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unInteger;
+import langageCompilation.UnInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,18 +13,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>un Integer</b></em>'.
+ * An implementation of the model object '<em><b>Un Integer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link langageCompilation.impl.unIntegerImpl#getInitialeValue <em>Initiale Value</em>}</li>
+ *   <li>{@link langageCompilation.impl.UnIntegerImpl#getInitialeValue <em>Initiale Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class unIntegerImpl extends VariableImpl implements unInteger {
+public class UnIntegerImpl extends VariableImpl implements UnInteger {
 	/**
 	 * The default value of the '{@link #getInitialeValue() <em>Initiale Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class unIntegerImpl extends VariableImpl implements unInteger {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected unIntegerImpl() {
+	protected UnIntegerImpl() {
 		super();
 	}
 
@@ -161,4 +161,4 @@ public class unIntegerImpl extends VariableImpl implements unInteger {
 		return result.toString();
 	}
 
-} //unIntegerImpl
+} //UnIntegerImpl

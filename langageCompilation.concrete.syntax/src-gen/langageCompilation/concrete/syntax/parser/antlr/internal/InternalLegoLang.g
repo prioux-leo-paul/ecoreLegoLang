@@ -449,9 +449,9 @@ ruleVariable returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getVariableAccess().getUnIntegerParserRuleCall_0());
 		}
-		this_unInteger_0=ruleunInteger
+		this_UnInteger_0=ruleUnInteger
 		{
-			$current = $this_unInteger_0.current;
+			$current = $this_UnInteger_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -461,9 +461,9 @@ ruleVariable returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getVariableAccess().getUnStringParserRuleCall_1());
 		}
-		this_unString_1=ruleunString
+		this_UnString_1=ruleUnString
 		{
-			$current = $this_unString_1.current;
+			$current = $this_UnString_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -473,9 +473,9 @@ ruleVariable returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getVariableAccess().getUnBooleanParserRuleCall_2());
 		}
-		this_unBoolean_2=ruleunBoolean
+		this_UnBoolean_2=ruleUnBoolean
 		{
-			$current = $this_unBoolean_2.current;
+			$current = $this_UnBoolean_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -485,9 +485,9 @@ ruleVariable returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getVariableAccess().getUnDoubleParserRuleCall_3());
 		}
-		this_unDouble_3=ruleunDouble
+		this_UnDouble_3=ruleUnDouble
 		{
-			$current = $this_unDouble_3.current;
+			$current = $this_UnDouble_3.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -816,26 +816,32 @@ ruleMethodePrint returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0());
-				}
-				lv_expression_2_0=ruleExpression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMethodePrintRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0_0());
 					}
-					add(
-						$current,
-						"expression",
-						lv_expression_2_0,
-						"langageCompilation.concrete.syntax.LegoLang.Expression");
-					afterParserOrEnumRuleCall();
-				}
+					lv_expression_2_0=ruleExpression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMethodePrintRule());
+						}
+						add(
+							$current,
+							"expression",
+							lv_expression_2_0,
+							"langageCompilation.concrete.syntax.LegoLang.Expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
+			otherlv_3=','
+			{
+				newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getCommaKeyword_2_1());
+			}
 		)+
-		otherlv_3=');'
+		otherlv_4=');'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getRightParenthesisSemicolonKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getMethodePrintAccess().getRightParenthesisSemicolonKeyword_3());
 		}
 	)
 ;
@@ -1833,15 +1839,15 @@ ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
 	)
 ;
 
-// Entry rule entryRuleunInteger
-entryRuleunInteger returns [EObject current=null]:
+// Entry rule entryRuleUnInteger
+entryRuleUnInteger returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getUnIntegerRule()); }
-	iv_ruleunInteger=ruleunInteger
-	{ $current=$iv_ruleunInteger.current; }
+	iv_ruleUnInteger=ruleUnInteger
+	{ $current=$iv_ruleUnInteger.current; }
 	EOF;
 
-// Rule unInteger
-ruleunInteger returns [EObject current=null]
+// Rule UnInteger
+ruleUnInteger returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1928,15 +1934,15 @@ ruleunInteger returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleunDouble
-entryRuleunDouble returns [EObject current=null]:
+// Entry rule entryRuleUnDouble
+entryRuleUnDouble returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getUnDoubleRule()); }
-	iv_ruleunDouble=ruleunDouble
-	{ $current=$iv_ruleunDouble.current; }
+	iv_ruleUnDouble=ruleUnDouble
+	{ $current=$iv_ruleUnDouble.current; }
 	EOF;
 
-// Rule unDouble
-ruleunDouble returns [EObject current=null]
+// Rule UnDouble
+ruleUnDouble returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2048,15 +2054,15 @@ ruleunDouble returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleunBoolean
-entryRuleunBoolean returns [EObject current=null]:
+// Entry rule entryRuleUnBoolean
+entryRuleUnBoolean returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getUnBooleanRule()); }
-	iv_ruleunBoolean=ruleunBoolean
-	{ $current=$iv_ruleunBoolean.current; }
+	iv_ruleUnBoolean=ruleUnBoolean
+	{ $current=$iv_ruleUnBoolean.current; }
 	EOF;
 
-// Rule unBoolean
-ruleunBoolean returns [EObject current=null]
+// Rule UnBoolean
+ruleUnBoolean returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2143,15 +2149,15 @@ ruleunBoolean returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleunString
-entryRuleunString returns [EObject current=null]:
+// Entry rule entryRuleUnString
+entryRuleUnString returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getUnStringRule()); }
-	iv_ruleunString=ruleunString
-	{ $current=$iv_ruleunString.current; }
+	iv_ruleUnString=ruleUnString
+	{ $current=$iv_ruleUnString.current; }
 	EOF;
 
-// Rule unString
-ruleunString returns [EObject current=null]
+// Rule UnString
+ruleUnString returns [EObject current=null]
 @init {
 	enterRule();
 }
