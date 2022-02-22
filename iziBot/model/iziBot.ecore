@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iziBot" nsURI="http://www.example.org/iziBot" nsPrefix="iziBot">
+  <eClassifiers xsi:type="ecore:EClass" name="Car" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" upperBound="4"
+        eType="#//Engine" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="car" upperBound="4" eType="#//Car"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WheelEngine" eSuperTypes="#//Engine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorSensor" eSuperTypes="#//Sensor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" lowerBound="1" eType="#//Color"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intensity" lowerBound="1"
+        eType="#//Intensity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LaserRangeSensor" eSuperTypes="#//Sensor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="range" lowerBound="1" eType="#//Range"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Color"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Intensity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Range"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Engine" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeString" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeInt" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeDouble" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeBool" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinusEqual" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlusEqual" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Substraction" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparaison" abstract="true" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equal" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GTorEqual" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LTorEqual" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LT" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GT" eSuperTypes="#//Comparaison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//Statement"/>
+</ecore:EPackage>

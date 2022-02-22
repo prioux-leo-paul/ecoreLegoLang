@@ -3667,3 +3667,496 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.emf.workspace 4 43 2022-02-22 15:40:59.118
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!SUBENTRY 1 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:40:59.118
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.emf.workspace 4 43 2022-02-22 15:40:59.118
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=30, size=30
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData$EPackageExtendedMetaDataImpl.getType(BasicExtendedMetaData.java:2242)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getType(BasicExtendedMetaData.java:108)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getDocumentRoot(BasicExtendedMetaData.java:130)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.isDocumentRoot(GenClassImpl.java:3236)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenFeatureImpl.initialize(GenFeatureImpl.java:2199)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.initialize(GenClassImpl.java:1872)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.initialize(GenPackageImpl.java:3148)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.reconcile(GenPackageImpl.java:4390)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenModelImpl.reconcile(GenModelImpl.java:9767)
+	at org.eclipse.emf.ecoretools.design.service.ProcessGenModels.doExecute(GenModelAutoReload.java:149)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.common.command.CompoundCommand.execute(CompoundCommand.java:261)
+	at org.eclipse.emf.transaction.util.TriggerCommand.execute(TriggerCommand.java:113)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.executeTriggers(WorkspaceCommandStackImpl.java:398)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.precommit(TransactionalEditingDomainImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:414)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.gmf.runtime.common.ui.action.global.GlobalAction.doRun(GlobalAction.java:124)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.run(AbstractActionHandler.java:360)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager$1.run(ActionManager.java:226)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager.run(ActionManager.java:224)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.runWithEvent(AbstractActionHandler.java:378)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1519)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4882)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1435)
+
+!ENTRY org.eclipse.emf.workspace 4 43 2022-02-22 15:41:05.782
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!SUBENTRY 1 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:41:05.782
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.emf.workspace 4 43 2022-02-22 15:41:05.782
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=30, size=30
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData$EPackageExtendedMetaDataImpl.getType(BasicExtendedMetaData.java:2242)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getType(BasicExtendedMetaData.java:108)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getDocumentRoot(BasicExtendedMetaData.java:130)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.isDocumentRoot(GenClassImpl.java:3236)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenFeatureImpl.initialize(GenFeatureImpl.java:2199)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.initialize(GenClassImpl.java:1872)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.initialize(GenPackageImpl.java:3148)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.reconcile(GenPackageImpl.java:4390)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenModelImpl.reconcile(GenModelImpl.java:9767)
+	at org.eclipse.emf.ecoretools.design.service.ProcessGenModels.doExecute(GenModelAutoReload.java:149)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.common.command.CompoundCommand.execute(CompoundCommand.java:261)
+	at org.eclipse.emf.transaction.util.TriggerCommand.execute(TriggerCommand.java:113)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.executeTriggers(WorkspaceCommandStackImpl.java:398)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.precommit(TransactionalEditingDomainImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:414)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.gmf.runtime.common.ui.action.global.GlobalAction.doRun(GlobalAction.java:124)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.run(AbstractActionHandler.java:360)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager$1.run(ActionManager.java:226)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager.run(ActionManager.java:224)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.runWithEvent(AbstractActionHandler.java:378)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1519)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4882)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1435)
+
+!ENTRY org.eclipse.emf.workspace 4 43 2022-02-22 15:42:07.494
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!SUBENTRY 1 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:42:07.494
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.emf.workspace 4 43 2022-02-22 15:42:07.494
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=30, size=30
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData$EPackageExtendedMetaDataImpl.getType(BasicExtendedMetaData.java:2242)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getType(BasicExtendedMetaData.java:108)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getDocumentRoot(BasicExtendedMetaData.java:130)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.isDocumentRoot(GenClassImpl.java:3236)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenFeatureImpl.initialize(GenFeatureImpl.java:2199)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.initialize(GenClassImpl.java:1872)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.initialize(GenPackageImpl.java:3148)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.reconcile(GenPackageImpl.java:4390)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenModelImpl.reconcile(GenModelImpl.java:9767)
+	at org.eclipse.emf.ecoretools.design.service.ProcessGenModels.doExecute(GenModelAutoReload.java:149)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.common.command.CompoundCommand.execute(CompoundCommand.java:261)
+	at org.eclipse.emf.transaction.util.TriggerCommand.execute(TriggerCommand.java:113)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.executeTriggers(WorkspaceCommandStackImpl.java:398)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.precommit(TransactionalEditingDomainImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:414)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.gmf.runtime.common.ui.action.global.GlobalAction.doRun(GlobalAction.java:124)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.run(AbstractActionHandler.java:360)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager$1.run(ActionManager.java:226)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager.run(ActionManager.java:224)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.runWithEvent(AbstractActionHandler.java:378)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor263.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1519)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4882)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1435)
+
+!ENTRY org.eclipse.core.commands 4 3 2022-02-22 15:42:08.842
+!MESSAGE Operation is not valid
+
+!ENTRY org.eclipse.emf.workspace 4 43 2022-02-22 15:44:26.929
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!SUBENTRY 1 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:44:26.929
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:44:26.929
+!MESSAGE 
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.core 0 0 2022-02-22 15:44:26.929
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.emf.workspace 4 43 2022-02-22 15:44:26.929
+!MESSAGE Uncaught exception during pre-commit trigger processing
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=28, size=28
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData$EPackageExtendedMetaDataImpl.getType(BasicExtendedMetaData.java:2242)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getType(BasicExtendedMetaData.java:108)
+	at org.eclipse.emf.ecore.util.BasicExtendedMetaData.getDocumentRoot(BasicExtendedMetaData.java:130)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.isDocumentRoot(GenClassImpl.java:3236)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenFeatureImpl.initialize(GenFeatureImpl.java:2199)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenClassImpl.initialize(GenClassImpl.java:1872)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.initialize(GenPackageImpl.java:3148)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenPackageImpl.reconcile(GenPackageImpl.java:4390)
+	at org.eclipse.emf.codegen.ecore.genmodel.impl.GenModelImpl.reconcile(GenModelImpl.java:9767)
+	at org.eclipse.emf.ecoretools.design.service.ProcessGenModels.doExecute(GenModelAutoReload.java:149)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.common.command.CompoundCommand.execute(CompoundCommand.java:261)
+	at org.eclipse.emf.transaction.util.TriggerCommand.execute(TriggerCommand.java:113)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.executeTriggers(WorkspaceCommandStackImpl.java:398)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.precommit(TransactionalEditingDomainImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:414)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.gmf.runtime.common.ui.action.global.GlobalAction.doRun(GlobalAction.java:124)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.run(AbstractActionHandler.java:360)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager$1.run(ActionManager.java:226)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.gmf.runtime.common.ui.action.ActionManager.run(ActionManager.java:224)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler.runWithEvent(AbstractActionHandler.java:378)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor263.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1519)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4882)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1435)
