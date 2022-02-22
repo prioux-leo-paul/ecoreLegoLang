@@ -47,12 +47,14 @@ import langageCompilation.Statement
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class LegoLangGenerator extends AbstractGenerator {
+	
+	var int nbTab = 0
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		var Program prog = resource.allContents.head as Program
 		var String fileContent = ''
 		for (v : prog.statement){
-			fileContent += statementToPython(v)
+			fileContent += donneTab(nbTab) + statementToPython(v)
 			fileContent += '\n'
 		}
 		fsa.generateFile(prog.name+'.py','#!/usr/bin/env python3
@@ -68,7 +70,6 @@ from ev3dev2.sensor.lego import *
 from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 	}
 	
-	
 	def String statementToPython(Statement v){
 			if (v instanceof Variable) {
 				return varToPython(v)
@@ -81,19 +82,24 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 			}
 			if (v instanceof ConditionEtat) {
 				var String tmp = 'if(' + comparaisonPython(v.condition) + '):'
+				nbTab += 1
 				for(s : v.then){
-						tmp += '\n\t' + statementToPython(s)
+						tmp += '\n'+ donneTab(nbTab)  + statementToPython(s)
 					}
+				nbTab -=1
 				if( v.^else !== null){
-					tmp += '\nelse :'
+					tmp += '\n' + donneTab(nbTab)  + 'else :'
+					nbTab +=1
 					for(s : v.^else){
-						tmp += '\n\t' + statementToPython(s)
+						tmp += '\n' + donneTab(nbTab)  + statementToPython(s)	
 					}
+					nbTab -=1
 				}	
+				
 				return tmp
 			}
 			if(v instanceof MethodePrint){
-				var String tmp =  'print('
+				var String tmp = 'print('
 				for(s : v.expression){
 					tmp +=expressionToPython(s) + ','
 				}
@@ -188,11 +194,22 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 	def String loopToPython(Loop v){
 		if( v instanceof WhileLoop){
 			var String tmp ='while(' + comparaisonPython(v.loopCondition) + '): '
+			nbTab += 1
 			for(s : v.statement){
-				tmp += '\n\t' + statementToPython(s)
+				tmp += '\n'+donneTab(nbTab)  + statementToPython(s)
 			}
+			nbTab -=1
 			return tmp
 		}
+	}
+	
+	def String donneTab(int nbTab){
+		var String tmp = ''
+		for(var int i = 0; i < nbTab;i++){
+			tmp += '\t'
+		}
+		return tmp
+		
 	}
 	
 }

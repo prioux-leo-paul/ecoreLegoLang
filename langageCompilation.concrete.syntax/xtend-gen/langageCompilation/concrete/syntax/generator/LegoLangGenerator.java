@@ -50,6 +50,8 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
  */
 @SuppressWarnings("all")
 public class LegoLangGenerator extends AbstractGenerator {
+  private int nbTab = 0;
+  
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     EObject _head = IteratorExtensions.<EObject>head(resource.getAllContents());
@@ -59,8 +61,10 @@ public class LegoLangGenerator extends AbstractGenerator {
     for (final Statement v : _statement) {
       {
         String _fileContent = fileContent;
+        String _donneTab = this.donneTab(this.nbTab);
         String _statementToPython = this.statementToPython(v);
-        fileContent = (_fileContent + _statementToPython);
+        String _plus = (_donneTab + _statementToPython);
+        fileContent = (_fileContent + _plus);
         String _fileContent_1 = fileContent;
         fileContent = (_fileContent_1 + "\n");
       }
@@ -84,25 +88,40 @@ public class LegoLangGenerator extends AbstractGenerator {
       String _comparaisonPython = this.comparaisonPython(((ConditionEtat)v).getCondition());
       String _plus = ("if(" + _comparaisonPython);
       String tmp = (_plus + "):");
+      int _nbTab = this.nbTab;
+      this.nbTab = (_nbTab + 1);
       EList<Statement> _then = ((ConditionEtat)v).getThen();
       for (final Statement s : _then) {
         String _tmp = tmp;
+        String _donneTab = this.donneTab(this.nbTab);
+        String _plus_1 = ("\n" + _donneTab);
         String _statementToPython = this.statementToPython(s);
-        String _plus_1 = ("\n\t" + _statementToPython);
-        tmp = (_tmp + _plus_1);
+        String _plus_2 = (_plus_1 + _statementToPython);
+        tmp = (_tmp + _plus_2);
       }
+      int _nbTab_1 = this.nbTab;
+      this.nbTab = (_nbTab_1 - 1);
       EList<Statement> _else = ((ConditionEtat)v).getElse();
       boolean _tripleNotEquals = (_else != null);
       if (_tripleNotEquals) {
         String _tmp_1 = tmp;
-        tmp = (_tmp_1 + "\nelse :");
+        String _donneTab_1 = this.donneTab(this.nbTab);
+        String _plus_3 = ("\n" + _donneTab_1);
+        String _plus_4 = (_plus_3 + "else :");
+        tmp = (_tmp_1 + _plus_4);
+        int _nbTab_2 = this.nbTab;
+        this.nbTab = (_nbTab_2 + 1);
         EList<Statement> _else_1 = ((ConditionEtat)v).getElse();
         for (final Statement s_1 : _else_1) {
           String _tmp_2 = tmp;
+          String _donneTab_2 = this.donneTab(this.nbTab);
+          String _plus_5 = ("\n" + _donneTab_2);
           String _statementToPython_1 = this.statementToPython(s_1);
-          String _plus_2 = ("\n\t" + _statementToPython_1);
-          tmp = (_tmp_2 + _plus_2);
+          String _plus_6 = (_plus_5 + _statementToPython_1);
+          tmp = (_tmp_2 + _plus_6);
         }
+        int _nbTab_3 = this.nbTab;
+        this.nbTab = (_nbTab_3 - 1);
       }
       return tmp;
     }
@@ -112,8 +131,8 @@ public class LegoLangGenerator extends AbstractGenerator {
       for (final Expression s_2 : _expression) {
         String _tmp_3 = tmp_1;
         String _expressionToPython = this.expressionToPython(s_2);
-        String _plus_3 = (_expressionToPython + ",");
-        tmp_1 = (_tmp_3 + _plus_3);
+        String _plus_7 = (_expressionToPython + ",");
+        tmp_1 = (_tmp_3 + _plus_7);
       }
       return (tmp_1 + ")");
     }
@@ -270,15 +289,30 @@ public class LegoLangGenerator extends AbstractGenerator {
       String _comparaisonPython = this.comparaisonPython(((WhileLoop)v).getLoopCondition());
       String _plus = ("while(" + _comparaisonPython);
       String tmp = (_plus + "): ");
+      int _nbTab = this.nbTab;
+      this.nbTab = (_nbTab + 1);
       EList<Statement> _statement = ((WhileLoop)v).getStatement();
       for (final Statement s : _statement) {
         String _tmp = tmp;
+        String _donneTab = this.donneTab(this.nbTab);
+        String _plus_1 = ("\n" + _donneTab);
         String _statementToPython = this.statementToPython(s);
-        String _plus_1 = ("\n\t" + _statementToPython);
-        tmp = (_tmp + _plus_1);
+        String _plus_2 = (_plus_1 + _statementToPython);
+        tmp = (_tmp + _plus_2);
       }
+      int _nbTab_1 = this.nbTab;
+      this.nbTab = (_nbTab_1 - 1);
       return tmp;
     }
     return null;
+  }
+  
+  public String donneTab(final int nbTab) {
+    String tmp = "";
+    for (int i = 0; (i < nbTab); i++) {
+      String _tmp = tmp;
+      tmp = (_tmp + "\t");
+    }
+    return tmp;
   }
 }
