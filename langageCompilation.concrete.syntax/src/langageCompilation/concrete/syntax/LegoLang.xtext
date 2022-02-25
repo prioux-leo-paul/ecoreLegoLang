@@ -13,10 +13,10 @@ Program returns Program:
 	'}';
 
 Statement returns Statement:
-	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint ;
+	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
 
 Expression returns Expression:
-	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean;
+	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation;
 
 BinaryOperation returns BinaryOperation:
 	Substraction | Comparaison | Assignement | Division | Multiplication | Addition | MinusEqual | PlusEqual;
@@ -27,6 +27,59 @@ Variable returns Variable:
 Comparaison returns Comparaison:
 	  GT | Equal | LT | Different | GTorEqual | LTorEqual ;
 
+Engine returns Engine:
+	WheelEngine;
+
+Sensor returns Sensor:
+	LaserSensor | ColorSensor;
+
+WheelEngine returns WheelEngine:
+	'WheelEngine'
+	name=EString
+;
+
+ColorSensor returns ColorSensor:
+	'ColorSensor'
+	name=EString
+;
+
+LaserSensor returns LaserSensor:
+	'LaserSensor'
+	name=EString
+;
+
+Car returns Car:
+	'Car'
+	name=EString
+	'{'
+		(sensor+=Sensor)*
+		(engine+=Engine)*
+	
+	'}'
+;
+
+EngineOperation returns EngineOperation:
+	 VitesseOperation
+;
+
+SensorOperation returns SensorOperation:
+	RangeOperation | ColorOperation ;
+
+
+VitesseOperation returns VitesseOperation:
+	(engine+=[Engine|EString])
+	(',' engine+=[Engine|EString])*
+	':''vitesse''='
+	right=Expression
+;
+
+ColorOperation returns ColorOperation:
+	'get''color''('sensor=[Sensor|EString]')'
+;
+
+RangeOperation returns RangeOperation:
+	'get''range''('sensor=[Sensor|EString]')'
+;
 ConditionEtat returns ConditionEtat:
 	'if'
 		Condition=Comparaison '{'

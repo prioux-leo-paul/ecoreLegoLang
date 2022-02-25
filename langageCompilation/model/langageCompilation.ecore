@@ -86,4 +86,37 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlusEqual" eSuperTypes="#//BinaryOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="MinusEqual" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Car" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" upperBound="4"
+        eType="#//Engine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" upperBound="4"
+        eType="#//Sensor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Engine" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LaserSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WheelEngine" eSuperTypes="#//Engine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EngineOperation" abstract="true" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" lowerBound="1"
+        upperBound="-1" eType="#//Engine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensorOperation" abstract="true" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" lowerBound="1"
+        eType="#//Sensor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EngineRef" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" lowerBound="1"
+        eType="#//Engine" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensorRef" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" lowerBound="1"
+        eType="#//Sensor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass43"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VitesseOperation" eSuperTypes="#//EngineOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorOperation" eSuperTypes="#//SensorOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RangeOperation" eSuperTypes="#//SensorOperation"/>
 </ecore:EPackage>

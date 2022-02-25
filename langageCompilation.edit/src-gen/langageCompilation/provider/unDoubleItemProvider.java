@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unDouble;
+import langageCompilation.UnDouble;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.unDouble} object.
+ * This is the item provider adapter for a {@link langageCompilation.UnDouble} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class unDoubleItemProvider extends VariableItemProvider {
+public class UnDoubleItemProvider extends VariableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unDoubleItemProvider(AdapterFactory adapterFactory) {
+	public UnDoubleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,9 +59,9 @@ public class unDoubleItemProvider extends VariableItemProvider {
 	protected void addInitialeValue1PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_unDouble_initialeValue1_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_unDouble_initialeValue1_feature",
-								"_UI_unDouble_type"),
+						getResourceLocator(), getString("_UI_UnDouble_initialeValue1_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UnDouble_initialeValue1_feature",
+								"_UI_UnDouble_type"),
 						LangageCompilationPackage.Literals.UN_DOUBLE__INITIALE_VALUE1, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
@@ -75,22 +75,22 @@ public class unDoubleItemProvider extends VariableItemProvider {
 	protected void addInitialeValue2PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_unDouble_initialeValue2_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_unDouble_initialeValue2_feature",
-								"_UI_unDouble_type"),
+						getResourceLocator(), getString("_UI_UnDouble_initialeValue2_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UnDouble_initialeValue2_feature",
+								"_UI_UnDouble_type"),
 						LangageCompilationPackage.Literals.UN_DOUBLE__INITIALE_VALUE2, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns unDouble.gif.
+	 * This returns UnDouble.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/unDouble"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/UnDouble"));
 	}
 
 	/**
@@ -111,9 +111,9 @@ public class unDoubleItemProvider extends VariableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((unDouble) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_unDouble_type")
-				: getString("_UI_unDouble_type") + " " + label;
+		String label = ((UnDouble) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_UnDouble_type")
+				: getString("_UI_UnDouble_type") + " " + label;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class unDoubleItemProvider extends VariableItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(unDouble.class)) {
+		switch (notification.getFeatureID(UnDouble.class)) {
 		case LangageCompilationPackage.UN_DOUBLE__INITIALE_VALUE1:
 		case LangageCompilationPackage.UN_DOUBLE__INITIALE_VALUE2:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

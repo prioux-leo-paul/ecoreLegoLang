@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unInteger;
+import langageCompilation.UnInteger;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.unInteger} object.
+ * This is the item provider adapter for a {@link langageCompilation.UnInteger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class unIntegerItemProvider extends VariableItemProvider {
+public class UnIntegerItemProvider extends VariableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unIntegerItemProvider(AdapterFactory adapterFactory) {
+	public UnIntegerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,22 +58,22 @@ public class unIntegerItemProvider extends VariableItemProvider {
 	protected void addInitialeValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_unInteger_initialeValue_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_unInteger_initialeValue_feature",
-								"_UI_unInteger_type"),
+						getResourceLocator(), getString("_UI_UnInteger_initialeValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UnInteger_initialeValue_feature",
+								"_UI_UnInteger_type"),
 						LangageCompilationPackage.Literals.UN_INTEGER__INITIALE_VALUE, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns unInteger.gif.
+	 * This returns UnInteger.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/unInteger"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/UnInteger"));
 	}
 
 	/**
@@ -94,9 +94,9 @@ public class unIntegerItemProvider extends VariableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((unInteger) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_unInteger_type")
-				: getString("_UI_unInteger_type") + " " + label;
+		String label = ((UnInteger) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_UnInteger_type")
+				: getString("_UI_UnInteger_type") + " " + label;
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class unIntegerItemProvider extends VariableItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(unInteger.class)) {
+		switch (notification.getFeatureID(UnInteger.class)) {
 		case LangageCompilationPackage.UN_INTEGER__INITIALE_VALUE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

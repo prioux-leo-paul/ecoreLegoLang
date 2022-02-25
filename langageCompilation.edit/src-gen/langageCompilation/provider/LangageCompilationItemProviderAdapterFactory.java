@@ -671,6 +671,236 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.Car} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CarItemProvider carItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.Car}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCarAdapter() {
+		if (carItemProvider == null) {
+			carItemProvider = new CarItemProvider(this);
+		}
+
+		return carItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorSensorItemProvider colorSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.ColorSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorSensorAdapter() {
+		if (colorSensorItemProvider == null) {
+			colorSensorItemProvider = new ColorSensorItemProvider(this);
+		}
+
+		return colorSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.LaserSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LaserSensorItemProvider laserSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.LaserSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLaserSensorAdapter() {
+		if (laserSensorItemProvider == null) {
+			laserSensorItemProvider = new LaserSensorItemProvider(this);
+		}
+
+		return laserSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.WheelEngine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WheelEngineItemProvider wheelEngineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.WheelEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWheelEngineAdapter() {
+		if (wheelEngineItemProvider == null) {
+			wheelEngineItemProvider = new WheelEngineItemProvider(this);
+		}
+
+		return wheelEngineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.EngineRef} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EngineRefItemProvider engineRefItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.EngineRef}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEngineRefAdapter() {
+		if (engineRefItemProvider == null) {
+			engineRefItemProvider = new EngineRefItemProvider(this);
+		}
+
+		return engineRefItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.SensorRef} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SensorRefItemProvider sensorRefItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.SensorRef}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSensorRefAdapter() {
+		if (sensorRefItemProvider == null) {
+			sensorRefItemProvider = new SensorRefItemProvider(this);
+		}
+
+		return sensorRefItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.NewEClass43} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass43ItemProvider newEClass43ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.NewEClass43}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewEClass43Adapter() {
+		if (newEClass43ItemProvider == null) {
+			newEClass43ItemProvider = new NewEClass43ItemProvider(this);
+		}
+
+		return newEClass43ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.VitesseOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VitesseOperationItemProvider vitesseOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.VitesseOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVitesseOperationAdapter() {
+		if (vitesseOperationItemProvider == null) {
+			vitesseOperationItemProvider = new VitesseOperationItemProvider(this);
+		}
+
+		return vitesseOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorOperationItemProvider colorOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.ColorOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorOperationAdapter() {
+		if (colorOperationItemProvider == null) {
+			colorOperationItemProvider = new ColorOperationItemProvider(this);
+		}
+
+		return colorOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.RangeOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RangeOperationItemProvider rangeOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.RangeOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRangeOperationAdapter() {
+		if (rangeOperationItemProvider == null) {
+			rangeOperationItemProvider = new RangeOperationItemProvider(this);
+		}
+
+		return rangeOperationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,6 +1051,26 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			plusEqualItemProvider.dispose();
 		if (minusEqualItemProvider != null)
 			minusEqualItemProvider.dispose();
+		if (carItemProvider != null)
+			carItemProvider.dispose();
+		if (colorSensorItemProvider != null)
+			colorSensorItemProvider.dispose();
+		if (laserSensorItemProvider != null)
+			laserSensorItemProvider.dispose();
+		if (wheelEngineItemProvider != null)
+			wheelEngineItemProvider.dispose();
+		if (engineRefItemProvider != null)
+			engineRefItemProvider.dispose();
+		if (sensorRefItemProvider != null)
+			sensorRefItemProvider.dispose();
+		if (newEClass43ItemProvider != null)
+			newEClass43ItemProvider.dispose();
+		if (vitesseOperationItemProvider != null)
+			vitesseOperationItemProvider.dispose();
+		if (colorOperationItemProvider != null)
+			colorOperationItemProvider.dispose();
+		if (rangeOperationItemProvider != null)
+			rangeOperationItemProvider.dispose();
 	}
 
 }

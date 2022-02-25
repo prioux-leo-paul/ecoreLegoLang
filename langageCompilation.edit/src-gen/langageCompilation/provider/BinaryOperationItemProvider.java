@@ -199,6 +199,21 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createEngineRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createSensorRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createColorOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVariableRef()));
 
@@ -252,6 +267,21 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createEngineRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createSensorRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createColorOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
 	}
 
 	/**

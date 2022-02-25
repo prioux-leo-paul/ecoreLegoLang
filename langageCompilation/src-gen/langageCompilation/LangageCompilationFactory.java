@@ -256,6 +256,96 @@ public interface LangageCompilationFactory extends EFactory {
 	MinusEqual createMinusEqual();
 
 	/**
+	 * Returns a new object of class '<em>Car</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Car</em>'.
+	 * @generated
+	 */
+	Car createCar();
+
+	/**
+	 * Returns a new object of class '<em>Color Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color Sensor</em>'.
+	 * @generated
+	 */
+	ColorSensor createColorSensor();
+
+	/**
+	 * Returns a new object of class '<em>Laser Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Laser Sensor</em>'.
+	 * @generated
+	 */
+	LaserSensor createLaserSensor();
+
+	/**
+	 * Returns a new object of class '<em>Wheel Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wheel Engine</em>'.
+	 * @generated
+	 */
+	WheelEngine createWheelEngine();
+
+	/**
+	 * Returns a new object of class '<em>Engine Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Engine Ref</em>'.
+	 * @generated
+	 */
+	EngineRef createEngineRef();
+
+	/**
+	 * Returns a new object of class '<em>Sensor Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sensor Ref</em>'.
+	 * @generated
+	 */
+	SensorRef createSensorRef();
+
+	/**
+	 * Returns a new object of class '<em>New EClass43</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>New EClass43</em>'.
+	 * @generated
+	 */
+	NewEClass43 createNewEClass43();
+
+	/**
+	 * Returns a new object of class '<em>Vitesse Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vitesse Operation</em>'.
+	 * @generated
+	 */
+	VitesseOperation createVitesseOperation();
+
+	/**
+	 * Returns a new object of class '<em>Color Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color Operation</em>'.
+	 * @generated
+	 */
+	ColorOperation createColorOperation();
+
+	/**
+	 * Returns a new object of class '<em>Range Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Range Operation</em>'.
+	 * @generated
+	 */
+	RangeOperation createRangeOperation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

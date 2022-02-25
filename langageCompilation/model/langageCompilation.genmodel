@@ -81,5 +81,31 @@
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//PlusEqual"/>
     <genClasses ecoreClass="langageCompilation.ecore#//MinusEqual"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Car">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Car/engine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Car/sensor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Sensor"/>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Engine"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//ColorSensor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//LaserSensor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//WheelEngine"/>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//EngineOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineOperation/right"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineOperation/engine"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//SensorOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//SensorOperation/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//EngineRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineRef/engine"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//SensorRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//SensorRef/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//NewEClass43"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//VitesseOperation"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//ColorOperation"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//RangeOperation"/>
   </genPackages>
 </genmodel:GenModel>

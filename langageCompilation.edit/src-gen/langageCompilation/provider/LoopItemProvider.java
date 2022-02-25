@@ -217,6 +217,33 @@ public class LoopItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createCar()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createColorSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createLaserSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createEngineRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createSensorRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createColorOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
 	}
 
 }

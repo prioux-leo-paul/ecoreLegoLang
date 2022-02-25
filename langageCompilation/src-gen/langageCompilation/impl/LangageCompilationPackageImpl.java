@@ -5,22 +5,34 @@ package langageCompilation.impl;
 import langageCompilation.Addition;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
+import langageCompilation.Car;
+import langageCompilation.ColorOperation;
+import langageCompilation.ColorSensor;
 import langageCompilation.Comparaison;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
 import langageCompilation.Division;
+import langageCompilation.Engine;
+import langageCompilation.EngineOperation;
+import langageCompilation.EngineRef;
 import langageCompilation.Equal;
 import langageCompilation.Expression;
 import langageCompilation.GTorEqual;
 import langageCompilation.LTorEqual;
 import langageCompilation.LangageCompilationFactory;
 import langageCompilation.LangageCompilationPackage;
+import langageCompilation.LaserSensor;
 import langageCompilation.Loop;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
+import langageCompilation.NewEClass43;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
+import langageCompilation.RangeOperation;
+import langageCompilation.Sensor;
+import langageCompilation.SensorOperation;
+import langageCompilation.SensorRef;
 import langageCompilation.Statement;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
@@ -33,6 +45,8 @@ import langageCompilation.UnInteger;
 import langageCompilation.UnString;
 import langageCompilation.Variable;
 import langageCompilation.VariableRef;
+import langageCompilation.VitesseOperation;
+import langageCompilation.WheelEngine;
 import langageCompilation.WhileLoop;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -272,6 +286,104 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * @generated
 	 */
 	private EClass minusEqualEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass carEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass engineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass laserSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wheelEngineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass engineOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sensorOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass engineRefEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sensorRefEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newEClass43EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vitesseOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rangeOperationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -838,6 +950,195 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCar() {
+		return carEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCar_Engine() {
+		return (EReference) carEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCar_Sensor() {
+		return (EReference) carEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSensor() {
+		return sensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEngine() {
+		return engineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColorSensor() {
+		return colorSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLaserSensor() {
+		return laserSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWheelEngine() {
+		return wheelEngineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEngineOperation() {
+		return engineOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEngineOperation_Right() {
+		return (EReference) engineOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEngineOperation_Engine() {
+		return (EReference) engineOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSensorOperation() {
+		return sensorOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSensorOperation_Sensor() {
+		return (EReference) sensorOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEngineRef() {
+		return engineRefEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEngineRef_Engine() {
+		return (EReference) engineRefEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSensorRef() {
+		return sensorRefEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSensorRef_Sensor() {
+		return (EReference) sensorRefEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNewEClass43() {
+		return newEClass43EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVitesseOperation() {
+		return vitesseOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColorOperation() {
+		return colorOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRangeOperation() {
+		return rangeOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LangageCompilationFactory getLangageCompilationFactory() {
 		return (LangageCompilationFactory) getEFactoryInstance();
 	}
@@ -948,6 +1249,41 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		plusEqualEClass = createEClass(PLUS_EQUAL);
 
 		minusEqualEClass = createEClass(MINUS_EQUAL);
+
+		carEClass = createEClass(CAR);
+		createEReference(carEClass, CAR__ENGINE);
+		createEReference(carEClass, CAR__SENSOR);
+
+		sensorEClass = createEClass(SENSOR);
+
+		engineEClass = createEClass(ENGINE);
+
+		colorSensorEClass = createEClass(COLOR_SENSOR);
+
+		laserSensorEClass = createEClass(LASER_SENSOR);
+
+		wheelEngineEClass = createEClass(WHEEL_ENGINE);
+
+		engineOperationEClass = createEClass(ENGINE_OPERATION);
+		createEReference(engineOperationEClass, ENGINE_OPERATION__RIGHT);
+		createEReference(engineOperationEClass, ENGINE_OPERATION__ENGINE);
+
+		sensorOperationEClass = createEClass(SENSOR_OPERATION);
+		createEReference(sensorOperationEClass, SENSOR_OPERATION__SENSOR);
+
+		engineRefEClass = createEClass(ENGINE_REF);
+		createEReference(engineRefEClass, ENGINE_REF__ENGINE);
+
+		sensorRefEClass = createEClass(SENSOR_REF);
+		createEReference(sensorRefEClass, SENSOR_REF__SENSOR);
+
+		newEClass43EClass = createEClass(NEW_ECLASS43);
+
+		vitesseOperationEClass = createEClass(VITESSE_OPERATION);
+
+		colorOperationEClass = createEClass(COLOR_OPERATION);
+
+		rangeOperationEClass = createEClass(RANGE_OPERATION);
 	}
 
 	/**
@@ -1009,6 +1345,19 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		theStringEClass.getESuperTypes().add(this.getExpression());
 		plusEqualEClass.getESuperTypes().add(this.getBinaryOperation());
 		minusEqualEClass.getESuperTypes().add(this.getBinaryOperation());
+		carEClass.getESuperTypes().add(this.getStatement());
+		sensorEClass.getESuperTypes().add(this.getStatement());
+		engineEClass.getESuperTypes().add(this.getStatement());
+		colorSensorEClass.getESuperTypes().add(this.getSensor());
+		laserSensorEClass.getESuperTypes().add(this.getSensor());
+		wheelEngineEClass.getESuperTypes().add(this.getEngine());
+		engineOperationEClass.getESuperTypes().add(this.getExpression());
+		sensorOperationEClass.getESuperTypes().add(this.getExpression());
+		engineRefEClass.getESuperTypes().add(this.getExpression());
+		sensorRefEClass.getESuperTypes().add(this.getExpression());
+		vitesseOperationEClass.getESuperTypes().add(this.getEngineOperation());
+		colorOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		rangeOperationEClass.getESuperTypes().add(this.getSensorOperation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1161,6 +1510,66 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(minusEqualEClass, MinusEqual.class, "MinusEqual", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(carEClass, Car.class, "Car", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCar_Engine(), this.getEngine(), null, "engine", null, 0, 4, Car.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getCar_Sensor(), this.getSensor(), null, "sensor", null, 0, 4, Car.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(sensorEClass, Sensor.class, "Sensor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(engineEClass, Engine.class, "Engine", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(colorSensorEClass, ColorSensor.class, "ColorSensor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(laserSensorEClass, LaserSensor.class, "LaserSensor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(wheelEngineEClass, WheelEngine.class, "WheelEngine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(engineOperationEClass, EngineOperation.class, "EngineOperation", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEngineOperation_Right(), this.getExpression(), null, "right", null, 1, 1,
+				EngineOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEngineOperation_Engine(), this.getEngine(), null, "engine", null, 1, -1,
+				EngineOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sensorOperationEClass, SensorOperation.class, "SensorOperation", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSensorOperation_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, SensorOperation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(engineRefEClass, EngineRef.class, "EngineRef", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEngineRef_Engine(), this.getEngine(), null, "engine", null, 1, 1, EngineRef.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sensorRefEClass, SensorRef.class, "SensorRef", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSensorRef_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, SensorRef.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(newEClass43EClass, NewEClass43.class, "NewEClass43", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(vitesseOperationEClass, VitesseOperation.class, "VitesseOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(colorOperationEClass, ColorOperation.class, "ColorOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(rangeOperationEClass, RangeOperation.class, "RangeOperation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource

@@ -227,6 +227,76 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseCar(Car object) {
+			return createCarAdapter();
+		}
+
+		@Override
+		public Adapter caseSensor(Sensor object) {
+			return createSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseEngine(Engine object) {
+			return createEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseColorSensor(ColorSensor object) {
+			return createColorSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseLaserSensor(LaserSensor object) {
+			return createLaserSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseWheelEngine(WheelEngine object) {
+			return createWheelEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseEngineOperation(EngineOperation object) {
+			return createEngineOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseSensorOperation(SensorOperation object) {
+			return createSensorOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseEngineRef(EngineRef object) {
+			return createEngineRefAdapter();
+		}
+
+		@Override
+		public Adapter caseSensorRef(SensorRef object) {
+			return createSensorRefAdapter();
+		}
+
+		@Override
+		public Adapter caseNewEClass43(NewEClass43 object) {
+			return createNewEClass43Adapter();
+		}
+
+		@Override
+		public Adapter caseVitesseOperation(VitesseOperation object) {
+			return createVitesseOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseColorOperation(ColorOperation object) {
+			return createColorOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseRangeOperation(RangeOperation object) {
+			return createRangeOperationAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -690,6 +760,202 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMinusEqualAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.Car <em>Car</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.Car
+	 * @generated
+	 */
+	public Adapter createCarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.Sensor <em>Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.Sensor
+	 * @generated
+	 */
+	public Adapter createSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.Engine <em>Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.Engine
+	 * @generated
+	 */
+	public Adapter createEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorSensor <em>Color Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ColorSensor
+	 * @generated
+	 */
+	public Adapter createColorSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.LaserSensor <em>Laser Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.LaserSensor
+	 * @generated
+	 */
+	public Adapter createLaserSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.WheelEngine <em>Wheel Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.WheelEngine
+	 * @generated
+	 */
+	public Adapter createWheelEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.EngineOperation <em>Engine Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.EngineOperation
+	 * @generated
+	 */
+	public Adapter createEngineOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.SensorOperation <em>Sensor Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.SensorOperation
+	 * @generated
+	 */
+	public Adapter createSensorOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.EngineRef <em>Engine Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.EngineRef
+	 * @generated
+	 */
+	public Adapter createEngineRefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.SensorRef <em>Sensor Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.SensorRef
+	 * @generated
+	 */
+	public Adapter createSensorRefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.NewEClass43 <em>New EClass43</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.NewEClass43
+	 * @generated
+	 */
+	public Adapter createNewEClass43Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.VitesseOperation <em>Vitesse Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.VitesseOperation
+	 * @generated
+	 */
+	public Adapter createVitesseOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorOperation <em>Color Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ColorOperation
+	 * @generated
+	 */
+	public Adapter createColorOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.RangeOperation <em>Range Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.RangeOperation
+	 * @generated
+	 */
+	public Adapter createRangeOperationAdapter() {
 		return null;
 	}
 

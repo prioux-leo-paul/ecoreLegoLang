@@ -211,6 +211,33 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createCar()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createColorSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createLaserSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createEngineRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createSensorRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createColorOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createWhileLoop()));
 
@@ -285,6 +312,33 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createCar()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createColorSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createLaserSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createEngineRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createSensorRef()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createColorOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
 				LangageCompilationFactory.eINSTANCE.createGT()));

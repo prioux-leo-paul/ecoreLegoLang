@@ -5,8 +5,7 @@ package langageCompilation.provider;
 import java.util.Collection;
 import java.util.List;
 
-import langageCompilation.Decrementation;
-import langageCompilation.LangageCompilationPackage;
+import langageCompilation.Setter;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -14,19 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.Decrementation} object.
+ * This is the item provider adapter for a {@link langageCompilation.Setter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DecrementationItemProvider extends BinaryOperationItemProvider {
+public class SetterItemProvider extends EngineOperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecrementationItemProvider(AdapterFactory adapterFactory) {
+	public SetterItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,17 +42,6 @@ public class DecrementationItemProvider extends BinaryOperationItemProvider {
 
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This returns Decrementation.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Decrementation"));
 	}
 
 	/**
@@ -74,9 +62,9 @@ public class DecrementationItemProvider extends BinaryOperationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Decrementation) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Decrementation_type")
-				: getString("_UI_Decrementation_type") + " " + label;
+		String label = ((Setter) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Setter_type")
+				: getString("_UI_Setter_type") + " " + label;
 	}
 
 	/**
@@ -102,27 +90,6 @@ public class DecrementationItemProvider extends BinaryOperationItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify = childFeature == LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT
-				|| childFeature == LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT;
-
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

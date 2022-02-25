@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unBoolean;
+import langageCompilation.UnBoolean;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.unBoolean} object.
+ * This is the item provider adapter for a {@link langageCompilation.UnBoolean} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class unBooleanItemProvider extends VariableItemProvider {
+public class UnBooleanItemProvider extends VariableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unBooleanItemProvider(AdapterFactory adapterFactory) {
+	public UnBooleanItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,22 +58,22 @@ public class unBooleanItemProvider extends VariableItemProvider {
 	protected void addInitialeValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_unBoolean_initialeValue_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_unBoolean_initialeValue_feature",
-								"_UI_unBoolean_type"),
+						getResourceLocator(), getString("_UI_UnBoolean_initialeValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UnBoolean_initialeValue_feature",
+								"_UI_UnBoolean_type"),
 						LangageCompilationPackage.Literals.UN_BOOLEAN__INITIALE_VALUE, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns unBoolean.gif.
+	 * This returns UnBoolean.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/unBoolean"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/UnBoolean"));
 	}
 
 	/**
@@ -94,9 +94,9 @@ public class unBooleanItemProvider extends VariableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((unBoolean) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_unBoolean_type")
-				: getString("_UI_unBoolean_type") + " " + label;
+		String label = ((UnBoolean) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_UnBoolean_type")
+				: getString("_UI_UnBoolean_type") + " " + label;
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class unBooleanItemProvider extends VariableItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(unBoolean.class)) {
+		switch (notification.getFeatureID(UnBoolean.class)) {
 		case LangageCompilationPackage.UN_BOOLEAN__INITIALE_VALUE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

@@ -440,6 +440,156 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case LangageCompilationPackage.CAR: {
+			Car car = (Car) theEObject;
+			T result = caseCar(car);
+			if (result == null)
+				result = caseStatement(car);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.SENSOR: {
+			Sensor sensor = (Sensor) theEObject;
+			T result = caseSensor(sensor);
+			if (result == null)
+				result = caseStatement(sensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.ENGINE: {
+			Engine engine = (Engine) theEObject;
+			T result = caseEngine(engine);
+			if (result == null)
+				result = caseStatement(engine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.COLOR_SENSOR: {
+			ColorSensor colorSensor = (ColorSensor) theEObject;
+			T result = caseColorSensor(colorSensor);
+			if (result == null)
+				result = caseSensor(colorSensor);
+			if (result == null)
+				result = caseStatement(colorSensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.LASER_SENSOR: {
+			LaserSensor laserSensor = (LaserSensor) theEObject;
+			T result = caseLaserSensor(laserSensor);
+			if (result == null)
+				result = caseSensor(laserSensor);
+			if (result == null)
+				result = caseStatement(laserSensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.WHEEL_ENGINE: {
+			WheelEngine wheelEngine = (WheelEngine) theEObject;
+			T result = caseWheelEngine(wheelEngine);
+			if (result == null)
+				result = caseEngine(wheelEngine);
+			if (result == null)
+				result = caseStatement(wheelEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.ENGINE_OPERATION: {
+			EngineOperation engineOperation = (EngineOperation) theEObject;
+			T result = caseEngineOperation(engineOperation);
+			if (result == null)
+				result = caseExpression(engineOperation);
+			if (result == null)
+				result = caseStatement(engineOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.SENSOR_OPERATION: {
+			SensorOperation sensorOperation = (SensorOperation) theEObject;
+			T result = caseSensorOperation(sensorOperation);
+			if (result == null)
+				result = caseExpression(sensorOperation);
+			if (result == null)
+				result = caseStatement(sensorOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.ENGINE_REF: {
+			EngineRef engineRef = (EngineRef) theEObject;
+			T result = caseEngineRef(engineRef);
+			if (result == null)
+				result = caseExpression(engineRef);
+			if (result == null)
+				result = caseStatement(engineRef);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.SENSOR_REF: {
+			SensorRef sensorRef = (SensorRef) theEObject;
+			T result = caseSensorRef(sensorRef);
+			if (result == null)
+				result = caseExpression(sensorRef);
+			if (result == null)
+				result = caseStatement(sensorRef);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.NEW_ECLASS43: {
+			NewEClass43 newEClass43 = (NewEClass43) theEObject;
+			T result = caseNewEClass43(newEClass43);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.VITESSE_OPERATION: {
+			VitesseOperation vitesseOperation = (VitesseOperation) theEObject;
+			T result = caseVitesseOperation(vitesseOperation);
+			if (result == null)
+				result = caseEngineOperation(vitesseOperation);
+			if (result == null)
+				result = caseExpression(vitesseOperation);
+			if (result == null)
+				result = caseStatement(vitesseOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.COLOR_OPERATION: {
+			ColorOperation colorOperation = (ColorOperation) theEObject;
+			T result = caseColorOperation(colorOperation);
+			if (result == null)
+				result = caseSensorOperation(colorOperation);
+			if (result == null)
+				result = caseExpression(colorOperation);
+			if (result == null)
+				result = caseStatement(colorOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.RANGE_OPERATION: {
+			RangeOperation rangeOperation = (RangeOperation) theEObject;
+			T result = caseRangeOperation(rangeOperation);
+			if (result == null)
+				result = caseSensorOperation(rangeOperation);
+			if (result == null)
+				result = caseExpression(rangeOperation);
+			if (result == null)
+				result = caseStatement(rangeOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -922,6 +1072,216 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMinusEqual(MinusEqual object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Car</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Car</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCar(Car object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSensor(Sensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEngine(Engine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorSensor(ColorSensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Laser Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Laser Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLaserSensor(LaserSensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wheel Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wheel Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWheelEngine(WheelEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Engine Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Engine Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEngineOperation(EngineOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sensor Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sensor Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSensorOperation(SensorOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Engine Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Engine Ref</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEngineRef(EngineRef object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sensor Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sensor Ref</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSensorRef(SensorRef object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>New EClass43</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>New EClass43</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNewEClass43(NewEClass43 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vitesse Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vitesse Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVitesseOperation(VitesseOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorOperation(ColorOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Range Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Range Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRangeOperation(RangeOperation object) {
 		return null;
 	}
 

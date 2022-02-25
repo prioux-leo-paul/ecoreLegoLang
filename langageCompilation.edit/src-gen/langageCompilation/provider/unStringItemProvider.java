@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 import langageCompilation.LangageCompilationPackage;
-import langageCompilation.unString;
+import langageCompilation.UnString;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.unString} object.
+ * This is the item provider adapter for a {@link langageCompilation.UnString} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class unStringItemProvider extends VariableItemProvider {
+public class UnStringItemProvider extends VariableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public unStringItemProvider(AdapterFactory adapterFactory) {
+	public UnStringItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,22 +58,22 @@ public class unStringItemProvider extends VariableItemProvider {
 	protected void addInitialeValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_unString_initialeValue_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_unString_initialeValue_feature",
-								"_UI_unString_type"),
+						getResourceLocator(), getString("_UI_UnString_initialeValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UnString_initialeValue_feature",
+								"_UI_UnString_type"),
 						LangageCompilationPackage.Literals.UN_STRING__INITIALE_VALUE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns unString.gif.
+	 * This returns UnString.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/unString"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/UnString"));
 	}
 
 	/**
@@ -94,9 +94,9 @@ public class unStringItemProvider extends VariableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((unString) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_unString_type")
-				: getString("_UI_unString_type") + " " + label;
+		String label = ((UnString) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_UnString_type")
+				: getString("_UI_UnString_type") + " " + label;
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class unStringItemProvider extends VariableItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(unString.class)) {
+		switch (notification.getFeatureID(UnString.class)) {
 		case LangageCompilationPackage.UN_STRING__INITIALE_VALUE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

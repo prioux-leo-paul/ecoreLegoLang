@@ -108,6 +108,26 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createPlusEqual();
 		case LangageCompilationPackage.MINUS_EQUAL:
 			return createMinusEqual();
+		case LangageCompilationPackage.CAR:
+			return createCar();
+		case LangageCompilationPackage.COLOR_SENSOR:
+			return createColorSensor();
+		case LangageCompilationPackage.LASER_SENSOR:
+			return createLaserSensor();
+		case LangageCompilationPackage.WHEEL_ENGINE:
+			return createWheelEngine();
+		case LangageCompilationPackage.ENGINE_REF:
+			return createEngineRef();
+		case LangageCompilationPackage.SENSOR_REF:
+			return createSensorRef();
+		case LangageCompilationPackage.NEW_ECLASS43:
+			return createNewEClass43();
+		case LangageCompilationPackage.VITESSE_OPERATION:
+			return createVitesseOperation();
+		case LangageCompilationPackage.COLOR_OPERATION:
+			return createColorOperation();
+		case LangageCompilationPackage.RANGE_OPERATION:
+			return createRangeOperation();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -371,6 +391,106 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	public MinusEqual createMinusEqual() {
 		MinusEqualImpl minusEqual = new MinusEqualImpl();
 		return minusEqual;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Car createCar() {
+		CarImpl car = new CarImpl();
+		return car;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorSensor createColorSensor() {
+		ColorSensorImpl colorSensor = new ColorSensorImpl();
+		return colorSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LaserSensor createLaserSensor() {
+		LaserSensorImpl laserSensor = new LaserSensorImpl();
+		return laserSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WheelEngine createWheelEngine() {
+		WheelEngineImpl wheelEngine = new WheelEngineImpl();
+		return wheelEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EngineRef createEngineRef() {
+		EngineRefImpl engineRef = new EngineRefImpl();
+		return engineRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SensorRef createSensorRef() {
+		SensorRefImpl sensorRef = new SensorRefImpl();
+		return sensorRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewEClass43 createNewEClass43() {
+		NewEClass43Impl newEClass43 = new NewEClass43Impl();
+		return newEClass43;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VitesseOperation createVitesseOperation() {
+		VitesseOperationImpl vitesseOperation = new VitesseOperationImpl();
+		return vitesseOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorOperation createColorOperation() {
+		ColorOperationImpl colorOperation = new ColorOperationImpl();
+		return colorOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RangeOperation createRangeOperation() {
+		RangeOperationImpl rangeOperation = new RangeOperationImpl();
+		return rangeOperation;
 	}
 
 	/**
