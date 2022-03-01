@@ -6,32 +6,47 @@ package langageCompilation.concrete.syntax.serializer;
 import com.google.inject.Inject;
 import java.util.Set;
 import langageCompilation.Addition;
+import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
+import langageCompilation.Car;
+import langageCompilation.ColorOperation;
+import langageCompilation.ColorSensor;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
+import langageCompilation.DistanceOperation;
 import langageCompilation.Division;
 import langageCompilation.Equal;
+import langageCompilation.GPSSensor;
 import langageCompilation.GT;
 import langageCompilation.GTorEqual;
+import langageCompilation.GyroSensor;
+import langageCompilation.IntensityOperation;
 import langageCompilation.LT;
 import langageCompilation.LTorEqual;
 import langageCompilation.LangageCompilationPackage;
+import langageCompilation.LaserSensor;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
+import langageCompilation.RangeOperation;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
+import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
 import langageCompilation.UnString;
 import langageCompilation.VariableRef;
+import langageCompilation.VitesseOperation;
+import langageCompilation.WheelEngine;
 import langageCompilation.WhileLoop;
+import langageCompilation.XGPSOperation;
+import langageCompilation.YGPSOperation;
 import langageCompilation.concrete.syntax.services.LegoLangGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -60,8 +75,20 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.ADDITION:
 				sequence_Addition(context, (Addition) semanticObject); 
 				return; 
+			case LangageCompilationPackage.ANGLE_OPERATION:
+				sequence_AngleOperation(context, (AngleOperation) semanticObject); 
+				return; 
 			case LangageCompilationPackage.ASSIGNEMENT:
 				sequence_Assignement(context, (Assignement) semanticObject); 
+				return; 
+			case LangageCompilationPackage.CAR:
+				sequence_Car(context, (Car) semanticObject); 
+				return; 
+			case LangageCompilationPackage.COLOR_OPERATION:
+				sequence_ColorOperation(context, (ColorOperation) semanticObject); 
+				return; 
+			case LangageCompilationPackage.COLOR_SENSOR:
+				sequence_ColorSensor(context, (ColorSensor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.CONDITION_ETAT:
 				sequence_ConditionEtat(context, (ConditionEtat) semanticObject); 
@@ -69,11 +96,17 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.DIFFERENT:
 				sequence_Different(context, (Different) semanticObject); 
 				return; 
+			case LangageCompilationPackage.DISTANCE_OPERATION:
+				sequence_DistanceOperation(context, (DistanceOperation) semanticObject); 
+				return; 
 			case LangageCompilationPackage.DIVISION:
 				sequence_Division(context, (Division) semanticObject); 
 				return; 
 			case LangageCompilationPackage.EQUAL:
 				sequence_Equal(context, (Equal) semanticObject); 
+				return; 
+			case LangageCompilationPackage.GPS_SENSOR:
+				sequence_GPSSensor(context, (GPSSensor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.GT:
 				sequence_GT(context, (GT) semanticObject); 
@@ -81,11 +114,20 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.GTOR_EQUAL:
 				sequence_GTorEqual(context, (GTorEqual) semanticObject); 
 				return; 
+			case LangageCompilationPackage.GYRO_SENSOR:
+				sequence_GyroSensor(context, (GyroSensor) semanticObject); 
+				return; 
+			case LangageCompilationPackage.INTENSITY_OPERATION:
+				sequence_IntensityOperation(context, (IntensityOperation) semanticObject); 
+				return; 
 			case LangageCompilationPackage.LT:
 				sequence_LT(context, (LT) semanticObject); 
 				return; 
 			case LangageCompilationPackage.LTOR_EQUAL:
 				sequence_LTorEqual(context, (LTorEqual) semanticObject); 
+				return; 
+			case LangageCompilationPackage.LASER_SENSOR:
+				sequence_LaserSensor(context, (LaserSensor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.METHODE_PRINT:
 				sequence_MethodePrint(context, (MethodePrint) semanticObject); 
@@ -102,6 +144,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.PROGRAM:
 				sequence_Program(context, (Program) semanticObject); 
 				return; 
+			case LangageCompilationPackage.RANGE_OPERATION:
+				sequence_RangeOperation(context, (RangeOperation) semanticObject); 
+				return; 
 			case LangageCompilationPackage.SUBSTRACTION:
 				sequence_Substraction(context, (Substraction) semanticObject); 
 				return; 
@@ -116,6 +161,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.THE_STRING:
 				sequence_TheString(context, (TheString) semanticObject); 
+				return; 
+			case LangageCompilationPackage.ULTRA_SONIC_SENSOR:
+				sequence_UltraSonicSensor(context, (UltraSonicSensor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.UN_BOOLEAN:
 				sequence_UnBoolean(context, (UnBoolean) semanticObject); 
@@ -132,8 +180,20 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.VARIABLE_REF:
 				sequence_VariableRef(context, (VariableRef) semanticObject); 
 				return; 
+			case LangageCompilationPackage.VITESSE_OPERATION:
+				sequence_VitesseOperation(context, (VitesseOperation) semanticObject); 
+				return; 
+			case LangageCompilationPackage.WHEEL_ENGINE:
+				sequence_WheelEngine(context, (WheelEngine) semanticObject); 
+				return; 
 			case LangageCompilationPackage.WHILE_LOOP:
 				sequence_WhileLoop(context, (WhileLoop) semanticObject); 
+				return; 
+			case LangageCompilationPackage.XGPS_OPERATION:
+				sequence_XGPSOperation(context, (XGPSOperation) semanticObject); 
+				return; 
+			case LangageCompilationPackage.YGPS_OPERATION:
+				sequence_YGPSOperation(context, (YGPSOperation) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -166,6 +226,27 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns AngleOperation
+	 *     Expression returns AngleOperation
+	 *     SensorOperation returns AngleOperation
+	 *     AngleOperation returns AngleOperation
+	 *
+	 * Constraint:
+	 *     gyrosensor=[GyroSensor|FQN]
+	 */
+	protected void sequence_AngleOperation(ISerializationContext context, AngleOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ANGLE_OPERATION__GYROSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ANGLE_OPERATION__GYROSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngleOperationAccess().getGyrosensorGyroSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.ANGLE_OPERATION__GYROSENSOR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns Assignement
 	 *     Expression returns Assignement
 	 *     BinaryOperation returns Assignement
@@ -190,11 +271,68 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Car
+	 *     Car returns Car
+	 *
+	 * Constraint:
+	 *     (name=EString sensor+=Sensor* engine+=Engine*)
+	 */
+	protected void sequence_Car(ISerializationContext context, Car semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns ColorOperation
+	 *     Expression returns ColorOperation
+	 *     SensorOperation returns ColorOperation
+	 *     ColorOperation returns ColorOperation
+	 *
+	 * Constraint:
+	 *     colorsensor=[ColorSensor|FQN]
+	 */
+	protected void sequence_ColorOperation(ISerializationContext context, ColorOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.COLOR_OPERATION__COLORSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.COLOR_OPERATION__COLORSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColorOperationAccess().getColorsensorColorSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.COLOR_OPERATION__COLORSENSOR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns ColorSensor
+	 *     Sensor returns ColorSensor
+	 *     ColorSensor returns ColorSensor
+	 *
+	 * Constraint:
+	 *     (name=EString position=EInt)
+	 */
+	protected void sequence_ColorSensor(ISerializationContext context, ColorSensor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColorSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getColorSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns ConditionEtat
 	 *     ConditionEtat returns ConditionEtat
 	 *
 	 * Constraint:
-	 *     (Condition=Comparaison then+=Statement* else+=Statement?)
+	 *     (Condition+=Comparaison Condition+=Comparaison* Condition+=Comparaison* then+=Statement* else+=Statement?)
 	 */
 	protected void sequence_ConditionEtat(ISerializationContext context, ConditionEtat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -222,6 +360,27 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDifferentAccess().getLeftExpressionParserRuleCall_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getDifferentAccess().getRightExpressionParserRuleCall_3_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns DistanceOperation
+	 *     Expression returns DistanceOperation
+	 *     SensorOperation returns DistanceOperation
+	 *     DistanceOperation returns DistanceOperation
+	 *
+	 * Constraint:
+	 *     ultrasonicsensor=[UltraSonicSensor|FQN]
+	 */
+	protected void sequence_DistanceOperation(ISerializationContext context, DistanceOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.DISTANCE_OPERATION__ULTRASONICSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.DISTANCE_OPERATION__ULTRASONICSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDistanceOperationAccess().getUltrasonicsensorUltraSonicSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.DISTANCE_OPERATION__ULTRASONICSENSOR, false));
 		feeder.finish();
 	}
 	
@@ -271,6 +430,29 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getEqualAccess().getLeftExpressionParserRuleCall_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getEqualAccess().getRightExpressionParserRuleCall_3_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns GPSSensor
+	 *     Sensor returns GPSSensor
+	 *     GPSSensor returns GPSSensor
+	 *
+	 * Constraint:
+	 *     (name=EString position=EInt)
+	 */
+	protected void sequence_GPSSensor(ISerializationContext context, GPSSensor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGPSSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGPSSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -327,6 +509,50 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns GyroSensor
+	 *     Sensor returns GyroSensor
+	 *     GyroSensor returns GyroSensor
+	 *
+	 * Constraint:
+	 *     (name=EString position=EInt)
+	 */
+	protected void sequence_GyroSensor(ISerializationContext context, GyroSensor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGyroSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGyroSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns IntensityOperation
+	 *     Expression returns IntensityOperation
+	 *     SensorOperation returns IntensityOperation
+	 *     IntensityOperation returns IntensityOperation
+	 *
+	 * Constraint:
+	 *     colorsensor=[ColorSensor|FQN]
+	 */
+	protected void sequence_IntensityOperation(ISerializationContext context, IntensityOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.INTENSITY_OPERATION__COLORSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.INTENSITY_OPERATION__COLORSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIntensityOperationAccess().getColorsensorColorSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.INTENSITY_OPERATION__COLORSENSOR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns LT
 	 *     Expression returns LT
 	 *     BinaryOperation returns LT
@@ -371,6 +597,29 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLTorEqualAccess().getLeftExpressionParserRuleCall_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getLTorEqualAccess().getRightExpressionParserRuleCall_3_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns LaserSensor
+	 *     Sensor returns LaserSensor
+	 *     LaserSensor returns LaserSensor
+	 *
+	 * Constraint:
+	 *     (name=EString position=EInt)
+	 */
+	protected void sequence_LaserSensor(ISerializationContext context, LaserSensor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLaserSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLaserSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -474,6 +723,27 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns RangeOperation
+	 *     Expression returns RangeOperation
+	 *     SensorOperation returns RangeOperation
+	 *     RangeOperation returns RangeOperation
+	 *
+	 * Constraint:
+	 *     lasersensor=[LaserSensor|FQN]
+	 */
+	protected void sequence_RangeOperation(ISerializationContext context, RangeOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.RANGE_OPERATION__LASERSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.RANGE_OPERATION__LASERSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRangeOperationAccess().getLasersensorLaserSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.RANGE_OPERATION__LASERSENSOR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns Substraction
 	 *     Expression returns Substraction
 	 *     BinaryOperation returns Substraction
@@ -523,10 +793,19 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     TheDouble returns TheDouble
 	 *
 	 * Constraint:
-	 *     (value1=EInt value2=EInt?)
+	 *     (value1=EInt value2=EInt)
 	 */
 	protected void sequence_TheDouble(ISerializationContext context, TheDouble semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.THE_DOUBLE__VALUE1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.THE_DOUBLE__VALUE1));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.THE_DOUBLE__VALUE2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.THE_DOUBLE__VALUE2));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTheDoubleAccess().getValue1EIntParserRuleCall_1_0(), semanticObject.getValue1());
+		feeder.accept(grammarAccess.getTheDoubleAccess().getValue2EIntParserRuleCall_3_0(), semanticObject.getValue2());
+		feeder.finish();
 	}
 	
 	
@@ -566,6 +845,29 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getTheStringAccess().getValueEStringParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns UltraSonicSensor
+	 *     Sensor returns UltraSonicSensor
+	 *     UltraSonicSensor returns UltraSonicSensor
+	 *
+	 * Constraint:
+	 *     (name=EString position=EInt)
+	 */
+	protected void sequence_UltraSonicSensor(ISerializationContext context, UltraSonicSensor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.SENSOR__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUltraSonicSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getUltraSonicSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -648,6 +950,53 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns VitesseOperation
+	 *     Expression returns VitesseOperation
+	 *     EngineOperation returns VitesseOperation
+	 *     VitesseOperation returns VitesseOperation
+	 *
+	 * Constraint:
+	 *     (wheelengine=[WheelEngine|FQN] right=Expression)
+	 */
+	protected void sequence_VitesseOperation(ISerializationContext context, VitesseOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.VITESSE_OPERATION__WHEELENGINE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.VITESSE_OPERATION__WHEELENGINE));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVitesseOperationAccess().getWheelengineWheelEngineFQNParserRuleCall_0_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.VITESSE_OPERATION__WHEELENGINE, false));
+		feeder.accept(grammarAccess.getVitesseOperationAccess().getRightExpressionParserRuleCall_4_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns WheelEngine
+	 *     Engine returns WheelEngine
+	 *     WheelEngine returns WheelEngine
+	 *
+	 * Constraint:
+	 *     (name=EString position=EString)
+	 */
+	protected void sequence_WheelEngine(ISerializationContext context, WheelEngine semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getWheelEngineAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getWheelEngineAccess().getPositionEStringParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns WhileLoop
 	 *     WhileLoop returns WhileLoop
 	 *
@@ -656,6 +1005,48 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_WhileLoop(ISerializationContext context, WhileLoop semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns XGPSOperation
+	 *     Expression returns XGPSOperation
+	 *     SensorOperation returns XGPSOperation
+	 *     XGPSOperation returns XGPSOperation
+	 *
+	 * Constraint:
+	 *     gpssensor=[GPSSensor|FQN]
+	 */
+	protected void sequence_XGPSOperation(ISerializationContext context, XGPSOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.XGPS_OPERATION__GPSSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.XGPS_OPERATION__GPSSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getXGPSOperationAccess().getGpssensorGPSSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.XGPS_OPERATION__GPSSENSOR, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns YGPSOperation
+	 *     Expression returns YGPSOperation
+	 *     SensorOperation returns YGPSOperation
+	 *     YGPSOperation returns YGPSOperation
+	 *
+	 * Constraint:
+	 *     gpssensor=[GPSSensor|FQN]
+	 */
+	protected void sequence_YGPSOperation(ISerializationContext context, YGPSOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.YGPS_OPERATION__GPSSENSOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.YGPS_OPERATION__GPSSENSOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getYGPSOperationAccess().getGpssensorGPSSensorFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.YGPS_OPERATION__GPSSENSOR, false));
+		feeder.finish();
 	}
 	
 	

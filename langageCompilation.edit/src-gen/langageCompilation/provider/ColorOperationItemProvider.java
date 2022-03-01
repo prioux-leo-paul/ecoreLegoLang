@@ -7,9 +7,11 @@ import java.util.List;
 
 import langageCompilation.ColorOperation;
 
+import langageCompilation.LangageCompilationPackage;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -40,8 +42,24 @@ public class ColorOperationItemProvider extends SensorOperationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addColorsensorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Colorsensor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorsensorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ColorOperation_colorsensor_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ColorOperation_colorsensor_feature",
+						"_UI_ColorOperation_type"),
+				LangageCompilationPackage.Literals.COLOR_OPERATION__COLORSENSOR, true, false, true, null, null, null));
 	}
 
 	/**

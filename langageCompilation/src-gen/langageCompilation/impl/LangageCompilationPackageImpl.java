@@ -3,6 +3,7 @@
 package langageCompilation.impl;
 
 import langageCompilation.Addition;
+import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
 import langageCompilation.Car;
@@ -11,13 +12,16 @@ import langageCompilation.ColorSensor;
 import langageCompilation.Comparaison;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
+import langageCompilation.DistanceOperation;
 import langageCompilation.Division;
 import langageCompilation.Engine;
 import langageCompilation.EngineOperation;
-import langageCompilation.EngineRef;
 import langageCompilation.Equal;
 import langageCompilation.Expression;
+import langageCompilation.GPSSensor;
 import langageCompilation.GTorEqual;
+import langageCompilation.GyroSensor;
+import langageCompilation.IntensityOperation;
 import langageCompilation.LTorEqual;
 import langageCompilation.LangageCompilationFactory;
 import langageCompilation.LangageCompilationPackage;
@@ -32,13 +36,13 @@ import langageCompilation.Program;
 import langageCompilation.RangeOperation;
 import langageCompilation.Sensor;
 import langageCompilation.SensorOperation;
-import langageCompilation.SensorRef;
 import langageCompilation.Statement;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
+import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
@@ -49,6 +53,8 @@ import langageCompilation.VitesseOperation;
 import langageCompilation.WheelEngine;
 import langageCompilation.WhileLoop;
 
+import langageCompilation.XGPSOperation;
+import langageCompilation.YGPSOperation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -348,20 +354,6 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass engineRefEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sensorRefEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass newEClass43EClass = null;
 
 	/**
@@ -384,6 +376,62 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * @generated
 	 */
 	private EClass rangeOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intensityOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ultraSonicSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gyroSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gpsSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass xgpsOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ygpsOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass distanceOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass angleOperationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -986,8 +1034,26 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSensor_Position() {
+		return (EAttribute) sensorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEngine() {
 		return engineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEngine_Position() {
+		return (EAttribute) engineEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1040,62 +1106,8 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEngineOperation_Engine() {
-		return (EReference) engineOperationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSensorOperation() {
 		return sensorOperationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSensorOperation_Sensor() {
-		return (EReference) sensorOperationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEngineRef() {
-		return engineRefEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEngineRef_Engine() {
-		return (EReference) engineRefEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSensorRef() {
-		return sensorRefEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSensorRef_Sensor() {
-		return (EReference) sensorRefEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1121,6 +1133,15 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVitesseOperation_Wheelengine() {
+		return (EReference) vitesseOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getColorOperation() {
 		return colorOperationEClass;
 	}
@@ -1130,8 +1151,143 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getColorOperation_Colorsensor() {
+		return (EReference) colorOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRangeOperation() {
 		return rangeOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRangeOperation_Lasersensor() {
+		return (EReference) rangeOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIntensityOperation() {
+		return intensityOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIntensityOperation_Colorsensor() {
+		return (EReference) intensityOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUltraSonicSensor() {
+		return ultraSonicSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGyroSensor() {
+		return gyroSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGPSSensor() {
+		return gpsSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getXGPSOperation() {
+		return xgpsOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getXGPSOperation_Gpssensor() {
+		return (EReference) xgpsOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYGPSOperation() {
+		return ygpsOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYGPSOperation_Gpssensor() {
+		return (EReference) ygpsOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDistanceOperation() {
+		return distanceOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDistanceOperation_Ultrasonicsensor() {
+		return (EReference) distanceOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAngleOperation() {
+		return angleOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAngleOperation_Gyrosensor() {
+		return (EReference) angleOperationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1255,8 +1411,10 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		createEReference(carEClass, CAR__SENSOR);
 
 		sensorEClass = createEClass(SENSOR);
+		createEAttribute(sensorEClass, SENSOR__POSITION);
 
 		engineEClass = createEClass(ENGINE);
+		createEAttribute(engineEClass, ENGINE__POSITION);
 
 		colorSensorEClass = createEClass(COLOR_SENSOR);
 
@@ -1266,24 +1424,40 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 
 		engineOperationEClass = createEClass(ENGINE_OPERATION);
 		createEReference(engineOperationEClass, ENGINE_OPERATION__RIGHT);
-		createEReference(engineOperationEClass, ENGINE_OPERATION__ENGINE);
 
 		sensorOperationEClass = createEClass(SENSOR_OPERATION);
-		createEReference(sensorOperationEClass, SENSOR_OPERATION__SENSOR);
-
-		engineRefEClass = createEClass(ENGINE_REF);
-		createEReference(engineRefEClass, ENGINE_REF__ENGINE);
-
-		sensorRefEClass = createEClass(SENSOR_REF);
-		createEReference(sensorRefEClass, SENSOR_REF__SENSOR);
 
 		newEClass43EClass = createEClass(NEW_ECLASS43);
 
 		vitesseOperationEClass = createEClass(VITESSE_OPERATION);
+		createEReference(vitesseOperationEClass, VITESSE_OPERATION__WHEELENGINE);
 
 		colorOperationEClass = createEClass(COLOR_OPERATION);
+		createEReference(colorOperationEClass, COLOR_OPERATION__COLORSENSOR);
 
 		rangeOperationEClass = createEClass(RANGE_OPERATION);
+		createEReference(rangeOperationEClass, RANGE_OPERATION__LASERSENSOR);
+
+		intensityOperationEClass = createEClass(INTENSITY_OPERATION);
+		createEReference(intensityOperationEClass, INTENSITY_OPERATION__COLORSENSOR);
+
+		ultraSonicSensorEClass = createEClass(ULTRA_SONIC_SENSOR);
+
+		gyroSensorEClass = createEClass(GYRO_SENSOR);
+
+		gpsSensorEClass = createEClass(GPS_SENSOR);
+
+		xgpsOperationEClass = createEClass(XGPS_OPERATION);
+		createEReference(xgpsOperationEClass, XGPS_OPERATION__GPSSENSOR);
+
+		ygpsOperationEClass = createEClass(YGPS_OPERATION);
+		createEReference(ygpsOperationEClass, YGPS_OPERATION__GPSSENSOR);
+
+		distanceOperationEClass = createEClass(DISTANCE_OPERATION);
+		createEReference(distanceOperationEClass, DISTANCE_OPERATION__ULTRASONICSENSOR);
+
+		angleOperationEClass = createEClass(ANGLE_OPERATION);
+		createEReference(angleOperationEClass, ANGLE_OPERATION__GYROSENSOR);
 	}
 
 	/**
@@ -1353,11 +1527,17 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		wheelEngineEClass.getESuperTypes().add(this.getEngine());
 		engineOperationEClass.getESuperTypes().add(this.getExpression());
 		sensorOperationEClass.getESuperTypes().add(this.getExpression());
-		engineRefEClass.getESuperTypes().add(this.getExpression());
-		sensorRefEClass.getESuperTypes().add(this.getExpression());
 		vitesseOperationEClass.getESuperTypes().add(this.getEngineOperation());
 		colorOperationEClass.getESuperTypes().add(this.getSensorOperation());
 		rangeOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		intensityOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		ultraSonicSensorEClass.getESuperTypes().add(this.getSensor());
+		gyroSensorEClass.getESuperTypes().add(this.getSensor());
+		gpsSensorEClass.getESuperTypes().add(this.getSensor());
+		xgpsOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		ygpsOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		distanceOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		angleOperationEClass.getESuperTypes().add(this.getSensorOperation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1466,7 +1646,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEReference(getConditionEtat_Else(), this.getStatement(), null, "else", null, 0, -1, ConditionEtat.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConditionEtat_Condition(), this.getComparaison(), null, "Condition", null, 1, 1,
+		initEReference(getConditionEtat_Condition(), this.getComparaison(), null, "Condition", null, 1, -1,
 				ConditionEtat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1521,8 +1701,12 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 				IS_ORDERED);
 
 		initEClass(sensorEClass, Sensor.class, "Sensor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSensor_Position(), ecorePackage.getEInt(), "position", null, 0, 1, Sensor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(engineEClass, Engine.class, "Engine", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEngine_Position(), ecorePackage.getEString(), "position", null, 0, 1, Engine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colorSensorEClass, ColorSensor.class, "ColorSensor", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1538,39 +1722,69 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEReference(getEngineOperation_Right(), this.getExpression(), null, "right", null, 1, 1,
 				EngineOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEngineOperation_Engine(), this.getEngine(), null, "engine", null, 1, -1,
-				EngineOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sensorOperationEClass, SensorOperation.class, "SensorOperation", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSensorOperation_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, SensorOperation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(engineRefEClass, EngineRef.class, "EngineRef", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEngineRef_Engine(), this.getEngine(), null, "engine", null, 1, 1, EngineRef.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sensorRefEClass, SensorRef.class, "SensorRef", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSensorRef_Sensor(), this.getSensor(), null, "sensor", null, 1, 1, SensorRef.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(newEClass43EClass, NewEClass43.class, "NewEClass43", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vitesseOperationEClass, VitesseOperation.class, "VitesseOperation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVitesseOperation_Wheelengine(), this.getWheelEngine(), null, "wheelengine", null, 1, 1,
+				VitesseOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colorOperationEClass, ColorOperation.class, "ColorOperation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getColorOperation_Colorsensor(), this.getColorSensor(), null, "colorsensor", null, 1, 1,
+				ColorOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rangeOperationEClass, RangeOperation.class, "RangeOperation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRangeOperation_Lasersensor(), this.getLaserSensor(), null, "lasersensor", null, 1, 1,
+				RangeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(intensityOperationEClass, IntensityOperation.class, "IntensityOperation", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIntensityOperation_Colorsensor(), this.getColorSensor(), null, "colorsensor", null, 1, 1,
+				IntensityOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ultraSonicSensorEClass, UltraSonicSensor.class, "UltraSonicSensor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(gyroSensorEClass, GyroSensor.class, "GyroSensor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(gpsSensorEClass, GPSSensor.class, "GPSSensor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(xgpsOperationEClass, XGPSOperation.class, "XGPSOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getXGPSOperation_Gpssensor(), this.getGPSSensor(), null, "gpssensor", null, 1, 1,
+				XGPSOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ygpsOperationEClass, YGPSOperation.class, "YGPSOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYGPSOperation_Gpssensor(), this.getGPSSensor(), null, "gpssensor", null, 1, 1,
+				YGPSOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(distanceOperationEClass, DistanceOperation.class, "DistanceOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDistanceOperation_Ultrasonicsensor(), this.getUltraSonicSensor(), null, "ultrasonicsensor",
+				null, 1, 1, DistanceOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(angleOperationEClass, AngleOperation.class, "AngleOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAngleOperation_Gyrosensor(), this.getGyroSensor(), null, "gyrosensor", null, 1, 1,
+				AngleOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

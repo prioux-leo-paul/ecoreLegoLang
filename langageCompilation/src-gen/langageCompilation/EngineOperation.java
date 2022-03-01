@@ -2,8 +2,6 @@
  */
 package langageCompilation;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Engine Operation</b></em>'.
@@ -14,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link langageCompilation.EngineOperation#getRight <em>Right</em>}</li>
- *   <li>{@link langageCompilation.EngineOperation#getEngine <em>Engine</em>}</li>
  * </ul>
  *
  * @see langageCompilation.LangageCompilationPackage#getEngineOperation()
@@ -44,16 +41,4 @@ public interface EngineOperation extends Expression {
 	 * @generated
 	 */
 	void setRight(Expression value);
-
-	/**
-	 * Returns the value of the '<em><b>Engine</b></em>' reference list.
-	 * The list contents are of type {@link langageCompilation.Engine}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Engine</em>' reference list.
-	 * @see langageCompilation.LangageCompilationPackage#getEngineOperation_Engine()
-	 * @model required="true"
-	 * @generated
-	 */
-	EList<Engine> getEngine();
 } // EngineOperation

@@ -2,19 +2,15 @@
  */
 package langageCompilation.impl;
 
-import java.util.Collection;
-import langageCompilation.Engine;
 import langageCompilation.EngineOperation;
 import langageCompilation.Expression;
 import langageCompilation.LangageCompilationPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +21,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link langageCompilation.impl.EngineOperationImpl#getRight <em>Right</em>}</li>
- *   <li>{@link langageCompilation.impl.EngineOperationImpl#getEngine <em>Engine</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,16 +35,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 	 * @ordered
 	 */
 	protected Expression right;
-
-	/**
-	 * The cached value of the '{@link #getEngine() <em>Engine</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEngine()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Engine> engine;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,19 +110,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Engine> getEngine() {
-		if (engine == null) {
-			engine = new EObjectResolvingEList<Engine>(Engine.class, this,
-					LangageCompilationPackage.ENGINE_OPERATION__ENGINE);
-		}
-		return engine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -157,8 +129,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 		switch (featureID) {
 		case LangageCompilationPackage.ENGINE_OPERATION__RIGHT:
 			return getRight();
-		case LangageCompilationPackage.ENGINE_OPERATION__ENGINE:
-			return getEngine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,10 +145,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 		case LangageCompilationPackage.ENGINE_OPERATION__RIGHT:
 			setRight((Expression) newValue);
 			return;
-		case LangageCompilationPackage.ENGINE_OPERATION__ENGINE:
-			getEngine().clear();
-			getEngine().addAll((Collection<? extends Engine>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -194,9 +160,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 		case LangageCompilationPackage.ENGINE_OPERATION__RIGHT:
 			setRight((Expression) null);
 			return;
-		case LangageCompilationPackage.ENGINE_OPERATION__ENGINE:
-			getEngine().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +174,6 @@ public abstract class EngineOperationImpl extends ExpressionImpl implements Engi
 		switch (featureID) {
 		case LangageCompilationPackage.ENGINE_OPERATION__RIGHT:
 			return right != null;
-		case LangageCompilationPackage.ENGINE_OPERATION__ENGINE:
-			return engine != null && !engine.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

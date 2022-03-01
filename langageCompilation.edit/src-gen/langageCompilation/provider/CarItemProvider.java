@@ -153,6 +153,15 @@ public class CarItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__SENSOR,
 				LangageCompilationFactory.eINSTANCE.createLaserSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__SENSOR,
+				LangageCompilationFactory.eINSTANCE.createUltraSonicSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__SENSOR,
+				LangageCompilationFactory.eINSTANCE.createGyroSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__SENSOR,
+				LangageCompilationFactory.eINSTANCE.createGPSSensor()));
 	}
 
 }

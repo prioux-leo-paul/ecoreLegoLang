@@ -1287,7 +1287,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int CONDITION_ETAT__ELSE = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1801,13 +1801,22 @@ public interface LangageCompilationPackage extends EPackage {
 	int SENSOR__NAME = STATEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__POSITION = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Sensor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
+	int SENSOR_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Sensor</em>' class.
@@ -1838,13 +1847,22 @@ public interface LangageCompilationPackage extends EPackage {
 	int ENGINE__NAME = STATEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGINE__POSITION = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Engine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENGINE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
+	int ENGINE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Engine</em>' class.
@@ -1873,6 +1891,15 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @ordered
 	 */
 	int COLOR_SENSOR__NAME = SENSOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_SENSOR__POSITION = SENSOR__POSITION;
 
 	/**
 	 * The number of structural features of the '<em>Color Sensor</em>' class.
@@ -1912,6 +1939,15 @@ public interface LangageCompilationPackage extends EPackage {
 	int LASER_SENSOR__NAME = SENSOR__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LASER_SENSOR__POSITION = SENSOR__POSITION;
+
+	/**
 	 * The number of structural features of the '<em>Laser Sensor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1947,6 +1983,15 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @ordered
 	 */
 	int WHEEL_ENGINE__NAME = ENGINE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHEEL_ENGINE__POSITION = ENGINE__POSITION;
 
 	/**
 	 * The number of structural features of the '<em>Wheel Engine</em>' class.
@@ -1995,22 +2040,13 @@ public interface LangageCompilationPackage extends EPackage {
 	int ENGINE_OPERATION__RIGHT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Engine</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGINE_OPERATION__ENGINE = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Engine Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENGINE_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+	int ENGINE_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Engine Operation</em>' class.
@@ -2041,22 +2077,13 @@ public interface LangageCompilationPackage extends EPackage {
 	int SENSOR_OPERATION__NAME = EXPRESSION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Sensor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSOR_OPERATION__SENSOR = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Sensor Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+	int SENSOR_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Sensor Operation</em>' class.
@@ -2068,98 +2095,6 @@ public interface LangageCompilationPackage extends EPackage {
 	int SENSOR_OPERATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.EngineRefImpl <em>Engine Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.EngineRefImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getEngineRef()
-	 * @generated
-	 */
-	int ENGINE_REF = 40;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGINE_REF__NAME = EXPRESSION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Engine</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGINE_REF__ENGINE = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Engine Ref</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGINE_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Engine Ref</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGINE_REF_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link langageCompilation.impl.SensorRefImpl <em>Sensor Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.SensorRefImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getSensorRef()
-	 * @generated
-	 */
-	int SENSOR_REF = 41;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSOR_REF__NAME = EXPRESSION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Sensor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSOR_REF__SENSOR = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Sensor Ref</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSOR_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Sensor Ref</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSOR_REF_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link langageCompilation.impl.NewEClass43Impl <em>New EClass43</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2167,7 +2102,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getNewEClass43()
 	 * @generated
 	 */
-	int NEW_ECLASS43 = 42;
+	int NEW_ECLASS43 = 40;
 
 	/**
 	 * The number of structural features of the '<em>New EClass43</em>' class.
@@ -2195,7 +2130,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getVitesseOperation()
 	 * @generated
 	 */
-	int VITESSE_OPERATION = 43;
+	int VITESSE_OPERATION = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2216,13 +2151,13 @@ public interface LangageCompilationPackage extends EPackage {
 	int VITESSE_OPERATION__RIGHT = ENGINE_OPERATION__RIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Engine</b></em>' reference list.
+	 * The feature id for the '<em><b>Wheelengine</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VITESSE_OPERATION__ENGINE = ENGINE_OPERATION__ENGINE;
+	int VITESSE_OPERATION__WHEELENGINE = ENGINE_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Vitesse Operation</em>' class.
@@ -2231,7 +2166,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VITESSE_OPERATION_FEATURE_COUNT = ENGINE_OPERATION_FEATURE_COUNT + 0;
+	int VITESSE_OPERATION_FEATURE_COUNT = ENGINE_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Vitesse Operation</em>' class.
@@ -2250,7 +2185,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorOperation()
 	 * @generated
 	 */
-	int COLOR_OPERATION = 44;
+	int COLOR_OPERATION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2262,13 +2197,13 @@ public interface LangageCompilationPackage extends EPackage {
 	int COLOR_OPERATION__NAME = SENSOR_OPERATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Sensor</b></em>' reference.
+	 * The feature id for the '<em><b>Colorsensor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLOR_OPERATION__SENSOR = SENSOR_OPERATION__SENSOR;
+	int COLOR_OPERATION__COLORSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Color Operation</em>' class.
@@ -2277,7 +2212,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLOR_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 0;
+	int COLOR_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Color Operation</em>' class.
@@ -2296,7 +2231,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getRangeOperation()
 	 * @generated
 	 */
-	int RANGE_OPERATION = 45;
+	int RANGE_OPERATION = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2308,13 +2243,13 @@ public interface LangageCompilationPackage extends EPackage {
 	int RANGE_OPERATION__NAME = SENSOR_OPERATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Sensor</b></em>' reference.
+	 * The feature id for the '<em><b>Lasersensor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_OPERATION__SENSOR = SENSOR_OPERATION__SENSOR;
+	int RANGE_OPERATION__LASERSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Range Operation</em>' class.
@@ -2323,7 +2258,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 0;
+	int RANGE_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Range Operation</em>' class.
@@ -2333,6 +2268,374 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @ordered
 	 */
 	int RANGE_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.IntensityOperationImpl <em>Intensity Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.IntensityOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getIntensityOperation()
+	 * @generated
+	 */
+	int INTENSITY_OPERATION = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTENSITY_OPERATION__NAME = SENSOR_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Colorsensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTENSITY_OPERATION__COLORSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Intensity Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTENSITY_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Intensity Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTENSITY_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.UltraSonicSensorImpl <em>Ultra Sonic Sensor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.UltraSonicSensorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUltraSonicSensor()
+	 * @generated
+	 */
+	int ULTRA_SONIC_SENSOR = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULTRA_SONIC_SENSOR__NAME = SENSOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULTRA_SONIC_SENSOR__POSITION = SENSOR__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>Ultra Sonic Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULTRA_SONIC_SENSOR_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Ultra Sonic Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ULTRA_SONIC_SENSOR_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.GyroSensorImpl <em>Gyro Sensor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.GyroSensorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getGyroSensor()
+	 * @generated
+	 */
+	int GYRO_SENSOR = 46;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GYRO_SENSOR__NAME = SENSOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GYRO_SENSOR__POSITION = SENSOR__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>Gyro Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GYRO_SENSOR_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Gyro Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GYRO_SENSOR_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.GPSSensorImpl <em>GPS Sensor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.GPSSensorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getGPSSensor()
+	 * @generated
+	 */
+	int GPS_SENSOR = 47;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPS_SENSOR__NAME = SENSOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPS_SENSOR__POSITION = SENSOR__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>GPS Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPS_SENSOR_FEATURE_COUNT = SENSOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>GPS Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPS_SENSOR_OPERATION_COUNT = SENSOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.XGPSOperationImpl <em>XGPS Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.XGPSOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getXGPSOperation()
+	 * @generated
+	 */
+	int XGPS_OPERATION = 48;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XGPS_OPERATION__NAME = SENSOR_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Gpssensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XGPS_OPERATION__GPSSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>XGPS Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XGPS_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>XGPS Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XGPS_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.YGPSOperationImpl <em>YGPS Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.YGPSOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getYGPSOperation()
+	 * @generated
+	 */
+	int YGPS_OPERATION = 49;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGPS_OPERATION__NAME = SENSOR_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Gpssensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGPS_OPERATION__GPSSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>YGPS Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGPS_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>YGPS Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGPS_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.DistanceOperationImpl <em>Distance Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.DistanceOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getDistanceOperation()
+	 * @generated
+	 */
+	int DISTANCE_OPERATION = 50;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTANCE_OPERATION__NAME = SENSOR_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Ultrasonicsensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTANCE_OPERATION__ULTRASONICSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Distance Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTANCE_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Distance Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTANCE_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.AngleOperationImpl <em>Angle Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.AngleOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getAngleOperation()
+	 * @generated
+	 */
+	int ANGLE_OPERATION = 51;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANGLE_OPERATION__NAME = SENSOR_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Gyrosensor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANGLE_OPERATION__GYROSENSOR = SENSOR_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Angle Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANGLE_OPERATION_FEATURE_COUNT = SENSOR_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Angle Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANGLE_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.Program <em>Program</em>}'.
@@ -2729,10 +3032,10 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getConditionEtat_Else();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the containment reference list '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @return the meta object for the containment reference list '<em>Condition</em>'.
 	 * @see langageCompilation.ConditionEtat#getCondition()
 	 * @see #getConditionEtat()
 	 * @generated
@@ -2950,6 +3253,17 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getSensor();
 
 	/**
+	 * Returns the meta object for the attribute '{@link langageCompilation.Sensor#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see langageCompilation.Sensor#getPosition()
+	 * @see #getSensor()
+	 * @generated
+	 */
+	EAttribute getSensor_Position();
+
+	/**
 	 * Returns the meta object for class '{@link langageCompilation.Engine <em>Engine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2958,6 +3272,17 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEngine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link langageCompilation.Engine#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see langageCompilation.Engine#getPosition()
+	 * @see #getEngine()
+	 * @generated
+	 */
+	EAttribute getEngine_Position();
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.ColorSensor <em>Color Sensor</em>}'.
@@ -3011,17 +3336,6 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getEngineOperation_Right();
 
 	/**
-	 * Returns the meta object for the reference list '{@link langageCompilation.EngineOperation#getEngine <em>Engine</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Engine</em>'.
-	 * @see langageCompilation.EngineOperation#getEngine()
-	 * @see #getEngineOperation()
-	 * @generated
-	 */
-	EReference getEngineOperation_Engine();
-
-	/**
 	 * Returns the meta object for class '{@link langageCompilation.SensorOperation <em>Sensor Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3030,59 +3344,6 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSensorOperation();
-
-	/**
-	 * Returns the meta object for the reference '{@link langageCompilation.SensorOperation#getSensor <em>Sensor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sensor</em>'.
-	 * @see langageCompilation.SensorOperation#getSensor()
-	 * @see #getSensorOperation()
-	 * @generated
-	 */
-	EReference getSensorOperation_Sensor();
-
-	/**
-	 * Returns the meta object for class '{@link langageCompilation.EngineRef <em>Engine Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Engine Ref</em>'.
-	 * @see langageCompilation.EngineRef
-	 * @generated
-	 */
-	EClass getEngineRef();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link langageCompilation.EngineRef#getEngine <em>Engine</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Engine</em>'.
-	 * @see langageCompilation.EngineRef#getEngine()
-	 * @see #getEngineRef()
-	 * @generated
-	 */
-	EReference getEngineRef_Engine();
-
-	/**
-	 * Returns the meta object for class '{@link langageCompilation.SensorRef <em>Sensor Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sensor Ref</em>'.
-	 * @see langageCompilation.SensorRef
-	 * @generated
-	 */
-	EClass getSensorRef();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link langageCompilation.SensorRef#getSensor <em>Sensor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sensor</em>'.
-	 * @see langageCompilation.SensorRef#getSensor()
-	 * @see #getSensorRef()
-	 * @generated
-	 */
-	EReference getSensorRef_Sensor();
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.NewEClass43 <em>New EClass43</em>}'.
@@ -3105,6 +3366,17 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getVitesseOperation();
 
 	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.VitesseOperation#getWheelengine <em>Wheelengine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Wheelengine</em>'.
+	 * @see langageCompilation.VitesseOperation#getWheelengine()
+	 * @see #getVitesseOperation()
+	 * @generated
+	 */
+	EReference getVitesseOperation_Wheelengine();
+
+	/**
 	 * Returns the meta object for class '{@link langageCompilation.ColorOperation <em>Color Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3115,6 +3387,17 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getColorOperation();
 
 	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.ColorOperation#getColorsensor <em>Colorsensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Colorsensor</em>'.
+	 * @see langageCompilation.ColorOperation#getColorsensor()
+	 * @see #getColorOperation()
+	 * @generated
+	 */
+	EReference getColorOperation_Colorsensor();
+
+	/**
 	 * Returns the meta object for class '{@link langageCompilation.RangeOperation <em>Range Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3123,6 +3406,152 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRangeOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.RangeOperation#getLasersensor <em>Lasersensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Lasersensor</em>'.
+	 * @see langageCompilation.RangeOperation#getLasersensor()
+	 * @see #getRangeOperation()
+	 * @generated
+	 */
+	EReference getRangeOperation_Lasersensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.IntensityOperation <em>Intensity Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Intensity Operation</em>'.
+	 * @see langageCompilation.IntensityOperation
+	 * @generated
+	 */
+	EClass getIntensityOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.IntensityOperation#getColorsensor <em>Colorsensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Colorsensor</em>'.
+	 * @see langageCompilation.IntensityOperation#getColorsensor()
+	 * @see #getIntensityOperation()
+	 * @generated
+	 */
+	EReference getIntensityOperation_Colorsensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.UltraSonicSensor <em>Ultra Sonic Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ultra Sonic Sensor</em>'.
+	 * @see langageCompilation.UltraSonicSensor
+	 * @generated
+	 */
+	EClass getUltraSonicSensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.GyroSensor <em>Gyro Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gyro Sensor</em>'.
+	 * @see langageCompilation.GyroSensor
+	 * @generated
+	 */
+	EClass getGyroSensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.GPSSensor <em>GPS Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GPS Sensor</em>'.
+	 * @see langageCompilation.GPSSensor
+	 * @generated
+	 */
+	EClass getGPSSensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.XGPSOperation <em>XGPS Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>XGPS Operation</em>'.
+	 * @see langageCompilation.XGPSOperation
+	 * @generated
+	 */
+	EClass getXGPSOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.XGPSOperation#getGpssensor <em>Gpssensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Gpssensor</em>'.
+	 * @see langageCompilation.XGPSOperation#getGpssensor()
+	 * @see #getXGPSOperation()
+	 * @generated
+	 */
+	EReference getXGPSOperation_Gpssensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.YGPSOperation <em>YGPS Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YGPS Operation</em>'.
+	 * @see langageCompilation.YGPSOperation
+	 * @generated
+	 */
+	EClass getYGPSOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.YGPSOperation#getGpssensor <em>Gpssensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Gpssensor</em>'.
+	 * @see langageCompilation.YGPSOperation#getGpssensor()
+	 * @see #getYGPSOperation()
+	 * @generated
+	 */
+	EReference getYGPSOperation_Gpssensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.DistanceOperation <em>Distance Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Distance Operation</em>'.
+	 * @see langageCompilation.DistanceOperation
+	 * @generated
+	 */
+	EClass getDistanceOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.DistanceOperation#getUltrasonicsensor <em>Ultrasonicsensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ultrasonicsensor</em>'.
+	 * @see langageCompilation.DistanceOperation#getUltrasonicsensor()
+	 * @see #getDistanceOperation()
+	 * @generated
+	 */
+	EReference getDistanceOperation_Ultrasonicsensor();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.AngleOperation <em>Angle Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Angle Operation</em>'.
+	 * @see langageCompilation.AngleOperation
+	 * @generated
+	 */
+	EClass getAngleOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.AngleOperation#getGyrosensor <em>Gyrosensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Gyrosensor</em>'.
+	 * @see langageCompilation.AngleOperation#getGyrosensor()
+	 * @see #getAngleOperation()
+	 * @generated
+	 */
+	EReference getAngleOperation_Gyrosensor();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3500,7 +3929,7 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference CONDITION_ETAT__ELSE = eINSTANCE.getConditionEtat_Else();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3688,6 +4117,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EClass SENSOR = eINSTANCE.getSensor();
 
 		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSOR__POSITION = eINSTANCE.getSensor_Position();
+
+		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.EngineImpl <em>Engine</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3696,6 +4133,14 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENGINE = eINSTANCE.getEngine();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGINE__POSITION = eINSTANCE.getEngine_Position();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.ColorSensorImpl <em>Color Sensor</em>}' class.
@@ -3746,14 +4191,6 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference ENGINE_OPERATION__RIGHT = eINSTANCE.getEngineOperation_Right();
 
 		/**
-		 * The meta object literal for the '<em><b>Engine</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENGINE_OPERATION__ENGINE = eINSTANCE.getEngineOperation_Engine();
-
-		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.SensorOperationImpl <em>Sensor Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3762,50 +4199,6 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SENSOR_OPERATION = eINSTANCE.getSensorOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Sensor</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSOR_OPERATION__SENSOR = eINSTANCE.getSensorOperation_Sensor();
-
-		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.EngineRefImpl <em>Engine Ref</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.EngineRefImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getEngineRef()
-		 * @generated
-		 */
-		EClass ENGINE_REF = eINSTANCE.getEngineRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Engine</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENGINE_REF__ENGINE = eINSTANCE.getEngineRef_Engine();
-
-		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.SensorRefImpl <em>Sensor Ref</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.SensorRefImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getSensorRef()
-		 * @generated
-		 */
-		EClass SENSOR_REF = eINSTANCE.getSensorRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Sensor</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSOR_REF__SENSOR = eINSTANCE.getSensorRef_Sensor();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.NewEClass43Impl <em>New EClass43</em>}' class.
@@ -3828,6 +4221,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EClass VITESSE_OPERATION = eINSTANCE.getVitesseOperation();
 
 		/**
+		 * The meta object literal for the '<em><b>Wheelengine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VITESSE_OPERATION__WHEELENGINE = eINSTANCE.getVitesseOperation_Wheelengine();
+
+		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.ColorOperationImpl <em>Color Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3838,6 +4239,14 @@ public interface LangageCompilationPackage extends EPackage {
 		EClass COLOR_OPERATION = eINSTANCE.getColorOperation();
 
 		/**
+		 * The meta object literal for the '<em><b>Colorsensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLOR_OPERATION__COLORSENSOR = eINSTANCE.getColorOperation_Colorsensor();
+
+		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.RangeOperationImpl <em>Range Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3846,6 +4255,134 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RANGE_OPERATION = eINSTANCE.getRangeOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Lasersensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RANGE_OPERATION__LASERSENSOR = eINSTANCE.getRangeOperation_Lasersensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.IntensityOperationImpl <em>Intensity Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.IntensityOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getIntensityOperation()
+		 * @generated
+		 */
+		EClass INTENSITY_OPERATION = eINSTANCE.getIntensityOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Colorsensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTENSITY_OPERATION__COLORSENSOR = eINSTANCE.getIntensityOperation_Colorsensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.UltraSonicSensorImpl <em>Ultra Sonic Sensor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.UltraSonicSensorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUltraSonicSensor()
+		 * @generated
+		 */
+		EClass ULTRA_SONIC_SENSOR = eINSTANCE.getUltraSonicSensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.GyroSensorImpl <em>Gyro Sensor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.GyroSensorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getGyroSensor()
+		 * @generated
+		 */
+		EClass GYRO_SENSOR = eINSTANCE.getGyroSensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.GPSSensorImpl <em>GPS Sensor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.GPSSensorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getGPSSensor()
+		 * @generated
+		 */
+		EClass GPS_SENSOR = eINSTANCE.getGPSSensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.XGPSOperationImpl <em>XGPS Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.XGPSOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getXGPSOperation()
+		 * @generated
+		 */
+		EClass XGPS_OPERATION = eINSTANCE.getXGPSOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Gpssensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference XGPS_OPERATION__GPSSENSOR = eINSTANCE.getXGPSOperation_Gpssensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.YGPSOperationImpl <em>YGPS Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.YGPSOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getYGPSOperation()
+		 * @generated
+		 */
+		EClass YGPS_OPERATION = eINSTANCE.getYGPSOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Gpssensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YGPS_OPERATION__GPSSENSOR = eINSTANCE.getYGPSOperation_Gpssensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.DistanceOperationImpl <em>Distance Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.DistanceOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getDistanceOperation()
+		 * @generated
+		 */
+		EClass DISTANCE_OPERATION = eINSTANCE.getDistanceOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Ultrasonicsensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DISTANCE_OPERATION__ULTRASONICSENSOR = eINSTANCE.getDistanceOperation_Ultrasonicsensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.AngleOperationImpl <em>Angle Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.AngleOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getAngleOperation()
+		 * @generated
+		 */
+		EClass ANGLE_OPERATION = eINSTANCE.getAngleOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Gyrosensor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANGLE_OPERATION__GYROSENSOR = eINSTANCE.getAngleOperation_Gyrosensor();
 
 	}
 

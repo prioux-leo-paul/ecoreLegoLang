@@ -198,12 +198,6 @@ public class MethodePrintItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
@@ -211,6 +205,21 @@ public class MethodePrintItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 	}
 
 }

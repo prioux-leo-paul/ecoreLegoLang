@@ -5,11 +5,13 @@ package langageCompilation.provider;
 import java.util.Collection;
 import java.util.List;
 
+import langageCompilation.LangageCompilationPackage;
 import langageCompilation.RangeOperation;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -40,8 +42,24 @@ public class RangeOperationItemProvider extends SensorOperationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLasersensorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Lasersensor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLasersensorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RangeOperation_lasersensor_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RangeOperation_lasersensor_feature",
+						"_UI_RangeOperation_type"),
+				LangageCompilationPackage.Literals.RANGE_OPERATION__LASERSENSOR, true, false, true, null, null, null));
 	}
 
 	/**

@@ -292,24 +292,6 @@ public interface LangageCompilationFactory extends EFactory {
 	WheelEngine createWheelEngine();
 
 	/**
-	 * Returns a new object of class '<em>Engine Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Engine Ref</em>'.
-	 * @generated
-	 */
-	EngineRef createEngineRef();
-
-	/**
-	 * Returns a new object of class '<em>Sensor Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sensor Ref</em>'.
-	 * @generated
-	 */
-	SensorRef createSensorRef();
-
-	/**
 	 * Returns a new object of class '<em>New EClass43</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -344,6 +326,78 @@ public interface LangageCompilationFactory extends EFactory {
 	 * @generated
 	 */
 	RangeOperation createRangeOperation();
+
+	/**
+	 * Returns a new object of class '<em>Intensity Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Intensity Operation</em>'.
+	 * @generated
+	 */
+	IntensityOperation createIntensityOperation();
+
+	/**
+	 * Returns a new object of class '<em>Ultra Sonic Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ultra Sonic Sensor</em>'.
+	 * @generated
+	 */
+	UltraSonicSensor createUltraSonicSensor();
+
+	/**
+	 * Returns a new object of class '<em>Gyro Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gyro Sensor</em>'.
+	 * @generated
+	 */
+	GyroSensor createGyroSensor();
+
+	/**
+	 * Returns a new object of class '<em>GPS Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GPS Sensor</em>'.
+	 * @generated
+	 */
+	GPSSensor createGPSSensor();
+
+	/**
+	 * Returns a new object of class '<em>XGPS Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>XGPS Operation</em>'.
+	 * @generated
+	 */
+	XGPSOperation createXGPSOperation();
+
+	/**
+	 * Returns a new object of class '<em>YGPS Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YGPS Operation</em>'.
+	 * @generated
+	 */
+	YGPSOperation createYGPSOperation();
+
+	/**
+	 * Returns a new object of class '<em>Distance Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Distance Operation</em>'.
+	 * @generated
+	 */
+	DistanceOperation createDistanceOperation();
+
+	/**
+	 * Returns a new object of class '<em>Angle Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Angle Operation</em>'.
+	 * @generated
+	 */
+	AngleOperation createAngleOperation();
 
 	/**
 	 * Returns the package supported by this factory.

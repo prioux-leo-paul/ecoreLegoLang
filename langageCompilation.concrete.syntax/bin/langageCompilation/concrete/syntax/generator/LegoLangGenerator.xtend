@@ -40,6 +40,25 @@ import langageCompilation.WhileLoop
 import langageCompilation.ConditionEtat
 import langageCompilation.MethodePrint
 import langageCompilation.Statement
+import langageCompilation.Car
+import langageCompilation.Sensor
+import langageCompilation.Engine
+import langageCompilation.WheelEngine
+import langageCompilation.ColorSensor
+import langageCompilation.LaserSensor
+import langageCompilation.SensorOperation
+import langageCompilation.VitesseOperation
+import langageCompilation.EngineOperation
+import langageCompilation.ColorOperation
+import langageCompilation.RangeOperation
+import langageCompilation.IntensityOperation
+import langageCompilation.XGPSOperation
+import langageCompilation.YGPSOperation
+import langageCompilation.DistanceOperation
+import langageCompilation.AngleOperation
+import langageCompilation.GyroSensor
+import langageCompilation.GPSSensor
+import langageCompilation.UltraSonicSensor
 
 /**
  * Generates code from your model files on save.
@@ -81,13 +100,17 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 				return v.loopToPython()
 			}
 			if (v instanceof ConditionEtat) {
-				var String tmp = 'if(' + comparaisonPython(v.condition) + '):'
+				var String tmp = 'if(' 
+				for(s : v.condition){
+					tmp += comparaisonPython(s)
+				}
+				tmp += ')'
 				nbTab += 1
 				for(s : v.then){
 						tmp += '\n'+ donneTab(nbTab)  + statementToPython(s)
 					}
 				nbTab -=1
-				if( v.^else !== null){
+				if( !v.^else.isEmpty()){
 					tmp += '\n' + donneTab(nbTab)  + 'else :'
 					nbTab +=1
 					for(s : v.^else){
@@ -105,7 +128,39 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 				}
 				return tmp + ')'
 			}
+			if (v instanceof Car){
+				var String tmp = ""
+				for( s : v.sensor)
+					tmp += sensorToPython(s)+'\n'
+				var String tmp2 = ""
+				for(s : v.engine)
+					tmp2 += engineToPython(s)+'\n'
+				return tmp + tmp2
+			}
 		}
+		
+	def String engineToPython(Engine v){
+		if( v instanceof WheelEngine ){
+			return 'motor'+v.position + ' = LargeMotor(OUTPUT_'+v.position+')'
+		}
+	}
+	def String sensorToPython(Sensor v){
+		if( v instanceof ColorSensor ){
+			return 'color_sensor_in'+v.position + ' = ColorSensor(INPUT_'+v.position+')'
+		}
+		if( v instanceof LaserSensor ){
+			return 'laser_sensor_in'+v.position + ' = LaserRangeSensor(INPUT_'+v.position+')'
+		}
+		if( v instanceof GyroSensor ){
+			return 'gyro_sensor_in'+v.position + ' = GyroSensor(INPUT_'+v.position+')'
+		}
+		if( v instanceof GPSSensor ){
+			return 'GPS_sensor_in'+v.position + ' = GPSSensor(INPUT_'+v.position+')'
+		}
+		if( v instanceof UltraSonicSensor ){
+			return 'ultrasonic_sensor_in'+v.position + ' = UltrasonicSensor(INPUT_'+v.position+')'
+		}
+	}
 	def String varToPython(Variable v){
 		if (v instanceof UnInteger){
 			return v.name + ":int=" + v.initialeValue
@@ -139,9 +194,42 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		}
 		if(v instanceof BinaryOperation){
 			return binaryOperationPython(v)
-		}	
+		}
+		if(v instanceof EngineOperation){
+			return engineOperationToPython(v)
+		}
+		if(v instanceof SensorOperation){
+			return sensorOperationToPython(v)
+		}
 	}
-	
+	def String sensorOperationToPython(SensorOperation v){
+		if( v instanceof ColorOperation){
+			return 'color_sensor_in'+ v.colorsensor.position +'.color_name'
+		}
+		if( v instanceof RangeOperation){
+			return 'laser_sensor_in'+ v.lasersensor.position +'.distance_centimeters'
+		}
+		if( v instanceof IntensityOperation){
+			return 'color_sensor_in'+ v.colorsensor.position +'.reflected_light_intensity'
+		}
+		if( v instanceof XGPSOperation){
+			return 'GPS_sensor_in'+ v.gpssensor.position +'.x'
+		}
+		if( v instanceof YGPSOperation){
+			return 'GPS_sensor_in'+ v.gpssensor.position +'.y'
+		}
+		if( v instanceof DistanceOperation){
+			return 'ultrasonic_sensor_in'+ v.ultrasonicsensor.position +'.distance_centimeters'
+		}
+		if( v instanceof AngleOperation){
+			return 'gyro_sensor_in'+ v.gyrosensor.position +'.angle'
+		}
+	}
+	def String engineOperationToPython(EngineOperation v){
+		if(v instanceof VitesseOperation){
+			return 'motor'+v.wheelengine.position+'.on(' + expressionToPython(v.right)+')'
+		}
+	}
 	
 	def String binaryOperationPython(BinaryOperation v){
 		if(v instanceof Multiplication){

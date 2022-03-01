@@ -224,12 +224,6 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
@@ -237,6 +231,30 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createUltraSonicSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createGyroSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createGPSSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createWhileLoop()));
@@ -326,12 +344,6 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
@@ -339,6 +351,30 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createUltraSonicSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createGyroSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createGPSSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
 				LangageCompilationFactory.eINSTANCE.createGT()));

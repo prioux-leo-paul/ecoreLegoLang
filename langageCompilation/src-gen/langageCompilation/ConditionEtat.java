@@ -48,25 +48,15 @@ public interface ConditionEtat extends Statement {
 	EList<Statement> getElse();
 
 	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Condition</b></em>' containment reference list.
+	 * The list contents are of type {@link langageCompilation.Comparaison}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' containment reference.
-	 * @see #setCondition(Comparaison)
+	 * @return the value of the '<em>Condition</em>' containment reference list.
 	 * @see langageCompilation.LangageCompilationPackage#getConditionEtat_Condition()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Comparaison getCondition();
-
-	/**
-	 * Sets the value of the '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' containment reference.
-	 * @see #getCondition()
-	 * @generated
-	 */
-	void setCondition(Comparaison value);
+	EList<Comparaison> getCondition();
 
 } // ConditionEtat

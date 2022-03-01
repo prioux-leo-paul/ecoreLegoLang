@@ -5,32 +5,29 @@ package langageCompilation.provider;
 import java.util.Collection;
 import java.util.List;
 
-import langageCompilation.EngineRef;
-import langageCompilation.LangageCompilationFactory;
+import langageCompilation.IntensityOperation;
 import langageCompilation.LangageCompilationPackage;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link langageCompilation.EngineRef} object.
+ * This is the item provider adapter for a {@link langageCompilation.IntensityOperation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EngineRefItemProvider extends ExpressionItemProvider {
+public class IntensityOperationItemProvider extends SensorOperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EngineRefItemProvider(AdapterFactory adapterFactory) {
+	public IntensityOperationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,49 +42,36 @@ public class EngineRefItemProvider extends ExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addColorsensorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Colorsensor feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(LangageCompilationPackage.Literals.ENGINE_REF__ENGINE);
-		}
-		return childrenFeatures;
+	protected void addColorsensorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_IntensityOperation_colorsensor_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IntensityOperation_colorsensor_feature",
+								"_UI_IntensityOperation_type"),
+						LangageCompilationPackage.Literals.INTENSITY_OPERATION__COLORSENSOR, true, false, true, null,
+						null, null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns EngineRef.gif.
+	 * This returns IntensityOperation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/EngineRef"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntensityOperation"));
 	}
 
 	/**
@@ -108,9 +92,9 @@ public class EngineRefItemProvider extends ExpressionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EngineRef) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_EngineRef_type")
-				: getString("_UI_EngineRef_type") + " " + label;
+		String label = ((IntensityOperation) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_IntensityOperation_type")
+				: getString("_UI_IntensityOperation_type") + " " + label;
 	}
 
 	/**
@@ -123,12 +107,6 @@ public class EngineRefItemProvider extends ExpressionItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(EngineRef.class)) {
-		case LangageCompilationPackage.ENGINE_REF__ENGINE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -142,9 +120,6 @@ public class EngineRefItemProvider extends ExpressionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_REF__ENGINE,
-				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
 	}
 
 }

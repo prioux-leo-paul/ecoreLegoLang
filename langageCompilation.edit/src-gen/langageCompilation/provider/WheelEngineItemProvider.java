@@ -4,12 +4,10 @@ package langageCompilation.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import langageCompilation.WheelEngine;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**

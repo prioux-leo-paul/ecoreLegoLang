@@ -267,16 +267,6 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEngineRef(EngineRef object) {
-			return createEngineRefAdapter();
-		}
-
-		@Override
-		public Adapter caseSensorRef(SensorRef object) {
-			return createSensorRefAdapter();
-		}
-
-		@Override
 		public Adapter caseNewEClass43(NewEClass43 object) {
 			return createNewEClass43Adapter();
 		}
@@ -294,6 +284,46 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseRangeOperation(RangeOperation object) {
 			return createRangeOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseIntensityOperation(IntensityOperation object) {
+			return createIntensityOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseUltraSonicSensor(UltraSonicSensor object) {
+			return createUltraSonicSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseGyroSensor(GyroSensor object) {
+			return createGyroSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseGPSSensor(GPSSensor object) {
+			return createGPSSensorAdapter();
+		}
+
+		@Override
+		public Adapter caseXGPSOperation(XGPSOperation object) {
+			return createXGPSOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseYGPSOperation(YGPSOperation object) {
+			return createYGPSOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseDistanceOperation(DistanceOperation object) {
+			return createDistanceOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseAngleOperation(AngleOperation object) {
+			return createAngleOperationAdapter();
 		}
 
 		@Override
@@ -876,34 +906,6 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.EngineRef <em>Engine Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see langageCompilation.EngineRef
-	 * @generated
-	 */
-	public Adapter createEngineRefAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.SensorRef <em>Sensor Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see langageCompilation.SensorRef
-	 * @generated
-	 */
-	public Adapter createSensorRefAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link langageCompilation.NewEClass43 <em>New EClass43</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -956,6 +958,118 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRangeOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.IntensityOperation <em>Intensity Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.IntensityOperation
+	 * @generated
+	 */
+	public Adapter createIntensityOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UltraSonicSensor <em>Ultra Sonic Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.UltraSonicSensor
+	 * @generated
+	 */
+	public Adapter createUltraSonicSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.GyroSensor <em>Gyro Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.GyroSensor
+	 * @generated
+	 */
+	public Adapter createGyroSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.GPSSensor <em>GPS Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.GPSSensor
+	 * @generated
+	 */
+	public Adapter createGPSSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.XGPSOperation <em>XGPS Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.XGPSOperation
+	 * @generated
+	 */
+	public Adapter createXGPSOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.YGPSOperation <em>YGPS Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.YGPSOperation
+	 * @generated
+	 */
+	public Adapter createYGPSOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.DistanceOperation <em>Distance Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.DistanceOperation
+	 * @generated
+	 */
+	public Adapter createDistanceOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.AngleOperation <em>Angle Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.AngleOperation
+	 * @generated
+	 */
+	public Adapter createAngleOperationAdapter() {
 		return null;
 	}
 

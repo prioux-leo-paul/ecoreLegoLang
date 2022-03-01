@@ -116,10 +116,6 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createLaserSensor();
 		case LangageCompilationPackage.WHEEL_ENGINE:
 			return createWheelEngine();
-		case LangageCompilationPackage.ENGINE_REF:
-			return createEngineRef();
-		case LangageCompilationPackage.SENSOR_REF:
-			return createSensorRef();
 		case LangageCompilationPackage.NEW_ECLASS43:
 			return createNewEClass43();
 		case LangageCompilationPackage.VITESSE_OPERATION:
@@ -128,6 +124,22 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createColorOperation();
 		case LangageCompilationPackage.RANGE_OPERATION:
 			return createRangeOperation();
+		case LangageCompilationPackage.INTENSITY_OPERATION:
+			return createIntensityOperation();
+		case LangageCompilationPackage.ULTRA_SONIC_SENSOR:
+			return createUltraSonicSensor();
+		case LangageCompilationPackage.GYRO_SENSOR:
+			return createGyroSensor();
+		case LangageCompilationPackage.GPS_SENSOR:
+			return createGPSSensor();
+		case LangageCompilationPackage.XGPS_OPERATION:
+			return createXGPSOperation();
+		case LangageCompilationPackage.YGPS_OPERATION:
+			return createYGPSOperation();
+		case LangageCompilationPackage.DISTANCE_OPERATION:
+			return createDistanceOperation();
+		case LangageCompilationPackage.ANGLE_OPERATION:
+			return createAngleOperation();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -438,26 +450,6 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EngineRef createEngineRef() {
-		EngineRefImpl engineRef = new EngineRefImpl();
-		return engineRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SensorRef createSensorRef() {
-		SensorRefImpl sensorRef = new SensorRefImpl();
-		return sensorRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public NewEClass43 createNewEClass43() {
 		NewEClass43Impl newEClass43 = new NewEClass43Impl();
 		return newEClass43;
@@ -491,6 +483,86 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	public RangeOperation createRangeOperation() {
 		RangeOperationImpl rangeOperation = new RangeOperationImpl();
 		return rangeOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntensityOperation createIntensityOperation() {
+		IntensityOperationImpl intensityOperation = new IntensityOperationImpl();
+		return intensityOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UltraSonicSensor createUltraSonicSensor() {
+		UltraSonicSensorImpl ultraSonicSensor = new UltraSonicSensorImpl();
+		return ultraSonicSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GyroSensor createGyroSensor() {
+		GyroSensorImpl gyroSensor = new GyroSensorImpl();
+		return gyroSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GPSSensor createGPSSensor() {
+		GPSSensorImpl gpsSensor = new GPSSensorImpl();
+		return gpsSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public XGPSOperation createXGPSOperation() {
+		XGPSOperationImpl xgpsOperation = new XGPSOperationImpl();
+		return xgpsOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YGPSOperation createYGPSOperation() {
+		YGPSOperationImpl ygpsOperation = new YGPSOperationImpl();
+		return ygpsOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DistanceOperation createDistanceOperation() {
+		DistanceOperationImpl distanceOperation = new DistanceOperationImpl();
+		return distanceOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AngleOperation createAngleOperation() {
+		AngleOperationImpl angleOperation = new AngleOperationImpl();
+		return angleOperation;
 	}
 
 	/**

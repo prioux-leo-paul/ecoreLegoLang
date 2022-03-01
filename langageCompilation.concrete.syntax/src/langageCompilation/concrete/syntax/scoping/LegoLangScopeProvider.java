@@ -11,5 +11,7 @@ package langageCompilation.concrete.syntax.scoping;
  * on how and when to use it.
  */
 public class LegoLangScopeProvider extends AbstractLegoLangScopeProvider {
+	
+	
 
 }

@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -45,24 +44,8 @@ public class EngineOperationItemProvider extends ExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEnginePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Engine feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnginePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_EngineOperation_engine_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_EngineOperation_engine_feature",
-						"_UI_EngineOperation_type"),
-				LangageCompilationPackage.Literals.ENGINE_OPERATION__ENGINE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -203,12 +186,6 @@ public class EngineOperationItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
@@ -216,6 +193,21 @@ public class EngineOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 	}
 
 }

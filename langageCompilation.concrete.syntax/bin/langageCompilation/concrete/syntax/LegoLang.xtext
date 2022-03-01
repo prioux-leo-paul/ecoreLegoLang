@@ -9,14 +9,14 @@ Program returns Program:
 	'Program'
 	name=EString
 	'{'
-		(statement+=Statement)*
+		(statement+=Statement)* 
 	'}';
 
 Statement returns Statement:
 	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
 
 Expression returns Expression:
-	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation;
+	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation ;
 
 BinaryOperation returns BinaryOperation:
 	Substraction | Comparaison | Assignement | Division | Multiplication | Addition | MinusEqual | PlusEqual;
@@ -31,21 +31,43 @@ Engine returns Engine:
 	WheelEngine;
 
 Sensor returns Sensor:
-	LaserSensor | ColorSensor;
+	LaserSensor | ColorSensor | UltraSonicSensor | GyroSensor | GPSSensor;
 
 WheelEngine returns WheelEngine:
 	'WheelEngine'
 	name=EString
+	position=EString
+	
 ;
 
 ColorSensor returns ColorSensor:
 	'ColorSensor'
 	name=EString
+	position=EInt
 ;
 
 LaserSensor returns LaserSensor:
 	'LaserSensor'
 	name=EString
+	position=EInt
+;
+
+GPSSensor returns GPSSensor:
+	'GPSSensor'
+	name=EString
+	position=EInt
+;
+
+GyroSensor returns GyroSensor:
+	'GyroSensor'
+	name=EString
+	position=EInt
+;
+
+UltraSonicSensor returns UltraSonicSensor:
+	'UltraSonicSensor'
+	name=EString
+	position=EInt
 ;
 
 Car returns Car:
@@ -63,32 +85,54 @@ EngineOperation returns EngineOperation:
 ;
 
 SensorOperation returns SensorOperation:
-	RangeOperation | ColorOperation ;
+	RangeOperation | ColorOperation | IntensityOperation | XGPSOperation | YGPSOperation | AngleOperation | DistanceOperation ;
 
 
 VitesseOperation returns VitesseOperation:
-	(engine+=[Engine|EString])
-	(',' engine+=[Engine|EString])*
+	(wheelengine=[WheelEngine|FQN])
 	':''vitesse''='
 	right=Expression
 ;
 
 ColorOperation returns ColorOperation:
-	'get''color''('sensor=[Sensor|EString]')'
+	'get''color''('colorsensor=[ColorSensor|FQN]')'
+;
+
+IntensityOperation returns IntensityOperation:
+	'get''intensity''('colorsensor=[ColorSensor|FQN]')'
 ;
 
 RangeOperation returns RangeOperation:
-	'get''range''('sensor=[Sensor|EString]')'
+	'get''range''('lasersensor=[LaserSensor|FQN]')'
 ;
+
+XGPSOperation returns XGPSOperation:
+	'get''x''('gpssensor=[GPSSensor|FQN]')'
+;
+
+YGPSOperation returns YGPSOperation:
+	'get''y''('gpssensor=[GPSSensor|FQN]')'
+;
+
+AngleOperation returns AngleOperation:
+	'get''angle''('gyrosensor=[GyroSensor|FQN]')'
+;
+
+DistanceOperation returns DistanceOperation:
+	'get''distance''('ultrasonicsensor=[UltraSonicSensor|FQN]')'
+;
+
 ConditionEtat returns ConditionEtat:
 	'if'
-		Condition=Comparaison '{'
+		(Condition+=Comparaison) ('and' Condition+=Comparaison)* ('or' Condition+=Comparaison)* '{'
 			(then+=Statement )*
 		'}'
 		('else{'else+=Statement'}' )?
 	;
+
 EString returns ecore::EString:
 	STRING | ID;
+
 
 
 WhileLoop returns WhileLoop:
@@ -204,7 +248,7 @@ UnString returns UnString:
 
 TheDouble returns TheDouble:
 	{TheDouble}
-	value1=EInt ('.' value2=EInt)? ;
+	value1=EInt '.' value2=EInt ;
 	
 TheInt returns TheInt:
 	{TheInt}
@@ -218,6 +262,8 @@ TheString returns TheString:
 	{TheString}
 	value=EString;
 
-
+FQN :
+	ID('.'ID)*
+;
 EInt returns ecore::EInt:
 	'-'? INT;

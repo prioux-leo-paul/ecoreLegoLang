@@ -4,7 +4,6 @@ package langageCompilation.impl;
 
 import langageCompilation.LangageCompilationPackage;
 import langageCompilation.WheelEngine;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -4,37 +4,56 @@
 package langageCompilation.concrete.syntax.generator;
 
 import langageCompilation.Addition;
+import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
+import langageCompilation.Car;
+import langageCompilation.ColorOperation;
+import langageCompilation.ColorSensor;
 import langageCompilation.Comparaison;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
+import langageCompilation.DistanceOperation;
 import langageCompilation.Division;
+import langageCompilation.Engine;
+import langageCompilation.EngineOperation;
 import langageCompilation.Equal;
 import langageCompilation.Expression;
+import langageCompilation.GPSSensor;
 import langageCompilation.GT;
 import langageCompilation.GTorEqual;
+import langageCompilation.GyroSensor;
+import langageCompilation.IntensityOperation;
 import langageCompilation.LT;
 import langageCompilation.LTorEqual;
+import langageCompilation.LaserSensor;
 import langageCompilation.Loop;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
+import langageCompilation.RangeOperation;
+import langageCompilation.Sensor;
+import langageCompilation.SensorOperation;
 import langageCompilation.Statement;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
+import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
 import langageCompilation.UnString;
 import langageCompilation.Variable;
 import langageCompilation.VariableRef;
+import langageCompilation.VitesseOperation;
+import langageCompilation.WheelEngine;
 import langageCompilation.WhileLoop;
+import langageCompilation.XGPSOperation;
+import langageCompilation.YGPSOperation;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -85,40 +104,46 @@ public class LegoLangGenerator extends AbstractGenerator {
       return this.loopToPython(((Loop)v));
     }
     if ((v instanceof ConditionEtat)) {
-      String _comparaisonPython = this.comparaisonPython(((ConditionEtat)v).getCondition());
-      String _plus = ("if(" + _comparaisonPython);
-      String tmp = (_plus + "):");
+      String tmp = "if(";
+      EList<Comparaison> _condition = ((ConditionEtat)v).getCondition();
+      for (final Comparaison s : _condition) {
+        String _tmp = tmp;
+        String _comparaisonPython = this.comparaisonPython(s);
+        tmp = (_tmp + _comparaisonPython);
+      }
+      String _tmp_1 = tmp;
+      tmp = (_tmp_1 + ")");
       int _nbTab = this.nbTab;
       this.nbTab = (_nbTab + 1);
       EList<Statement> _then = ((ConditionEtat)v).getThen();
-      for (final Statement s : _then) {
-        String _tmp = tmp;
+      for (final Statement s_1 : _then) {
+        String _tmp_2 = tmp;
         String _donneTab = this.donneTab(this.nbTab);
-        String _plus_1 = ("\n" + _donneTab);
-        String _statementToPython = this.statementToPython(s);
-        String _plus_2 = (_plus_1 + _statementToPython);
-        tmp = (_tmp + _plus_2);
+        String _plus = ("\n" + _donneTab);
+        String _statementToPython = this.statementToPython(s_1);
+        String _plus_1 = (_plus + _statementToPython);
+        tmp = (_tmp_2 + _plus_1);
       }
       int _nbTab_1 = this.nbTab;
       this.nbTab = (_nbTab_1 - 1);
-      EList<Statement> _else = ((ConditionEtat)v).getElse();
-      boolean _tripleNotEquals = (_else != null);
-      if (_tripleNotEquals) {
-        String _tmp_1 = tmp;
+      boolean _isEmpty = ((ConditionEtat)v).getElse().isEmpty();
+      boolean _not = (!_isEmpty);
+      if (_not) {
+        String _tmp_3 = tmp;
         String _donneTab_1 = this.donneTab(this.nbTab);
-        String _plus_3 = ("\n" + _donneTab_1);
-        String _plus_4 = (_plus_3 + "else :");
-        tmp = (_tmp_1 + _plus_4);
+        String _plus_2 = ("\n" + _donneTab_1);
+        String _plus_3 = (_plus_2 + "else :");
+        tmp = (_tmp_3 + _plus_3);
         int _nbTab_2 = this.nbTab;
         this.nbTab = (_nbTab_2 + 1);
-        EList<Statement> _else_1 = ((ConditionEtat)v).getElse();
-        for (final Statement s_1 : _else_1) {
-          String _tmp_2 = tmp;
+        EList<Statement> _else = ((ConditionEtat)v).getElse();
+        for (final Statement s_2 : _else) {
+          String _tmp_4 = tmp;
           String _donneTab_2 = this.donneTab(this.nbTab);
-          String _plus_5 = ("\n" + _donneTab_2);
-          String _statementToPython_1 = this.statementToPython(s_1);
-          String _plus_6 = (_plus_5 + _statementToPython_1);
-          tmp = (_tmp_2 + _plus_6);
+          String _plus_4 = ("\n" + _donneTab_2);
+          String _statementToPython_1 = this.statementToPython(s_2);
+          String _plus_5 = (_plus_4 + _statementToPython_1);
+          tmp = (_tmp_4 + _plus_5);
         }
         int _nbTab_3 = this.nbTab;
         this.nbTab = (_nbTab_3 - 1);
@@ -128,13 +153,88 @@ public class LegoLangGenerator extends AbstractGenerator {
     if ((v instanceof MethodePrint)) {
       String tmp_1 = "print(";
       EList<Expression> _expression = ((MethodePrint)v).getExpression();
-      for (final Expression s_2 : _expression) {
-        String _tmp_3 = tmp_1;
-        String _expressionToPython = this.expressionToPython(s_2);
-        String _plus_7 = (_expressionToPython + ",");
-        tmp_1 = (_tmp_3 + _plus_7);
+      for (final Expression s_3 : _expression) {
+        String _tmp_5 = tmp_1;
+        String _expressionToPython = this.expressionToPython(s_3);
+        String _plus_6 = (_expressionToPython + ",");
+        tmp_1 = (_tmp_5 + _plus_6);
       }
       return (tmp_1 + ")");
+    }
+    if ((v instanceof Car)) {
+      String tmp_2 = "";
+      EList<Sensor> _sensor = ((Car)v).getSensor();
+      for (final Sensor s_4 : _sensor) {
+        String _tmp_6 = tmp_2;
+        String _sensorToPython = this.sensorToPython(s_4);
+        String _plus_7 = (_sensorToPython + "\n");
+        tmp_2 = (_tmp_6 + _plus_7);
+      }
+      String tmp2 = "";
+      EList<Engine> _engine = ((Car)v).getEngine();
+      for (final Engine s_5 : _engine) {
+        String _tmp2 = tmp2;
+        String _engineToPython = this.engineToPython(s_5);
+        String _plus_8 = (_engineToPython + "\n");
+        tmp2 = (_tmp2 + _plus_8);
+      }
+      return (tmp_2 + tmp2);
+    }
+    return null;
+  }
+  
+  public String engineToPython(final Engine v) {
+    if ((v instanceof WheelEngine)) {
+      String _position = ((WheelEngine)v).getPosition();
+      String _plus = ("motor" + _position);
+      String _plus_1 = (_plus + " = LargeMotor(OUTPUT_");
+      String _position_1 = ((WheelEngine)v).getPosition();
+      String _plus_2 = (_plus_1 + _position_1);
+      return (_plus_2 + ")");
+    }
+    return null;
+  }
+  
+  public String sensorToPython(final Sensor v) {
+    if ((v instanceof ColorSensor)) {
+      int _position = ((ColorSensor)v).getPosition();
+      String _plus = ("color_sensor_in" + Integer.valueOf(_position));
+      String _plus_1 = (_plus + " = ColorSensor(INPUT_");
+      int _position_1 = ((ColorSensor)v).getPosition();
+      String _plus_2 = (_plus_1 + Integer.valueOf(_position_1));
+      return (_plus_2 + ")");
+    }
+    if ((v instanceof LaserSensor)) {
+      int _position_2 = ((LaserSensor)v).getPosition();
+      String _plus_3 = ("laser_sensor_in" + Integer.valueOf(_position_2));
+      String _plus_4 = (_plus_3 + " = LaserRangeSensor(INPUT_");
+      int _position_3 = ((LaserSensor)v).getPosition();
+      String _plus_5 = (_plus_4 + Integer.valueOf(_position_3));
+      return (_plus_5 + ")");
+    }
+    if ((v instanceof GyroSensor)) {
+      int _position_4 = ((GyroSensor)v).getPosition();
+      String _plus_6 = ("gyro_sensor_in" + Integer.valueOf(_position_4));
+      String _plus_7 = (_plus_6 + " = GyroSensor(INPUT_");
+      int _position_5 = ((GyroSensor)v).getPosition();
+      String _plus_8 = (_plus_7 + Integer.valueOf(_position_5));
+      return (_plus_8 + ")");
+    }
+    if ((v instanceof GPSSensor)) {
+      int _position_6 = ((GPSSensor)v).getPosition();
+      String _plus_9 = ("GPS_sensor_in" + Integer.valueOf(_position_6));
+      String _plus_10 = (_plus_9 + " = GPSSensor(INPUT_");
+      int _position_7 = ((GPSSensor)v).getPosition();
+      String _plus_11 = (_plus_10 + Integer.valueOf(_position_7));
+      return (_plus_11 + ")");
+    }
+    if ((v instanceof UltraSonicSensor)) {
+      int _position_8 = ((UltraSonicSensor)v).getPosition();
+      String _plus_12 = ("ultrasonic_sensor_in" + Integer.valueOf(_position_8));
+      String _plus_13 = (_plus_12 + " = UltrasonicSensor(INPUT_");
+      int _position_9 = ((UltraSonicSensor)v).getPosition();
+      String _plus_14 = (_plus_13 + Integer.valueOf(_position_9));
+      return (_plus_14 + ")");
     }
     return null;
   }
@@ -191,6 +291,63 @@ public class LegoLangGenerator extends AbstractGenerator {
     }
     if ((v instanceof BinaryOperation)) {
       return this.binaryOperationPython(((BinaryOperation)v));
+    }
+    if ((v instanceof EngineOperation)) {
+      return this.engineOperationToPython(((EngineOperation)v));
+    }
+    if ((v instanceof SensorOperation)) {
+      return this.sensorOperationToPython(((SensorOperation)v));
+    }
+    return null;
+  }
+  
+  public String sensorOperationToPython(final SensorOperation v) {
+    if ((v instanceof ColorOperation)) {
+      int _position = ((ColorOperation)v).getColorsensor().getPosition();
+      String _plus = ("color_sensor_in" + Integer.valueOf(_position));
+      return (_plus + ".color_name");
+    }
+    if ((v instanceof RangeOperation)) {
+      int _position_1 = ((RangeOperation)v).getLasersensor().getPosition();
+      String _plus_1 = ("laser_sensor_in" + Integer.valueOf(_position_1));
+      return (_plus_1 + ".distance_centimeters");
+    }
+    if ((v instanceof IntensityOperation)) {
+      int _position_2 = ((IntensityOperation)v).getColorsensor().getPosition();
+      String _plus_2 = ("color_sensor_in" + Integer.valueOf(_position_2));
+      return (_plus_2 + ".reflected_light_intensity");
+    }
+    if ((v instanceof XGPSOperation)) {
+      int _position_3 = ((XGPSOperation)v).getGpssensor().getPosition();
+      String _plus_3 = ("GPS_sensor_in" + Integer.valueOf(_position_3));
+      return (_plus_3 + ".x");
+    }
+    if ((v instanceof YGPSOperation)) {
+      int _position_4 = ((YGPSOperation)v).getGpssensor().getPosition();
+      String _plus_4 = ("GPS_sensor_in" + Integer.valueOf(_position_4));
+      return (_plus_4 + ".y");
+    }
+    if ((v instanceof DistanceOperation)) {
+      int _position_5 = ((DistanceOperation)v).getUltrasonicsensor().getPosition();
+      String _plus_5 = ("ultrasonic_sensor_in" + Integer.valueOf(_position_5));
+      return (_plus_5 + ".distance_centimeters");
+    }
+    if ((v instanceof AngleOperation)) {
+      int _position_6 = ((AngleOperation)v).getGyrosensor().getPosition();
+      String _plus_6 = ("gyro_sensor_in" + Integer.valueOf(_position_6));
+      return (_plus_6 + ".angle");
+    }
+    return null;
+  }
+  
+  public String engineOperationToPython(final EngineOperation v) {
+    if ((v instanceof VitesseOperation)) {
+      String _position = ((VitesseOperation)v).getWheelengine().getPosition();
+      String _plus = ("motor" + _position);
+      String _plus_1 = (_plus + ".on(");
+      String _expressionToPython = this.expressionToPython(((VitesseOperation)v).getRight());
+      String _plus_2 = (_plus_1 + _expressionToPython);
+      return (_plus_2 + ")");
     }
     return null;
   }

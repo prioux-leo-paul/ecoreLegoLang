@@ -85,27 +85,46 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Car/engine"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Car/sensor"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Sensor"/>
-    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Engine"/>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Sensor/position"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//Engine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Engine/position"/>
+    </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//ColorSensor"/>
     <genClasses ecoreClass="langageCompilation.ecore#//LaserSensor"/>
     <genClasses ecoreClass="langageCompilation.ecore#//WheelEngine"/>
     <genClasses image="false" ecoreClass="langageCompilation.ecore#//EngineOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineOperation/right"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineOperation/engine"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="langageCompilation.ecore#//SensorOperation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//SensorOperation/sensor"/>
-    </genClasses>
-    <genClasses ecoreClass="langageCompilation.ecore#//EngineRef">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//EngineRef/engine"/>
-    </genClasses>
-    <genClasses ecoreClass="langageCompilation.ecore#//SensorRef">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//SensorRef/sensor"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//SensorOperation"/>
     <genClasses ecoreClass="langageCompilation.ecore#//NewEClass43"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//VitesseOperation"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//ColorOperation"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//RangeOperation"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//VitesseOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//VitesseOperation/wheelengine"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//ColorOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//ColorOperation/colorsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//RangeOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//RangeOperation/lasersensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//IntensityOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//IntensityOperation/colorsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//UltraSonicSensor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//GyroSensor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//GPSSensor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//XGPSOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//XGPSOperation/gpssensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//YGPSOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//YGPSOperation/gpssensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//DistanceOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//DistanceOperation/ultrasonicsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//AngleOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//AngleOperation/gyrosensor"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

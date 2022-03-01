@@ -763,52 +763,6 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.EngineRef} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EngineRefItemProvider engineRefItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link langageCompilation.EngineRef}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEngineRefAdapter() {
-		if (engineRefItemProvider == null) {
-			engineRefItemProvider = new EngineRefItemProvider(this);
-		}
-
-		return engineRefItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.SensorRef} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SensorRefItemProvider sensorRefItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link langageCompilation.SensorRef}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSensorRefAdapter() {
-		if (sensorRefItemProvider == null) {
-			sensorRefItemProvider = new SensorRefItemProvider(this);
-		}
-
-		return sensorRefItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link langageCompilation.NewEClass43} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -898,6 +852,190 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 		}
 
 		return rangeOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.IntensityOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntensityOperationItemProvider intensityOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.IntensityOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntensityOperationAdapter() {
+		if (intensityOperationItemProvider == null) {
+			intensityOperationItemProvider = new IntensityOperationItemProvider(this);
+		}
+
+		return intensityOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UltraSonicSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UltraSonicSensorItemProvider ultraSonicSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.UltraSonicSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUltraSonicSensorAdapter() {
+		if (ultraSonicSensorItemProvider == null) {
+			ultraSonicSensorItemProvider = new UltraSonicSensorItemProvider(this);
+		}
+
+		return ultraSonicSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.GyroSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GyroSensorItemProvider gyroSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.GyroSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGyroSensorAdapter() {
+		if (gyroSensorItemProvider == null) {
+			gyroSensorItemProvider = new GyroSensorItemProvider(this);
+		}
+
+		return gyroSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.GPSSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GPSSensorItemProvider gpsSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.GPSSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGPSSensorAdapter() {
+		if (gpsSensorItemProvider == null) {
+			gpsSensorItemProvider = new GPSSensorItemProvider(this);
+		}
+
+		return gpsSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.XGPSOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected XGPSOperationItemProvider xgpsOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.XGPSOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createXGPSOperationAdapter() {
+		if (xgpsOperationItemProvider == null) {
+			xgpsOperationItemProvider = new XGPSOperationItemProvider(this);
+		}
+
+		return xgpsOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.YGPSOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected YGPSOperationItemProvider ygpsOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.YGPSOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createYGPSOperationAdapter() {
+		if (ygpsOperationItemProvider == null) {
+			ygpsOperationItemProvider = new YGPSOperationItemProvider(this);
+		}
+
+		return ygpsOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.DistanceOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DistanceOperationItemProvider distanceOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.DistanceOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDistanceOperationAdapter() {
+		if (distanceOperationItemProvider == null) {
+			distanceOperationItemProvider = new DistanceOperationItemProvider(this);
+		}
+
+		return distanceOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.AngleOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AngleOperationItemProvider angleOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.AngleOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAngleOperationAdapter() {
+		if (angleOperationItemProvider == null) {
+			angleOperationItemProvider = new AngleOperationItemProvider(this);
+		}
+
+		return angleOperationItemProvider;
 	}
 
 	/**
@@ -1059,10 +1197,6 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			laserSensorItemProvider.dispose();
 		if (wheelEngineItemProvider != null)
 			wheelEngineItemProvider.dispose();
-		if (engineRefItemProvider != null)
-			engineRefItemProvider.dispose();
-		if (sensorRefItemProvider != null)
-			sensorRefItemProvider.dispose();
 		if (newEClass43ItemProvider != null)
 			newEClass43ItemProvider.dispose();
 		if (vitesseOperationItemProvider != null)
@@ -1071,6 +1205,22 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			colorOperationItemProvider.dispose();
 		if (rangeOperationItemProvider != null)
 			rangeOperationItemProvider.dispose();
+		if (intensityOperationItemProvider != null)
+			intensityOperationItemProvider.dispose();
+		if (ultraSonicSensorItemProvider != null)
+			ultraSonicSensorItemProvider.dispose();
+		if (gyroSensorItemProvider != null)
+			gyroSensorItemProvider.dispose();
+		if (gpsSensorItemProvider != null)
+			gpsSensorItemProvider.dispose();
+		if (xgpsOperationItemProvider != null)
+			xgpsOperationItemProvider.dispose();
+		if (ygpsOperationItemProvider != null)
+			ygpsOperationItemProvider.dispose();
+		if (distanceOperationItemProvider != null)
+			distanceOperationItemProvider.dispose();
+		if (angleOperationItemProvider != null)
+			angleOperationItemProvider.dispose();
 	}
 
 }

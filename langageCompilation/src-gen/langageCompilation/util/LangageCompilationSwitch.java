@@ -522,28 +522,6 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case LangageCompilationPackage.ENGINE_REF: {
-			EngineRef engineRef = (EngineRef) theEObject;
-			T result = caseEngineRef(engineRef);
-			if (result == null)
-				result = caseExpression(engineRef);
-			if (result == null)
-				result = caseStatement(engineRef);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case LangageCompilationPackage.SENSOR_REF: {
-			SensorRef sensorRef = (SensorRef) theEObject;
-			T result = caseSensorRef(sensorRef);
-			if (result == null)
-				result = caseExpression(sensorRef);
-			if (result == null)
-				result = caseStatement(sensorRef);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case LangageCompilationPackage.NEW_ECLASS43: {
 			NewEClass43 newEClass43 = (NewEClass43) theEObject;
 			T result = caseNewEClass43(newEClass43);
@@ -586,6 +564,104 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = caseExpression(rangeOperation);
 			if (result == null)
 				result = caseStatement(rangeOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.INTENSITY_OPERATION: {
+			IntensityOperation intensityOperation = (IntensityOperation) theEObject;
+			T result = caseIntensityOperation(intensityOperation);
+			if (result == null)
+				result = caseSensorOperation(intensityOperation);
+			if (result == null)
+				result = caseExpression(intensityOperation);
+			if (result == null)
+				result = caseStatement(intensityOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.ULTRA_SONIC_SENSOR: {
+			UltraSonicSensor ultraSonicSensor = (UltraSonicSensor) theEObject;
+			T result = caseUltraSonicSensor(ultraSonicSensor);
+			if (result == null)
+				result = caseSensor(ultraSonicSensor);
+			if (result == null)
+				result = caseStatement(ultraSonicSensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.GYRO_SENSOR: {
+			GyroSensor gyroSensor = (GyroSensor) theEObject;
+			T result = caseGyroSensor(gyroSensor);
+			if (result == null)
+				result = caseSensor(gyroSensor);
+			if (result == null)
+				result = caseStatement(gyroSensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.GPS_SENSOR: {
+			GPSSensor gpsSensor = (GPSSensor) theEObject;
+			T result = caseGPSSensor(gpsSensor);
+			if (result == null)
+				result = caseSensor(gpsSensor);
+			if (result == null)
+				result = caseStatement(gpsSensor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.XGPS_OPERATION: {
+			XGPSOperation xgpsOperation = (XGPSOperation) theEObject;
+			T result = caseXGPSOperation(xgpsOperation);
+			if (result == null)
+				result = caseSensorOperation(xgpsOperation);
+			if (result == null)
+				result = caseExpression(xgpsOperation);
+			if (result == null)
+				result = caseStatement(xgpsOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.YGPS_OPERATION: {
+			YGPSOperation ygpsOperation = (YGPSOperation) theEObject;
+			T result = caseYGPSOperation(ygpsOperation);
+			if (result == null)
+				result = caseSensorOperation(ygpsOperation);
+			if (result == null)
+				result = caseExpression(ygpsOperation);
+			if (result == null)
+				result = caseStatement(ygpsOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.DISTANCE_OPERATION: {
+			DistanceOperation distanceOperation = (DistanceOperation) theEObject;
+			T result = caseDistanceOperation(distanceOperation);
+			if (result == null)
+				result = caseSensorOperation(distanceOperation);
+			if (result == null)
+				result = caseExpression(distanceOperation);
+			if (result == null)
+				result = caseStatement(distanceOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.ANGLE_OPERATION: {
+			AngleOperation angleOperation = (AngleOperation) theEObject;
+			T result = caseAngleOperation(angleOperation);
+			if (result == null)
+				result = caseSensorOperation(angleOperation);
+			if (result == null)
+				result = caseExpression(angleOperation);
+			if (result == null)
+				result = caseStatement(angleOperation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1196,36 +1272,6 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Engine Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Engine Ref</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEngineRef(EngineRef object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sensor Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sensor Ref</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSensorRef(SensorRef object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>New EClass43</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1282,6 +1328,126 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRangeOperation(RangeOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Intensity Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Intensity Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntensityOperation(IntensityOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ultra Sonic Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ultra Sonic Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUltraSonicSensor(UltraSonicSensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gyro Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gyro Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGyroSensor(GyroSensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GPS Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GPS Sensor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGPSSensor(GPSSensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>XGPS Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>XGPS Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseXGPSOperation(XGPSOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YGPS Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YGPS Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYGPSOperation(YGPSOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Distance Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Distance Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDistanceOperation(DistanceOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Angle Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Angle Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAngleOperation(AngleOperation object) {
 		return null;
 	}
 

@@ -261,12 +261,6 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
@@ -274,6 +268,30 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createUltraSonicSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createGyroSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createGPSSensor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 	}
 
 	/**

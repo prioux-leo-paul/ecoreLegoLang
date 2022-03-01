@@ -200,12 +200,6 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
@@ -213,6 +207,21 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVariableRef()));
@@ -269,12 +278,6 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createMinusEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createEngineRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createSensorRef()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVitesseOperation()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
@@ -282,6 +285,21 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createRangeOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createIntensityOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createXGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createYGPSOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createDistanceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 	}
 
 	/**
