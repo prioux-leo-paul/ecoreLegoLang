@@ -126,5 +126,11 @@
     <genClasses ecoreClass="langageCompilation.ecore#//AngleOperation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//AngleOperation/gyrosensor"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//BooleanExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BooleanExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BooleanExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//And"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Or"/>
   </genPackages>
 </genmodel:GenModel>

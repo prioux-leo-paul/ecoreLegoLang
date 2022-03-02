@@ -292,6 +292,12 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 	/**

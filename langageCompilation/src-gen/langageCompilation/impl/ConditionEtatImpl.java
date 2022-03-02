@@ -4,16 +4,18 @@ package langageCompilation.impl;
 
 import java.util.Collection;
 
-import langageCompilation.Comparaison;
+import langageCompilation.BooleanExpression;
 import langageCompilation.ConditionEtat;
 import langageCompilation.LangageCompilationPackage;
 import langageCompilation.Statement;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -54,14 +56,14 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 	protected EList<Statement> else_;
 
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference list.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Comparaison> condition;
+	protected BooleanExpression condition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,12 +115,49 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Comparaison> getCondition() {
-		if (condition == null) {
-			condition = new EObjectContainmentEList<Comparaison>(Comparaison.class, this,
-					LangageCompilationPackage.CONDITION_ETAT__CONDITION);
-		}
+	public BooleanExpression getCondition() {
 		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCondition(BooleanExpression newCondition, NotificationChain msgs) {
+		BooleanExpression oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					LangageCompilationPackage.CONDITION_ETAT__CONDITION, oldCondition, newCondition);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(BooleanExpression newCondition) {
+		if (newCondition != condition) {
+			NotificationChain msgs = null;
+			if (condition != null)
+				msgs = ((InternalEObject) condition).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - LangageCompilationPackage.CONDITION_ETAT__CONDITION, null, msgs);
+			if (newCondition != null)
+				msgs = ((InternalEObject) newCondition).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - LangageCompilationPackage.CONDITION_ETAT__CONDITION, null, msgs);
+			msgs = basicSetCondition(newCondition, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LangageCompilationPackage.CONDITION_ETAT__CONDITION,
+					newCondition, newCondition));
 	}
 
 	/**
@@ -134,7 +173,7 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 		case LangageCompilationPackage.CONDITION_ETAT__ELSE:
 			return ((InternalEList<?>) getElse()).basicRemove(otherEnd, msgs);
 		case LangageCompilationPackage.CONDITION_ETAT__CONDITION:
-			return ((InternalEList<?>) getCondition()).basicRemove(otherEnd, msgs);
+			return basicSetCondition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +214,7 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 			getElse().addAll((Collection<? extends Statement>) newValue);
 			return;
 		case LangageCompilationPackage.CONDITION_ETAT__CONDITION:
-			getCondition().clear();
-			getCondition().addAll((Collection<? extends Comparaison>) newValue);
+			setCondition((BooleanExpression) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -197,7 +235,7 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 			getElse().clear();
 			return;
 		case LangageCompilationPackage.CONDITION_ETAT__CONDITION:
-			getCondition().clear();
+			setCondition((BooleanExpression) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -216,7 +254,7 @@ public class ConditionEtatImpl extends StatementImpl implements ConditionEtat {
 		case LangageCompilationPackage.CONDITION_ETAT__ELSE:
 			return else_ != null && !else_.isEmpty();
 		case LangageCompilationPackage.CONDITION_ETAT__CONDITION:
-			return condition != null && !condition.isEmpty();
+			return condition != null;
 		}
 		return super.eIsSet(featureID);
 	}

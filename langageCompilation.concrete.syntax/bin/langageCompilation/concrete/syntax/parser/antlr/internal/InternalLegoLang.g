@@ -370,6 +370,18 @@ ruleExpression returns [EObject current=null]
 			$current = $this_SensorOperation_7.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getExpressionAccess().getBooleanExpressionParserRuleCall_8());
+		}
+		this_BooleanExpression_8=ruleBooleanExpression
+		{
+			$current = $this_BooleanExpression_8.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -1349,6 +1361,18 @@ ruleVitesseOperation returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='set'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVitesseOperationAccess().getSetKeyword_0());
+		}
+		otherlv_1='vitesse'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVitesseOperationAccess().getVitesseKeyword_1());
+		}
+		otherlv_2='('
+		{
+			newLeafNode(otherlv_2, grammarAccess.getVitesseOperationAccess().getLeftParenthesisKeyword_2());
+		}
 		(
 			(
 				{
@@ -1360,7 +1384,7 @@ ruleVitesseOperation returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getVitesseOperationAccess().getWheelengineWheelEngineCrossReference_0_0());
+					newCompositeNode(grammarAccess.getVitesseOperationAccess().getWheelengineWheelEngineCrossReference_3_0());
 				}
 				ruleFQN
 				{
@@ -1368,24 +1392,20 @@ ruleVitesseOperation returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_1=':'
+		otherlv_4=')'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVitesseOperationAccess().getColonKeyword_1());
+			newLeafNode(otherlv_4, grammarAccess.getVitesseOperationAccess().getRightParenthesisKeyword_4());
 		}
-		otherlv_2='vitesse'
+		otherlv_5='='
 		{
-			newLeafNode(otherlv_2, grammarAccess.getVitesseOperationAccess().getVitesseKeyword_2());
-		}
-		otherlv_3='='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVitesseOperationAccess().getEqualsSignKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVitesseOperationAccess().getEqualsSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVitesseOperationAccess().getRightExpressionParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVitesseOperationAccess().getRightExpressionParserRuleCall_6_0());
 				}
-				lv_right_4_0=ruleExpression
+				lv_right_6_0=ruleExpression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVitesseOperationRule());
@@ -1393,7 +1413,7 @@ ruleVitesseOperation returns [EObject current=null]
 					set(
 						$current,
 						"right",
-						lv_right_4_0,
+						lv_right_6_0,
 						"langageCompilation.concrete.syntax.LegoLang.Expression");
 					afterParserOrEnumRuleCall();
 				}
@@ -1780,6 +1800,210 @@ ruleDistanceOperation returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleBooleanExpression
+entryRuleBooleanExpression returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBooleanExpressionRule()); }
+	iv_ruleBooleanExpression=ruleBooleanExpression
+	{ $current=$iv_ruleBooleanExpression.current; }
+	EOF;
+
+// Rule BooleanExpression
+ruleBooleanExpression returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getBooleanExpressionAccess().getAndParserRuleCall_0());
+		}
+		this_And_0=ruleAnd
+		{
+			$current = $this_And_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getBooleanExpressionAccess().getOrParserRuleCall_1());
+		}
+		this_Or_1=ruleOr
+		{
+			$current = $this_Or_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleAnd
+entryRuleAnd returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAndRule()); }
+	iv_ruleAnd=ruleAnd
+	{ $current=$iv_ruleAnd.current; }
+	EOF;
+
+// Rule And
+ruleAnd returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getAndAccess().getAndAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='('
+		{
+			newLeafNode(otherlv_1, grammarAccess.getAndAccess().getLeftParenthesisKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAndAccess().getLeftExpressionParserRuleCall_2_0());
+				}
+				lv_left_2_0=ruleExpression
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAndRule());
+					}
+					set(
+						$current,
+						"left",
+						lv_left_2_0,
+						"langageCompilation.concrete.syntax.LegoLang.Expression");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_3='and'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getAndAccess().getAndKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAndAccess().getRightExpressionParserRuleCall_3_1_0());
+					}
+					lv_right_4_0=ruleExpression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAndRule());
+						}
+						set(
+							$current,
+							"right",
+							lv_right_4_0,
+							"langageCompilation.concrete.syntax.LegoLang.Expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_5=')'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getAndAccess().getRightParenthesisKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleOr
+entryRuleOr returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getOrRule()); }
+	iv_ruleOr=ruleOr
+	{ $current=$iv_ruleOr.current; }
+	EOF;
+
+// Rule Or
+ruleOr returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getOrAccess().getOrAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='('
+		{
+			newLeafNode(otherlv_1, grammarAccess.getOrAccess().getLeftParenthesisKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getOrAccess().getLeftExpressionParserRuleCall_2_0());
+				}
+				lv_left_2_0=ruleExpression
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getOrRule());
+					}
+					set(
+						$current,
+						"left",
+						lv_left_2_0,
+						"langageCompilation.concrete.syntax.LegoLang.Expression");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_3='or'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getOrAccess().getOrKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getOrAccess().getRightExpressionParserRuleCall_3_1_0());
+					}
+					lv_right_4_0=ruleExpression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getOrRule());
+						}
+						set(
+							$current,
+							"right",
+							lv_right_4_0,
+							"langageCompilation.concrete.syntax.LegoLang.Expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_5=')'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getOrAccess().getRightParenthesisKeyword_4());
+		}
+	)
+;
+
 // Entry rule entryRuleConditionEtat
 entryRuleConditionEtat returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getConditionEtatRule()); }
@@ -1803,82 +2027,32 @@ ruleConditionEtat returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConditionEtatAccess().getConditionComparaisonParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getConditionEtatAccess().getConditionBooleanExpressionParserRuleCall_1_0());
 				}
-				lv_Condition_1_0=ruleComparaison
+				lv_Condition_1_0=ruleBooleanExpression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConditionEtatRule());
 					}
-					add(
+					set(
 						$current,
 						"Condition",
 						lv_Condition_1_0,
-						"langageCompilation.concrete.syntax.LegoLang.Comparaison");
+						"langageCompilation.concrete.syntax.LegoLang.BooleanExpression");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		(
-			otherlv_2='and'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getConditionEtatAccess().getAndKeyword_2_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getConditionEtatAccess().getConditionComparaisonParserRuleCall_2_1_0());
-					}
-					lv_Condition_3_0=ruleComparaison
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getConditionEtatRule());
-						}
-						add(
-							$current,
-							"Condition",
-							lv_Condition_3_0,
-							"langageCompilation.concrete.syntax.LegoLang.Comparaison");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		(
-			otherlv_4='or'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getConditionEtatAccess().getOrKeyword_3_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getConditionEtatAccess().getConditionComparaisonParserRuleCall_3_1_0());
-					}
-					lv_Condition_5_0=ruleComparaison
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getConditionEtatRule());
-						}
-						add(
-							$current,
-							"Condition",
-							lv_Condition_5_0,
-							"langageCompilation.concrete.syntax.LegoLang.Comparaison");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		otherlv_6='{'
+		otherlv_2='{'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getConditionEtatAccess().getLeftCurlyBracketKeyword_4());
+			newLeafNode(otherlv_2, grammarAccess.getConditionEtatAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConditionEtatAccess().getThenStatementParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getConditionEtatAccess().getThenStatementParserRuleCall_3_0());
 				}
-				lv_then_7_0=ruleStatement
+				lv_then_3_0=ruleStatement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConditionEtatRule());
@@ -1886,27 +2060,27 @@ ruleConditionEtat returns [EObject current=null]
 					add(
 						$current,
 						"then",
-						lv_then_7_0,
+						lv_then_3_0,
 						"langageCompilation.concrete.syntax.LegoLang.Statement");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_8='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getConditionEtatAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_4, grammarAccess.getConditionEtatAccess().getRightCurlyBracketKeyword_4());
 		}
 		(
-			otherlv_9='else{'
+			otherlv_5='else{'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getConditionEtatAccess().getElseKeyword_7_0());
+				newLeafNode(otherlv_5, grammarAccess.getConditionEtatAccess().getElseKeyword_5_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getConditionEtatAccess().getElseStatementParserRuleCall_7_1_0());
+						newCompositeNode(grammarAccess.getConditionEtatAccess().getElseStatementParserRuleCall_5_1_0());
 					}
-					lv_else_10_0=ruleStatement
+					lv_else_6_0=ruleStatement
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getConditionEtatRule());
@@ -1914,15 +2088,15 @@ ruleConditionEtat returns [EObject current=null]
 						add(
 							$current,
 							"else",
-							lv_else_10_0,
+							lv_else_6_0,
 							"langageCompilation.concrete.syntax.LegoLang.Statement");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_11='}'
+			otherlv_7='}'
 			{
-				newLeafNode(otherlv_11, grammarAccess.getConditionEtatAccess().getRightCurlyBracketKeyword_7_2());
+				newLeafNode(otherlv_7, grammarAccess.getConditionEtatAccess().getRightCurlyBracketKeyword_5_2());
 			}
 		)?
 	)
@@ -1985,9 +2159,9 @@ ruleWhileLoop returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getWhileLoopAccess().getLoopConditionComparaisonParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getWhileLoopAccess().getLoopConditionBooleanExpressionParserRuleCall_1_0());
 				}
-				lv_LoopCondition_1_0=ruleComparaison
+				lv_LoopCondition_1_0=ruleBooleanExpression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getWhileLoopRule());
@@ -1996,7 +2170,7 @@ ruleWhileLoop returns [EObject current=null]
 						$current,
 						"LoopCondition",
 						lv_LoopCondition_1_0,
-						"langageCompilation.concrete.syntax.LegoLang.Comparaison");
+						"langageCompilation.concrete.syntax.LegoLang.BooleanExpression");
 					afterParserOrEnumRuleCall();
 				}
 			)

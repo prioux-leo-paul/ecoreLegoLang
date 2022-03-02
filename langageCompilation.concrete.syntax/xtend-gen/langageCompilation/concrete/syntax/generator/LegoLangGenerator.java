@@ -4,9 +4,11 @@
 package langageCompilation.concrete.syntax.generator;
 
 import langageCompilation.Addition;
+import langageCompilation.And;
 import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
+import langageCompilation.BooleanExpression;
 import langageCompilation.Car;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
@@ -31,6 +33,7 @@ import langageCompilation.Loop;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
+import langageCompilation.Or;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
@@ -105,22 +108,19 @@ public class LegoLangGenerator extends AbstractGenerator {
     }
     if ((v instanceof ConditionEtat)) {
       String tmp = "if(";
-      EList<Comparaison> _condition = ((ConditionEtat)v).getCondition();
-      for (final Comparaison s : _condition) {
-        String _tmp = tmp;
-        String _comparaisonPython = this.comparaisonPython(s);
-        tmp = (_tmp + _comparaisonPython);
-      }
+      String _tmp = tmp;
+      String _booleanExpressionToPython = this.booleanExpressionToPython(((ConditionEtat)v).getCondition());
+      tmp = (_tmp + _booleanExpressionToPython);
       String _tmp_1 = tmp;
       tmp = (_tmp_1 + ")");
       int _nbTab = this.nbTab;
       this.nbTab = (_nbTab + 1);
       EList<Statement> _then = ((ConditionEtat)v).getThen();
-      for (final Statement s_1 : _then) {
+      for (final Statement s : _then) {
         String _tmp_2 = tmp;
         String _donneTab = this.donneTab(this.nbTab);
         String _plus = ("\n" + _donneTab);
-        String _statementToPython = this.statementToPython(s_1);
+        String _statementToPython = this.statementToPython(s);
         String _plus_1 = (_plus + _statementToPython);
         tmp = (_tmp_2 + _plus_1);
       }
@@ -137,11 +137,11 @@ public class LegoLangGenerator extends AbstractGenerator {
         int _nbTab_2 = this.nbTab;
         this.nbTab = (_nbTab_2 + 1);
         EList<Statement> _else = ((ConditionEtat)v).getElse();
-        for (final Statement s_2 : _else) {
+        for (final Statement s_1 : _else) {
           String _tmp_4 = tmp;
           String _donneTab_2 = this.donneTab(this.nbTab);
           String _plus_4 = ("\n" + _donneTab_2);
-          String _statementToPython_1 = this.statementToPython(s_2);
+          String _statementToPython_1 = this.statementToPython(s_1);
           String _plus_5 = (_plus_4 + _statementToPython_1);
           tmp = (_tmp_4 + _plus_5);
         }
@@ -153,9 +153,9 @@ public class LegoLangGenerator extends AbstractGenerator {
     if ((v instanceof MethodePrint)) {
       String tmp_1 = "print(";
       EList<Expression> _expression = ((MethodePrint)v).getExpression();
-      for (final Expression s_3 : _expression) {
+      for (final Expression s_2 : _expression) {
         String _tmp_5 = tmp_1;
-        String _expressionToPython = this.expressionToPython(s_3);
+        String _expressionToPython = this.expressionToPython(s_2);
         String _plus_6 = (_expressionToPython + ",");
         tmp_1 = (_tmp_5 + _plus_6);
       }
@@ -164,17 +164,17 @@ public class LegoLangGenerator extends AbstractGenerator {
     if ((v instanceof Car)) {
       String tmp_2 = "";
       EList<Sensor> _sensor = ((Car)v).getSensor();
-      for (final Sensor s_4 : _sensor) {
+      for (final Sensor s_3 : _sensor) {
         String _tmp_6 = tmp_2;
-        String _sensorToPython = this.sensorToPython(s_4);
+        String _sensorToPython = this.sensorToPython(s_3);
         String _plus_7 = (_sensorToPython + "\n");
         tmp_2 = (_tmp_6 + _plus_7);
       }
       String tmp2 = "";
       EList<Engine> _engine = ((Car)v).getEngine();
-      for (final Engine s_5 : _engine) {
+      for (final Engine s_4 : _engine) {
         String _tmp2 = tmp2;
-        String _engineToPython = this.engineToPython(s_5);
+        String _engineToPython = this.engineToPython(s_4);
         String _plus_8 = (_engineToPython + "\n");
         tmp2 = (_tmp2 + _plus_8);
       }
@@ -297,6 +297,37 @@ public class LegoLangGenerator extends AbstractGenerator {
     }
     if ((v instanceof SensorOperation)) {
       return this.sensorOperationToPython(((SensorOperation)v));
+    }
+    if ((v instanceof BooleanExpression)) {
+      return this.booleanExpressionToPython(((BooleanExpression)v));
+    }
+    return null;
+  }
+  
+  public String booleanExpressionToPython(final BooleanExpression v) {
+    if ((v instanceof And)) {
+      String tmp = this.expressionToPython(((And)v).getLeft());
+      boolean _equals = ((And)v).getRight().equals(null);
+      boolean _not = (!_equals);
+      if (_not) {
+        String _tmp = tmp;
+        String _expressionToPython = this.expressionToPython(((And)v).getRight());
+        String _plus = (" and " + _expressionToPython);
+        tmp = (_tmp + _plus);
+      }
+      return tmp;
+    }
+    if ((v instanceof Or)) {
+      String tmp_1 = this.expressionToPython(((Or)v).getLeft());
+      boolean _equals_1 = ((Or)v).getRight().equals(null);
+      boolean _not_1 = (!_equals_1);
+      if (_not_1) {
+        String _tmp_1 = tmp_1;
+        String _expressionToPython_1 = this.expressionToPython(((Or)v).getRight());
+        String _plus_1 = (" or " + _expressionToPython_1);
+        tmp_1 = (_tmp_1 + _plus_1);
+      }
+      return tmp_1;
     }
     return null;
   }
@@ -443,8 +474,8 @@ public class LegoLangGenerator extends AbstractGenerator {
   
   public String loopToPython(final Loop v) {
     if ((v instanceof WhileLoop)) {
-      String _comparaisonPython = this.comparaisonPython(((WhileLoop)v).getLoopCondition());
-      String _plus = ("while(" + _comparaisonPython);
+      String _booleanExpressionToPython = this.booleanExpressionToPython(((WhileLoop)v).getLoopCondition());
+      String _plus = ("while(" + _booleanExpressionToPython);
       String tmp = (_plus + "): ");
       int _nbTab = this.nbTab;
       this.nbTab = (_nbTab + 1);

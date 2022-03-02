@@ -1039,6 +1039,52 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.And} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AndItemProvider andItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.And}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAndAdapter() {
+		if (andItemProvider == null) {
+			andItemProvider = new AndItemProvider(this);
+		}
+
+		return andItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.Or} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrItemProvider orItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.Or}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrAdapter() {
+		if (orItemProvider == null) {
+			orItemProvider = new OrItemProvider(this);
+		}
+
+		return orItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1221,6 +1267,10 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			distanceOperationItemProvider.dispose();
 		if (angleOperationItemProvider != null)
 			angleOperationItemProvider.dispose();
+		if (andItemProvider != null)
+			andItemProvider.dispose();
+		if (orItemProvider != null)
+			orItemProvider.dispose();
 	}
 
 }

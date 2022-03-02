@@ -256,6 +256,12 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createOr()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createWhileLoop()));
 
@@ -376,23 +382,17 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createGT()));
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createLT()));
+				LangageCompilationFactory.eINSTANCE.createAnd()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createLTorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
-				LangageCompilationFactory.eINSTANCE.createDifferent()));
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 	/**

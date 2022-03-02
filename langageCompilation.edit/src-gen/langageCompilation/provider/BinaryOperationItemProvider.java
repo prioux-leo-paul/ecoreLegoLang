@@ -223,6 +223,12 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createOr()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVariableRef()));
 
@@ -300,6 +306,12 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 	/**

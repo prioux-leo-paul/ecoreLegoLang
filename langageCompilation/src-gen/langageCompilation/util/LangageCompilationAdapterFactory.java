@@ -327,6 +327,21 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseBooleanExpression(BooleanExpression object) {
+			return createBooleanExpressionAdapter();
+		}
+
+		@Override
+		public Adapter caseAnd(And object) {
+			return createAndAdapter();
+		}
+
+		@Override
+		public Adapter caseOr(Or object) {
+			return createOrAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1070,6 +1085,48 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAngleOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.BooleanExpression <em>Boolean Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.BooleanExpression
+	 * @generated
+	 */
+	public Adapter createBooleanExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.And <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.And
+	 * @generated
+	 */
+	public Adapter createAndAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.Or <em>Or</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.Or
+	 * @generated
+	 */
+	public Adapter createOrAdapter() {
 		return null;
 	}
 

@@ -220,6 +220,12 @@ public class MethodePrintItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 }

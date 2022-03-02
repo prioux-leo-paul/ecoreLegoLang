@@ -262,6 +262,12 @@ public class LoopItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 }

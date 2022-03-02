@@ -144,22 +144,10 @@ public class WhileLoopItemProvider extends LoopItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createGT()));
+				LangageCompilationFactory.eINSTANCE.createAnd()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createLT()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createLTorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createGTorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.WHILE_LOOP__LOOP_CONDITION,
-				LangageCompilationFactory.eINSTANCE.createDifferent()));
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 	/**

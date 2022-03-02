@@ -6,6 +6,7 @@ package langageCompilation.concrete.syntax.serializer;
 import com.google.inject.Inject;
 import java.util.Set;
 import langageCompilation.Addition;
+import langageCompilation.And;
 import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.Car;
@@ -28,6 +29,7 @@ import langageCompilation.LaserSensor;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
+import langageCompilation.Or;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
@@ -74,6 +76,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			switch (semanticObject.eClass().getClassifierID()) {
 			case LangageCompilationPackage.ADDITION:
 				sequence_Addition(context, (Addition) semanticObject); 
+				return; 
+			case LangageCompilationPackage.AND:
+				sequence_And(context, (And) semanticObject); 
 				return; 
 			case LangageCompilationPackage.ANGLE_OPERATION:
 				sequence_AngleOperation(context, (AngleOperation) semanticObject); 
@@ -137,6 +142,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.MULTIPLICATION:
 				sequence_Multiplication(context, (Multiplication) semanticObject); 
+				return; 
+			case LangageCompilationPackage.OR:
+				sequence_Or(context, (Or) semanticObject); 
 				return; 
 			case LangageCompilationPackage.PLUS_EQUAL:
 				sequence_PlusEqual(context, (PlusEqual) semanticObject); 
@@ -221,6 +229,21 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getAdditionAccess().getLeftExpressionParserRuleCall_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getAdditionAccess().getRightExpressionParserRuleCall_3_0(), semanticObject.getRight());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns And
+	 *     Expression returns And
+	 *     BooleanExpression returns And
+	 *     And returns And
+	 *
+	 * Constraint:
+	 *     (left=Expression right=Expression?)
+	 */
+	protected void sequence_And(ISerializationContext context, And semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -332,7 +355,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     ConditionEtat returns ConditionEtat
 	 *
 	 * Constraint:
-	 *     (Condition+=Comparaison Condition+=Comparaison* Condition+=Comparaison* then+=Statement* else+=Statement?)
+	 *     (Condition=BooleanExpression then+=Statement* else+=Statement?)
 	 */
 	protected void sequence_ConditionEtat(ISerializationContext context, ConditionEtat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -687,6 +710,21 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Or
+	 *     Expression returns Or
+	 *     BooleanExpression returns Or
+	 *     Or returns Or
+	 *
+	 * Constraint:
+	 *     (left=Expression right=Expression?)
+	 */
+	protected void sequence_Or(ISerializationContext context, Or semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns PlusEqual
 	 *     Expression returns PlusEqual
 	 *     BinaryOperation returns PlusEqual
@@ -966,8 +1004,8 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVitesseOperationAccess().getWheelengineWheelEngineFQNParserRuleCall_0_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.VITESSE_OPERATION__WHEELENGINE, false));
-		feeder.accept(grammarAccess.getVitesseOperationAccess().getRightExpressionParserRuleCall_4_0(), semanticObject.getRight());
+		feeder.accept(grammarAccess.getVitesseOperationAccess().getWheelengineWheelEngineFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.VITESSE_OPERATION__WHEELENGINE, false));
+		feeder.accept(grammarAccess.getVitesseOperationAccess().getRightExpressionParserRuleCall_6_0(), semanticObject.getRight());
 		feeder.finish();
 	}
 	
@@ -1001,7 +1039,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     WhileLoop returns WhileLoop
 	 *
 	 * Constraint:
-	 *     (LoopCondition=Comparaison statement+=Statement*)
+	 *     (LoopCondition=BooleanExpression statement+=Statement*)
 	 */
 	protected void sequence_WhileLoop(ISerializationContext context, WhileLoop semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

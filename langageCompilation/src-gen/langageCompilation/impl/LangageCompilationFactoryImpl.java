@@ -140,6 +140,10 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createDistanceOperation();
 		case LangageCompilationPackage.ANGLE_OPERATION:
 			return createAngleOperation();
+		case LangageCompilationPackage.AND:
+			return createAnd();
+		case LangageCompilationPackage.OR:
+			return createOr();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -563,6 +567,26 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	public AngleOperation createAngleOperation() {
 		AngleOperationImpl angleOperation = new AngleOperationImpl();
 		return angleOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public And createAnd() {
+		AndImpl and = new AndImpl();
+		return and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Or createOr() {
+		OrImpl or = new OrImpl();
+		return or;
 	}
 
 	/**

@@ -5,7 +5,7 @@ package langageCompilation.concrete.syntax.formatting2;
 
 import com.google.inject.Inject;
 import java.util.Arrays;
-import langageCompilation.Comparaison;
+import langageCompilation.BooleanExpression;
 import langageCompilation.Program;
 import langageCompilation.Statement;
 import langageCompilation.WhileLoop;
@@ -35,7 +35,7 @@ public class LegoLangFormatter extends AbstractFormatter2 {
     for (final Statement statement : _statement) {
       document.<Statement>format(statement);
     }
-    document.<Comparaison>format(whileLoop.getLoopCondition());
+    document.<BooleanExpression>format(whileLoop.getLoopCondition());
   }
   
   public void format(final Object whileLoop, final IFormattableDocument document) {

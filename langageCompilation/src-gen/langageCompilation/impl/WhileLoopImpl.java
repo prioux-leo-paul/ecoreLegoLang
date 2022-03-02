@@ -2,7 +2,7 @@
  */
 package langageCompilation.impl;
 
-import langageCompilation.Comparaison;
+import langageCompilation.BooleanExpression;
 import langageCompilation.LangageCompilationPackage;
 import langageCompilation.WhileLoop;
 
@@ -36,7 +36,7 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	 * @generated
 	 * @ordered
 	 */
-	protected Comparaison loopCondition;
+	protected BooleanExpression loopCondition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Comparaison getLoopCondition() {
+	public BooleanExpression getLoopCondition() {
 		return loopCondition;
 	}
 
@@ -71,8 +71,8 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLoopCondition(Comparaison newLoopCondition, NotificationChain msgs) {
-		Comparaison oldLoopCondition = loopCondition;
+	public NotificationChain basicSetLoopCondition(BooleanExpression newLoopCondition, NotificationChain msgs) {
+		BooleanExpression oldLoopCondition = loopCondition;
 		loopCondition = newLoopCondition;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -90,7 +90,7 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLoopCondition(Comparaison newLoopCondition) {
+	public void setLoopCondition(BooleanExpression newLoopCondition) {
 		if (newLoopCondition != loopCondition) {
 			NotificationChain msgs = null;
 			if (loopCondition != null)
@@ -144,7 +144,7 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case LangageCompilationPackage.WHILE_LOOP__LOOP_CONDITION:
-			setLoopCondition((Comparaison) newValue);
+			setLoopCondition((BooleanExpression) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,7 +159,7 @@ public class WhileLoopImpl extends LoopImpl implements WhileLoop {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case LangageCompilationPackage.WHILE_LOOP__LOOP_CONDITION:
-			setLoopCondition((Comparaison) null);
+			setLoopCondition((BooleanExpression) null);
 			return;
 		}
 		super.eUnset(featureID);

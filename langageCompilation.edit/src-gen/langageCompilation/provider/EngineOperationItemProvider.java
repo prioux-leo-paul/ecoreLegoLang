@@ -208,6 +208,12 @@ public class EngineOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createAngleOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createOr()));
 	}
 
 }

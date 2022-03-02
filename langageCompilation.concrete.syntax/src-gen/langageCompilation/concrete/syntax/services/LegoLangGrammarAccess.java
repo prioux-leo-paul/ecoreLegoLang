@@ -131,12 +131,13 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cTheBooleanParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cEngineOperationParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cSensorOperationParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cBooleanExpressionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
 		//Expression returns Expression:
-		//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation ;
+		//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation
+		//VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//VariableRef
@@ -162,6 +163,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//SensorOperation
 		public RuleCall getSensorOperationParserRuleCall_7() { return cSensorOperationParserRuleCall_7; }
+		
+		//BooleanExpression
+		public RuleCall getBooleanExpressionParserRuleCall_8() { return cBooleanExpressionParserRuleCall_8; }
 	}
 	public class BinaryOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.BinaryOperation");
@@ -638,50 +642,58 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	public class VitesseOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.VitesseOperation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cWheelengineAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cWheelengineWheelEngineCrossReference_0_0 = (CrossReference)cWheelengineAssignment_0.eContents().get(0);
-		private final RuleCall cWheelengineWheelEngineFQNParserRuleCall_0_0_1 = (RuleCall)cWheelengineWheelEngineCrossReference_0_0.eContents().get(1);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cVitesseKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cRightAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cRightExpressionParserRuleCall_4_0 = (RuleCall)cRightAssignment_4.eContents().get(0);
+		private final Keyword cSetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cVitesseKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cWheelengineAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cWheelengineWheelEngineCrossReference_3_0 = (CrossReference)cWheelengineAssignment_3.eContents().get(0);
+		private final RuleCall cWheelengineWheelEngineFQNParserRuleCall_3_0_1 = (RuleCall)cWheelengineWheelEngineCrossReference_3_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cRightAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRightExpressionParserRuleCall_6_0 = (RuleCall)cRightAssignment_6.eContents().get(0);
 		
 		//VitesseOperation returns VitesseOperation:
-		//    (wheelengine=[WheelEngine|FQN])
-		//    ':''vitesse''='
+		//    'set' 'vitesse''('wheelengine=[WheelEngine|FQN]')'
+		//    '='
 		//    right=Expression
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(wheelengine=[WheelEngine|FQN])
-		//':''vitesse''='
+		//'set' 'vitesse''('wheelengine=[WheelEngine|FQN]')'
+		//'='
 		//right=Expression
 		public Group getGroup() { return cGroup; }
 		
-		//(wheelengine=[WheelEngine|FQN])
-		public Assignment getWheelengineAssignment_0() { return cWheelengineAssignment_0; }
-		
-		//[WheelEngine|FQN]
-		public CrossReference getWheelengineWheelEngineCrossReference_0_0() { return cWheelengineWheelEngineCrossReference_0_0; }
-		
-		//FQN
-		public RuleCall getWheelengineWheelEngineFQNParserRuleCall_0_0_1() { return cWheelengineWheelEngineFQNParserRuleCall_0_0_1; }
-		
-		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		//'set'
+		public Keyword getSetKeyword_0() { return cSetKeyword_0; }
 		
 		//'vitesse'
-		public Keyword getVitesseKeyword_2() { return cVitesseKeyword_2; }
+		public Keyword getVitesseKeyword_1() { return cVitesseKeyword_1; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//wheelengine=[WheelEngine|FQN]
+		public Assignment getWheelengineAssignment_3() { return cWheelengineAssignment_3; }
+		
+		//[WheelEngine|FQN]
+		public CrossReference getWheelengineWheelEngineCrossReference_3_0() { return cWheelengineWheelEngineCrossReference_3_0; }
+		
+		//FQN
+		public RuleCall getWheelengineWheelEngineFQNParserRuleCall_3_0_1() { return cWheelengineWheelEngineFQNParserRuleCall_3_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
+		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
 		
 		//right=Expression
-		public Assignment getRightAssignment_4() { return cRightAssignment_4; }
+		public Assignment getRightAssignment_6() { return cRightAssignment_6; }
 		
 		//Expression
-		public RuleCall getRightExpressionParserRuleCall_4_0() { return cRightExpressionParserRuleCall_4_0; }
+		public RuleCall getRightExpressionParserRuleCall_6_0() { return cRightExpressionParserRuleCall_6_0; }
 	}
 	public class ColorOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.ColorOperation");
@@ -963,33 +975,153 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
+	public class BooleanExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.BooleanExpression");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cAndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cOrParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//BooleanExpression returns BooleanExpression:
+		//    And | Or
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//And | Or
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//And
+		public RuleCall getAndParserRuleCall_0() { return cAndParserRuleCall_0; }
+		
+		//Or
+		public RuleCall getOrParserRuleCall_1() { return cOrParserRuleCall_1; }
+	}
+	public class AndElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.And");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAndAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cLeftAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLeftExpressionParserRuleCall_2_0 = (RuleCall)cLeftAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cAndKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cRightAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cRightExpressionParserRuleCall_3_1_0 = (RuleCall)cRightAssignment_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//And returns And:
+		//    {And}
+		//    '('(left=Expression)
+		//    ('and' right=Expression)?
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{And}
+		//'('(left=Expression)
+		//('and' right=Expression)?
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//{And}
+		public Action getAndAction_0() { return cAndAction_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(left=Expression)
+		public Assignment getLeftAssignment_2() { return cLeftAssignment_2; }
+		
+		//Expression
+		public RuleCall getLeftExpressionParserRuleCall_2_0() { return cLeftExpressionParserRuleCall_2_0; }
+		
+		//('and' right=Expression)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'and'
+		public Keyword getAndKeyword_3_0() { return cAndKeyword_3_0; }
+		
+		//right=Expression
+		public Assignment getRightAssignment_3_1() { return cRightAssignment_3_1; }
+		
+		//Expression
+		public RuleCall getRightExpressionParserRuleCall_3_1_0() { return cRightExpressionParserRuleCall_3_1_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+	public class OrElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Or");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cOrAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cLeftAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLeftExpressionParserRuleCall_2_0 = (RuleCall)cLeftAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cOrKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cRightAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cRightExpressionParserRuleCall_3_1_0 = (RuleCall)cRightAssignment_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Or returns Or:
+		//    {Or}
+		//    '('(left=Expression)
+		//    ('or' right=Expression)?
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Or}
+		//'('(left=Expression)
+		//('or' right=Expression)?
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//{Or}
+		public Action getOrAction_0() { return cOrAction_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(left=Expression)
+		public Assignment getLeftAssignment_2() { return cLeftAssignment_2; }
+		
+		//Expression
+		public RuleCall getLeftExpressionParserRuleCall_2_0() { return cLeftExpressionParserRuleCall_2_0; }
+		
+		//('or' right=Expression)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'or'
+		public Keyword getOrKeyword_3_0() { return cOrKeyword_3_0; }
+		
+		//right=Expression
+		public Assignment getRightAssignment_3_1() { return cRightAssignment_3_1; }
+		
+		//Expression
+		public RuleCall getRightExpressionParserRuleCall_3_1_0() { return cRightExpressionParserRuleCall_3_1_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
 	public class ConditionEtatElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.ConditionEtat");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionComparaisonParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cAndKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cConditionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cConditionComparaisonParserRuleCall_2_1_0 = (RuleCall)cConditionAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cOrKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cConditionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cConditionComparaisonParserRuleCall_3_1_0 = (RuleCall)cConditionAssignment_3_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cThenAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cThenStatementParserRuleCall_5_0 = (RuleCall)cThenAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cElseKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cElseAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cElseStatementParserRuleCall_7_1_0 = (RuleCall)cElseAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final RuleCall cConditionBooleanExpressionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cThenAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cThenStatementParserRuleCall_3_0 = (RuleCall)cThenAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cElseKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cElseAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cElseStatementParserRuleCall_5_1_0 = (RuleCall)cElseAssignment_5_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
 		
 		//ConditionEtat returns ConditionEtat:
 		//    'if'
-		//        (Condition+=Comparaison) ('and' Condition+=Comparaison)* ('or' Condition+=Comparaison)* '{'
+		//        Condition=BooleanExpression '{'
 		//            (then+=Statement )*
 		//        '}'
 		//        ('else{'else+=Statement'}' )?
@@ -997,7 +1129,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'if'
-		//    (Condition+=Comparaison) ('and' Condition+=Comparaison)* ('or' Condition+=Comparaison)* '{'
+		//    Condition=BooleanExpression '{'
 		//        (then+=Statement )*
 		//    '}'
 		//    ('else{'else+=Statement'}' )?
@@ -1006,62 +1138,38 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'if'
 		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
 		
-		//(Condition+=Comparaison)
+		//Condition=BooleanExpression
 		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
 		
-		//Comparaison
-		public RuleCall getConditionComparaisonParserRuleCall_1_0() { return cConditionComparaisonParserRuleCall_1_0; }
-		
-		//('and' Condition+=Comparaison)*
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'and'
-		public Keyword getAndKeyword_2_0() { return cAndKeyword_2_0; }
-		
-		//Condition+=Comparaison
-		public Assignment getConditionAssignment_2_1() { return cConditionAssignment_2_1; }
-		
-		//Comparaison
-		public RuleCall getConditionComparaisonParserRuleCall_2_1_0() { return cConditionComparaisonParserRuleCall_2_1_0; }
-		
-		//('or' Condition+=Comparaison)*
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'or'
-		public Keyword getOrKeyword_3_0() { return cOrKeyword_3_0; }
-		
-		//Condition+=Comparaison
-		public Assignment getConditionAssignment_3_1() { return cConditionAssignment_3_1; }
-		
-		//Comparaison
-		public RuleCall getConditionComparaisonParserRuleCall_3_1_0() { return cConditionComparaisonParserRuleCall_3_1_0; }
+		//BooleanExpression
+		public RuleCall getConditionBooleanExpressionParserRuleCall_1_0() { return cConditionBooleanExpressionParserRuleCall_1_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//(then+=Statement )*
-		public Assignment getThenAssignment_5() { return cThenAssignment_5; }
+		public Assignment getThenAssignment_3() { return cThenAssignment_3; }
 		
 		//Statement
-		public RuleCall getThenStatementParserRuleCall_5_0() { return cThenStatementParserRuleCall_5_0; }
+		public RuleCall getThenStatementParserRuleCall_3_0() { return cThenStatementParserRuleCall_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 		
 		//('else{'else+=Statement'}' )?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'else{'
-		public Keyword getElseKeyword_7_0() { return cElseKeyword_7_0; }
+		public Keyword getElseKeyword_5_0() { return cElseKeyword_5_0; }
 		
 		//else+=Statement
-		public Assignment getElseAssignment_7_1() { return cElseAssignment_7_1; }
+		public Assignment getElseAssignment_5_1() { return cElseAssignment_5_1; }
 		
 		//Statement
-		public RuleCall getElseStatementParserRuleCall_7_1_0() { return cElseStatementParserRuleCall_7_1_0; }
+		public RuleCall getElseStatementParserRuleCall_5_1_0() { return cElseStatementParserRuleCall_5_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_2() { return cRightCurlyBracketKeyword_7_2; }
+		public Keyword getRightCurlyBracketKeyword_5_2() { return cRightCurlyBracketKeyword_5_2; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.EString");
@@ -1087,7 +1195,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWhileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cLoopConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLoopConditionComparaisonParserRuleCall_1_0 = (RuleCall)cLoopConditionAssignment_1.eContents().get(0);
+		private final RuleCall cLoopConditionBooleanExpressionParserRuleCall_1_0 = (RuleCall)cLoopConditionAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cStatementAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cStatementStatementParserRuleCall_3_0 = (RuleCall)cStatementAssignment_3.eContents().get(0);
@@ -1095,14 +1203,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//WhileLoop returns WhileLoop:
 		//    'while'
-		//        LoopCondition=Comparaison
+		//        LoopCondition=BooleanExpression
 		//    '{'
 		//        (statement+=Statement )*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'while'
-		//    LoopCondition=Comparaison
+		//    LoopCondition=BooleanExpression
 		//'{'
 		//    (statement+=Statement )*
 		//'}'
@@ -1111,11 +1219,11 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'while'
 		public Keyword getWhileKeyword_0() { return cWhileKeyword_0; }
 		
-		//LoopCondition=Comparaison
+		//LoopCondition=BooleanExpression
 		public Assignment getLoopConditionAssignment_1() { return cLoopConditionAssignment_1; }
 		
-		//Comparaison
-		public RuleCall getLoopConditionComparaisonParserRuleCall_1_0() { return cLoopConditionComparaisonParserRuleCall_1_0; }
+		//BooleanExpression
+		public RuleCall getLoopConditionBooleanExpressionParserRuleCall_1_0() { return cLoopConditionBooleanExpressionParserRuleCall_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -2225,6 +2333,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final YGPSOperationElements pYGPSOperation;
 	private final AngleOperationElements pAngleOperation;
 	private final DistanceOperationElements pDistanceOperation;
+	private final BooleanExpressionElements pBooleanExpression;
+	private final AndElements pAnd;
+	private final OrElements pOr;
 	private final ConditionEtatElements pConditionEtat;
 	private final EStringElements pEString;
 	private final WhileLoopElements pWhileLoop;
@@ -2289,6 +2400,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pYGPSOperation = new YGPSOperationElements();
 		this.pAngleOperation = new AngleOperationElements();
 		this.pDistanceOperation = new DistanceOperationElements();
+		this.pBooleanExpression = new BooleanExpressionElements();
+		this.pAnd = new AndElements();
+		this.pOr = new OrElements();
 		this.pConditionEtat = new ConditionEtatElements();
 		this.pEString = new EStringElements();
 		this.pWhileLoop = new WhileLoopElements();
@@ -2373,7 +2487,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Expression returns Expression:
-	//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation ;
+	//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -2548,8 +2662,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//VitesseOperation returns VitesseOperation:
-	//    (wheelengine=[WheelEngine|FQN])
-	//    ':''vitesse''='
+	//    'set' 'vitesse''('wheelengine=[WheelEngine|FQN]')'
+	//    '='
 	//    right=Expression
 	//;
 	public VitesseOperationElements getVitesseOperationAccess() {
@@ -2637,9 +2751,48 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getDistanceOperationAccess().getRule();
 	}
 	
+	//BooleanExpression returns BooleanExpression:
+	//    And | Or
+	//;
+	public BooleanExpressionElements getBooleanExpressionAccess() {
+		return pBooleanExpression;
+	}
+	
+	public ParserRule getBooleanExpressionRule() {
+		return getBooleanExpressionAccess().getRule();
+	}
+	
+	//And returns And:
+	//    {And}
+	//    '('(left=Expression)
+	//    ('and' right=Expression)?
+	//    ')'
+	//;
+	public AndElements getAndAccess() {
+		return pAnd;
+	}
+	
+	public ParserRule getAndRule() {
+		return getAndAccess().getRule();
+	}
+	
+	//Or returns Or:
+	//    {Or}
+	//    '('(left=Expression)
+	//    ('or' right=Expression)?
+	//    ')'
+	//;
+	public OrElements getOrAccess() {
+		return pOr;
+	}
+	
+	public ParserRule getOrRule() {
+		return getOrAccess().getRule();
+	}
+	
 	//ConditionEtat returns ConditionEtat:
 	//    'if'
-	//        (Condition+=Comparaison) ('and' Condition+=Comparaison)* ('or' Condition+=Comparaison)* '{'
+	//        Condition=BooleanExpression '{'
 	//            (then+=Statement )*
 	//        '}'
 	//        ('else{'else+=Statement'}' )?
@@ -2664,7 +2817,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	//WhileLoop returns WhileLoop:
 	//    'while'
-	//        LoopCondition=Comparaison
+	//        LoopCondition=BooleanExpression
 	//    '{'
 	//        (statement+=Statement )*
 	//    '}';

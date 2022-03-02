@@ -59,6 +59,9 @@ import langageCompilation.AngleOperation
 import langageCompilation.GyroSensor
 import langageCompilation.GPSSensor
 import langageCompilation.UltraSonicSensor
+import langageCompilation.BooleanExpression
+import langageCompilation.And
+import langageCompilation.Or
 
 /**
  * Generates code from your model files on save.
@@ -101,9 +104,7 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 			}
 			if (v instanceof ConditionEtat) {
 				var String tmp = 'if(' 
-				for(s : v.condition){
-					tmp += comparaisonPython(s)
-				}
+				tmp += booleanExpressionToPython(v.condition)
 				tmp += ')'
 				nbTab += 1
 				for(s : v.then){
@@ -201,7 +202,27 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		if(v instanceof SensorOperation){
 			return sensorOperationToPython(v)
 		}
+		if(v instanceof BooleanExpression)
+			return booleanExpressionToPython(v)
 	}
+	
+	def booleanExpressionToPython(BooleanExpression v){
+		if( v instanceof And){
+			var String tmp = expressionToPython(v.left)
+			if (!v.right.equals(null))
+				tmp += ' and '+expressionToPython(v.right)
+			return tmp
+			
+		}
+		if( v instanceof Or){
+			var String tmp = expressionToPython(v.left)
+			if (!v.right.equals(null))
+				tmp += ' or '+expressionToPython(v.right)
+			return tmp
+		}
+	}
+	
+	
 	def String sensorOperationToPython(SensorOperation v){
 		if( v instanceof ColorOperation){
 			return 'color_sensor_in'+ v.colorsensor.position +'.color_name'
@@ -281,7 +302,7 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 	
 	def String loopToPython(Loop v){
 		if( v instanceof WhileLoop){
-			var String tmp ='while(' + comparaisonPython(v.loopCondition) + '): '
+			var String tmp ='while(' + booleanExpressionToPython(v.loopCondition) + '): '
 			nbTab += 1
 			for(s : v.statement){
 				tmp += '\n'+donneTab(nbTab)  + statementToPython(s)

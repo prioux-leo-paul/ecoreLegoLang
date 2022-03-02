@@ -219,7 +219,7 @@
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_HC9s6YUKEeyjYL9BFL_5EQ" containerData="7500" selectedElement="_HC9s6oUKEeyjYL9BFL_5EQ">
               <children xsi:type="advanced:Placeholder" xmi:id="_HC9s6oUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.editorss" containerData="6500" ref="_HC-76oUKEeyjYL9BFL_5EQ"/>
-              <children xsi:type="basic:PartStack" xmi:id="_HC9s64UKEeyjYL9BFL_5EQ" elementId="bottom" visible="false" containerData="3500" selectedElement="_HC9s7IUKEeyjYL9BFL_5EQ">
+              <children xsi:type="basic:PartStack" xmi:id="_HC9s64UKEeyjYL9BFL_5EQ" elementId="bottom" visible="false" containerData="3500" selectedElement="_HC9s7oUKEeyjYL9BFL_5EQ">
                 <tags>Minimized</tags>
                 <tags>Java</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_HC9s7IUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_HDAJQIUKEeyjYL9BFL_5EQ" closeable="true">
@@ -230,7 +230,7 @@
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
                 </children>
-                <children xsi:type="advanced:Placeholder" xmi:id="_HC9s7oUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.console.ConsoleView" toBeRendered="false" ref="_HDAJbIUKEeyjYL9BFL_5EQ" closeable="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_HC9s7oUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_HDAJbIUKEeyjYL9BFL_5EQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
                 </children>
@@ -288,13 +288,13 @@
           <tags>org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_FXtWwJYfEeyY_bEky2kKHA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LegoLang.xtext" iconURI="platform:/plugin/org.eclipse.xtext.xtext.ui/icons/editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;LegoLang.xtext&quot; partName=&quot;LegoLang.xtext&quot; title=&quot;LegoLang.xtext&quot; tooltip=&quot;langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/LegoLang.xtext&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/LegoLang.xtext&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2874&quot; selectionTopPixel=&quot;2626&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;LegoLang.xtext&quot; partName=&quot;LegoLang.xtext&quot; title=&quot;LegoLang.xtext&quot; tooltip=&quot;langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/LegoLang.xtext&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/LegoLang.xtext&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3196&quot; selectionTopPixel=&quot;2686&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.xtext.Xtext</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_DhcEsJlsEeyQhYVwp0_zXg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LegoLangGenerator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;LegoLangGenerator.xtend&quot; partName=&quot;LegoLangGenerator.xtend&quot; title=&quot;LegoLangGenerator.xtend&quot; tooltip=&quot;langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/generator/LegoLangGenerator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/generator/LegoLangGenerator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3528&quot; selectionTopPixel=&quot;1909&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;LegoLangGenerator.xtend&quot; partName=&quot;LegoLangGenerator.xtend&quot; title=&quot;LegoLangGenerator.xtend&quot; tooltip=&quot;langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/generator/LegoLangGenerator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/langageCompilation.concrete.syntax/src/langageCompilation/concrete/syntax/generator/LegoLangGenerator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;6&quot; selectionOffset=&quot;6655&quot; selectionTopPixel=&quot;4508&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.xtend.core.Xtend</tags>
@@ -484,7 +484,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HDAJmYUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_0eBYkJlaEeyQhYVwp0_zXg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_HDG4k4UKEeyjYL9BFL_5EQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f6IPIJpJEeyCbY3oPyT_lg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_HDG4k4UKEeyjYL9BFL_5EQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HDAJpoUKEeyjYL9BFL_5EQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -515,7 +515,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HDAwKYUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_0eGREJlaEeyQhYVwp0_zXg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_HDG4OYUKEeyjYL9BFL_5EQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f6MgkJpJEeyCbY3oPyT_lg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_HDG4OYUKEeyjYL9BFL_5EQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HDAwVIUKEeyjYL9BFL_5EQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2885,7 +2885,7 @@
   <addons xmi:id="_HDG5v4UKEeyjYL9BFL_5EQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_HDG5wIUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_HDG5wYUKEeyjYL9BFL_5EQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_ffzDkZpJEeyCbY3oPyT_lg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_HDG5w4UKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_HDG5xIUKEeyjYL9BFL_5EQ" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_HDG5xYUKEeyjYL9BFL_5EQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

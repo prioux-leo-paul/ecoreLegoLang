@@ -16,7 +16,7 @@ Statement returns Statement:
 	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
 
 Expression returns Expression:
-	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation ;
+	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
 
 BinaryOperation returns BinaryOperation:
 	Substraction | Comparaison | Assignement | Division | Multiplication | Addition | MinusEqual | PlusEqual;
@@ -89,8 +89,8 @@ SensorOperation returns SensorOperation:
 
 
 VitesseOperation returns VitesseOperation:
-	(wheelengine=[WheelEngine|FQN])
-	':''vitesse''='
+	'set' 'vitesse''('wheelengine=[WheelEngine|FQN]')'
+	'='
 	right=Expression
 ;
 
@@ -122,9 +122,27 @@ DistanceOperation returns DistanceOperation:
 	'get''distance''('ultrasonicsensor=[UltraSonicSensor|FQN]')'
 ;
 
+BooleanExpression returns BooleanExpression:
+	And | Or
+;
+
+And returns And:
+	{And}
+	'('(left=Expression)
+	('and' right=Expression)?
+	')'
+;
+
+Or returns Or:
+	{Or}
+	'('(left=Expression)
+	('or' right=Expression)?
+	')'
+;
+
 ConditionEtat returns ConditionEtat:
 	'if'
-		(Condition+=Comparaison) ('and' Condition+=Comparaison)* ('or' Condition+=Comparaison)* '{'
+		Condition=BooleanExpression '{'
 			(then+=Statement )*
 		'}'
 		('else{'else+=Statement'}' )?
@@ -137,7 +155,7 @@ EString returns ecore::EString:
 
 WhileLoop returns WhileLoop:
 	'while'
-		LoopCondition=Comparaison
+		LoopCondition=BooleanExpression
 	'{'
 		(statement+=Statement )*
 	'}';

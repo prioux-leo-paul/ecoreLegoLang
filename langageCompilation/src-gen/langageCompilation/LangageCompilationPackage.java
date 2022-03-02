@@ -1287,7 +1287,7 @@ public interface LangageCompilationPackage extends EPackage {
 	int CONDITION_ETAT__ELSE = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2638,6 +2638,171 @@ public interface LangageCompilationPackage extends EPackage {
 	int ANGLE_OPERATION_OPERATION_COUNT = SENSOR_OPERATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link langageCompilation.impl.BooleanExpressionImpl <em>Boolean Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.BooleanExpressionImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getBooleanExpression()
+	 * @generated
+	 */
+	int BOOLEAN_EXPRESSION = 52;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EXPRESSION__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Boolean Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.AndImpl <em>And</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.AndImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getAnd()
+	 * @generated
+	 */
+	int AND = 53;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__NAME = BOOLEAN_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__LEFT = BOOLEAN_EXPRESSION__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__RIGHT = BOOLEAN_EXPRESSION__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_FEATURE_COUNT = BOOLEAN_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_OPERATION_COUNT = BOOLEAN_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.OrImpl <em>Or</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.OrImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getOr()
+	 * @generated
+	 */
+	int OR = 54;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__NAME = BOOLEAN_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__LEFT = BOOLEAN_EXPRESSION__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__RIGHT = BOOLEAN_EXPRESSION__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>Or</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR_FEATURE_COUNT = BOOLEAN_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Or</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR_OPERATION_COUNT = BOOLEAN_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link langageCompilation.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3032,10 +3197,10 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getConditionEtat_Else();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the containment reference '{@link langageCompilation.ConditionEtat#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Condition</em>'.
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
 	 * @see langageCompilation.ConditionEtat#getCondition()
 	 * @see #getConditionEtat()
 	 * @generated
@@ -3554,6 +3719,58 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getAngleOperation_Gyrosensor();
 
 	/**
+	 * Returns the meta object for class '{@link langageCompilation.BooleanExpression <em>Boolean Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Expression</em>'.
+	 * @see langageCompilation.BooleanExpression
+	 * @generated
+	 */
+	EClass getBooleanExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link langageCompilation.BooleanExpression#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see langageCompilation.BooleanExpression#getLeft()
+	 * @see #getBooleanExpression()
+	 * @generated
+	 */
+	EReference getBooleanExpression_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link langageCompilation.BooleanExpression#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see langageCompilation.BooleanExpression#getRight()
+	 * @see #getBooleanExpression()
+	 * @generated
+	 */
+	EReference getBooleanExpression_Right();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.And <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>And</em>'.
+	 * @see langageCompilation.And
+	 * @generated
+	 */
+	EClass getAnd();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.Or <em>Or</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Or</em>'.
+	 * @see langageCompilation.Or
+	 * @generated
+	 */
+	EClass getOr();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3929,7 +4146,7 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference CONDITION_ETAT__ELSE = eINSTANCE.getConditionEtat_Else();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4383,6 +4600,52 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ANGLE_OPERATION__GYROSENSOR = eINSTANCE.getAngleOperation_Gyrosensor();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.BooleanExpressionImpl <em>Boolean Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.BooleanExpressionImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getBooleanExpression()
+		 * @generated
+		 */
+		EClass BOOLEAN_EXPRESSION = eINSTANCE.getBooleanExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOLEAN_EXPRESSION__LEFT = eINSTANCE.getBooleanExpression_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOLEAN_EXPRESSION__RIGHT = eINSTANCE.getBooleanExpression_Right();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.AndImpl <em>And</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.AndImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getAnd()
+		 * @generated
+		 */
+		EClass AND = eINSTANCE.getAnd();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.OrImpl <em>Or</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.OrImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getOr()
+		 * @generated
+		 */
+		EClass OR = eINSTANCE.getOr();
 
 	}
 

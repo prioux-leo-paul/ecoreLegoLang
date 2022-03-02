@@ -3,9 +3,11 @@
 package langageCompilation.impl;
 
 import langageCompilation.Addition;
+import langageCompilation.And;
 import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
+import langageCompilation.BooleanExpression;
 import langageCompilation.Car;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
@@ -31,6 +33,7 @@ import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
 import langageCompilation.Multiplication;
 import langageCompilation.NewEClass43;
+import langageCompilation.Or;
 import langageCompilation.PlusEqual;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
@@ -432,6 +435,27 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * @generated
 	 */
 	private EClass angleOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass andEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1295,6 +1319,51 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBooleanExpression() {
+		return booleanExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBooleanExpression_Left() {
+		return (EReference) booleanExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBooleanExpression_Right() {
+		return (EReference) booleanExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAnd() {
+		return andEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOr() {
+		return orEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LangageCompilationFactory getLangageCompilationFactory() {
 		return (LangageCompilationFactory) getEFactoryInstance();
 	}
@@ -1458,6 +1527,14 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 
 		angleOperationEClass = createEClass(ANGLE_OPERATION);
 		createEReference(angleOperationEClass, ANGLE_OPERATION__GYROSENSOR);
+
+		booleanExpressionEClass = createEClass(BOOLEAN_EXPRESSION);
+		createEReference(booleanExpressionEClass, BOOLEAN_EXPRESSION__LEFT);
+		createEReference(booleanExpressionEClass, BOOLEAN_EXPRESSION__RIGHT);
+
+		andEClass = createEClass(AND);
+
+		orEClass = createEClass(OR);
 	}
 
 	/**
@@ -1538,6 +1615,9 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		ygpsOperationEClass.getESuperTypes().add(this.getSensorOperation());
 		distanceOperationEClass.getESuperTypes().add(this.getSensorOperation());
 		angleOperationEClass.getESuperTypes().add(this.getSensorOperation());
+		booleanExpressionEClass.getESuperTypes().add(this.getExpression());
+		andEClass.getESuperTypes().add(this.getBooleanExpression());
+		orEClass.getESuperTypes().add(this.getBooleanExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1563,7 +1643,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 
 		initEClass(whileLoopEClass, WhileLoop.class, "WhileLoop", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWhileLoop_LoopCondition(), this.getComparaison(), null, "LoopCondition", null, 1, 1,
+		initEReference(getWhileLoop_LoopCondition(), this.getBooleanExpression(), null, "LoopCondition", null, 1, 1,
 				WhileLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1646,7 +1726,7 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEReference(getConditionEtat_Else(), this.getStatement(), null, "else", null, 0, -1, ConditionEtat.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConditionEtat_Condition(), this.getComparaison(), null, "Condition", null, 1, -1,
+		initEReference(getConditionEtat_Condition(), this.getBooleanExpression(), null, "Condition", null, 1, 1,
 				ConditionEtat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1785,6 +1865,19 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEReference(getAngleOperation_Gyrosensor(), this.getGyroSensor(), null, "gyrosensor", null, 1, 1,
 				AngleOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(booleanExpressionEClass, BooleanExpression.class, "BooleanExpression", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBooleanExpression_Left(), this.getExpression(), null, "left", null, 1, 1,
+				BooleanExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBooleanExpression_Right(), this.getExpression(), null, "right", null, 0, 1,
+				BooleanExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
