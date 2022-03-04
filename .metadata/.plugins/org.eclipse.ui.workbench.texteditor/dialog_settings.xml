@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="binaryOperationPython"/>
+		<item key="selection" value="The"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="The"/>
+			<item value="TheString"/>
+			<item value="UnDouble"/>
+			<item value="BreakMotor"/>
+			<item value="bool"/>
+			<item value=" );"/>
+			<item value=" "/>
+			<item value="(&apos;;&apos;)? "/>
+			<item value="Loop"/>
+			<item value="loop"/>
+			<item value="String"/>
 			<item value="binaryOperationPython"/>
 			<item value="term"/>
 			<item value="Doub"/>
 			<item value="SensorRef"/>
-			<item value="comparaisonPython"/>
-			<item value="\t"/>
-			<item value="VariableDeclaration"/>
 		</list>
 		<list key="replacehistory">
+			<item value=" "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="779"/>
-		<item key="DIALOG_Y_ORIGIN" value="180"/>
+		<item key="DIALOG_X_ORIGIN" value="1239"/>
+		<item key="DIALOG_Y_ORIGIN" value="477"/>
 		<item key="DIALOG_WIDTH" value="385"/>
 		<item key="DIALOG_HEIGHT" value="523"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

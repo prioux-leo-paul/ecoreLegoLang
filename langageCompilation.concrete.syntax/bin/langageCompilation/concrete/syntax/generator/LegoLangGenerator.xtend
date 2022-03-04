@@ -62,6 +62,14 @@ import langageCompilation.UltraSonicSensor
 import langageCompilation.BooleanExpression
 import langageCompilation.And
 import langageCompilation.Or
+import langageCompilation.PositionOperation
+import langageCompilation.MotorizedArmEngine
+import langageCompilation.PaintballLauncherEngine
+import langageCompilation.ForceOperation
+import langageCompilation.BreakMotor
+import langageCompilation.Colors
+import langageCompilation.UnColor
+import langageCompilation.TheColor
 
 /**
  * Generates code from your model files on save.
@@ -105,7 +113,7 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 			if (v instanceof ConditionEtat) {
 				var String tmp = 'if(' 
 				tmp += booleanExpressionToPython(v.condition)
-				tmp += ')'
+				tmp += '):'
 				nbTab += 1
 				for(s : v.then){
 						tmp += '\n'+ donneTab(nbTab)  + statementToPython(s)
@@ -144,6 +152,12 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		if( v instanceof WheelEngine ){
 			return 'motor'+v.position + ' = LargeMotor(OUTPUT_'+v.position+')'
 		}
+		if( v instanceof MotorizedArmEngine ){
+			return 'motor'+v.position + ' = LargeMotor(OUTPUT_'+v.position+')'
+		}
+		if( v instanceof PaintballLauncherEngine ){
+			return 'motor'+v.position + ' = LargeMotor(OUTPUT_'+v.position+')'
+		}
 	}
 	def String sensorToPython(Sensor v){
 		if( v instanceof ColorSensor ){
@@ -167,13 +181,19 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 			return v.name + ":int=" + v.initialeValue
 		}
 		if (v instanceof UnString){
-			return v.name + ":str=" + v.initialeValue
+			if ( v.initialeValue === null){
+				return v.name + ":int= None"
+			}
+			return v.name + ":str=" + '"' + v.initialeValue + '"'
 		}
 		if (v instanceof UnBoolean){
-			return v.name + ":bool=" + v.initialeValue
+			return v.name + ":bool=" + v.initialeValue.toString().substring(0, 1).toUpperCase() +  v.initialeValue.toString().substring(1)
 		}
 		if (v instanceof UnDouble){
 			return v.name + ":double=" + v.initialeValue1 + "." + v.initialeValue2
+		}
+		if (v instanceof UnColor){
+			return v.name + ":str=" + colorToPython(v.initialValue)
 		}
 	}
 	
@@ -184,11 +204,14 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		if(v instanceof TheInt){
 			return v.value.toString()
 		}
+		if(v instanceof TheColor){
+			return colorToPython(v.value)
+		}
 		if(v instanceof TheBoolean){
-			return v.value.toString()
+			return v.value.toString().substring(0, 1).toUpperCase() +  v.value.toString().substring(1)
 		}
 		if(v instanceof TheString){
-			return v.value
+			return '"'+v.value.toString()+'"'
 		}
 		if(v instanceof TheDouble){
 			return v.value1.toString() + '.' + v.value2.toString()
@@ -202,21 +225,28 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		if(v instanceof SensorOperation){
 			return sensorOperationToPython(v)
 		}
-		if(v instanceof BooleanExpression)
+		if(v instanceof BooleanExpression){
 			return booleanExpressionToPython(v)
+			}
+		if (v instanceof BreakMotor){
+			return 'motor' + v.engine.position +'.off(brake=True)' 
+		}
 	}
 	
+	def colorToPython(Colors c){
+		return '"' + c.toString().substring(0, 1).toUpperCase() +  c.toString().substring(1) +'"'
+	}
 	def booleanExpressionToPython(BooleanExpression v){
 		if( v instanceof And){
 			var String tmp = expressionToPython(v.left)
-			if (!v.right.equals(null))
+			if (v.right !== null)
 				tmp += ' and '+expressionToPython(v.right)
 			return tmp
 			
 		}
 		if( v instanceof Or){
 			var String tmp = expressionToPython(v.left)
-			if (!v.right.equals(null))
+			if (v.right !== null)
 				tmp += ' or '+expressionToPython(v.right)
 			return tmp
 		}
@@ -250,29 +280,36 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 		if(v instanceof VitesseOperation){
 			return 'motor'+v.wheelengine.position+'.on(' + expressionToPython(v.right)+')'
 		}
+		if(v instanceof PositionOperation){
+			return 'motor'+v.motorizedarmengine.position+'.on_to_position(20,(' + expressionToPython(v.right)+'))'
+		}
+		if(v instanceof ForceOperation){
+			return 'motor'+v.paintballlauncherengine.position+'.on_for_rotations(100,(-' + expressionToPython(v.right)+'))\n'+'motor'+v.paintballlauncherengine.position+'.on_for_rotations(100,(' + expressionToPython(v.right)+'))'
+		}
+		
 	}
 	
 	def String binaryOperationPython(BinaryOperation v){
 		if(v instanceof Multiplication){
-			return expressionToPython(v.left) + '*' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' * ' + expressionToPython(v.right)
 		}
 		if(v instanceof Addition){
-			return expressionToPython(v.left) + '+' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' + ' + expressionToPython(v.right)
 		}	
 		if(v instanceof Division){
-			return expressionToPython(v.left) + '/' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' / ' + expressionToPython(v.right)
 		}
 		if(v instanceof Assignement){
-			return expressionToPython(v.left) + '=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' = ' + expressionToPython(v.right)
 		}
 		if(v instanceof MinusEqual){
-			return expressionToPython(v.left) + '-=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' -= ' + expressionToPython(v.right)
 		}
 		if(v instanceof PlusEqual){
-			return expressionToPython(v.left) + '+=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' += ' + expressionToPython(v.right)
 		}
 		if(v instanceof Substraction){
-			return expressionToPython(v.left) + '-' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' - ' + expressionToPython(v.right)
 		}
 		if(v instanceof Comparaison){
 			return comparaisonPython(v)
@@ -281,22 +318,22 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 	
 	def String comparaisonPython(Comparaison v){
 		if(v instanceof GT){
-			return expressionToPython(v.left) + '>' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' > ' + expressionToPython(v.right)
 		}
 		if(v instanceof LT){
-			return expressionToPython(v.left) + '<' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' < ' + expressionToPython(v.right)
 		}
 		if(v instanceof LTorEqual){
-			return expressionToPython(v.left) + '<=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' <= ' + expressionToPython(v.right)
 		}
 		if(v instanceof GTorEqual){
-			return expressionToPython(v.left) + '>=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' >= ' + expressionToPython(v.right)
 		}
 		if(v instanceof Equal){
-			return expressionToPython(v.left) + '==' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' == ' + expressionToPython(v.right)
 		}
 		if(v instanceof Different){
-			return expressionToPython(v.left) + '!=' + expressionToPython(v.right)
+			return expressionToPython(v.left) + ' != ' + expressionToPython(v.right)
 		}
 	}
 	

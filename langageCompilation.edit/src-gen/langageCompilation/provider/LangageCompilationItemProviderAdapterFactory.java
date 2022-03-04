@@ -1085,6 +1085,213 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.MotorizedArmEngine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MotorizedArmEngineItemProvider motorizedArmEngineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.MotorizedArmEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMotorizedArmEngineAdapter() {
+		if (motorizedArmEngineItemProvider == null) {
+			motorizedArmEngineItemProvider = new MotorizedArmEngineItemProvider(this);
+		}
+
+		return motorizedArmEngineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.PositionOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PositionOperationItemProvider positionOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.PositionOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPositionOperationAdapter() {
+		if (positionOperationItemProvider == null) {
+			positionOperationItemProvider = new PositionOperationItemProvider(this);
+		}
+
+		return positionOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.PaintballLauncherEngine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PaintballLauncherEngineItemProvider paintballLauncherEngineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.PaintballLauncherEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPaintballLauncherEngineAdapter() {
+		if (paintballLauncherEngineItemProvider == null) {
+			paintballLauncherEngineItemProvider = new PaintballLauncherEngineItemProvider(this);
+		}
+
+		return paintballLauncherEngineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.ForceOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ForceOperationItemProvider forceOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.ForceOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createForceOperationAdapter() {
+		if (forceOperationItemProvider == null) {
+			forceOperationItemProvider = new ForceOperationItemProvider(this);
+		}
+
+		return forceOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.BreakMotor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BreakMotorItemProvider breakMotorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.BreakMotor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBreakMotorAdapter() {
+		if (breakMotorItemProvider == null) {
+			breakMotorItemProvider = new BreakMotorItemProvider(this);
+		}
+
+		return breakMotorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorEqual} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorEqualItemProvider colorEqualItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.ColorEqual}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorEqualAdapter() {
+		if (colorEqualItemProvider == null) {
+			colorEqualItemProvider = new ColorEqualItemProvider(this);
+		}
+
+		return colorEqualItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorNotEqual} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorNotEqualItemProvider colorNotEqualItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.ColorNotEqual}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorNotEqualAdapter() {
+		if (colorNotEqualItemProvider == null) {
+			colorNotEqualItemProvider = new ColorNotEqualItemProvider(this);
+		}
+
+		return colorNotEqualItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.UnColor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnColorItemProvider unColorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.UnColor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnColorAdapter() {
+		if (unColorItemProvider == null) {
+			unColorItemProvider = new UnColorItemProvider(this);
+		}
+
+		return unColorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.TheColor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TheColorItemProvider theColorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.TheColor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTheColorAdapter() {
+		if (theColorItemProvider == null) {
+			theColorItemProvider = new TheColorItemProvider(this);
+		}
+
+		return theColorItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1271,6 +1478,24 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			andItemProvider.dispose();
 		if (orItemProvider != null)
 			orItemProvider.dispose();
+		if (motorizedArmEngineItemProvider != null)
+			motorizedArmEngineItemProvider.dispose();
+		if (positionOperationItemProvider != null)
+			positionOperationItemProvider.dispose();
+		if (paintballLauncherEngineItemProvider != null)
+			paintballLauncherEngineItemProvider.dispose();
+		if (forceOperationItemProvider != null)
+			forceOperationItemProvider.dispose();
+		if (breakMotorItemProvider != null)
+			breakMotorItemProvider.dispose();
+		if (colorEqualItemProvider != null)
+			colorEqualItemProvider.dispose();
+		if (colorNotEqualItemProvider != null)
+			colorNotEqualItemProvider.dispose();
+		if (unColorItemProvider != null)
+			unColorItemProvider.dispose();
+		if (theColorItemProvider != null)
+			theColorItemProvider.dispose();
 	}
 
 }

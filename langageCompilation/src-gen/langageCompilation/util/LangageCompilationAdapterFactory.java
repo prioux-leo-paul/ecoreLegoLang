@@ -342,6 +342,56 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseMotorizedArmEngine(MotorizedArmEngine object) {
+			return createMotorizedArmEngineAdapter();
+		}
+
+		@Override
+		public Adapter casePositionOperation(PositionOperation object) {
+			return createPositionOperationAdapter();
+		}
+
+		@Override
+		public Adapter casePaintballLauncherEngine(PaintballLauncherEngine object) {
+			return createPaintballLauncherEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseForceOperation(ForceOperation object) {
+			return createForceOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseBreakMotor(BreakMotor object) {
+			return createBreakMotorAdapter();
+		}
+
+		@Override
+		public Adapter caseColorExpression(ColorExpression object) {
+			return createColorExpressionAdapter();
+		}
+
+		@Override
+		public Adapter caseColorEqual(ColorEqual object) {
+			return createColorEqualAdapter();
+		}
+
+		@Override
+		public Adapter caseColorNotEqual(ColorNotEqual object) {
+			return createColorNotEqualAdapter();
+		}
+
+		@Override
+		public Adapter caseUnColor(UnColor object) {
+			return createUnColorAdapter();
+		}
+
+		@Override
+		public Adapter caseTheColor(TheColor object) {
+			return createTheColorAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1127,6 +1177,146 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOrAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.MotorizedArmEngine <em>Motorized Arm Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.MotorizedArmEngine
+	 * @generated
+	 */
+	public Adapter createMotorizedArmEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.PositionOperation <em>Position Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.PositionOperation
+	 * @generated
+	 */
+	public Adapter createPositionOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.PaintballLauncherEngine <em>Paintball Launcher Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.PaintballLauncherEngine
+	 * @generated
+	 */
+	public Adapter createPaintballLauncherEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ForceOperation <em>Force Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ForceOperation
+	 * @generated
+	 */
+	public Adapter createForceOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.BreakMotor <em>Break Motor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.BreakMotor
+	 * @generated
+	 */
+	public Adapter createBreakMotorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorExpression <em>Color Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ColorExpression
+	 * @generated
+	 */
+	public Adapter createColorExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorEqual <em>Color Equal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ColorEqual
+	 * @generated
+	 */
+	public Adapter createColorEqualAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorNotEqual <em>Color Not Equal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.ColorNotEqual
+	 * @generated
+	 */
+	public Adapter createColorNotEqualAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.UnColor <em>Un Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.UnColor
+	 * @generated
+	 */
+	public Adapter createUnColorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.TheColor <em>The Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.TheColor
+	 * @generated
+	 */
+	public Adapter createTheColorAdapter() {
 		return null;
 	}
 

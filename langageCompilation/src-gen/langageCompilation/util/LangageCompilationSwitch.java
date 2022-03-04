@@ -703,6 +703,124 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case LangageCompilationPackage.MOTORIZED_ARM_ENGINE: {
+			MotorizedArmEngine motorizedArmEngine = (MotorizedArmEngine) theEObject;
+			T result = caseMotorizedArmEngine(motorizedArmEngine);
+			if (result == null)
+				result = caseEngine(motorizedArmEngine);
+			if (result == null)
+				result = caseStatement(motorizedArmEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.POSITION_OPERATION: {
+			PositionOperation positionOperation = (PositionOperation) theEObject;
+			T result = casePositionOperation(positionOperation);
+			if (result == null)
+				result = caseEngineOperation(positionOperation);
+			if (result == null)
+				result = caseExpression(positionOperation);
+			if (result == null)
+				result = caseStatement(positionOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.PAINTBALL_LAUNCHER_ENGINE: {
+			PaintballLauncherEngine paintballLauncherEngine = (PaintballLauncherEngine) theEObject;
+			T result = casePaintballLauncherEngine(paintballLauncherEngine);
+			if (result == null)
+				result = caseEngine(paintballLauncherEngine);
+			if (result == null)
+				result = caseStatement(paintballLauncherEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.FORCE_OPERATION: {
+			ForceOperation forceOperation = (ForceOperation) theEObject;
+			T result = caseForceOperation(forceOperation);
+			if (result == null)
+				result = caseEngineOperation(forceOperation);
+			if (result == null)
+				result = caseExpression(forceOperation);
+			if (result == null)
+				result = caseStatement(forceOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.BREAK_MOTOR: {
+			BreakMotor breakMotor = (BreakMotor) theEObject;
+			T result = caseBreakMotor(breakMotor);
+			if (result == null)
+				result = caseExpression(breakMotor);
+			if (result == null)
+				result = caseStatement(breakMotor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.COLOR_EXPRESSION: {
+			ColorExpression colorExpression = (ColorExpression) theEObject;
+			T result = caseColorExpression(colorExpression);
+			if (result == null)
+				result = caseExpression(colorExpression);
+			if (result == null)
+				result = caseStatement(colorExpression);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.COLOR_EQUAL: {
+			ColorEqual colorEqual = (ColorEqual) theEObject;
+			T result = caseColorEqual(colorEqual);
+			if (result == null)
+				result = caseColorExpression(colorEqual);
+			if (result == null)
+				result = caseExpression(colorEqual);
+			if (result == null)
+				result = caseStatement(colorEqual);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.COLOR_NOT_EQUAL: {
+			ColorNotEqual colorNotEqual = (ColorNotEqual) theEObject;
+			T result = caseColorNotEqual(colorNotEqual);
+			if (result == null)
+				result = caseColorExpression(colorNotEqual);
+			if (result == null)
+				result = caseExpression(colorNotEqual);
+			if (result == null)
+				result = caseStatement(colorNotEqual);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.UN_COLOR: {
+			UnColor unColor = (UnColor) theEObject;
+			T result = caseUnColor(unColor);
+			if (result == null)
+				result = caseVariable(unColor);
+			if (result == null)
+				result = caseStatement(unColor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.THE_COLOR: {
+			TheColor theColor = (TheColor) theEObject;
+			T result = caseTheColor(theColor);
+			if (result == null)
+				result = caseExpression(theColor);
+			if (result == null)
+				result = caseStatement(theColor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1530,6 +1648,156 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOr(Or object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Motorized Arm Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Motorized Arm Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMotorizedArmEngine(MotorizedArmEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Position Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Position Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositionOperation(PositionOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Paintball Launcher Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Paintball Launcher Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePaintballLauncherEngine(PaintballLauncherEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Force Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Force Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForceOperation(ForceOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Break Motor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Break Motor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBreakMotor(BreakMotor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorExpression(ColorExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Equal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Equal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorEqual(ColorEqual object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Color Not Equal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Color Not Equal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseColorNotEqual(ColorNotEqual object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Un Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Un Color</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnColor(UnColor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>The Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>The Color</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTheColor(TheColor object) {
 		return null;
 	}
 

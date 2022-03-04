@@ -298,6 +298,33 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createMotorizedArmEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createPaintballLauncherEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createUnColor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
 	}
 
 	/**

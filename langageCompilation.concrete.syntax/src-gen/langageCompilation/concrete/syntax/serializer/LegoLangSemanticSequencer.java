@@ -9,6 +9,7 @@ import langageCompilation.Addition;
 import langageCompilation.And;
 import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
+import langageCompilation.BreakMotor;
 import langageCompilation.Car;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
@@ -17,6 +18,7 @@ import langageCompilation.Different;
 import langageCompilation.DistanceOperation;
 import langageCompilation.Division;
 import langageCompilation.Equal;
+import langageCompilation.ForceOperation;
 import langageCompilation.GPSSensor;
 import langageCompilation.GT;
 import langageCompilation.GTorEqual;
@@ -28,18 +30,23 @@ import langageCompilation.LangageCompilationPackage;
 import langageCompilation.LaserSensor;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
+import langageCompilation.MotorizedArmEngine;
 import langageCompilation.Multiplication;
 import langageCompilation.Or;
+import langageCompilation.PaintballLauncherEngine;
 import langageCompilation.PlusEqual;
+import langageCompilation.PositionOperation;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
+import langageCompilation.TheColor;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
 import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
+import langageCompilation.UnColor;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
 import langageCompilation.UnString;
@@ -86,6 +93,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.ASSIGNEMENT:
 				sequence_Assignement(context, (Assignement) semanticObject); 
 				return; 
+			case LangageCompilationPackage.BREAK_MOTOR:
+				sequence_BreakMotor(context, (BreakMotor) semanticObject); 
+				return; 
 			case LangageCompilationPackage.CAR:
 				sequence_Car(context, (Car) semanticObject); 
 				return; 
@@ -109,6 +119,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.EQUAL:
 				sequence_Equal(context, (Equal) semanticObject); 
+				return; 
+			case LangageCompilationPackage.FORCE_OPERATION:
+				sequence_ForceOperation(context, (ForceOperation) semanticObject); 
 				return; 
 			case LangageCompilationPackage.GPS_SENSOR:
 				sequence_GPSSensor(context, (GPSSensor) semanticObject); 
@@ -140,14 +153,23 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case LangageCompilationPackage.MINUS_EQUAL:
 				sequence_MinusEqual(context, (MinusEqual) semanticObject); 
 				return; 
+			case LangageCompilationPackage.MOTORIZED_ARM_ENGINE:
+				sequence_MotorizedArmEngine(context, (MotorizedArmEngine) semanticObject); 
+				return; 
 			case LangageCompilationPackage.MULTIPLICATION:
 				sequence_Multiplication(context, (Multiplication) semanticObject); 
 				return; 
 			case LangageCompilationPackage.OR:
 				sequence_Or(context, (Or) semanticObject); 
 				return; 
+			case LangageCompilationPackage.PAINTBALL_LAUNCHER_ENGINE:
+				sequence_PaintballLauncherEngine(context, (PaintballLauncherEngine) semanticObject); 
+				return; 
 			case LangageCompilationPackage.PLUS_EQUAL:
 				sequence_PlusEqual(context, (PlusEqual) semanticObject); 
+				return; 
+			case LangageCompilationPackage.POSITION_OPERATION:
+				sequence_PositionOperation(context, (PositionOperation) semanticObject); 
 				return; 
 			case LangageCompilationPackage.PROGRAM:
 				sequence_Program(context, (Program) semanticObject); 
@@ -160,6 +182,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.THE_BOOLEAN:
 				sequence_TheBoolean(context, (TheBoolean) semanticObject); 
+				return; 
+			case LangageCompilationPackage.THE_COLOR:
+				sequence_TheColor(context, (TheColor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.THE_DOUBLE:
 				sequence_TheDouble(context, (TheDouble) semanticObject); 
@@ -175,6 +200,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.UN_BOOLEAN:
 				sequence_UnBoolean(context, (UnBoolean) semanticObject); 
+				return; 
+			case LangageCompilationPackage.UN_COLOR:
+				sequence_UnColor(context, (UnColor) semanticObject); 
 				return; 
 			case LangageCompilationPackage.UN_DOUBLE:
 				sequence_UnDouble(context, (UnDouble) semanticObject); 
@@ -294,6 +322,26 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns BreakMotor
+	 *     Expression returns BreakMotor
+	 *     BreakMotor returns BreakMotor
+	 *
+	 * Constraint:
+	 *     engine=[Engine|FQN]
+	 */
+	protected void sequence_BreakMotor(ISerializationContext context, BreakMotor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.BREAK_MOTOR__ENGINE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.BREAK_MOTOR__ENGINE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBreakMotorAccess().getEngineEngineFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.BREAK_MOTOR__ENGINE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns Car
 	 *     Car returns Car
 	 *
@@ -344,7 +392,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getColorSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getColorSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getColorSensorAccess().getPositionEIntParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -459,6 +507,30 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns ForceOperation
+	 *     Expression returns ForceOperation
+	 *     EngineOperation returns ForceOperation
+	 *     ForceOperation returns ForceOperation
+	 *
+	 * Constraint:
+	 *     (paintballlauncherengine=[PaintballLauncherEngine|FQN] right=Expression)
+	 */
+	protected void sequence_ForceOperation(ISerializationContext context, ForceOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.FORCE_OPERATION__PAINTBALLLAUNCHERENGINE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.FORCE_OPERATION__PAINTBALLLAUNCHERENGINE));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getForceOperationAccess().getPaintballlauncherenginePaintballLauncherEngineFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.FORCE_OPERATION__PAINTBALLLAUNCHERENGINE, false));
+		feeder.accept(grammarAccess.getForceOperationAccess().getRightExpressionParserRuleCall_6_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns GPSSensor
 	 *     Sensor returns GPSSensor
 	 *     GPSSensor returns GPSSensor
@@ -475,7 +547,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGPSSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGPSSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getGPSSensorAccess().getPositionEIntParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -548,7 +620,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGyroSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGyroSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getGyroSensorAccess().getPositionEIntParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -642,7 +714,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLaserSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLaserSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getLaserSensorAccess().getPositionEIntParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -680,6 +752,29 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMinusEqualAccess().getLeftExpressionParserRuleCall_2_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getMinusEqualAccess().getRightExpressionParserRuleCall_4_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns MotorizedArmEngine
+	 *     Engine returns MotorizedArmEngine
+	 *     MotorizedArmEngine returns MotorizedArmEngine
+	 *
+	 * Constraint:
+	 *     (name=EString position=EString)
+	 */
+	protected void sequence_MotorizedArmEngine(ISerializationContext context, MotorizedArmEngine semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMotorizedArmEngineAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMotorizedArmEngineAccess().getPositionEStringParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -725,6 +820,29 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns PaintballLauncherEngine
+	 *     Engine returns PaintballLauncherEngine
+	 *     PaintballLauncherEngine returns PaintballLauncherEngine
+	 *
+	 * Constraint:
+	 *     (name=EString position=EString)
+	 */
+	protected void sequence_PaintballLauncherEngine(ISerializationContext context, PaintballLauncherEngine semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.STATEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE__POSITION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPaintballLauncherEngineAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getPaintballLauncherEngineAccess().getPositionEStringParserRuleCall_3_0(), semanticObject.getPosition());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns PlusEqual
 	 *     Expression returns PlusEqual
 	 *     BinaryOperation returns PlusEqual
@@ -743,6 +861,30 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getPlusEqualAccess().getLeftExpressionParserRuleCall_2_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getPlusEqualAccess().getRightExpressionParserRuleCall_4_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns PositionOperation
+	 *     Expression returns PositionOperation
+	 *     EngineOperation returns PositionOperation
+	 *     PositionOperation returns PositionOperation
+	 *
+	 * Constraint:
+	 *     (motorizedarmengine=[MotorizedArmEngine|FQN] right=Expression)
+	 */
+	protected void sequence_PositionOperation(ISerializationContext context, PositionOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.POSITION_OPERATION__MOTORIZEDARMENGINE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.POSITION_OPERATION__MOTORIZEDARMENGINE));
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPositionOperationAccess().getMotorizedarmengineMotorizedArmEngineFQNParserRuleCall_3_0_1(), semanticObject.eGet(LangageCompilationPackage.Literals.POSITION_OPERATION__MOTORIZEDARMENGINE, false));
+		feeder.accept(grammarAccess.getPositionOperationAccess().getRightExpressionParserRuleCall_6_0(), semanticObject.getRight());
 		feeder.finish();
 	}
 	
@@ -826,6 +968,26 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns TheColor
+	 *     Expression returns TheColor
+	 *     TheColor returns TheColor
+	 *
+	 * Constraint:
+	 *     value=Colors
+	 */
+	protected void sequence_TheColor(ISerializationContext context, TheColor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.THE_COLOR__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.THE_COLOR__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTheColorAccess().getValueColorsEnumRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns TheDouble
 	 *     Expression returns TheDouble
 	 *     TheDouble returns TheDouble
@@ -874,7 +1036,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     TheString returns TheString
 	 *
 	 * Constraint:
-	 *     value=EString
+	 *     value=STRING
 	 */
 	protected void sequence_TheString(ISerializationContext context, TheString semanticObject) {
 		if (errorAcceptor != null) {
@@ -882,7 +1044,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.THE_STRING__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTheStringAccess().getValueEStringParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getTheStringAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -905,7 +1067,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getUltraSonicSensorAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getUltraSonicSensorAccess().getPositionEIntParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getUltraSonicSensorAccess().getPositionEIntParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	
@@ -926,12 +1088,26 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Statement returns UnColor
+	 *     Variable returns UnColor
+	 *     UnColor returns UnColor
+	 *
+	 * Constraint:
+	 *     (isConst?='const'? name=EString initialValue=Colors?)
+	 */
+	protected void sequence_UnColor(ISerializationContext context, UnColor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns UnDouble
 	 *     Variable returns UnDouble
 	 *     UnDouble returns UnDouble
 	 *
 	 * Constraint:
-	 *     (isConst?='const'? name=EString (initialeValue1=EInt initialeValue2=EInt?)?)
+	 *     (isConst?='const'? name=EString (initialeValue1=EInt initialeValue2=EInt)?)
 	 */
 	protected void sequence_UnDouble(ISerializationContext context, UnDouble semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -959,7 +1135,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     UnString returns UnString
 	 *
 	 * Constraint:
-	 *     (isConst?='const'? name=EString initialeValue=EString?)
+	 *     (isConst?='const'? name=EString initialeValue=STRING?)
 	 */
 	protected void sequence_UnString(ISerializationContext context, UnString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1028,7 +1204,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getWheelEngineAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getWheelEngineAccess().getPositionEStringParserRuleCall_2_0(), semanticObject.getPosition());
+		feeder.accept(grammarAccess.getWheelEngineAccess().getPositionEStringParserRuleCall_3_0(), semanticObject.getPosition());
 		feeder.finish();
 	}
 	

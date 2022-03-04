@@ -9,64 +9,81 @@ Program returns Program:
 	'Program'
 	name=EString
 	'{'
-		(statement+=Statement)* 
+		(statement+=Statement)*  (';')? 
 	'}';
 
 Statement returns Statement:
 	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
 
 Expression returns Expression:
-	VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
+	VariableRef | BinaryOperation | TheString | TheColor | TheDouble | TheInt | TheBoolean | EngineOperation | BreakMotor | SensorOperation | BooleanExpression ;
 
 BinaryOperation returns BinaryOperation:
 	Substraction | Comparaison | Assignement | Division | Multiplication | Addition | MinusEqual | PlusEqual;
 	
 Variable returns Variable:
-	UnInteger | UnString | UnBoolean | UnDouble;
+	UnInteger | UnString | UnBoolean | UnDouble | UnColor;
 
 Comparaison returns Comparaison:
 	  GT | Equal | LT | Different | GTorEqual | LTorEqual ;
 
 Engine returns Engine:
-	WheelEngine;
+	WheelEngine | MotorizedArmEngine | PaintballLauncherEngine;
 
 Sensor returns Sensor:
 	LaserSensor | ColorSensor | UltraSonicSensor | GyroSensor | GPSSensor;
 
 WheelEngine returns WheelEngine:
 	'WheelEngine'
-	name=EString
+	name=EString 
+	'on'
 	position=EString
-	
+;
+MotorizedArmEngine returns MotorizedArmEngine:
+	'MotorizedArmEngine'
+	name=EString 
+	'on'
+	position=EString
 ;
 
+PaintballLauncherEngine returns PaintballLauncherEngine:
+	'PaintballLauncherEngine'
+	name=EString 
+	'on'
+	position=EString
+;
 ColorSensor returns ColorSensor:
 	'ColorSensor'
 	name=EString
+	'on'
 	position=EInt
 ;
 
 LaserSensor returns LaserSensor:
 	'LaserSensor'
 	name=EString
+	'on'
 	position=EInt
 ;
 
 GPSSensor returns GPSSensor:
 	'GPSSensor'
 	name=EString
+	'on'
 	position=EInt
 ;
 
 GyroSensor returns GyroSensor:
 	'GyroSensor'
 	name=EString
+	'on'
 	position=EInt
 ;
 
 UltraSonicSensor returns UltraSonicSensor:
 	'UltraSonicSensor'
 	name=EString
+	'on'
 	position=EInt
 ;
 
@@ -81,12 +98,11 @@ Car returns Car:
 ;
 
 EngineOperation returns EngineOperation:
-	 VitesseOperation
+	 VitesseOperation | PositionOperation | ForceOperation 
 ;
 
 SensorOperation returns SensorOperation:
 	RangeOperation | ColorOperation | IntensityOperation | XGPSOperation | YGPSOperation | AngleOperation | DistanceOperation ;
-
 
 VitesseOperation returns VitesseOperation:
 	'set' 'vitesse''('wheelengine=[WheelEngine|FQN]')'
@@ -94,6 +110,20 @@ VitesseOperation returns VitesseOperation:
 	right=Expression
 ;
 
+BreakMotor returns BreakMotor:
+	'break' 'motor' '('engine=[Engine|FQN]')'
+;
+PositionOperation returns PositionOperation:
+	'set' 'degres''('motorizedarmengine=[MotorizedArmEngine|FQN]')'
+	'='
+	right=Expression
+;
+
+ForceOperation returns ForceOperation:
+	'set' 'strength''('paintballlauncherengine=[PaintballLauncherEngine|FQN]')'
+	'='
+	right=Expression
+;
 ColorOperation returns ColorOperation:
 	'get''color''('colorsensor=[ColorSensor|FQN]')'
 ;
@@ -149,7 +179,7 @@ ConditionEtat returns ConditionEtat:
 	;
 
 EString returns ecore::EString:
-	STRING | ID;
+	FQN | ID;
 
 
 
@@ -164,7 +194,7 @@ MethodePrint returns MethodePrint:
 	{MethodePrint}
 	'print('
 	(expression+=Expression ",")+
-	');';
+	')';
 	
 VariableRef returns VariableRef:
 	variable=[Variable|EString]
@@ -217,20 +247,20 @@ GTorEqual returns GTorEqual:
 	
 Assignement returns Assignement:
 	{Assignement}
-	'('left=Expression
-	'=' right= Expression ');' 
+	'set' left=Expression
+	'=' right= Expression  
 	;
 
 PlusEqual returns PlusEqual:
 	{PlusEqual}
 	'('left=Expression
-	'+=' right= Expression ');' 
+	'+=' right= Expression ')' 
 	;
 
 MinusEqual returns MinusEqual:
 	{MinusEqual}
 	'('left=Expression
-	'-=' right= Expression ');' 
+	'-=' right= Expression ')'
 	;
 
 EBoolean returns ecore::EBoolean:
@@ -241,28 +271,35 @@ UnInteger returns UnInteger:
 	(isConst?='const')?
 	'int'
 	name=EString
-	('=' initialeValue=EInt)? ";";
+	('=' initialeValue=EInt)? ;
 
 UnDouble returns UnDouble:
 	{UnDouble}
 	(isConst?='const')?
 	'double'
 	name=EString
-	('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";";
+	('=' initialeValue1=EInt '.' initialeValue2=EInt)? ;
 
 UnBoolean returns UnBoolean:
 	{UnBoolean}
 	(isConst?='const')?
 	'bool'
 	name=EString
-	('=' initialeValue=EBoolean)? ";"; 
+	('=' initialeValue=EBoolean)?; 
 	
 UnString returns UnString:
 	{UnString}
 	(isConst?='const')?
 	'string'
 	name=EString
-	('=' initialeValue=EString)? ";";
+	('=' initialeValue=STRING)?;
+	
+UnColor returns UnColor:
+	{UnColor}
+	(isConst?='const')?
+	'color'
+	name=EString
+	('=' initialValue =Colors )?;
 
 TheDouble returns TheDouble:
 	{TheDouble}
@@ -278,10 +315,18 @@ TheBoolean returns TheBoolean:
 
 TheString returns TheString:
 	{TheString}
-	value=EString;
+	value=STRING;
+TheColor returns TheColor:
+	{TheColor}
+	value=Colors;
 
+enum Colors:
+black = "black" | white = "white"	
+;
 FQN :
 	ID('.'ID)*
 ;
 EInt returns ecore::EInt:
 	'-'? INT;
+	
+

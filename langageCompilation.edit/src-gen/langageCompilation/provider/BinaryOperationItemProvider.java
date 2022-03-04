@@ -229,6 +229,24 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createOr()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVariableRef()));
 
@@ -312,6 +330,24 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
 	}
 
 	/**

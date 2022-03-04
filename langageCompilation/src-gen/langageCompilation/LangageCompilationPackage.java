@@ -4,6 +4,7 @@ package langageCompilation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -2803,6 +2804,530 @@ public interface LangageCompilationPackage extends EPackage {
 	int OR_OPERATION_COUNT = BOOLEAN_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link langageCompilation.impl.MotorizedArmEngineImpl <em>Motorized Arm Engine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.MotorizedArmEngineImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getMotorizedArmEngine()
+	 * @generated
+	 */
+	int MOTORIZED_ARM_ENGINE = 55;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTORIZED_ARM_ENGINE__NAME = ENGINE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTORIZED_ARM_ENGINE__POSITION = ENGINE__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>Motorized Arm Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTORIZED_ARM_ENGINE_FEATURE_COUNT = ENGINE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Motorized Arm Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTORIZED_ARM_ENGINE_OPERATION_COUNT = ENGINE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.PositionOperationImpl <em>Position Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.PositionOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPositionOperation()
+	 * @generated
+	 */
+	int POSITION_OPERATION = 56;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION__NAME = ENGINE_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION__RIGHT = ENGINE_OPERATION__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Motorizedarmengine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION__MOTORIZEDARMENGINE = ENGINE_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Position Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_FEATURE_COUNT = ENGINE_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Position Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_OPERATION_OPERATION_COUNT = ENGINE_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.PaintballLauncherEngineImpl <em>Paintball Launcher Engine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.PaintballLauncherEngineImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPaintballLauncherEngine()
+	 * @generated
+	 */
+	int PAINTBALL_LAUNCHER_ENGINE = 57;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAINTBALL_LAUNCHER_ENGINE__NAME = ENGINE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAINTBALL_LAUNCHER_ENGINE__POSITION = ENGINE__POSITION;
+
+	/**
+	 * The number of structural features of the '<em>Paintball Launcher Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAINTBALL_LAUNCHER_ENGINE_FEATURE_COUNT = ENGINE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Paintball Launcher Engine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAINTBALL_LAUNCHER_ENGINE_OPERATION_COUNT = ENGINE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.ForceOperationImpl <em>Force Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.ForceOperationImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getForceOperation()
+	 * @generated
+	 */
+	int FORCE_OPERATION = 58;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORCE_OPERATION__NAME = ENGINE_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORCE_OPERATION__RIGHT = ENGINE_OPERATION__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Paintballlauncherengine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORCE_OPERATION__PAINTBALLLAUNCHERENGINE = ENGINE_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Force Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORCE_OPERATION_FEATURE_COUNT = ENGINE_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Force Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORCE_OPERATION_OPERATION_COUNT = ENGINE_OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.BreakMotorImpl <em>Break Motor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.BreakMotorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getBreakMotor()
+	 * @generated
+	 */
+	int BREAK_MOTOR = 59;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREAK_MOTOR__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Engine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREAK_MOTOR__ENGINE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Break Motor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREAK_MOTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Break Motor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREAK_MOTOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.ColorExpressionImpl <em>Color Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.ColorExpressionImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorExpression()
+	 * @generated
+	 */
+	int COLOR_EXPRESSION = 60;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EXPRESSION__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Color Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Color Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.ColorEqualImpl <em>Color Equal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.ColorEqualImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorEqual()
+	 * @generated
+	 */
+	int COLOR_EQUAL = 61;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EQUAL__NAME = COLOR_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EQUAL__LEFT = COLOR_EXPRESSION__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EQUAL__RIGHT = COLOR_EXPRESSION__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>Color Equal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EQUAL_FEATURE_COUNT = COLOR_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Color Equal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_EQUAL_OPERATION_COUNT = COLOR_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.ColorNotEqualImpl <em>Color Not Equal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.ColorNotEqualImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorNotEqual()
+	 * @generated
+	 */
+	int COLOR_NOT_EQUAL = 62;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_NOT_EQUAL__NAME = COLOR_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_NOT_EQUAL__LEFT = COLOR_EXPRESSION__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_NOT_EQUAL__RIGHT = COLOR_EXPRESSION__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>Color Not Equal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_NOT_EQUAL_FEATURE_COUNT = COLOR_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Color Not Equal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLOR_NOT_EQUAL_OPERATION_COUNT = COLOR_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.UnColorImpl <em>Un Color</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.UnColorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnColor()
+	 * @generated
+	 */
+	int UN_COLOR = 63;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_COLOR__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Const</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_COLOR__IS_CONST = VARIABLE__IS_CONST;
+
+	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_COLOR__INITIAL_VALUE = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Un Color</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_COLOR_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Un Color</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_COLOR_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.impl.TheColorImpl <em>The Color</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.TheColorImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getTheColor()
+	 * @generated
+	 */
+	int THE_COLOR = 64;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THE_COLOR__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THE_COLOR__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>The Color</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THE_COLOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>The Color</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THE_COLOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link langageCompilation.Colors <em>Colors</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.Colors
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColors()
+	 * @generated
+	 */
+	int COLORS = 65;
+
+	/**
 	 * Returns the meta object for class '{@link langageCompilation.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3771,6 +4296,193 @@ public interface LangageCompilationPackage extends EPackage {
 	EClass getOr();
 
 	/**
+	 * Returns the meta object for class '{@link langageCompilation.MotorizedArmEngine <em>Motorized Arm Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Motorized Arm Engine</em>'.
+	 * @see langageCompilation.MotorizedArmEngine
+	 * @generated
+	 */
+	EClass getMotorizedArmEngine();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.PositionOperation <em>Position Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position Operation</em>'.
+	 * @see langageCompilation.PositionOperation
+	 * @generated
+	 */
+	EClass getPositionOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.PositionOperation#getMotorizedarmengine <em>Motorizedarmengine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Motorizedarmengine</em>'.
+	 * @see langageCompilation.PositionOperation#getMotorizedarmengine()
+	 * @see #getPositionOperation()
+	 * @generated
+	 */
+	EReference getPositionOperation_Motorizedarmengine();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.PaintballLauncherEngine <em>Paintball Launcher Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Paintball Launcher Engine</em>'.
+	 * @see langageCompilation.PaintballLauncherEngine
+	 * @generated
+	 */
+	EClass getPaintballLauncherEngine();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.ForceOperation <em>Force Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Force Operation</em>'.
+	 * @see langageCompilation.ForceOperation
+	 * @generated
+	 */
+	EClass getForceOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.ForceOperation#getPaintballlauncherengine <em>Paintballlauncherengine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Paintballlauncherengine</em>'.
+	 * @see langageCompilation.ForceOperation#getPaintballlauncherengine()
+	 * @see #getForceOperation()
+	 * @generated
+	 */
+	EReference getForceOperation_Paintballlauncherengine();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.BreakMotor <em>Break Motor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Break Motor</em>'.
+	 * @see langageCompilation.BreakMotor
+	 * @generated
+	 */
+	EClass getBreakMotor();
+
+	/**
+	 * Returns the meta object for the reference '{@link langageCompilation.BreakMotor#getEngine <em>Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Engine</em>'.
+	 * @see langageCompilation.BreakMotor#getEngine()
+	 * @see #getBreakMotor()
+	 * @generated
+	 */
+	EReference getBreakMotor_Engine();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.ColorExpression <em>Color Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Color Expression</em>'.
+	 * @see langageCompilation.ColorExpression
+	 * @generated
+	 */
+	EClass getColorExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link langageCompilation.ColorExpression#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see langageCompilation.ColorExpression#getLeft()
+	 * @see #getColorExpression()
+	 * @generated
+	 */
+	EReference getColorExpression_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link langageCompilation.ColorExpression#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see langageCompilation.ColorExpression#getRight()
+	 * @see #getColorExpression()
+	 * @generated
+	 */
+	EReference getColorExpression_Right();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.ColorEqual <em>Color Equal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Color Equal</em>'.
+	 * @see langageCompilation.ColorEqual
+	 * @generated
+	 */
+	EClass getColorEqual();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.ColorNotEqual <em>Color Not Equal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Color Not Equal</em>'.
+	 * @see langageCompilation.ColorNotEqual
+	 * @generated
+	 */
+	EClass getColorNotEqual();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.UnColor <em>Un Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Un Color</em>'.
+	 * @see langageCompilation.UnColor
+	 * @generated
+	 */
+	EClass getUnColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link langageCompilation.UnColor#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Value</em>'.
+	 * @see langageCompilation.UnColor#getInitialValue()
+	 * @see #getUnColor()
+	 * @generated
+	 */
+	EAttribute getUnColor_InitialValue();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.TheColor <em>The Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>The Color</em>'.
+	 * @see langageCompilation.TheColor
+	 * @generated
+	 */
+	EClass getTheColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link langageCompilation.TheColor#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see langageCompilation.TheColor#getValue()
+	 * @see #getTheColor()
+	 * @generated
+	 */
+	EAttribute getTheColor_Value();
+
+	/**
+	 * Returns the meta object for enum '{@link langageCompilation.Colors <em>Colors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Colors</em>'.
+	 * @see langageCompilation.Colors
+	 * @generated
+	 */
+	EEnum getColors();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4646,6 +5358,172 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OR = eINSTANCE.getOr();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.MotorizedArmEngineImpl <em>Motorized Arm Engine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.MotorizedArmEngineImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getMotorizedArmEngine()
+		 * @generated
+		 */
+		EClass MOTORIZED_ARM_ENGINE = eINSTANCE.getMotorizedArmEngine();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.PositionOperationImpl <em>Position Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.PositionOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPositionOperation()
+		 * @generated
+		 */
+		EClass POSITION_OPERATION = eINSTANCE.getPositionOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Motorizedarmengine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POSITION_OPERATION__MOTORIZEDARMENGINE = eINSTANCE.getPositionOperation_Motorizedarmengine();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.PaintballLauncherEngineImpl <em>Paintball Launcher Engine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.PaintballLauncherEngineImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPaintballLauncherEngine()
+		 * @generated
+		 */
+		EClass PAINTBALL_LAUNCHER_ENGINE = eINSTANCE.getPaintballLauncherEngine();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.ForceOperationImpl <em>Force Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.ForceOperationImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getForceOperation()
+		 * @generated
+		 */
+		EClass FORCE_OPERATION = eINSTANCE.getForceOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Paintballlauncherengine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORCE_OPERATION__PAINTBALLLAUNCHERENGINE = eINSTANCE.getForceOperation_Paintballlauncherengine();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.BreakMotorImpl <em>Break Motor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.BreakMotorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getBreakMotor()
+		 * @generated
+		 */
+		EClass BREAK_MOTOR = eINSTANCE.getBreakMotor();
+
+		/**
+		 * The meta object literal for the '<em><b>Engine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BREAK_MOTOR__ENGINE = eINSTANCE.getBreakMotor_Engine();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.ColorExpressionImpl <em>Color Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.ColorExpressionImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorExpression()
+		 * @generated
+		 */
+		EClass COLOR_EXPRESSION = eINSTANCE.getColorExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLOR_EXPRESSION__LEFT = eINSTANCE.getColorExpression_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLOR_EXPRESSION__RIGHT = eINSTANCE.getColorExpression_Right();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.ColorEqualImpl <em>Color Equal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.ColorEqualImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorEqual()
+		 * @generated
+		 */
+		EClass COLOR_EQUAL = eINSTANCE.getColorEqual();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.ColorNotEqualImpl <em>Color Not Equal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.ColorNotEqualImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorNotEqual()
+		 * @generated
+		 */
+		EClass COLOR_NOT_EQUAL = eINSTANCE.getColorNotEqual();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.UnColorImpl <em>Un Color</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.UnColorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnColor()
+		 * @generated
+		 */
+		EClass UN_COLOR = eINSTANCE.getUnColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UN_COLOR__INITIAL_VALUE = eINSTANCE.getUnColor_InitialValue();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.TheColorImpl <em>The Color</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.TheColorImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getTheColor()
+		 * @generated
+		 */
+		EClass THE_COLOR = eINSTANCE.getTheColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute THE_COLOR__VALUE = eINSTANCE.getTheColor_Value();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.Colors <em>Colors</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.Colors
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColors()
+		 * @generated
+		 */
+		EEnum COLORS = eINSTANCE.getColors();
 
 	}
 

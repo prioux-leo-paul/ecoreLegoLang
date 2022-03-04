@@ -418,6 +418,87 @@ public interface LangageCompilationFactory extends EFactory {
 	Or createOr();
 
 	/**
+	 * Returns a new object of class '<em>Motorized Arm Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Motorized Arm Engine</em>'.
+	 * @generated
+	 */
+	MotorizedArmEngine createMotorizedArmEngine();
+
+	/**
+	 * Returns a new object of class '<em>Position Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position Operation</em>'.
+	 * @generated
+	 */
+	PositionOperation createPositionOperation();
+
+	/**
+	 * Returns a new object of class '<em>Paintball Launcher Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Paintball Launcher Engine</em>'.
+	 * @generated
+	 */
+	PaintballLauncherEngine createPaintballLauncherEngine();
+
+	/**
+	 * Returns a new object of class '<em>Force Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Force Operation</em>'.
+	 * @generated
+	 */
+	ForceOperation createForceOperation();
+
+	/**
+	 * Returns a new object of class '<em>Break Motor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Break Motor</em>'.
+	 * @generated
+	 */
+	BreakMotor createBreakMotor();
+
+	/**
+	 * Returns a new object of class '<em>Color Equal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color Equal</em>'.
+	 * @generated
+	 */
+	ColorEqual createColorEqual();
+
+	/**
+	 * Returns a new object of class '<em>Color Not Equal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color Not Equal</em>'.
+	 * @generated
+	 */
+	ColorNotEqual createColorNotEqual();
+
+	/**
+	 * Returns a new object of class '<em>Un Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Un Color</em>'.
+	 * @generated
+	 */
+	UnColor createUnColor();
+
+	/**
+	 * Returns a new object of class '<em>The Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>The Color</em>'.
+	 * @generated
+	 */
+	TheColor createTheColor();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

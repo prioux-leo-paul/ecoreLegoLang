@@ -218,6 +218,24 @@ public class BooleanExpressionItemProvider extends ExpressionItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createOr()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createVariableRef()));
 
@@ -301,6 +319,24 @@ public class BooleanExpressionItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
 	}
 
 	/**

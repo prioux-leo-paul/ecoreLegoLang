@@ -5,6 +5,7 @@ package langageCompilation.impl;
 import langageCompilation.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -144,8 +145,56 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createAnd();
 		case LangageCompilationPackage.OR:
 			return createOr();
+		case LangageCompilationPackage.MOTORIZED_ARM_ENGINE:
+			return createMotorizedArmEngine();
+		case LangageCompilationPackage.POSITION_OPERATION:
+			return createPositionOperation();
+		case LangageCompilationPackage.PAINTBALL_LAUNCHER_ENGINE:
+			return createPaintballLauncherEngine();
+		case LangageCompilationPackage.FORCE_OPERATION:
+			return createForceOperation();
+		case LangageCompilationPackage.BREAK_MOTOR:
+			return createBreakMotor();
+		case LangageCompilationPackage.COLOR_EQUAL:
+			return createColorEqual();
+		case LangageCompilationPackage.COLOR_NOT_EQUAL:
+			return createColorNotEqual();
+		case LangageCompilationPackage.UN_COLOR:
+			return createUnColor();
+		case LangageCompilationPackage.THE_COLOR:
+			return createTheColor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case LangageCompilationPackage.COLORS:
+			return createColorsFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case LangageCompilationPackage.COLORS:
+			return convertColorsToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -587,6 +636,118 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	public Or createOr() {
 		OrImpl or = new OrImpl();
 		return or;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MotorizedArmEngine createMotorizedArmEngine() {
+		MotorizedArmEngineImpl motorizedArmEngine = new MotorizedArmEngineImpl();
+		return motorizedArmEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionOperation createPositionOperation() {
+		PositionOperationImpl positionOperation = new PositionOperationImpl();
+		return positionOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaintballLauncherEngine createPaintballLauncherEngine() {
+		PaintballLauncherEngineImpl paintballLauncherEngine = new PaintballLauncherEngineImpl();
+		return paintballLauncherEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ForceOperation createForceOperation() {
+		ForceOperationImpl forceOperation = new ForceOperationImpl();
+		return forceOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BreakMotor createBreakMotor() {
+		BreakMotorImpl breakMotor = new BreakMotorImpl();
+		return breakMotor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorEqual createColorEqual() {
+		ColorEqualImpl colorEqual = new ColorEqualImpl();
+		return colorEqual;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorNotEqual createColorNotEqual() {
+		ColorNotEqualImpl colorNotEqual = new ColorNotEqualImpl();
+		return colorNotEqual;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnColor createUnColor() {
+		UnColorImpl unColor = new UnColorImpl();
+		return unColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TheColor createTheColor() {
+		TheColorImpl theColor = new TheColorImpl();
+		return theColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Colors createColorsFromString(EDataType eDataType, String initialValue) {
+		Colors result = Colors.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertColorsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

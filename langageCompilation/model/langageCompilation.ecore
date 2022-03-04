@@ -150,4 +150,34 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//BooleanExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//BooleanExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MotorizedArmEngine" eSuperTypes="#//Engine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionOperation" eSuperTypes="#//EngineOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="motorizedarmengine" lowerBound="1"
+        eType="#//MotorizedArmEngine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaintballLauncherEngine" eSuperTypes="#//Engine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForceOperation" eSuperTypes="#//EngineOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paintballlauncherengine"
+        lowerBound="1" eType="#//PaintballLauncherEngine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BreakMotor" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="engine" lowerBound="1"
+        eType="#//Engine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Colors">
+    <eLiterals name="black"/>
+    <eLiterals name="white" value="1"/>
+    <eLiterals name="blue" value="2"/>
+    <eLiterals name="yellow" value="3"/>
+    <eLiterals name="red" value="4"/>
+    <eLiterals name="green" value="5"/>
+    <eLiterals name="pink" value="6"/>
+    <eLiterals name="grey" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnColor" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" eType="#//Colors"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TheColor" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Colors"/>
+  </eClassifiers>
 </ecore:EPackage>

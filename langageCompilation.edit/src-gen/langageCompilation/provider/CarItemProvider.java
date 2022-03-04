@@ -148,6 +148,12 @@ public class CarItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__ENGINE,
 				LangageCompilationFactory.eINSTANCE.createWheelEngine()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__ENGINE,
+				LangageCompilationFactory.eINSTANCE.createMotorizedArmEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__ENGINE,
+				LangageCompilationFactory.eINSTANCE.createPaintballLauncherEngine()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CAR__SENSOR,
 				LangageCompilationFactory.eINSTANCE.createColorSensor()));
 

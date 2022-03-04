@@ -8,9 +8,14 @@ import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
 import langageCompilation.BooleanExpression;
+import langageCompilation.BreakMotor;
 import langageCompilation.Car;
+import langageCompilation.ColorEqual;
+import langageCompilation.ColorExpression;
+import langageCompilation.ColorNotEqual;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
+import langageCompilation.Colors;
 import langageCompilation.Comparaison;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
@@ -20,6 +25,7 @@ import langageCompilation.Engine;
 import langageCompilation.EngineOperation;
 import langageCompilation.Equal;
 import langageCompilation.Expression;
+import langageCompilation.ForceOperation;
 import langageCompilation.GPSSensor;
 import langageCompilation.GTorEqual;
 import langageCompilation.GyroSensor;
@@ -31,10 +37,13 @@ import langageCompilation.LaserSensor;
 import langageCompilation.Loop;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
+import langageCompilation.MotorizedArmEngine;
 import langageCompilation.Multiplication;
 import langageCompilation.NewEClass43;
 import langageCompilation.Or;
+import langageCompilation.PaintballLauncherEngine;
 import langageCompilation.PlusEqual;
+import langageCompilation.PositionOperation;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
 import langageCompilation.Sensor;
@@ -42,11 +51,13 @@ import langageCompilation.SensorOperation;
 import langageCompilation.Statement;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
+import langageCompilation.TheColor;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
 import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
+import langageCompilation.UnColor;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
 import langageCompilation.UnString;
@@ -60,6 +71,7 @@ import langageCompilation.XGPSOperation;
 import langageCompilation.YGPSOperation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -456,6 +468,83 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * @generated
 	 */
 	private EClass orEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass motorizedArmEngineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass paintballLauncherEngineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass forceOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass breakMotorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorEqualEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass colorNotEqualEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unColorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass theColorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum colorsEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1364,6 +1453,168 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMotorizedArmEngine() {
+		return motorizedArmEngineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPositionOperation() {
+		return positionOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionOperation_Motorizedarmengine() {
+		return (EReference) positionOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPaintballLauncherEngine() {
+		return paintballLauncherEngineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getForceOperation() {
+		return forceOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getForceOperation_Paintballlauncherengine() {
+		return (EReference) forceOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBreakMotor() {
+		return breakMotorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBreakMotor_Engine() {
+		return (EReference) breakMotorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColorExpression() {
+		return colorExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getColorExpression_Left() {
+		return (EReference) colorExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getColorExpression_Right() {
+		return (EReference) colorExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColorEqual() {
+		return colorEqualEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColorNotEqual() {
+		return colorNotEqualEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnColor() {
+		return unColorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnColor_InitialValue() {
+		return (EAttribute) unColorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTheColor() {
+		return theColorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTheColor_Value() {
+		return (EAttribute) theColorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getColors() {
+		return colorsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LangageCompilationFactory getLangageCompilationFactory() {
 		return (LangageCompilationFactory) getEFactoryInstance();
 	}
@@ -1535,6 +1786,36 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		andEClass = createEClass(AND);
 
 		orEClass = createEClass(OR);
+
+		motorizedArmEngineEClass = createEClass(MOTORIZED_ARM_ENGINE);
+
+		positionOperationEClass = createEClass(POSITION_OPERATION);
+		createEReference(positionOperationEClass, POSITION_OPERATION__MOTORIZEDARMENGINE);
+
+		paintballLauncherEngineEClass = createEClass(PAINTBALL_LAUNCHER_ENGINE);
+
+		forceOperationEClass = createEClass(FORCE_OPERATION);
+		createEReference(forceOperationEClass, FORCE_OPERATION__PAINTBALLLAUNCHERENGINE);
+
+		breakMotorEClass = createEClass(BREAK_MOTOR);
+		createEReference(breakMotorEClass, BREAK_MOTOR__ENGINE);
+
+		colorExpressionEClass = createEClass(COLOR_EXPRESSION);
+		createEReference(colorExpressionEClass, COLOR_EXPRESSION__LEFT);
+		createEReference(colorExpressionEClass, COLOR_EXPRESSION__RIGHT);
+
+		colorEqualEClass = createEClass(COLOR_EQUAL);
+
+		colorNotEqualEClass = createEClass(COLOR_NOT_EQUAL);
+
+		unColorEClass = createEClass(UN_COLOR);
+		createEAttribute(unColorEClass, UN_COLOR__INITIAL_VALUE);
+
+		theColorEClass = createEClass(THE_COLOR);
+		createEAttribute(theColorEClass, THE_COLOR__VALUE);
+
+		// Create enums
+		colorsEEnum = createEEnum(COLORS);
 	}
 
 	/**
@@ -1618,6 +1899,16 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		booleanExpressionEClass.getESuperTypes().add(this.getExpression());
 		andEClass.getESuperTypes().add(this.getBooleanExpression());
 		orEClass.getESuperTypes().add(this.getBooleanExpression());
+		motorizedArmEngineEClass.getESuperTypes().add(this.getEngine());
+		positionOperationEClass.getESuperTypes().add(this.getEngineOperation());
+		paintballLauncherEngineEClass.getESuperTypes().add(this.getEngine());
+		forceOperationEClass.getESuperTypes().add(this.getEngineOperation());
+		breakMotorEClass.getESuperTypes().add(this.getExpression());
+		colorExpressionEClass.getESuperTypes().add(this.getExpression());
+		colorEqualEClass.getESuperTypes().add(this.getColorExpression());
+		colorNotEqualEClass.getESuperTypes().add(this.getColorExpression());
+		unColorEClass.getESuperTypes().add(this.getVariable());
+		theColorEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1878,6 +2169,59 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(motorizedArmEngineEClass, MotorizedArmEngine.class, "MotorizedArmEngine", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(positionOperationEClass, PositionOperation.class, "PositionOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPositionOperation_Motorizedarmengine(), this.getMotorizedArmEngine(), null,
+				"motorizedarmengine", null, 1, 1, PositionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(paintballLauncherEngineEClass, PaintballLauncherEngine.class, "PaintballLauncherEngine",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(forceOperationEClass, ForceOperation.class, "ForceOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getForceOperation_Paintballlauncherengine(), this.getPaintballLauncherEngine(), null,
+				"paintballlauncherengine", null, 1, 1, ForceOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(breakMotorEClass, BreakMotor.class, "BreakMotor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBreakMotor_Engine(), this.getEngine(), null, "engine", null, 1, 1, BreakMotor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(colorExpressionEClass, ColorExpression.class, "ColorExpression", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getColorExpression_Left(), this.getExpression(), null, "left", null, 1, 1, ColorExpression.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getColorExpression_Right(), this.getTheColor(), null, "right", null, 1, 1, ColorExpression.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(colorEqualEClass, ColorEqual.class, "ColorEqual", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(colorNotEqualEClass, ColorNotEqual.class, "ColorNotEqual", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(unColorEClass, UnColor.class, "UnColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUnColor_InitialValue(), this.getColors(), "initialValue", null, 0, 1, UnColor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(theColorEClass, TheColor.class, "TheColor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTheColor_Value(), this.getColors(), "value", null, 0, 1, TheColor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(colorsEEnum, Colors.class, "Colors");
+		addEEnumLiteral(colorsEEnum, Colors.BLACK);
+		addEEnumLiteral(colorsEEnum, Colors.WHITE);
 
 		// Create resource
 		createResource(eNS_URI);

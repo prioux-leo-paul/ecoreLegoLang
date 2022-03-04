@@ -10,6 +10,8 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
+import org.eclipse.xtext.EnumLiteralDeclaration;
+import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -34,14 +36,15 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cStatementAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cStatementStatementParserRuleCall_4_0 = (RuleCall)cStatementAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Program returns Program:
 		//    {Program}
 		//    'Program'
 		//    name=EString
 		//    '{'
-		//        (statement+=Statement)*
+		//        (statement+=Statement)*  (';')?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -49,7 +52,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'Program'
 		//name=EString
 		//'{'
-		//    (statement+=Statement)*
+		//    (statement+=Statement)*  (';')?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -74,8 +77,11 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Statement
 		public RuleCall getStatementStatementParserRuleCall_4_0() { return cStatementStatementParserRuleCall_4_0; }
 		
+		//(';')?
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 	public class StatementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Statement");
@@ -126,18 +132,20 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cVariableRefParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBinaryOperationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cTheStringParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cTheDoubleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cTheIntParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cTheBooleanParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cEngineOperationParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cSensorOperationParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cBooleanExpressionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cTheColorParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cTheDoubleParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cTheIntParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cTheBooleanParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cEngineOperationParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cBreakMotorParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cSensorOperationParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cBooleanExpressionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//Expression returns Expression:
-		//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
+		//    VariableRef | BinaryOperation | TheString | TheColor | TheDouble | TheInt | TheBoolean | EngineOperation | BreakMotor | SensorOperation | BooleanExpression ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression
+		//VariableRef | BinaryOperation | TheString | TheColor | TheDouble | TheInt | TheBoolean | EngineOperation | BreakMotor | SensorOperation | BooleanExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//VariableRef
@@ -149,23 +157,29 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//TheString
 		public RuleCall getTheStringParserRuleCall_2() { return cTheStringParserRuleCall_2; }
 		
+		//TheColor
+		public RuleCall getTheColorParserRuleCall_3() { return cTheColorParserRuleCall_3; }
+		
 		//TheDouble
-		public RuleCall getTheDoubleParserRuleCall_3() { return cTheDoubleParserRuleCall_3; }
+		public RuleCall getTheDoubleParserRuleCall_4() { return cTheDoubleParserRuleCall_4; }
 		
 		//TheInt
-		public RuleCall getTheIntParserRuleCall_4() { return cTheIntParserRuleCall_4; }
+		public RuleCall getTheIntParserRuleCall_5() { return cTheIntParserRuleCall_5; }
 		
 		//TheBoolean
-		public RuleCall getTheBooleanParserRuleCall_5() { return cTheBooleanParserRuleCall_5; }
+		public RuleCall getTheBooleanParserRuleCall_6() { return cTheBooleanParserRuleCall_6; }
 		
 		//EngineOperation
-		public RuleCall getEngineOperationParserRuleCall_6() { return cEngineOperationParserRuleCall_6; }
+		public RuleCall getEngineOperationParserRuleCall_7() { return cEngineOperationParserRuleCall_7; }
+		
+		//BreakMotor
+		public RuleCall getBreakMotorParserRuleCall_8() { return cBreakMotorParserRuleCall_8; }
 		
 		//SensorOperation
-		public RuleCall getSensorOperationParserRuleCall_7() { return cSensorOperationParserRuleCall_7; }
+		public RuleCall getSensorOperationParserRuleCall_9() { return cSensorOperationParserRuleCall_9; }
 		
 		//BooleanExpression
-		public RuleCall getBooleanExpressionParserRuleCall_8() { return cBooleanExpressionParserRuleCall_8; }
+		public RuleCall getBooleanExpressionParserRuleCall_10() { return cBooleanExpressionParserRuleCall_10; }
 	}
 	public class BinaryOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.BinaryOperation");
@@ -217,12 +231,13 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cUnStringParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cUnBooleanParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cUnDoubleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cUnColorParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Variable returns Variable:
-		//    UnInteger | UnString | UnBoolean | UnDouble;
+		//    UnInteger | UnString | UnBoolean | UnDouble | UnColor;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//UnInteger | UnString | UnBoolean | UnDouble
+		//UnInteger | UnString | UnBoolean | UnDouble | UnColor
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//UnInteger
@@ -236,6 +251,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//UnDouble
 		public RuleCall getUnDoubleParserRuleCall_3() { return cUnDoubleParserRuleCall_3; }
+		
+		//UnColor
+		public RuleCall getUnColorParserRuleCall_4() { return cUnColorParserRuleCall_4; }
 	}
 	public class ComparaisonElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Comparaison");
@@ -274,14 +292,26 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	public class EngineElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Engine");
-		private final RuleCall cWheelEngineParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cWheelEngineParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cMotorizedArmEngineParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cPaintballLauncherEngineParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Engine returns Engine:
-		//    WheelEngine;
+		//    WheelEngine | MotorizedArmEngine | PaintballLauncherEngine;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//WheelEngine | MotorizedArmEngine | PaintballLauncherEngine
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//WheelEngine
-		public RuleCall getWheelEngineParserRuleCall() { return cWheelEngineParserRuleCall; }
+		public RuleCall getWheelEngineParserRuleCall_0() { return cWheelEngineParserRuleCall_0; }
+		
+		//MotorizedArmEngine
+		public RuleCall getMotorizedArmEngineParserRuleCall_1() { return cMotorizedArmEngineParserRuleCall_1; }
+		
+		//PaintballLauncherEngine
+		public RuleCall getPaintballLauncherEngineParserRuleCall_2() { return cPaintballLauncherEngineParserRuleCall_2; }
 	}
 	public class SensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Sensor");
@@ -320,18 +350,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cWheelEngineKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEStringParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEStringParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//WheelEngine returns WheelEngine:
 		//    'WheelEngine'
 		//    name=EString
+		//    'on'
 		//    position=EString
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'WheelEngine'
 		//name=EString
+		//'on'
 		//position=EString
 		public Group getGroup() { return cGroup; }
 		
@@ -344,11 +377,98 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EString
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EString
-		public RuleCall getPositionEStringParserRuleCall_2_0() { return cPositionEStringParserRuleCall_2_0; }
+		public RuleCall getPositionEStringParserRuleCall_3_0() { return cPositionEStringParserRuleCall_3_0; }
+	}
+	public class MotorizedArmEngineElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.MotorizedArmEngine");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMotorizedArmEngineKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEStringParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
+		
+		//MotorizedArmEngine returns MotorizedArmEngine:
+		//    'MotorizedArmEngine'
+		//    name=EString
+		//    'on'
+		//    position=EString
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'MotorizedArmEngine'
+		//name=EString
+		//'on'
+		//position=EString
+		public Group getGroup() { return cGroup; }
+		
+		//'MotorizedArmEngine'
+		public Keyword getMotorizedArmEngineKeyword_0() { return cMotorizedArmEngineKeyword_0; }
+		
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
+		//position=EString
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
+		
+		//EString
+		public RuleCall getPositionEStringParserRuleCall_3_0() { return cPositionEStringParserRuleCall_3_0; }
+	}
+	public class PaintballLauncherEngineElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.PaintballLauncherEngine");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPaintballLauncherEngineKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEStringParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
+		
+		//PaintballLauncherEngine returns PaintballLauncherEngine:
+		//    'PaintballLauncherEngine'
+		//    name=EString
+		//    'on'
+		//    position=EString
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'PaintballLauncherEngine'
+		//name=EString
+		//'on'
+		//position=EString
+		public Group getGroup() { return cGroup; }
+		
+		//'PaintballLauncherEngine'
+		public Keyword getPaintballLauncherEngineKeyword_0() { return cPaintballLauncherEngineKeyword_0; }
+		
+		//name=EString
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
+		//position=EString
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
+		
+		//EString
+		public RuleCall getPositionEStringParserRuleCall_3_0() { return cPositionEStringParserRuleCall_3_0; }
 	}
 	public class ColorSensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.ColorSensor");
@@ -356,18 +476,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cColorSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEIntParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEIntParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//ColorSensor returns ColorSensor:
 		//    'ColorSensor'
 		//    name=EString
+		//    'on'
 		//    position=EInt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ColorSensor'
 		//name=EString
+		//'on'
 		//position=EInt
 		public Group getGroup() { return cGroup; }
 		
@@ -380,11 +503,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EInt
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EInt
-		public RuleCall getPositionEIntParserRuleCall_2_0() { return cPositionEIntParserRuleCall_2_0; }
+		public RuleCall getPositionEIntParserRuleCall_3_0() { return cPositionEIntParserRuleCall_3_0; }
 	}
 	public class LaserSensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.LaserSensor");
@@ -392,18 +518,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cLaserSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEIntParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEIntParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//LaserSensor returns LaserSensor:
 		//    'LaserSensor'
 		//    name=EString
+		//    'on'
 		//    position=EInt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'LaserSensor'
 		//name=EString
+		//'on'
 		//position=EInt
 		public Group getGroup() { return cGroup; }
 		
@@ -416,11 +545,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EInt
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EInt
-		public RuleCall getPositionEIntParserRuleCall_2_0() { return cPositionEIntParserRuleCall_2_0; }
+		public RuleCall getPositionEIntParserRuleCall_3_0() { return cPositionEIntParserRuleCall_3_0; }
 	}
 	public class GPSSensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.GPSSensor");
@@ -428,18 +560,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cGPSSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEIntParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEIntParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//GPSSensor returns GPSSensor:
 		//    'GPSSensor'
 		//    name=EString
+		//    'on'
 		//    position=EInt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GPSSensor'
 		//name=EString
+		//'on'
 		//position=EInt
 		public Group getGroup() { return cGroup; }
 		
@@ -452,11 +587,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EInt
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EInt
-		public RuleCall getPositionEIntParserRuleCall_2_0() { return cPositionEIntParserRuleCall_2_0; }
+		public RuleCall getPositionEIntParserRuleCall_3_0() { return cPositionEIntParserRuleCall_3_0; }
 	}
 	public class GyroSensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.GyroSensor");
@@ -464,18 +602,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cGyroSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEIntParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEIntParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//GyroSensor returns GyroSensor:
 		//    'GyroSensor'
 		//    name=EString
+		//    'on'
 		//    position=EInt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GyroSensor'
 		//name=EString
+		//'on'
 		//position=EInt
 		public Group getGroup() { return cGroup; }
 		
@@ -488,11 +629,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EInt
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EInt
-		public RuleCall getPositionEIntParserRuleCall_2_0() { return cPositionEIntParserRuleCall_2_0; }
+		public RuleCall getPositionEIntParserRuleCall_3_0() { return cPositionEIntParserRuleCall_3_0; }
 	}
 	public class UltraSonicSensorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UltraSonicSensor");
@@ -500,18 +644,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cUltraSonicSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPositionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPositionEIntParserRuleCall_2_0 = (RuleCall)cPositionAssignment_2.eContents().get(0);
+		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPositionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPositionEIntParserRuleCall_3_0 = (RuleCall)cPositionAssignment_3.eContents().get(0);
 		
 		//UltraSonicSensor returns UltraSonicSensor:
 		//    'UltraSonicSensor'
 		//    name=EString
+		//    'on'
 		//    position=EInt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'UltraSonicSensor'
 		//name=EString
+		//'on'
 		//position=EInt
 		public Group getGroup() { return cGroup; }
 		
@@ -524,11 +671,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
+		//'on'
+		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
+		
 		//position=EInt
-		public Assignment getPositionAssignment_2() { return cPositionAssignment_2; }
+		public Assignment getPositionAssignment_3() { return cPositionAssignment_3; }
 		
 		//EInt
-		public RuleCall getPositionEIntParserRuleCall_2_0() { return cPositionEIntParserRuleCall_2_0; }
+		public RuleCall getPositionEIntParserRuleCall_3_0() { return cPositionEIntParserRuleCall_3_0; }
 	}
 	public class CarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Car");
@@ -590,15 +740,27 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	public class EngineOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.EngineOperation");
-		private final RuleCall cVitesseOperationParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cVitesseOperationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cPositionOperationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cForceOperationParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//EngineOperation returns EngineOperation:
-		//     VitesseOperation
+		//     VitesseOperation | PositionOperation | ForceOperation
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//VitesseOperation | PositionOperation | ForceOperation
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//VitesseOperation
-		public RuleCall getVitesseOperationParserRuleCall() { return cVitesseOperationParserRuleCall; }
+		public RuleCall getVitesseOperationParserRuleCall_0() { return cVitesseOperationParserRuleCall_0; }
+		
+		//PositionOperation
+		public RuleCall getPositionOperationParserRuleCall_1() { return cPositionOperationParserRuleCall_1; }
+		
+		//ForceOperation
+		public RuleCall getForceOperationParserRuleCall_2() { return cForceOperationParserRuleCall_2; }
 	}
 	public class SensorOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.SensorOperation");
@@ -682,6 +844,158 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//FQN
 		public RuleCall getWheelengineWheelEngineFQNParserRuleCall_3_0_1() { return cWheelengineWheelEngineFQNParserRuleCall_3_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
+		
+		//right=Expression
+		public Assignment getRightAssignment_6() { return cRightAssignment_6; }
+		
+		//Expression
+		public RuleCall getRightExpressionParserRuleCall_6_0() { return cRightExpressionParserRuleCall_6_0; }
+	}
+	public class BreakMotorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.BreakMotor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBreakKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cMotorKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cEngineAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cEngineEngineCrossReference_3_0 = (CrossReference)cEngineAssignment_3.eContents().get(0);
+		private final RuleCall cEngineEngineFQNParserRuleCall_3_0_1 = (RuleCall)cEngineEngineCrossReference_3_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//BreakMotor returns BreakMotor:
+		//    'break' 'motor' '('engine=[Engine|FQN]')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'break' 'motor' '('engine=[Engine|FQN]')'
+		public Group getGroup() { return cGroup; }
+		
+		//'break'
+		public Keyword getBreakKeyword_0() { return cBreakKeyword_0; }
+		
+		//'motor'
+		public Keyword getMotorKeyword_1() { return cMotorKeyword_1; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//engine=[Engine|FQN]
+		public Assignment getEngineAssignment_3() { return cEngineAssignment_3; }
+		
+		//[Engine|FQN]
+		public CrossReference getEngineEngineCrossReference_3_0() { return cEngineEngineCrossReference_3_0; }
+		
+		//FQN
+		public RuleCall getEngineEngineFQNParserRuleCall_3_0_1() { return cEngineEngineFQNParserRuleCall_3_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+	public class PositionOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.PositionOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cDegresKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cMotorizedarmengineAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cMotorizedarmengineMotorizedArmEngineCrossReference_3_0 = (CrossReference)cMotorizedarmengineAssignment_3.eContents().get(0);
+		private final RuleCall cMotorizedarmengineMotorizedArmEngineFQNParserRuleCall_3_0_1 = (RuleCall)cMotorizedarmengineMotorizedArmEngineCrossReference_3_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cRightAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRightExpressionParserRuleCall_6_0 = (RuleCall)cRightAssignment_6.eContents().get(0);
+		
+		//PositionOperation returns PositionOperation:
+		//    'set' 'degres''('motorizedarmengine=[MotorizedArmEngine|FQN]')'
+		//    '='
+		//    right=Expression
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'set' 'degres''('motorizedarmengine=[MotorizedArmEngine|FQN]')'
+		//'='
+		//right=Expression
+		public Group getGroup() { return cGroup; }
+		
+		//'set'
+		public Keyword getSetKeyword_0() { return cSetKeyword_0; }
+		
+		//'degres'
+		public Keyword getDegresKeyword_1() { return cDegresKeyword_1; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//motorizedarmengine=[MotorizedArmEngine|FQN]
+		public Assignment getMotorizedarmengineAssignment_3() { return cMotorizedarmengineAssignment_3; }
+		
+		//[MotorizedArmEngine|FQN]
+		public CrossReference getMotorizedarmengineMotorizedArmEngineCrossReference_3_0() { return cMotorizedarmengineMotorizedArmEngineCrossReference_3_0; }
+		
+		//FQN
+		public RuleCall getMotorizedarmengineMotorizedArmEngineFQNParserRuleCall_3_0_1() { return cMotorizedarmengineMotorizedArmEngineFQNParserRuleCall_3_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
+		
+		//right=Expression
+		public Assignment getRightAssignment_6() { return cRightAssignment_6; }
+		
+		//Expression
+		public RuleCall getRightExpressionParserRuleCall_6_0() { return cRightExpressionParserRuleCall_6_0; }
+	}
+	public class ForceOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.ForceOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cStrengthKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPaintballlauncherengineAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cPaintballlauncherenginePaintballLauncherEngineCrossReference_3_0 = (CrossReference)cPaintballlauncherengineAssignment_3.eContents().get(0);
+		private final RuleCall cPaintballlauncherenginePaintballLauncherEngineFQNParserRuleCall_3_0_1 = (RuleCall)cPaintballlauncherenginePaintballLauncherEngineCrossReference_3_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cRightAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRightExpressionParserRuleCall_6_0 = (RuleCall)cRightAssignment_6.eContents().get(0);
+		
+		//ForceOperation returns ForceOperation:
+		//    'set' 'strength''('paintballlauncherengine=[PaintballLauncherEngine|FQN]')'
+		//    '='
+		//    right=Expression
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'set' 'strength''('paintballlauncherengine=[PaintballLauncherEngine|FQN]')'
+		//'='
+		//right=Expression
+		public Group getGroup() { return cGroup; }
+		
+		//'set'
+		public Keyword getSetKeyword_0() { return cSetKeyword_0; }
+		
+		//'strength'
+		public Keyword getStrengthKeyword_1() { return cStrengthKeyword_1; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//paintballlauncherengine=[PaintballLauncherEngine|FQN]
+		public Assignment getPaintballlauncherengineAssignment_3() { return cPaintballlauncherengineAssignment_3; }
+		
+		//[PaintballLauncherEngine|FQN]
+		public CrossReference getPaintballlauncherenginePaintballLauncherEngineCrossReference_3_0() { return cPaintballlauncherenginePaintballLauncherEngineCrossReference_3_0; }
+		
+		//FQN
+		public RuleCall getPaintballlauncherenginePaintballLauncherEngineFQNParserRuleCall_3_0_1() { return cPaintballlauncherenginePaintballLauncherEngineFQNParserRuleCall_3_0_1; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -1174,18 +1488,18 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.EString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFQNParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//EString returns ecore::EString:
-		//    STRING | ID;
+		//    FQN | ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//STRING | ID
+		//FQN | ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
+		//FQN
+		public RuleCall getFQNParserRuleCall_0() { return cFQNParserRuleCall_0; }
 		
 		//ID
 		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
@@ -1246,19 +1560,19 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cExpressionAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cExpressionExpressionParserRuleCall_2_0_0 = (RuleCall)cExpressionAssignment_2_0.eContents().get(0);
 		private final Keyword cCommaKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Keyword cRightParenthesisSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//MethodePrint returns MethodePrint:
 		//    {MethodePrint}
 		//    'print('
 		//    (expression+=Expression ",")+
-		//    ');';
+		//    ')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{MethodePrint}
 		//'print('
 		//(expression+=Expression ",")+
-		//');'
+		//')'
 		public Group getGroup() { return cGroup; }
 		
 		//{MethodePrint}
@@ -1279,8 +1593,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//","
 		public Keyword getCommaKeyword_2_1() { return cCommaKeyword_2_1; }
 		
-		//');'
-		public Keyword getRightParenthesisSemicolonKeyword_3() { return cRightParenthesisSemicolonKeyword_3; }
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 	public class VariableRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.VariableRef");
@@ -1720,31 +2034,30 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Assignement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cAssignementAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cSetKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cLeftAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cLeftExpressionParserRuleCall_2_0 = (RuleCall)cLeftAssignment_2.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cRightAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cRightExpressionParserRuleCall_4_0 = (RuleCall)cRightAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Assignement returns Assignement:
 		//    {Assignement}
-		//    '('left=Expression
-		//    '=' right= Expression ');'
+		//    'set' left=Expression
+		//    '=' right= Expression
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Assignement}
-		//'('left=Expression
-		//'=' right= Expression ');'
+		//'set' left=Expression
+		//'=' right= Expression
 		public Group getGroup() { return cGroup; }
 		
 		//{Assignement}
 		public Action getAssignementAction_0() { return cAssignementAction_0; }
 		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		//'set'
+		public Keyword getSetKeyword_1() { return cSetKeyword_1; }
 		
 		//left=Expression
 		public Assignment getLeftAssignment_2() { return cLeftAssignment_2; }
@@ -1760,9 +2073,6 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//Expression
 		public RuleCall getRightExpressionParserRuleCall_4_0() { return cRightExpressionParserRuleCall_4_0; }
-		
-		//');'
-		public Keyword getRightParenthesisSemicolonKeyword_5() { return cRightParenthesisSemicolonKeyword_5; }
 	}
 	public class PlusEqualElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.PlusEqual");
@@ -1774,18 +2084,18 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cPlusSignEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cRightAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cRightExpressionParserRuleCall_4_0 = (RuleCall)cRightAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//PlusEqual returns PlusEqual:
 		//    {PlusEqual}
 		//    '('left=Expression
-		//    '+=' right= Expression ');'
+		//    '+=' right= Expression ')'
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{PlusEqual}
 		//'('left=Expression
-		//'+=' right= Expression ');'
+		//'+=' right= Expression ')'
 		public Group getGroup() { return cGroup; }
 		
 		//{PlusEqual}
@@ -1809,8 +2119,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Expression
 		public RuleCall getRightExpressionParserRuleCall_4_0() { return cRightExpressionParserRuleCall_4_0; }
 		
-		//');'
-		public Keyword getRightParenthesisSemicolonKeyword_5() { return cRightParenthesisSemicolonKeyword_5; }
+		//')'
+		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
 	}
 	public class MinusEqualElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.MinusEqual");
@@ -1822,18 +2132,18 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cHyphenMinusEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cRightAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cRightExpressionParserRuleCall_4_0 = (RuleCall)cRightAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//MinusEqual returns MinusEqual:
 		//    {MinusEqual}
 		//    '('left=Expression
-		//    '-=' right= Expression ');'
+		//    '-=' right= Expression ')'
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{MinusEqual}
 		//'('left=Expression
-		//'-=' right= Expression ');'
+		//'-=' right= Expression ')'
 		public Group getGroup() { return cGroup; }
 		
 		//{MinusEqual}
@@ -1857,8 +2167,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Expression
 		public RuleCall getRightExpressionParserRuleCall_4_0() { return cRightExpressionParserRuleCall_4_0; }
 		
-		//');'
-		public Keyword getRightParenthesisSemicolonKeyword_5() { return cRightParenthesisSemicolonKeyword_5; }
+		//')'
+		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.EBoolean");
@@ -1892,21 +2202,20 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cInitialeValueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cInitialeValueEIntParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//UnInteger returns UnInteger:
 		//    {UnInteger}
 		//    (isConst?='const')?
 		//    'int'
 		//    name=EString
-		//    ('=' initialeValue=EInt)? ";";
+		//    ('=' initialeValue=EInt)? ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{UnInteger}
 		//(isConst?='const')?
 		//'int'
 		//name=EString
-		//('=' initialeValue=EInt)? ";"
+		//('=' initialeValue=EInt)?
 		public Group getGroup() { return cGroup; }
 		
 		//{UnInteger}
@@ -1938,9 +2247,6 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//EInt
 		public RuleCall getInitialeValueEIntParserRuleCall_4_1_0() { return cInitialeValueEIntParserRuleCall_4_1_0; }
-		
-		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class UnDoubleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnDouble");
@@ -1955,25 +2261,23 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cInitialeValue1Assignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cInitialeValue1EIntParserRuleCall_4_1_0 = (RuleCall)cInitialeValue1Assignment_4_1.eContents().get(0);
-		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
-		private final Keyword cFullStopKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
-		private final Assignment cInitialeValue2Assignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
-		private final RuleCall cInitialeValue2EIntParserRuleCall_4_2_1_0 = (RuleCall)cInitialeValue2Assignment_4_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cFullStopKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cInitialeValue2Assignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
+		private final RuleCall cInitialeValue2EIntParserRuleCall_4_3_0 = (RuleCall)cInitialeValue2Assignment_4_3.eContents().get(0);
 		
 		//UnDouble returns UnDouble:
 		//    {UnDouble}
 		//    (isConst?='const')?
 		//    'double'
 		//    name=EString
-		//    ('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";";
+		//    ('=' initialeValue1=EInt '.' initialeValue2=EInt)? ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{UnDouble}
 		//(isConst?='const')?
 		//'double'
 		//name=EString
-		//('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";"
+		//('=' initialeValue1=EInt '.' initialeValue2=EInt)?
 		public Group getGroup() { return cGroup; }
 		
 		//{UnDouble}
@@ -1994,7 +2298,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
 		
-		//('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)?
+		//('=' initialeValue1=EInt '.' initialeValue2=EInt)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'='
@@ -2006,20 +2310,14 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EInt
 		public RuleCall getInitialeValue1EIntParserRuleCall_4_1_0() { return cInitialeValue1EIntParserRuleCall_4_1_0; }
 		
-		//('.' initialeValue2=EInt)?
-		public Group getGroup_4_2() { return cGroup_4_2; }
-		
 		//'.'
-		public Keyword getFullStopKeyword_4_2_0() { return cFullStopKeyword_4_2_0; }
+		public Keyword getFullStopKeyword_4_2() { return cFullStopKeyword_4_2; }
 		
 		//initialeValue2=EInt
-		public Assignment getInitialeValue2Assignment_4_2_1() { return cInitialeValue2Assignment_4_2_1; }
+		public Assignment getInitialeValue2Assignment_4_3() { return cInitialeValue2Assignment_4_3; }
 		
 		//EInt
-		public RuleCall getInitialeValue2EIntParserRuleCall_4_2_1_0() { return cInitialeValue2EIntParserRuleCall_4_2_1_0; }
-		
-		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public RuleCall getInitialeValue2EIntParserRuleCall_4_3_0() { return cInitialeValue2EIntParserRuleCall_4_3_0; }
 	}
 	public class UnBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnBoolean");
@@ -2034,21 +2332,20 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cInitialeValueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cInitialeValueEBooleanParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//UnBoolean returns UnBoolean:
 		//    {UnBoolean}
 		//    (isConst?='const')?
 		//    'bool'
 		//    name=EString
-		//    ('=' initialeValue=EBoolean)? ";";
+		//    ('=' initialeValue=EBoolean)?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{UnBoolean}
 		//(isConst?='const')?
 		//'bool'
 		//name=EString
-		//('=' initialeValue=EBoolean)? ";"
+		//('=' initialeValue=EBoolean)?
 		public Group getGroup() { return cGroup; }
 		
 		//{UnBoolean}
@@ -2080,9 +2377,6 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//EBoolean
 		public RuleCall getInitialeValueEBooleanParserRuleCall_4_1_0() { return cInitialeValueEBooleanParserRuleCall_4_1_0; }
-		
-		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class UnStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnString");
@@ -2096,22 +2390,21 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cInitialeValueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cInitialeValueEStringParserRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final RuleCall cInitialeValueSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cInitialeValueAssignment_4_1.eContents().get(0);
 		
 		//UnString returns UnString:
 		//    {UnString}
 		//    (isConst?='const')?
 		//    'string'
 		//    name=EString
-		//    ('=' initialeValue=EString)? ";";
+		//    ('=' initialeValue=STRING)?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{UnString}
 		//(isConst?='const')?
 		//'string'
 		//name=EString
-		//('=' initialeValue=EString)? ";"
+		//('=' initialeValue=STRING)?
 		public Group getGroup() { return cGroup; }
 		
 		//{UnString}
@@ -2132,20 +2425,76 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//EString
 		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
 		
-		//('=' initialeValue=EString)?
+		//('=' initialeValue=STRING)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
 		
-		//initialeValue=EString
+		//initialeValue=STRING
 		public Assignment getInitialeValueAssignment_4_1() { return cInitialeValueAssignment_4_1; }
 		
-		//EString
-		public RuleCall getInitialeValueEStringParserRuleCall_4_1_0() { return cInitialeValueEStringParserRuleCall_4_1_0; }
+		//STRING
+		public RuleCall getInitialeValueSTRINGTerminalRuleCall_4_1_0() { return cInitialeValueSTRINGTerminalRuleCall_4_1_0; }
+	}
+	public class UnColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.UnColor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cUnColorAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cIsConstAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cIsConstConstKeyword_1_0 = (Keyword)cIsConstAssignment_1.eContents().get(0);
+		private final Keyword cColorKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cInitialValueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cInitialValueColorsEnumRuleCall_4_1_0 = (RuleCall)cInitialValueAssignment_4_1.eContents().get(0);
 		
-		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		//UnColor returns UnColor:
+		//    {UnColor}
+		//    (isConst?='const')?
+		//    'color'
+		//    name=EString
+		//    ('=' initialValue =Colors )?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{UnColor}
+		//(isConst?='const')?
+		//'color'
+		//name=EString
+		//('=' initialValue =Colors )?
+		public Group getGroup() { return cGroup; }
+		
+		//{UnColor}
+		public Action getUnColorAction_0() { return cUnColorAction_0; }
+		
+		//(isConst?='const')?
+		public Assignment getIsConstAssignment_1() { return cIsConstAssignment_1; }
+		
+		//'const'
+		public Keyword getIsConstConstKeyword_1_0() { return cIsConstConstKeyword_1_0; }
+		
+		//'color'
+		public Keyword getColorKeyword_2() { return cColorKeyword_2; }
+		
+		//name=EString
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
+		
+		//('=' initialValue =Colors )?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
+		
+		//initialValue =Colors
+		public Assignment getInitialValueAssignment_4_1() { return cInitialValueAssignment_4_1; }
+		
+		//Colors
+		public RuleCall getInitialValueColorsEnumRuleCall_4_1_0() { return cInitialValueColorsEnumRuleCall_4_1_0; }
 	}
 	public class TheDoubleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.TheDouble");
@@ -2239,25 +2588,50 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTheStringAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueEStringParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
 		//TheString returns TheString:
 		//    {TheString}
-		//    value=EString;
+		//    value=STRING;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{TheString}
-		//value=EString
+		//value=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//{TheString}
 		public Action getTheStringAction_0() { return cTheStringAction_0; }
 		
-		//value=EString
+		//value=STRING
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//EString
-		public RuleCall getValueEStringParserRuleCall_1_0() { return cValueEStringParserRuleCall_1_0; }
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_1_0() { return cValueSTRINGTerminalRuleCall_1_0; }
+	}
+	public class TheColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.TheColor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cTheColorAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValueColorsEnumRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		
+		//TheColor returns TheColor:
+		//    {TheColor}
+		//    value=Colors;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{TheColor}
+		//value=Colors
+		public Group getGroup() { return cGroup; }
+		
+		//{TheColor}
+		public Action getTheColorAction_0() { return cTheColorAction_0; }
+		
+		//value=Colors
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		
+		//Colors
+		public RuleCall getValueColorsEnumRuleCall_1_0() { return cValueColorsEnumRuleCall_1_0; }
 	}
 	public class FQNElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.FQN");
@@ -2307,6 +2681,34 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 	}
 	
+	public class ColorsElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Colors");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBlackEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBlackBlackKeyword_0_0 = (Keyword)cBlackEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cWhiteEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cWhiteWhiteKeyword_1_0 = (Keyword)cWhiteEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum Colors:
+		//black = "black" | white = "white"
+		//;
+		public EnumRule getRule() { return rule; }
+		
+		//black = "black" | white = "white"
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//black = "black"
+		public EnumLiteralDeclaration getBlackEnumLiteralDeclaration_0() { return cBlackEnumLiteralDeclaration_0; }
+		
+		//"black"
+		public Keyword getBlackBlackKeyword_0_0() { return cBlackBlackKeyword_0_0; }
+		
+		//white = "white"
+		public EnumLiteralDeclaration getWhiteEnumLiteralDeclaration_1() { return cWhiteEnumLiteralDeclaration_1; }
+		
+		//"white"
+		public Keyword getWhiteWhiteKeyword_1_0() { return cWhiteWhiteKeyword_1_0; }
+	}
 	
 	private final ProgramElements pProgram;
 	private final StatementElements pStatement;
@@ -2317,6 +2719,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final EngineElements pEngine;
 	private final SensorElements pSensor;
 	private final WheelEngineElements pWheelEngine;
+	private final MotorizedArmEngineElements pMotorizedArmEngine;
+	private final PaintballLauncherEngineElements pPaintballLauncherEngine;
 	private final ColorSensorElements pColorSensor;
 	private final LaserSensorElements pLaserSensor;
 	private final GPSSensorElements pGPSSensor;
@@ -2326,6 +2730,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final EngineOperationElements pEngineOperation;
 	private final SensorOperationElements pSensorOperation;
 	private final VitesseOperationElements pVitesseOperation;
+	private final BreakMotorElements pBreakMotor;
+	private final PositionOperationElements pPositionOperation;
+	private final ForceOperationElements pForceOperation;
 	private final ColorOperationElements pColorOperation;
 	private final IntensityOperationElements pIntensityOperation;
 	private final RangeOperationElements pRangeOperation;
@@ -2359,10 +2766,13 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final UnDoubleElements pUnDouble;
 	private final UnBooleanElements pUnBoolean;
 	private final UnStringElements pUnString;
+	private final UnColorElements pUnColor;
 	private final TheDoubleElements pTheDouble;
 	private final TheIntElements pTheInt;
 	private final TheBooleanElements pTheBoolean;
 	private final TheStringElements pTheString;
+	private final TheColorElements pTheColor;
+	private final ColorsElements eColors;
 	private final FQNElements pFQN;
 	private final EIntElements pEInt;
 	
@@ -2384,6 +2794,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pEngine = new EngineElements();
 		this.pSensor = new SensorElements();
 		this.pWheelEngine = new WheelEngineElements();
+		this.pMotorizedArmEngine = new MotorizedArmEngineElements();
+		this.pPaintballLauncherEngine = new PaintballLauncherEngineElements();
 		this.pColorSensor = new ColorSensorElements();
 		this.pLaserSensor = new LaserSensorElements();
 		this.pGPSSensor = new GPSSensorElements();
@@ -2393,6 +2805,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pEngineOperation = new EngineOperationElements();
 		this.pSensorOperation = new SensorOperationElements();
 		this.pVitesseOperation = new VitesseOperationElements();
+		this.pBreakMotor = new BreakMotorElements();
+		this.pPositionOperation = new PositionOperationElements();
+		this.pForceOperation = new ForceOperationElements();
 		this.pColorOperation = new ColorOperationElements();
 		this.pIntensityOperation = new IntensityOperationElements();
 		this.pRangeOperation = new RangeOperationElements();
@@ -2426,10 +2841,13 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pUnDouble = new UnDoubleElements();
 		this.pUnBoolean = new UnBooleanElements();
 		this.pUnString = new UnStringElements();
+		this.pUnColor = new UnColorElements();
 		this.pTheDouble = new TheDoubleElements();
 		this.pTheInt = new TheIntElements();
 		this.pTheBoolean = new TheBooleanElements();
 		this.pTheString = new TheStringElements();
+		this.pTheColor = new TheColorElements();
+		this.eColors = new ColorsElements();
 		this.pFQN = new FQNElements();
 		this.pEInt = new EIntElements();
 	}
@@ -2466,7 +2884,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    'Program'
 	//    name=EString
 	//    '{'
-	//        (statement+=Statement)*
+	//        (statement+=Statement)*  (';')?
 	//    '}';
 	public ProgramElements getProgramAccess() {
 		return pProgram;
@@ -2487,7 +2905,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Expression returns Expression:
-	//    VariableRef | BinaryOperation | TheString | TheDouble | TheInt | TheBoolean | EngineOperation | SensorOperation | BooleanExpression ;
+	//    VariableRef | BinaryOperation | TheString | TheColor | TheDouble | TheInt | TheBoolean | EngineOperation | BreakMotor | SensorOperation | BooleanExpression ;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -2507,7 +2925,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Variable returns Variable:
-	//    UnInteger | UnString | UnBoolean | UnDouble;
+	//    UnInteger | UnString | UnBoolean | UnDouble | UnColor;
 	public VariableElements getVariableAccess() {
 		return pVariable;
 	}
@@ -2527,7 +2945,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Engine returns Engine:
-	//    WheelEngine;
+	//    WheelEngine | MotorizedArmEngine | PaintballLauncherEngine;
 	public EngineElements getEngineAccess() {
 		return pEngine;
 	}
@@ -2549,6 +2967,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//WheelEngine returns WheelEngine:
 	//    'WheelEngine'
 	//    name=EString
+	//    'on'
 	//    position=EString
 	//;
 	public WheelEngineElements getWheelEngineAccess() {
@@ -2559,9 +2978,38 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getWheelEngineAccess().getRule();
 	}
 	
+	//MotorizedArmEngine returns MotorizedArmEngine:
+	//    'MotorizedArmEngine'
+	//    name=EString
+	//    'on'
+	//    position=EString
+	//;
+	public MotorizedArmEngineElements getMotorizedArmEngineAccess() {
+		return pMotorizedArmEngine;
+	}
+	
+	public ParserRule getMotorizedArmEngineRule() {
+		return getMotorizedArmEngineAccess().getRule();
+	}
+	
+	//PaintballLauncherEngine returns PaintballLauncherEngine:
+	//    'PaintballLauncherEngine'
+	//    name=EString
+	//    'on'
+	//    position=EString
+	//;
+	public PaintballLauncherEngineElements getPaintballLauncherEngineAccess() {
+		return pPaintballLauncherEngine;
+	}
+	
+	public ParserRule getPaintballLauncherEngineRule() {
+		return getPaintballLauncherEngineAccess().getRule();
+	}
+	
 	//ColorSensor returns ColorSensor:
 	//    'ColorSensor'
 	//    name=EString
+	//    'on'
 	//    position=EInt
 	//;
 	public ColorSensorElements getColorSensorAccess() {
@@ -2575,6 +3023,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//LaserSensor returns LaserSensor:
 	//    'LaserSensor'
 	//    name=EString
+	//    'on'
 	//    position=EInt
 	//;
 	public LaserSensorElements getLaserSensorAccess() {
@@ -2588,6 +3037,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//GPSSensor returns GPSSensor:
 	//    'GPSSensor'
 	//    name=EString
+	//    'on'
 	//    position=EInt
 	//;
 	public GPSSensorElements getGPSSensorAccess() {
@@ -2601,6 +3051,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//GyroSensor returns GyroSensor:
 	//    'GyroSensor'
 	//    name=EString
+	//    'on'
 	//    position=EInt
 	//;
 	public GyroSensorElements getGyroSensorAccess() {
@@ -2614,6 +3065,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//UltraSonicSensor returns UltraSonicSensor:
 	//    'UltraSonicSensor'
 	//    name=EString
+	//    'on'
 	//    position=EInt
 	//;
 	public UltraSonicSensorElements getUltraSonicSensorAccess() {
@@ -2641,7 +3093,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//EngineOperation returns EngineOperation:
-	//     VitesseOperation
+	//     VitesseOperation | PositionOperation | ForceOperation
 	//;
 	public EngineOperationElements getEngineOperationAccess() {
 		return pEngineOperation;
@@ -2672,6 +3124,43 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getVitesseOperationRule() {
 		return getVitesseOperationAccess().getRule();
+	}
+	
+	//BreakMotor returns BreakMotor:
+	//    'break' 'motor' '('engine=[Engine|FQN]')'
+	//;
+	public BreakMotorElements getBreakMotorAccess() {
+		return pBreakMotor;
+	}
+	
+	public ParserRule getBreakMotorRule() {
+		return getBreakMotorAccess().getRule();
+	}
+	
+	//PositionOperation returns PositionOperation:
+	//    'set' 'degres''('motorizedarmengine=[MotorizedArmEngine|FQN]')'
+	//    '='
+	//    right=Expression
+	//;
+	public PositionOperationElements getPositionOperationAccess() {
+		return pPositionOperation;
+	}
+	
+	public ParserRule getPositionOperationRule() {
+		return getPositionOperationAccess().getRule();
+	}
+	
+	//ForceOperation returns ForceOperation:
+	//    'set' 'strength''('paintballlauncherengine=[PaintballLauncherEngine|FQN]')'
+	//    '='
+	//    right=Expression
+	//;
+	public ForceOperationElements getForceOperationAccess() {
+		return pForceOperation;
+	}
+	
+	public ParserRule getForceOperationRule() {
+		return getForceOperationAccess().getRule();
 	}
 	
 	//ColorOperation returns ColorOperation:
@@ -2806,7 +3295,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//EString returns ecore::EString:
-	//    STRING | ID;
+	//    FQN | ID;
 	public EStringElements getEStringAccess() {
 		return pEString;
 	}
@@ -2833,7 +3322,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    {MethodePrint}
 	//    'print('
 	//    (expression+=Expression ",")+
-	//    ');';
+	//    ')';
 	public MethodePrintElements getMethodePrintAccess() {
 		return pMethodePrint;
 	}
@@ -2969,8 +3458,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	//Assignement returns Assignement:
 	//    {Assignement}
-	//    '('left=Expression
-	//    '=' right= Expression ');'
+	//    'set' left=Expression
+	//    '=' right= Expression
 	//    ;
 	public AssignementElements getAssignementAccess() {
 		return pAssignement;
@@ -2983,7 +3472,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//PlusEqual returns PlusEqual:
 	//    {PlusEqual}
 	//    '('left=Expression
-	//    '+=' right= Expression ');'
+	//    '+=' right= Expression ')'
 	//    ;
 	public PlusEqualElements getPlusEqualAccess() {
 		return pPlusEqual;
@@ -2996,7 +3485,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//MinusEqual returns MinusEqual:
 	//    {MinusEqual}
 	//    '('left=Expression
-	//    '-=' right= Expression ');'
+	//    '-=' right= Expression ')'
 	//    ;
 	public MinusEqualElements getMinusEqualAccess() {
 		return pMinusEqual;
@@ -3021,7 +3510,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (isConst?='const')?
 	//    'int'
 	//    name=EString
-	//    ('=' initialeValue=EInt)? ";";
+	//    ('=' initialeValue=EInt)? ;
 	public UnIntegerElements getUnIntegerAccess() {
 		return pUnInteger;
 	}
@@ -3035,7 +3524,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (isConst?='const')?
 	//    'double'
 	//    name=EString
-	//    ('=' initialeValue1=EInt ('.' initialeValue2=EInt)?)? ";";
+	//    ('=' initialeValue1=EInt '.' initialeValue2=EInt)? ;
 	public UnDoubleElements getUnDoubleAccess() {
 		return pUnDouble;
 	}
@@ -3049,7 +3538,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (isConst?='const')?
 	//    'bool'
 	//    name=EString
-	//    ('=' initialeValue=EBoolean)? ";";
+	//    ('=' initialeValue=EBoolean)?;
 	public UnBooleanElements getUnBooleanAccess() {
 		return pUnBoolean;
 	}
@@ -3063,13 +3552,27 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (isConst?='const')?
 	//    'string'
 	//    name=EString
-	//    ('=' initialeValue=EString)? ";";
+	//    ('=' initialeValue=STRING)?;
 	public UnStringElements getUnStringAccess() {
 		return pUnString;
 	}
 	
 	public ParserRule getUnStringRule() {
 		return getUnStringAccess().getRule();
+	}
+	
+	//UnColor returns UnColor:
+	//    {UnColor}
+	//    (isConst?='const')?
+	//    'color'
+	//    name=EString
+	//    ('=' initialValue =Colors )?;
+	public UnColorElements getUnColorAccess() {
+		return pUnColor;
+	}
+	
+	public ParserRule getUnColorRule() {
+		return getUnColorAccess().getRule();
 	}
 	
 	//TheDouble returns TheDouble:
@@ -3107,13 +3610,35 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	//TheString returns TheString:
 	//    {TheString}
-	//    value=EString;
+	//    value=STRING;
 	public TheStringElements getTheStringAccess() {
 		return pTheString;
 	}
 	
 	public ParserRule getTheStringRule() {
 		return getTheStringAccess().getRule();
+	}
+	
+	//TheColor returns TheColor:
+	//    {TheColor}
+	//    value=Colors;
+	public TheColorElements getTheColorAccess() {
+		return pTheColor;
+	}
+	
+	public ParserRule getTheColorRule() {
+		return getTheColorAccess().getRule();
+	}
+	
+	//enum Colors:
+	//black = "black" | white = "white"
+	//;
+	public ColorsElements getColorsAccess() {
+		return eColors;
+	}
+	
+	public EnumRule getColorsRule() {
+		return getColorsAccess().getRule();
 	}
 	
 	//FQN :

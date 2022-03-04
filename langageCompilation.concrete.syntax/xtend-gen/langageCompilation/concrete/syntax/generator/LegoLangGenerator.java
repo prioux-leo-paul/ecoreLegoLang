@@ -9,9 +9,11 @@ import langageCompilation.AngleOperation;
 import langageCompilation.Assignement;
 import langageCompilation.BinaryOperation;
 import langageCompilation.BooleanExpression;
+import langageCompilation.BreakMotor;
 import langageCompilation.Car;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
+import langageCompilation.Colors;
 import langageCompilation.Comparaison;
 import langageCompilation.ConditionEtat;
 import langageCompilation.Different;
@@ -21,6 +23,7 @@ import langageCompilation.Engine;
 import langageCompilation.EngineOperation;
 import langageCompilation.Equal;
 import langageCompilation.Expression;
+import langageCompilation.ForceOperation;
 import langageCompilation.GPSSensor;
 import langageCompilation.GT;
 import langageCompilation.GTorEqual;
@@ -32,9 +35,12 @@ import langageCompilation.LaserSensor;
 import langageCompilation.Loop;
 import langageCompilation.MethodePrint;
 import langageCompilation.MinusEqual;
+import langageCompilation.MotorizedArmEngine;
 import langageCompilation.Multiplication;
 import langageCompilation.Or;
+import langageCompilation.PaintballLauncherEngine;
 import langageCompilation.PlusEqual;
+import langageCompilation.PositionOperation;
 import langageCompilation.Program;
 import langageCompilation.RangeOperation;
 import langageCompilation.Sensor;
@@ -42,11 +48,13 @@ import langageCompilation.SensorOperation;
 import langageCompilation.Statement;
 import langageCompilation.Substraction;
 import langageCompilation.TheBoolean;
+import langageCompilation.TheColor;
 import langageCompilation.TheDouble;
 import langageCompilation.TheInt;
 import langageCompilation.TheString;
 import langageCompilation.UltraSonicSensor;
 import langageCompilation.UnBoolean;
+import langageCompilation.UnColor;
 import langageCompilation.UnDouble;
 import langageCompilation.UnInteger;
 import langageCompilation.UnString;
@@ -112,7 +120,7 @@ public class LegoLangGenerator extends AbstractGenerator {
       String _booleanExpressionToPython = this.booleanExpressionToPython(((ConditionEtat)v).getCondition());
       tmp = (_tmp + _booleanExpressionToPython);
       String _tmp_1 = tmp;
-      tmp = (_tmp_1 + ")");
+      tmp = (_tmp_1 + "):");
       int _nbTab = this.nbTab;
       this.nbTab = (_nbTab + 1);
       EList<Statement> _then = ((ConditionEtat)v).getThen();
@@ -192,6 +200,22 @@ public class LegoLangGenerator extends AbstractGenerator {
       String _plus_2 = (_plus_1 + _position_1);
       return (_plus_2 + ")");
     }
+    if ((v instanceof MotorizedArmEngine)) {
+      String _position_2 = ((MotorizedArmEngine)v).getPosition();
+      String _plus_3 = ("motor" + _position_2);
+      String _plus_4 = (_plus_3 + " = LargeMotor(OUTPUT_");
+      String _position_3 = ((MotorizedArmEngine)v).getPosition();
+      String _plus_5 = (_plus_4 + _position_3);
+      return (_plus_5 + ")");
+    }
+    if ((v instanceof PaintballLauncherEngine)) {
+      String _position_4 = ((PaintballLauncherEngine)v).getPosition();
+      String _plus_6 = ("motor" + _position_4);
+      String _plus_7 = (_plus_6 + " = LargeMotor(OUTPUT_");
+      String _position_5 = ((PaintballLauncherEngine)v).getPosition();
+      String _plus_8 = (_plus_7 + _position_5);
+      return (_plus_8 + ")");
+    }
     return null;
   }
   
@@ -247,25 +271,41 @@ public class LegoLangGenerator extends AbstractGenerator {
       return (_plus + Integer.valueOf(_initialeValue));
     }
     if ((v instanceof UnString)) {
-      String _name_1 = ((UnString)v).getName();
-      String _plus_1 = (_name_1 + ":str=");
       String _initialeValue_1 = ((UnString)v).getInitialeValue();
-      return (_plus_1 + _initialeValue_1);
+      boolean _tripleEquals = (_initialeValue_1 == null);
+      if (_tripleEquals) {
+        String _name_1 = ((UnString)v).getName();
+        return (_name_1 + ":int= None");
+      }
+      String _name_2 = ((UnString)v).getName();
+      String _plus_1 = (_name_2 + ":str=");
+      String _plus_2 = (_plus_1 + "\"");
+      String _initialeValue_2 = ((UnString)v).getInitialeValue();
+      String _plus_3 = (_plus_2 + _initialeValue_2);
+      return (_plus_3 + "\"");
     }
     if ((v instanceof UnBoolean)) {
-      String _name_2 = ((UnBoolean)v).getName();
-      String _plus_2 = (_name_2 + ":bool=");
-      boolean _isInitialeValue = ((UnBoolean)v).isInitialeValue();
-      return (_plus_2 + Boolean.valueOf(_isInitialeValue));
+      String _name_3 = ((UnBoolean)v).getName();
+      String _plus_4 = (_name_3 + ":bool=");
+      String _upperCase = Boolean.valueOf(((UnBoolean)v).isInitialeValue()).toString().substring(0, 1).toUpperCase();
+      String _plus_5 = (_plus_4 + _upperCase);
+      String _substring = Boolean.valueOf(((UnBoolean)v).isInitialeValue()).toString().substring(1);
+      return (_plus_5 + _substring);
     }
     if ((v instanceof UnDouble)) {
-      String _name_3 = ((UnDouble)v).getName();
-      String _plus_3 = (_name_3 + ":double=");
+      String _name_4 = ((UnDouble)v).getName();
+      String _plus_6 = (_name_4 + ":double=");
       int _initialeValue1 = ((UnDouble)v).getInitialeValue1();
-      String _plus_4 = (_plus_3 + Integer.valueOf(_initialeValue1));
-      String _plus_5 = (_plus_4 + ".");
+      String _plus_7 = (_plus_6 + Integer.valueOf(_initialeValue1));
+      String _plus_8 = (_plus_7 + ".");
       int _initialeValue2 = ((UnDouble)v).getInitialeValue2();
-      return (_plus_5 + Integer.valueOf(_initialeValue2));
+      return (_plus_8 + Integer.valueOf(_initialeValue2));
+    }
+    if ((v instanceof UnColor)) {
+      String _name_5 = ((UnColor)v).getName();
+      String _plus_9 = (_name_5 + ":str=");
+      String _colorToPython = this.colorToPython(((UnColor)v).getInitialValue());
+      return (_plus_9 + _colorToPython);
     }
     return null;
   }
@@ -277,17 +317,24 @@ public class LegoLangGenerator extends AbstractGenerator {
     if ((v instanceof TheInt)) {
       return Integer.valueOf(((TheInt)v).getValue()).toString();
     }
+    if ((v instanceof TheColor)) {
+      return this.colorToPython(((TheColor)v).getValue());
+    }
     if ((v instanceof TheBoolean)) {
-      return Boolean.valueOf(((TheBoolean)v).isValue()).toString();
+      String _upperCase = Boolean.valueOf(((TheBoolean)v).isValue()).toString().substring(0, 1).toUpperCase();
+      String _substring = Boolean.valueOf(((TheBoolean)v).isValue()).toString().substring(1);
+      return (_upperCase + _substring);
     }
     if ((v instanceof TheString)) {
-      return ((TheString)v).getValue();
+      String _string = ((TheString)v).getValue().toString();
+      String _plus = ("\"" + _string);
+      return (_plus + "\"");
     }
     if ((v instanceof TheDouble)) {
-      String _string = Integer.valueOf(((TheDouble)v).getValue1()).toString();
-      String _plus = (_string + ".");
-      String _string_1 = Integer.valueOf(((TheDouble)v).getValue2()).toString();
-      return (_plus + _string_1);
+      String _string_1 = Integer.valueOf(((TheDouble)v).getValue1()).toString();
+      String _plus_1 = (_string_1 + ".");
+      String _string_2 = Integer.valueOf(((TheDouble)v).getValue2()).toString();
+      return (_plus_1 + _string_2);
     }
     if ((v instanceof BinaryOperation)) {
       return this.binaryOperationPython(((BinaryOperation)v));
@@ -301,15 +348,28 @@ public class LegoLangGenerator extends AbstractGenerator {
     if ((v instanceof BooleanExpression)) {
       return this.booleanExpressionToPython(((BooleanExpression)v));
     }
+    if ((v instanceof BreakMotor)) {
+      String _position = ((BreakMotor)v).getEngine().getPosition();
+      String _plus_2 = ("motor" + _position);
+      return (_plus_2 + ".off(brake=True)");
+    }
     return null;
+  }
+  
+  public String colorToPython(final Colors c) {
+    String _upperCase = c.toString().substring(0, 1).toUpperCase();
+    String _plus = ("\"" + _upperCase);
+    String _substring = c.toString().substring(1);
+    String _plus_1 = (_plus + _substring);
+    return (_plus_1 + "\"");
   }
   
   public String booleanExpressionToPython(final BooleanExpression v) {
     if ((v instanceof And)) {
       String tmp = this.expressionToPython(((And)v).getLeft());
-      boolean _equals = ((And)v).getRight().equals(null);
-      boolean _not = (!_equals);
-      if (_not) {
+      Expression _right = ((And)v).getRight();
+      boolean _tripleNotEquals = (_right != null);
+      if (_tripleNotEquals) {
         String _tmp = tmp;
         String _expressionToPython = this.expressionToPython(((And)v).getRight());
         String _plus = (" and " + _expressionToPython);
@@ -319,9 +379,9 @@ public class LegoLangGenerator extends AbstractGenerator {
     }
     if ((v instanceof Or)) {
       String tmp_1 = this.expressionToPython(((Or)v).getLeft());
-      boolean _equals_1 = ((Or)v).getRight().equals(null);
-      boolean _not_1 = (!_equals_1);
-      if (_not_1) {
+      Expression _right_1 = ((Or)v).getRight();
+      boolean _tripleNotEquals_1 = (_right_1 != null);
+      if (_tripleNotEquals_1) {
         String _tmp_1 = tmp_1;
         String _expressionToPython_1 = this.expressionToPython(((Or)v).getRight());
         String _plus_1 = (" or " + _expressionToPython_1);
@@ -380,49 +440,72 @@ public class LegoLangGenerator extends AbstractGenerator {
       String _plus_2 = (_plus_1 + _expressionToPython);
       return (_plus_2 + ")");
     }
+    if ((v instanceof PositionOperation)) {
+      String _position_1 = ((PositionOperation)v).getMotorizedarmengine().getPosition();
+      String _plus_3 = ("motor" + _position_1);
+      String _plus_4 = (_plus_3 + ".on_to_position(20,(");
+      String _expressionToPython_1 = this.expressionToPython(((PositionOperation)v).getRight());
+      String _plus_5 = (_plus_4 + _expressionToPython_1);
+      return (_plus_5 + "))");
+    }
+    if ((v instanceof ForceOperation)) {
+      String _position_2 = ((ForceOperation)v).getPaintballlauncherengine().getPosition();
+      String _plus_6 = ("motor" + _position_2);
+      String _plus_7 = (_plus_6 + ".on_for_rotations(100,(-");
+      String _expressionToPython_2 = this.expressionToPython(((ForceOperation)v).getRight());
+      String _plus_8 = (_plus_7 + _expressionToPython_2);
+      String _plus_9 = (_plus_8 + "))\n");
+      String _plus_10 = (_plus_9 + "motor");
+      String _position_3 = ((ForceOperation)v).getPaintballlauncherengine().getPosition();
+      String _plus_11 = (_plus_10 + _position_3);
+      String _plus_12 = (_plus_11 + ".on_for_rotations(100,(");
+      String _expressionToPython_3 = this.expressionToPython(((ForceOperation)v).getRight());
+      String _plus_13 = (_plus_12 + _expressionToPython_3);
+      return (_plus_13 + "))");
+    }
     return null;
   }
   
   public String binaryOperationPython(final BinaryOperation v) {
     if ((v instanceof Multiplication)) {
       String _expressionToPython = this.expressionToPython(((Multiplication)v).getLeft());
-      String _plus = (_expressionToPython + "*");
+      String _plus = (_expressionToPython + " * ");
       String _expressionToPython_1 = this.expressionToPython(((Multiplication)v).getRight());
       return (_plus + _expressionToPython_1);
     }
     if ((v instanceof Addition)) {
       String _expressionToPython_2 = this.expressionToPython(((Addition)v).getLeft());
-      String _plus_1 = (_expressionToPython_2 + "+");
+      String _plus_1 = (_expressionToPython_2 + " + ");
       String _expressionToPython_3 = this.expressionToPython(((Addition)v).getRight());
       return (_plus_1 + _expressionToPython_3);
     }
     if ((v instanceof Division)) {
       String _expressionToPython_4 = this.expressionToPython(((Division)v).getLeft());
-      String _plus_2 = (_expressionToPython_4 + "/");
+      String _plus_2 = (_expressionToPython_4 + " / ");
       String _expressionToPython_5 = this.expressionToPython(((Division)v).getRight());
       return (_plus_2 + _expressionToPython_5);
     }
     if ((v instanceof Assignement)) {
       String _expressionToPython_6 = this.expressionToPython(((Assignement)v).getLeft());
-      String _plus_3 = (_expressionToPython_6 + "=");
+      String _plus_3 = (_expressionToPython_6 + " = ");
       String _expressionToPython_7 = this.expressionToPython(((Assignement)v).getRight());
       return (_plus_3 + _expressionToPython_7);
     }
     if ((v instanceof MinusEqual)) {
       String _expressionToPython_8 = this.expressionToPython(((MinusEqual)v).getLeft());
-      String _plus_4 = (_expressionToPython_8 + "-=");
+      String _plus_4 = (_expressionToPython_8 + " -= ");
       String _expressionToPython_9 = this.expressionToPython(((MinusEqual)v).getRight());
       return (_plus_4 + _expressionToPython_9);
     }
     if ((v instanceof PlusEqual)) {
       String _expressionToPython_10 = this.expressionToPython(((PlusEqual)v).getLeft());
-      String _plus_5 = (_expressionToPython_10 + "+=");
+      String _plus_5 = (_expressionToPython_10 + " += ");
       String _expressionToPython_11 = this.expressionToPython(((PlusEqual)v).getRight());
       return (_plus_5 + _expressionToPython_11);
     }
     if ((v instanceof Substraction)) {
       String _expressionToPython_12 = this.expressionToPython(((Substraction)v).getLeft());
-      String _plus_6 = (_expressionToPython_12 + "-");
+      String _plus_6 = (_expressionToPython_12 + " - ");
       String _expressionToPython_13 = this.expressionToPython(((Substraction)v).getRight());
       return (_plus_6 + _expressionToPython_13);
     }
@@ -435,37 +518,37 @@ public class LegoLangGenerator extends AbstractGenerator {
   public String comparaisonPython(final Comparaison v) {
     if ((v instanceof GT)) {
       String _expressionToPython = this.expressionToPython(((GT)v).getLeft());
-      String _plus = (_expressionToPython + ">");
+      String _plus = (_expressionToPython + " > ");
       String _expressionToPython_1 = this.expressionToPython(((GT)v).getRight());
       return (_plus + _expressionToPython_1);
     }
     if ((v instanceof LT)) {
       String _expressionToPython_2 = this.expressionToPython(((LT)v).getLeft());
-      String _plus_1 = (_expressionToPython_2 + "<");
+      String _plus_1 = (_expressionToPython_2 + " < ");
       String _expressionToPython_3 = this.expressionToPython(((LT)v).getRight());
       return (_plus_1 + _expressionToPython_3);
     }
     if ((v instanceof LTorEqual)) {
       String _expressionToPython_4 = this.expressionToPython(((LTorEqual)v).getLeft());
-      String _plus_2 = (_expressionToPython_4 + "<=");
+      String _plus_2 = (_expressionToPython_4 + " <= ");
       String _expressionToPython_5 = this.expressionToPython(((LTorEqual)v).getRight());
       return (_plus_2 + _expressionToPython_5);
     }
     if ((v instanceof GTorEqual)) {
       String _expressionToPython_6 = this.expressionToPython(((GTorEqual)v).getLeft());
-      String _plus_3 = (_expressionToPython_6 + ">=");
+      String _plus_3 = (_expressionToPython_6 + " >= ");
       String _expressionToPython_7 = this.expressionToPython(((GTorEqual)v).getRight());
       return (_plus_3 + _expressionToPython_7);
     }
     if ((v instanceof Equal)) {
       String _expressionToPython_8 = this.expressionToPython(((Equal)v).getLeft());
-      String _plus_4 = (_expressionToPython_8 + "==");
+      String _plus_4 = (_expressionToPython_8 + " == ");
       String _expressionToPython_9 = this.expressionToPython(((Equal)v).getRight());
       return (_plus_4 + _expressionToPython_9);
     }
     if ((v instanceof Different)) {
       String _expressionToPython_10 = this.expressionToPython(((Different)v).getLeft());
-      String _plus_5 = (_expressionToPython_10 + "!=");
+      String _plus_5 = (_expressionToPython_10 + " != ");
       String _expressionToPython_11 = this.expressionToPython(((Different)v).getRight());
       return (_plus_5 + _expressionToPython_11);
     }

@@ -226,6 +226,24 @@ public class MethodePrintItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
 				LangageCompilationFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.METHODE_PRINT__EXPRESSION,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
 	}
 
 }

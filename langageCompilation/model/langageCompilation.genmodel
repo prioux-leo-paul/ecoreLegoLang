@@ -9,6 +9,10 @@
   <foreignModel>langageCompilation.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="LangageCompilation" disposableProviderFactory="true" ecorePackage="langageCompilation.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="langageCompilation.ecore#//Colors">
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/black"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/white"/>
+    </genEnums>
     <genClasses ecoreClass="langageCompilation.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Program/statement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//Program/name"/>
@@ -132,5 +136,29 @@
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//And"/>
     <genClasses ecoreClass="langageCompilation.ecore#//Or"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//MotorizedArmEngine"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//PositionOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//PositionOperation/motorizedarmengine"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//PaintballLauncherEngine"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//ForceOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//ForceOperation/paintballlauncherengine"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//BreakMotor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BreakMotor/engine"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//ColorExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//ColorExpression/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference langageCompilation.ecore#//ColorExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//ColorEqual"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//ColorNotEqual"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//UnColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnColor/initialValue"/>
+    </genClasses>
+    <genClasses ecoreClass="langageCompilation.ecore#//TheColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//TheColor/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="langageCompilation.ecore#//ExpressionRightColor"/>
   </genPackages>
 </genmodel:GenModel>

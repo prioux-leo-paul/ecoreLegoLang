@@ -262,6 +262,33 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
 				LangageCompilationFactory.eINSTANCE.createOr()));
 
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createMotorizedArmEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createPaintballLauncherEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createUnColor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__THEN,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
+
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createWhileLoop()));
 
@@ -387,6 +414,33 @@ public class ConditionEtatItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
 				LangageCompilationFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createMotorizedArmEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createPositionOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createPaintballLauncherEngine()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createForceOperation()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createColorEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createUnColor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__ELSE,
+				LangageCompilationFactory.eINSTANCE.createTheColor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.CONDITION_ETAT__CONDITION,
 				LangageCompilationFactory.eINSTANCE.createAnd()));
