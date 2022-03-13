@@ -315,16 +315,13 @@ public class ProgramItemProvider extends ItemProviderAdapter implements IEditing
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createUnColor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.PROGRAM__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createPause()));
 	}
 
 	/**

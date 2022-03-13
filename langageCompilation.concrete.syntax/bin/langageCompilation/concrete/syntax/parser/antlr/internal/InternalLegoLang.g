@@ -263,6 +263,18 @@ ruleStatement returns [EObject current=null]
 			$current = $this_Engine_7.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getPauseParserRuleCall_8());
+		}
+		this_Pause_8=rulePause
+		{
+			$current = $this_Pause_8.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -827,6 +839,52 @@ ruleSensor returns [EObject current=null]
 			$current = $this_GPSSensor_4.current;
 			afterParserOrEnumRuleCall();
 		}
+	)
+;
+
+// Entry rule entryRulePause
+entryRulePause returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPauseRule()); }
+	iv_rulePause=rulePause
+	{ $current=$iv_rulePause.current; }
+	EOF;
+
+// Rule Pause
+rulePause returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='stop'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getPauseAccess().getStopKeyword_0());
+		}
+		otherlv_1='for'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getPauseAccess().getForKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPauseAccess().getExpressionExpressionParserRuleCall_2_0());
+				}
+				lv_expression_2_0=ruleExpression
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPauseRule());
+					}
+					set(
+						$current,
+						"expression",
+						lv_expression_2_0,
+						"langageCompilation.concrete.syntax.LegoLang.Expression");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 

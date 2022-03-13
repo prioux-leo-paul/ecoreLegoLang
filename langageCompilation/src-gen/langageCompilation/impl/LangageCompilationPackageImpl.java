@@ -10,9 +10,6 @@ import langageCompilation.BinaryOperation;
 import langageCompilation.BooleanExpression;
 import langageCompilation.BreakMotor;
 import langageCompilation.Car;
-import langageCompilation.ColorEqual;
-import langageCompilation.ColorExpression;
-import langageCompilation.ColorNotEqual;
 import langageCompilation.ColorOperation;
 import langageCompilation.ColorSensor;
 import langageCompilation.Colors;
@@ -42,6 +39,7 @@ import langageCompilation.Multiplication;
 import langageCompilation.NewEClass43;
 import langageCompilation.Or;
 import langageCompilation.PaintballLauncherEngine;
+import langageCompilation.Pause;
 import langageCompilation.PlusEqual;
 import langageCompilation.PositionOperation;
 import langageCompilation.Program;
@@ -509,27 +507,6 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass colorExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass colorEqualEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass colorNotEqualEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass unColorEClass = null;
 
 	/**
@@ -538,6 +515,13 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * @generated
 	 */
 	private EClass theColorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pauseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1525,51 +1509,6 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getColorExpression() {
-		return colorExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getColorExpression_Left() {
-		return (EReference) colorExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getColorExpression_Right() {
-		return (EReference) colorExpressionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getColorEqual() {
-		return colorEqualEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getColorNotEqual() {
-		return colorNotEqualEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getUnColor() {
 		return unColorEClass;
 	}
@@ -1599,6 +1538,24 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 	 */
 	public EAttribute getTheColor_Value() {
 		return (EAttribute) theColorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPause() {
+		return pauseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPause_Expression() {
+		return (EReference) pauseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1800,19 +1757,14 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		breakMotorEClass = createEClass(BREAK_MOTOR);
 		createEReference(breakMotorEClass, BREAK_MOTOR__ENGINE);
 
-		colorExpressionEClass = createEClass(COLOR_EXPRESSION);
-		createEReference(colorExpressionEClass, COLOR_EXPRESSION__LEFT);
-		createEReference(colorExpressionEClass, COLOR_EXPRESSION__RIGHT);
-
-		colorEqualEClass = createEClass(COLOR_EQUAL);
-
-		colorNotEqualEClass = createEClass(COLOR_NOT_EQUAL);
-
 		unColorEClass = createEClass(UN_COLOR);
 		createEAttribute(unColorEClass, UN_COLOR__INITIAL_VALUE);
 
 		theColorEClass = createEClass(THE_COLOR);
 		createEAttribute(theColorEClass, THE_COLOR__VALUE);
+
+		pauseEClass = createEClass(PAUSE);
+		createEReference(pauseEClass, PAUSE__EXPRESSION);
 
 		// Create enums
 		colorsEEnum = createEEnum(COLORS);
@@ -1904,11 +1856,9 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		paintballLauncherEngineEClass.getESuperTypes().add(this.getEngine());
 		forceOperationEClass.getESuperTypes().add(this.getEngineOperation());
 		breakMotorEClass.getESuperTypes().add(this.getExpression());
-		colorExpressionEClass.getESuperTypes().add(this.getExpression());
-		colorEqualEClass.getESuperTypes().add(this.getColorExpression());
-		colorNotEqualEClass.getESuperTypes().add(this.getColorExpression());
 		unColorEClass.getESuperTypes().add(this.getVariable());
 		theColorEClass.getESuperTypes().add(this.getExpression());
+		pauseEClass.getESuperTypes().add(this.getStatement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2194,21 +2144,6 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(colorExpressionEClass, ColorExpression.class, "ColorExpression", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getColorExpression_Left(), this.getExpression(), null, "left", null, 1, 1, ColorExpression.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getColorExpression_Right(), this.getTheColor(), null, "right", null, 1, 1, ColorExpression.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(colorEqualEClass, ColorEqual.class, "ColorEqual", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(colorNotEqualEClass, ColorNotEqual.class, "ColorNotEqual", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(unColorEClass, UnColor.class, "UnColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnColor_InitialValue(), this.getColors(), "initialValue", null, 0, 1, UnColor.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2218,10 +2153,21 @@ public class LangageCompilationPackageImpl extends EPackageImpl implements Langa
 		initEAttribute(getTheColor_Value(), this.getColors(), "value", null, 0, 1, TheColor.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPause_Expression(), this.getExpression(), null, "expression", null, 1, 1, Pause.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(colorsEEnum, Colors.class, "Colors");
 		addEEnumLiteral(colorsEEnum, Colors.BLACK);
 		addEEnumLiteral(colorsEEnum, Colors.WHITE);
+		addEEnumLiteral(colorsEEnum, Colors.BLUE);
+		addEEnumLiteral(colorsEEnum, Colors.YELLOW);
+		addEEnumLiteral(colorsEEnum, Colors.RED);
+		addEEnumLiteral(colorsEEnum, Colors.GREEN);
+		addEEnumLiteral(colorsEEnum, Colors.PINK);
+		addEEnumLiteral(colorsEEnum, Colors.GREY);
 
 		// Create resource
 		createResource(eNS_URI);

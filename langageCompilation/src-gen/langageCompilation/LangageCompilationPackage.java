@@ -3052,171 +3052,6 @@ public interface LangageCompilationPackage extends EPackage {
 	int BREAK_MOTOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link langageCompilation.impl.ColorExpressionImpl <em>Color Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.ColorExpressionImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorExpression()
-	 * @generated
-	 */
-	int COLOR_EXPRESSION = 60;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EXPRESSION__NAME = EXPRESSION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Color Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Color Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link langageCompilation.impl.ColorEqualImpl <em>Color Equal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.ColorEqualImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorEqual()
-	 * @generated
-	 */
-	int COLOR_EQUAL = 61;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EQUAL__NAME = COLOR_EXPRESSION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EQUAL__LEFT = COLOR_EXPRESSION__LEFT;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EQUAL__RIGHT = COLOR_EXPRESSION__RIGHT;
-
-	/**
-	 * The number of structural features of the '<em>Color Equal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EQUAL_FEATURE_COUNT = COLOR_EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Color Equal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_EQUAL_OPERATION_COUNT = COLOR_EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link langageCompilation.impl.ColorNotEqualImpl <em>Color Not Equal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see langageCompilation.impl.ColorNotEqualImpl
-	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorNotEqual()
-	 * @generated
-	 */
-	int COLOR_NOT_EQUAL = 62;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_NOT_EQUAL__NAME = COLOR_EXPRESSION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_NOT_EQUAL__LEFT = COLOR_EXPRESSION__LEFT;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_NOT_EQUAL__RIGHT = COLOR_EXPRESSION__RIGHT;
-
-	/**
-	 * The number of structural features of the '<em>Color Not Equal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_NOT_EQUAL_FEATURE_COUNT = COLOR_EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Color Not Equal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLOR_NOT_EQUAL_OPERATION_COUNT = COLOR_EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link langageCompilation.impl.UnColorImpl <em>Un Color</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3224,7 +3059,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getUnColor()
 	 * @generated
 	 */
-	int UN_COLOR = 63;
+	int UN_COLOR = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3279,7 +3114,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getTheColor()
 	 * @generated
 	 */
-	int THE_COLOR = 64;
+	int THE_COLOR = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3318,6 +3153,52 @@ public interface LangageCompilationPackage extends EPackage {
 	int THE_COLOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link langageCompilation.impl.PauseImpl <em>Pause</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see langageCompilation.impl.PauseImpl
+	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPause()
+	 * @generated
+	 */
+	int PAUSE = 62;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__NAME = STATEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Pause</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Pause</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link langageCompilation.Colors <em>Colors</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3325,7 +3206,7 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColors()
 	 * @generated
 	 */
-	int COLORS = 65;
+	int COLORS = 63;
 
 	/**
 	 * Returns the meta object for class '{@link langageCompilation.Program <em>Program</em>}'.
@@ -4379,58 +4260,6 @@ public interface LangageCompilationPackage extends EPackage {
 	EReference getBreakMotor_Engine();
 
 	/**
-	 * Returns the meta object for class '{@link langageCompilation.ColorExpression <em>Color Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Color Expression</em>'.
-	 * @see langageCompilation.ColorExpression
-	 * @generated
-	 */
-	EClass getColorExpression();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link langageCompilation.ColorExpression#getLeft <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Left</em>'.
-	 * @see langageCompilation.ColorExpression#getLeft()
-	 * @see #getColorExpression()
-	 * @generated
-	 */
-	EReference getColorExpression_Left();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link langageCompilation.ColorExpression#getRight <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Right</em>'.
-	 * @see langageCompilation.ColorExpression#getRight()
-	 * @see #getColorExpression()
-	 * @generated
-	 */
-	EReference getColorExpression_Right();
-
-	/**
-	 * Returns the meta object for class '{@link langageCompilation.ColorEqual <em>Color Equal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Color Equal</em>'.
-	 * @see langageCompilation.ColorEqual
-	 * @generated
-	 */
-	EClass getColorEqual();
-
-	/**
-	 * Returns the meta object for class '{@link langageCompilation.ColorNotEqual <em>Color Not Equal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Color Not Equal</em>'.
-	 * @see langageCompilation.ColorNotEqual
-	 * @generated
-	 */
-	EClass getColorNotEqual();
-
-	/**
 	 * Returns the meta object for class '{@link langageCompilation.UnColor <em>Un Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4471,6 +4300,27 @@ public interface LangageCompilationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTheColor_Value();
+
+	/**
+	 * Returns the meta object for class '{@link langageCompilation.Pause <em>Pause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pause</em>'.
+	 * @see langageCompilation.Pause
+	 * @generated
+	 */
+	EClass getPause();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link langageCompilation.Pause#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see langageCompilation.Pause#getExpression()
+	 * @see #getPause()
+	 * @generated
+	 */
+	EReference getPause_Expression();
 
 	/**
 	 * Returns the meta object for enum '{@link langageCompilation.Colors <em>Colors</em>}'.
@@ -5434,52 +5284,6 @@ public interface LangageCompilationPackage extends EPackage {
 		EReference BREAK_MOTOR__ENGINE = eINSTANCE.getBreakMotor_Engine();
 
 		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.ColorExpressionImpl <em>Color Expression</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.ColorExpressionImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorExpression()
-		 * @generated
-		 */
-		EClass COLOR_EXPRESSION = eINSTANCE.getColorExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLOR_EXPRESSION__LEFT = eINSTANCE.getColorExpression_Left();
-
-		/**
-		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLOR_EXPRESSION__RIGHT = eINSTANCE.getColorExpression_Right();
-
-		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.ColorEqualImpl <em>Color Equal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.ColorEqualImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorEqual()
-		 * @generated
-		 */
-		EClass COLOR_EQUAL = eINSTANCE.getColorEqual();
-
-		/**
-		 * The meta object literal for the '{@link langageCompilation.impl.ColorNotEqualImpl <em>Color Not Equal</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see langageCompilation.impl.ColorNotEqualImpl
-		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getColorNotEqual()
-		 * @generated
-		 */
-		EClass COLOR_NOT_EQUAL = eINSTANCE.getColorNotEqual();
-
-		/**
 		 * The meta object literal for the '{@link langageCompilation.impl.UnColorImpl <em>Un Color</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5514,6 +5318,24 @@ public interface LangageCompilationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute THE_COLOR__VALUE = eINSTANCE.getTheColor_Value();
+
+		/**
+		 * The meta object literal for the '{@link langageCompilation.impl.PauseImpl <em>Pause</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see langageCompilation.impl.PauseImpl
+		 * @see langageCompilation.impl.LangageCompilationPackageImpl#getPause()
+		 * @generated
+		 */
+		EClass PAUSE = eINSTANCE.getPause();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PAUSE__EXPRESSION = eINSTANCE.getPause_Expression();
 
 		/**
 		 * The meta object literal for the '{@link langageCompilation.Colors <em>Colors</em>}' enum.

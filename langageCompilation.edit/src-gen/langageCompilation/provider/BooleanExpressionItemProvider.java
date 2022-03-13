@@ -228,12 +228,6 @@ public class BooleanExpressionItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
@@ -328,12 +322,6 @@ public class BooleanExpressionItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BOOLEAN_EXPRESSION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));

@@ -225,12 +225,6 @@ public class EngineOperationItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.ENGINE_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));
 	}
 

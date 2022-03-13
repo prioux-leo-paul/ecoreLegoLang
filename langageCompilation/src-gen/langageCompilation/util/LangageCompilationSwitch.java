@@ -762,43 +762,6 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case LangageCompilationPackage.COLOR_EXPRESSION: {
-			ColorExpression colorExpression = (ColorExpression) theEObject;
-			T result = caseColorExpression(colorExpression);
-			if (result == null)
-				result = caseExpression(colorExpression);
-			if (result == null)
-				result = caseStatement(colorExpression);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case LangageCompilationPackage.COLOR_EQUAL: {
-			ColorEqual colorEqual = (ColorEqual) theEObject;
-			T result = caseColorEqual(colorEqual);
-			if (result == null)
-				result = caseColorExpression(colorEqual);
-			if (result == null)
-				result = caseExpression(colorEqual);
-			if (result == null)
-				result = caseStatement(colorEqual);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case LangageCompilationPackage.COLOR_NOT_EQUAL: {
-			ColorNotEqual colorNotEqual = (ColorNotEqual) theEObject;
-			T result = caseColorNotEqual(colorNotEqual);
-			if (result == null)
-				result = caseColorExpression(colorNotEqual);
-			if (result == null)
-				result = caseExpression(colorNotEqual);
-			if (result == null)
-				result = caseStatement(colorNotEqual);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case LangageCompilationPackage.UN_COLOR: {
 			UnColor unColor = (UnColor) theEObject;
 			T result = caseUnColor(unColor);
@@ -817,6 +780,15 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 				result = caseExpression(theColor);
 			if (result == null)
 				result = caseStatement(theColor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case LangageCompilationPackage.PAUSE: {
+			Pause pause = (Pause) theEObject;
+			T result = casePause(pause);
+			if (result == null)
+				result = caseStatement(pause);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1727,51 +1699,6 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Color Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Color Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseColorExpression(ColorExpression object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Color Equal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Color Equal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseColorEqual(ColorEqual object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Color Not Equal</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Color Not Equal</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseColorNotEqual(ColorNotEqual object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Un Color</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1798,6 +1725,21 @@ public class LangageCompilationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTheColor(TheColor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePause(Pause object) {
 		return null;
 	}
 

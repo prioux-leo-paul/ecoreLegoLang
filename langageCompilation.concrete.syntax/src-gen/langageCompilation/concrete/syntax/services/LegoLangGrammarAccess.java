@@ -94,12 +94,13 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cCarParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cSensorParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cEngineParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cPauseParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
 		//Statement returns Statement:
-		//    WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
+		//    WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine | Pause;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine
+		//WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine | Pause
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//WhileLoop
@@ -125,6 +126,9 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//Engine
 		public RuleCall getEngineParserRuleCall_7() { return cEngineParserRuleCall_7; }
+		
+		//Pause
+		public RuleCall getPauseParserRuleCall_8() { return cPauseParserRuleCall_8; }
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Expression");
@@ -343,6 +347,34 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//GPSSensor
 		public RuleCall getGPSSensorParserRuleCall_4() { return cGPSSensorParserRuleCall_4; }
+	}
+	public class PauseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.Pause");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cForKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExpressionExpressionParserRuleCall_2_0 = (RuleCall)cExpressionAssignment_2.eContents().get(0);
+		
+		//Pause returns Pause:
+		//    'stop''for' expression=Expression
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'stop''for' expression=Expression
+		public Group getGroup() { return cGroup; }
+		
+		//'stop'
+		public Keyword getStopKeyword_0() { return cStopKeyword_0; }
+		
+		//'for'
+		public Keyword getForKeyword_1() { return cForKeyword_1; }
+		
+		//expression=Expression
+		public Assignment getExpressionAssignment_2() { return cExpressionAssignment_2; }
+		
+		//Expression
+		public RuleCall getExpressionExpressionParserRuleCall_2_0() { return cExpressionExpressionParserRuleCall_2_0; }
 	}
 	public class WheelEngineElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.WheelEngine");
@@ -2718,6 +2750,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final ComparaisonElements pComparaison;
 	private final EngineElements pEngine;
 	private final SensorElements pSensor;
+	private final PauseElements pPause;
 	private final WheelEngineElements pWheelEngine;
 	private final MotorizedArmEngineElements pMotorizedArmEngine;
 	private final PaintballLauncherEngineElements pPaintballLauncherEngine;
@@ -2793,6 +2826,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pComparaison = new ComparaisonElements();
 		this.pEngine = new EngineElements();
 		this.pSensor = new SensorElements();
+		this.pPause = new PauseElements();
 		this.pWheelEngine = new WheelEngineElements();
 		this.pMotorizedArmEngine = new MotorizedArmEngineElements();
 		this.pPaintballLauncherEngine = new PaintballLauncherEngineElements();
@@ -2895,7 +2929,7 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Statement returns Statement:
-	//    WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
+	//    WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine | Pause;
 	public StatementElements getStatementAccess() {
 		return pStatement;
 	}
@@ -2962,6 +2996,17 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getSensorRule() {
 		return getSensorAccess().getRule();
+	}
+	
+	//Pause returns Pause:
+	//    'stop''for' expression=Expression
+	//;
+	public PauseElements getPauseAccess() {
+		return pPause;
+	}
+	
+	public ParserRule getPauseRule() {
+		return getPauseAccess().getRule();
 	}
 	
 	//WheelEngine returns WheelEngine:

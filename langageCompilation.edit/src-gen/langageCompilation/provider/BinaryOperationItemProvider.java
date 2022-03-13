@@ -239,12 +239,6 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__LEFT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
@@ -339,12 +333,6 @@ public class BinaryOperationItemProvider extends ExpressionItemProvider {
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.BINARY_OPERATION__RIGHT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));

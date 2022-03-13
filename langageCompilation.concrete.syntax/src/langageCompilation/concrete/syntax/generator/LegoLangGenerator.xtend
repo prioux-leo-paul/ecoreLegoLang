@@ -70,6 +70,7 @@ import langageCompilation.BreakMotor
 import langageCompilation.Colors
 import langageCompilation.UnColor
 import langageCompilation.TheColor
+import langageCompilation.Pause
 
 /**
  * Generates code from your model files on save.
@@ -145,6 +146,9 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 				for(s : v.engine)
 					tmp2 += engineToPython(s)+'\n'
 				return tmp + tmp2
+			}
+			if( v instanceof Pause){
+				return 'time.sleep(' + expressionToPython(v.expression) +')\n'
 			}
 		}
 		

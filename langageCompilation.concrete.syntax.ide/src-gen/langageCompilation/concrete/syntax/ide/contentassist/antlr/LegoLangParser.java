@@ -45,6 +45,7 @@ public class LegoLangParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 			builder.put(grammarAccess.getColorsAccess().getAlternatives(), "rule__Colors__Alternatives");
 			builder.put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
+			builder.put(grammarAccess.getPauseAccess().getGroup(), "rule__Pause__Group__0");
 			builder.put(grammarAccess.getWheelEngineAccess().getGroup(), "rule__WheelEngine__Group__0");
 			builder.put(grammarAccess.getMotorizedArmEngineAccess().getGroup(), "rule__MotorizedArmEngine__Group__0");
 			builder.put(grammarAccess.getPaintballLauncherEngineAccess().getGroup(), "rule__PaintballLauncherEngine__Group__0");
@@ -107,6 +108,7 @@ public class LegoLangParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
 			builder.put(grammarAccess.getProgramAccess().getNameAssignment_2(), "rule__Program__NameAssignment_2");
 			builder.put(grammarAccess.getProgramAccess().getStatementAssignment_4(), "rule__Program__StatementAssignment_4");
+			builder.put(grammarAccess.getPauseAccess().getExpressionAssignment_2(), "rule__Pause__ExpressionAssignment_2");
 			builder.put(grammarAccess.getWheelEngineAccess().getNameAssignment_1(), "rule__WheelEngine__NameAssignment_1");
 			builder.put(grammarAccess.getWheelEngineAccess().getPositionAssignment_3(), "rule__WheelEngine__PositionAssignment_3");
 			builder.put(grammarAccess.getMotorizedArmEngineAccess().getNameAssignment_1(), "rule__MotorizedArmEngine__NameAssignment_1");

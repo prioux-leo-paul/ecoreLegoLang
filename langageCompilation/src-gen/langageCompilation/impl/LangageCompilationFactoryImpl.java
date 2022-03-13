@@ -155,14 +155,12 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 			return createForceOperation();
 		case LangageCompilationPackage.BREAK_MOTOR:
 			return createBreakMotor();
-		case LangageCompilationPackage.COLOR_EQUAL:
-			return createColorEqual();
-		case LangageCompilationPackage.COLOR_NOT_EQUAL:
-			return createColorNotEqual();
 		case LangageCompilationPackage.UN_COLOR:
 			return createUnColor();
 		case LangageCompilationPackage.THE_COLOR:
 			return createTheColor();
+		case LangageCompilationPackage.PAUSE:
+			return createPause();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -693,26 +691,6 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ColorEqual createColorEqual() {
-		ColorEqualImpl colorEqual = new ColorEqualImpl();
-		return colorEqual;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ColorNotEqual createColorNotEqual() {
-		ColorNotEqualImpl colorNotEqual = new ColorNotEqualImpl();
-		return colorNotEqual;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public UnColor createUnColor() {
 		UnColorImpl unColor = new UnColorImpl();
 		return unColor;
@@ -726,6 +704,16 @@ public class LangageCompilationFactoryImpl extends EFactoryImpl implements Langa
 	public TheColor createTheColor() {
 		TheColorImpl theColor = new TheColorImpl();
 		return theColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pause createPause() {
+		PauseImpl pause = new PauseImpl();
+		return pause;
 	}
 
 	/**

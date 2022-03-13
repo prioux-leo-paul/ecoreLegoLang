@@ -39,6 +39,7 @@ import langageCompilation.MotorizedArmEngine;
 import langageCompilation.Multiplication;
 import langageCompilation.Or;
 import langageCompilation.PaintballLauncherEngine;
+import langageCompilation.Pause;
 import langageCompilation.PlusEqual;
 import langageCompilation.PositionOperation;
 import langageCompilation.Program;
@@ -187,6 +188,11 @@ public class LegoLangGenerator extends AbstractGenerator {
         tmp2 = (_tmp2 + _plus_8);
       }
       return (tmp_2 + tmp2);
+    }
+    if ((v instanceof Pause)) {
+      String _expressionToPython_1 = this.expressionToPython(((Pause)v).getExpression());
+      String _plus_9 = ("time.sleep(" + _expressionToPython_1);
+      return (_plus_9 + ")\n");
     }
     return null;
   }

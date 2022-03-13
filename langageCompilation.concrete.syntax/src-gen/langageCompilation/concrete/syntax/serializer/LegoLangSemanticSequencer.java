@@ -34,6 +34,7 @@ import langageCompilation.MotorizedArmEngine;
 import langageCompilation.Multiplication;
 import langageCompilation.Or;
 import langageCompilation.PaintballLauncherEngine;
+import langageCompilation.Pause;
 import langageCompilation.PlusEqual;
 import langageCompilation.PositionOperation;
 import langageCompilation.Program;
@@ -164,6 +165,9 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case LangageCompilationPackage.PAINTBALL_LAUNCHER_ENGINE:
 				sequence_PaintballLauncherEngine(context, (PaintballLauncherEngine) semanticObject); 
+				return; 
+			case LangageCompilationPackage.PAUSE:
+				sequence_Pause(context, (Pause) semanticObject); 
 				return; 
 			case LangageCompilationPackage.PLUS_EQUAL:
 				sequence_PlusEqual(context, (PlusEqual) semanticObject); 
@@ -837,6 +841,25 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getPaintballLauncherEngineAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getPaintballLauncherEngineAccess().getPositionEStringParserRuleCall_3_0(), semanticObject.getPosition());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statement returns Pause
+	 *     Pause returns Pause
+	 *
+	 * Constraint:
+	 *     expression=Expression
+	 */
+	protected void sequence_Pause(ISerializationContext context, Pause semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, LangageCompilationPackage.Literals.PAUSE__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LangageCompilationPackage.Literals.PAUSE__EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPauseAccess().getExpressionExpressionParserRuleCall_2_0(), semanticObject.getExpression());
 		feeder.finish();
 	}
 	

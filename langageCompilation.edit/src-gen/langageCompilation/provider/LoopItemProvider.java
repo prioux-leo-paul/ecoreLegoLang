@@ -285,16 +285,13 @@ public class LoopItemProvider extends StatementItemProvider {
 				LangageCompilationFactory.eINSTANCE.createBreakMotor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createColorEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
-				LangageCompilationFactory.eINSTANCE.createColorNotEqual()));
-
-		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createUnColor()));
 
 		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
 				LangageCompilationFactory.eINSTANCE.createTheColor()));
+
+		newChildDescriptors.add(createChildParameter(LangageCompilationPackage.Literals.LOOP__STATEMENT,
+				LangageCompilationFactory.eINSTANCE.createPause()));
 	}
 
 }

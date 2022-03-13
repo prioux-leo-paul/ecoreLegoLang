@@ -1200,52 +1200,6 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorEqual} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ColorEqualItemProvider colorEqualItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link langageCompilation.ColorEqual}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createColorEqualAdapter() {
-		if (colorEqualItemProvider == null) {
-			colorEqualItemProvider = new ColorEqualItemProvider(this);
-		}
-
-		return colorEqualItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link langageCompilation.ColorNotEqual} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ColorNotEqualItemProvider colorNotEqualItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link langageCompilation.ColorNotEqual}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createColorNotEqualAdapter() {
-		if (colorNotEqualItemProvider == null) {
-			colorNotEqualItemProvider = new ColorNotEqualItemProvider(this);
-		}
-
-		return colorNotEqualItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link langageCompilation.UnColor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1289,6 +1243,29 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 		}
 
 		return theColorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link langageCompilation.Pause} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PauseItemProvider pauseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link langageCompilation.Pause}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPauseAdapter() {
+		if (pauseItemProvider == null) {
+			pauseItemProvider = new PauseItemProvider(this);
+		}
+
+		return pauseItemProvider;
 	}
 
 	/**
@@ -1488,14 +1465,12 @@ public class LangageCompilationItemProviderAdapterFactory extends LangageCompila
 			forceOperationItemProvider.dispose();
 		if (breakMotorItemProvider != null)
 			breakMotorItemProvider.dispose();
-		if (colorEqualItemProvider != null)
-			colorEqualItemProvider.dispose();
-		if (colorNotEqualItemProvider != null)
-			colorNotEqualItemProvider.dispose();
 		if (unColorItemProvider != null)
 			unColorItemProvider.dispose();
 		if (theColorItemProvider != null)
 			theColorItemProvider.dispose();
+		if (pauseItemProvider != null)
+			pauseItemProvider.dispose();
 	}
 
 }

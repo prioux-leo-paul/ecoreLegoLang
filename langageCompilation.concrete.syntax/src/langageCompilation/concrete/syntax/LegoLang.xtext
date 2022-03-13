@@ -13,7 +13,7 @@ Program returns Program:
 	'}';
 
 Statement returns Statement:
-	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine;
+	WhileLoop | Variable | Expression | ConditionEtat | MethodePrint | Car | Sensor | Engine | Pause;
 
 Expression returns Expression:
 	VariableRef | BinaryOperation | TheString | TheColor | TheDouble | TheInt | TheBoolean | EngineOperation | BreakMotor | SensorOperation | BooleanExpression ;
@@ -32,6 +32,10 @@ Engine returns Engine:
 
 Sensor returns Sensor:
 	LaserSensor | ColorSensor | UltraSonicSensor | GyroSensor | GPSSensor;
+
+Pause returns Pause:
+	'stop''for' expression=Expression 
+;
 
 WheelEngine returns WheelEngine:
 	'WheelEngine'

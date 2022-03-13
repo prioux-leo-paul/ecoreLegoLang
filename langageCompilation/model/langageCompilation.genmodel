@@ -12,6 +12,12 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="langageCompilation.ecore#//Colors">
       <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/black"/>
       <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/white"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/blue"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/red"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/green"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/pink"/>
+      <genEnumLiterals ecoreEnumLiteral="langageCompilation.ecore#//Colors/grey"/>
     </genEnums>
     <genClasses ecoreClass="langageCompilation.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Program/statement"/>
@@ -147,18 +153,14 @@
     <genClasses ecoreClass="langageCompilation.ecore#//BreakMotor">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//BreakMotor/engine"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="langageCompilation.ecore#//ColorExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//ColorExpression/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference langageCompilation.ecore#//ColorExpression/right"/>
-    </genClasses>
-    <genClasses ecoreClass="langageCompilation.ecore#//ColorEqual"/>
-    <genClasses ecoreClass="langageCompilation.ecore#//ColorNotEqual"/>
     <genClasses ecoreClass="langageCompilation.ecore#//UnColor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//UnColor/initialValue"/>
     </genClasses>
     <genClasses ecoreClass="langageCompilation.ecore#//TheColor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute langageCompilation.ecore#//TheColor/value"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="langageCompilation.ecore#//ExpressionRightColor"/>
+    <genClasses ecoreClass="langageCompilation.ecore#//Pause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference langageCompilation.ecore#//Pause/expression"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

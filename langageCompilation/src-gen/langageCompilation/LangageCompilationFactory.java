@@ -463,24 +463,6 @@ public interface LangageCompilationFactory extends EFactory {
 	BreakMotor createBreakMotor();
 
 	/**
-	 * Returns a new object of class '<em>Color Equal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Color Equal</em>'.
-	 * @generated
-	 */
-	ColorEqual createColorEqual();
-
-	/**
-	 * Returns a new object of class '<em>Color Not Equal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Color Not Equal</em>'.
-	 * @generated
-	 */
-	ColorNotEqual createColorNotEqual();
-
-	/**
 	 * Returns a new object of class '<em>Un Color</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,6 +479,15 @@ public interface LangageCompilationFactory extends EFactory {
 	 * @generated
 	 */
 	TheColor createTheColor();
+
+	/**
+	 * Returns a new object of class '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pause</em>'.
+	 * @generated
+	 */
+	Pause createPause();
 
 	/**
 	 * Returns the package supported by this factory.

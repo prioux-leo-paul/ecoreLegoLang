@@ -367,21 +367,6 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseColorExpression(ColorExpression object) {
-			return createColorExpressionAdapter();
-		}
-
-		@Override
-		public Adapter caseColorEqual(ColorEqual object) {
-			return createColorEqualAdapter();
-		}
-
-		@Override
-		public Adapter caseColorNotEqual(ColorNotEqual object) {
-			return createColorNotEqualAdapter();
-		}
-
-		@Override
 		public Adapter caseUnColor(UnColor object) {
 			return createUnColorAdapter();
 		}
@@ -389,6 +374,11 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseTheColor(TheColor object) {
 			return createTheColorAdapter();
+		}
+
+		@Override
+		public Adapter casePause(Pause object) {
+			return createPauseAdapter();
 		}
 
 		@Override
@@ -1251,48 +1241,6 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorExpression <em>Color Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see langageCompilation.ColorExpression
-	 * @generated
-	 */
-	public Adapter createColorExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorEqual <em>Color Equal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see langageCompilation.ColorEqual
-	 * @generated
-	 */
-	public Adapter createColorEqualAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link langageCompilation.ColorNotEqual <em>Color Not Equal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see langageCompilation.ColorNotEqual
-	 * @generated
-	 */
-	public Adapter createColorNotEqualAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link langageCompilation.UnColor <em>Un Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1317,6 +1265,20 @@ public class LangageCompilationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTheColorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link langageCompilation.Pause <em>Pause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see langageCompilation.Pause
+	 * @generated
+	 */
+	public Adapter createPauseAdapter() {
 		return null;
 	}
 

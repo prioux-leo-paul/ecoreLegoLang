@@ -180,4 +180,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="TheColor" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Colors"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pause" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -36,7 +36,61 @@ public enum Colors implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WHITE(1, "white", "white");
+	WHITE(1, "white", "white"),
+	/**
+	* The '<em><b>Blue</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #BLUE_VALUE
+	* @generated
+	* @ordered
+	*/
+	BLUE(2, "blue", "blue"),
+	/**
+	* The '<em><b>Yellow</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #YELLOW_VALUE
+	* @generated
+	* @ordered
+	*/
+	YELLOW(3, "yellow", "yellow"),
+	/**
+	* The '<em><b>Red</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #RED_VALUE
+	* @generated
+	* @ordered
+	*/
+	RED(4, "red", "red"),
+	/**
+	* The '<em><b>Green</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #GREEN_VALUE
+	* @generated
+	* @ordered
+	*/
+	GREEN(5, "green", "green"),
+	/**
+	* The '<em><b>Pink</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #PINK_VALUE
+	* @generated
+	* @ordered
+	*/
+	PINK(6, "pink", "pink"),
+	/**
+	* The '<em><b>Grey</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #GREY_VALUE
+	* @generated
+	* @ordered
+	*/
+	GREY(7, "grey", "grey");
 
 	/**
 	 * The '<em><b>Black</b></em>' literal value.
@@ -61,12 +115,78 @@ public enum Colors implements Enumerator {
 	public static final int WHITE_VALUE = 1;
 
 	/**
+	 * The '<em><b>Blue</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #BLUE
+	 * @model name="blue"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int BLUE_VALUE = 2;
+
+	/**
+	 * The '<em><b>Yellow</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #YELLOW
+	 * @model name="yellow"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int YELLOW_VALUE = 3;
+
+	/**
+	 * The '<em><b>Red</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RED
+	 * @model name="red"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RED_VALUE = 4;
+
+	/**
+	 * The '<em><b>Green</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GREEN
+	 * @model name="green"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GREEN_VALUE = 5;
+
+	/**
+	 * The '<em><b>Pink</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PINK
+	 * @model name="pink"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PINK_VALUE = 6;
+
+	/**
+	 * The '<em><b>Grey</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GREY
+	 * @model name="grey"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GREY_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>Colors</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Colors[] VALUES_ARRAY = new Colors[] { BLACK, WHITE, };
+	private static final Colors[] VALUES_ARRAY = new Colors[] { BLACK, WHITE, BLUE, YELLOW, RED, GREEN, PINK, GREY, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Colors</b></em>' enumerators.
@@ -126,6 +246,18 @@ public enum Colors implements Enumerator {
 			return BLACK;
 		case WHITE_VALUE:
 			return WHITE;
+		case BLUE_VALUE:
+			return BLUE;
+		case YELLOW_VALUE:
+			return YELLOW;
+		case RED_VALUE:
+			return RED;
+		case GREEN_VALUE:
+			return GREEN;
+		case PINK_VALUE:
+			return PINK;
+		case GREY_VALUE:
+			return GREY;
 		}
 		return null;
 	}
