@@ -2755,11 +2755,34 @@ ruleMethodePrint returns [EObject current=null]
 		}
 		(
 			(
+				{
+					newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0());
+				}
+				lv_expression_2_0=ruleExpression
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMethodePrintRule());
+					}
+					add(
+						$current,
+						"expression",
+						lv_expression_2_0,
+						"langageCompilation.concrete.syntax.LegoLang.Expression");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_3=','
+			{
+				newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getCommaKeyword_3_0());
+			}
+			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0_0());
+						newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_3_1_0());
 					}
-					lv_expression_2_0=ruleExpression
+					lv_expression_4_0=ruleExpression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMethodePrintRule());
@@ -2767,20 +2790,16 @@ ruleMethodePrint returns [EObject current=null]
 						add(
 							$current,
 							"expression",
-							lv_expression_2_0,
+							lv_expression_4_0,
 							"langageCompilation.concrete.syntax.LegoLang.Expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_3=','
-			{
-				newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getCommaKeyword_2_1());
-			}
-		)+
-		otherlv_4=')'
+		)*
+		otherlv_5=')'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getMethodePrintAccess().getRightParenthesisKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getMethodePrintAccess().getRightParenthesisKeyword_4());
 		}
 	)
 ;

@@ -197,7 +197,8 @@ WhileLoop returns WhileLoop:
 MethodePrint returns MethodePrint:
 	{MethodePrint}
 	'print('
-	(expression+=Expression ",")+
+	(expression+=Expression)
+	(',' expression+=Expression)*
 	')';
 	
 VariableRef returns VariableRef:

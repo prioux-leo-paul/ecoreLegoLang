@@ -1574,11 +1574,6 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             case 65:
                 {
                 switch ( input.LA(2) ) {
-                case 37:
-                    {
-                    alt6=5;
-                    }
-                    break;
                 case 69:
                     {
                     alt6=3;
@@ -1597,6 +1592,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                 case 66:
                     {
                     alt6=1;
+                    }
+                    break;
+                case 37:
+                    {
+                    alt6=5;
                     }
                     break;
                 default:
@@ -7787,25 +7787,27 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodePrint"
-    // InternalLegoLang.g:2734:1: ruleMethodePrint returns [EObject current=null] : ( () otherlv_1= 'print(' ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+ otherlv_4= ')' ) ;
+    // InternalLegoLang.g:2734:1: ruleMethodePrint returns [EObject current=null] : ( () otherlv_1= 'print(' ( (lv_expression_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )* otherlv_5= ')' ) ;
     public final EObject ruleMethodePrint() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
+        Token otherlv_5=null;
         EObject lv_expression_2_0 = null;
+
+        EObject lv_expression_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalLegoLang.g:2740:2: ( ( () otherlv_1= 'print(' ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+ otherlv_4= ')' ) )
-            // InternalLegoLang.g:2741:2: ( () otherlv_1= 'print(' ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+ otherlv_4= ')' )
+            // InternalLegoLang.g:2740:2: ( ( () otherlv_1= 'print(' ( (lv_expression_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )* otherlv_5= ')' ) )
+            // InternalLegoLang.g:2741:2: ( () otherlv_1= 'print(' ( (lv_expression_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )* otherlv_5= ')' )
             {
-            // InternalLegoLang.g:2741:2: ( () otherlv_1= 'print(' ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+ otherlv_4= ')' )
-            // InternalLegoLang.g:2742:3: () otherlv_1= 'print(' ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+ otherlv_4= ')'
+            // InternalLegoLang.g:2741:2: ( () otherlv_1= 'print(' ( (lv_expression_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )* otherlv_5= ')' )
+            // InternalLegoLang.g:2742:3: () otherlv_1= 'print(' ( (lv_expression_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )* otherlv_5= ')'
             {
             // InternalLegoLang.g:2742:3: ()
             // InternalLegoLang.g:2743:4: 
@@ -7831,35 +7833,75 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getMethodePrintAccess().getPrintKeyword_1());
               		
             }
-            // InternalLegoLang.g:2756:3: ( ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ',' )+
-            int cnt21=0;
+            // InternalLegoLang.g:2756:3: ( (lv_expression_2_0= ruleExpression ) )
+            // InternalLegoLang.g:2757:4: (lv_expression_2_0= ruleExpression )
+            {
+            // InternalLegoLang.g:2757:4: (lv_expression_2_0= ruleExpression )
+            // InternalLegoLang.g:2758:5: lv_expression_2_0= ruleExpression
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0());
+              				
+            }
+            pushFollow(FOLLOW_32);
+            lv_expression_2_0=ruleExpression();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getMethodePrintRule());
+              					}
+              					add(
+              						current,
+              						"expression",
+              						lv_expression_2_0,
+              						"langageCompilation.concrete.syntax.LegoLang.Expression");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalLegoLang.g:2775:3: (otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) ) )*
             loop21:
             do {
                 int alt21=2;
                 int LA21_0 = input.LA(1);
 
-                if ( ((LA21_0>=RULE_ID && LA21_0<=RULE_INT)||LA21_0==27||LA21_0==29||LA21_0==32||LA21_0==36||LA21_0==51||(LA21_0>=63 && LA21_0<=64)||(LA21_0>=71 && LA21_0<=72)) ) {
+                if ( (LA21_0==50) ) {
                     alt21=1;
                 }
 
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalLegoLang.g:2757:4: ( (lv_expression_2_0= ruleExpression ) ) otherlv_3= ','
+            	    // InternalLegoLang.g:2776:4: otherlv_3= ',' ( (lv_expression_4_0= ruleExpression ) )
             	    {
-            	    // InternalLegoLang.g:2757:4: ( (lv_expression_2_0= ruleExpression ) )
-            	    // InternalLegoLang.g:2758:5: (lv_expression_2_0= ruleExpression )
+            	    otherlv_3=(Token)match(input,50,FOLLOW_8); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getCommaKeyword_3_0());
+            	      			
+            	    }
+            	    // InternalLegoLang.g:2780:4: ( (lv_expression_4_0= ruleExpression ) )
+            	    // InternalLegoLang.g:2781:5: (lv_expression_4_0= ruleExpression )
             	    {
-            	    // InternalLegoLang.g:2758:5: (lv_expression_2_0= ruleExpression )
-            	    // InternalLegoLang.g:2759:6: lv_expression_2_0= ruleExpression
+            	    // InternalLegoLang.g:2781:5: (lv_expression_4_0= ruleExpression )
+            	    // InternalLegoLang.g:2782:6: lv_expression_4_0= ruleExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      						newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_2_0_0());
+            	      						newCompositeNode(grammarAccess.getMethodePrintAccess().getExpressionExpressionParserRuleCall_3_1_0());
             	      					
             	    }
             	    pushFollow(FOLLOW_32);
-            	    lv_expression_2_0=ruleExpression();
+            	    lv_expression_4_0=ruleExpression();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -7871,7 +7913,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             	      						add(
             	      							current,
             	      							"expression",
-            	      							lv_expression_2_0,
+            	      							lv_expression_4_0,
             	      							"langageCompilation.concrete.syntax.LegoLang.Expression");
             	      						afterParserOrEnumRuleCall();
             	      					
@@ -7882,30 +7924,19 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_3=(Token)match(input,50,FOLLOW_33); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      				newLeafNode(otherlv_3, grammarAccess.getMethodePrintAccess().getCommaKeyword_2_1());
-            	      			
-            	    }
 
             	    }
             	    break;
 
             	default :
-            	    if ( cnt21 >= 1 ) break loop21;
-            	    if (state.backtracking>0) {state.failed=true; return current;}
-                        EarlyExitException eee =
-                            new EarlyExitException(21, input);
-                        throw eee;
+            	    break loop21;
                 }
-                cnt21++;
             } while (true);
 
-            otherlv_4=(Token)match(input,30,FOLLOW_2); if (state.failed) return current;
+            otherlv_5=(Token)match(input,30,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_4, grammarAccess.getMethodePrintAccess().getRightParenthesisKeyword_3());
+              			newLeafNode(otherlv_5, grammarAccess.getMethodePrintAccess().getRightParenthesisKeyword_4());
               		
             }
 
@@ -7933,7 +7964,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableRef"
-    // InternalLegoLang.g:2789:1: entryRuleVariableRef returns [EObject current=null] : iv_ruleVariableRef= ruleVariableRef EOF ;
+    // InternalLegoLang.g:2808:1: entryRuleVariableRef returns [EObject current=null] : iv_ruleVariableRef= ruleVariableRef EOF ;
     public final EObject entryRuleVariableRef() throws RecognitionException {
         EObject current = null;
 
@@ -7941,8 +7972,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:2789:52: (iv_ruleVariableRef= ruleVariableRef EOF )
-            // InternalLegoLang.g:2790:2: iv_ruleVariableRef= ruleVariableRef EOF
+            // InternalLegoLang.g:2808:52: (iv_ruleVariableRef= ruleVariableRef EOF )
+            // InternalLegoLang.g:2809:2: iv_ruleVariableRef= ruleVariableRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVariableRefRule()); 
@@ -7973,7 +8004,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableRef"
-    // InternalLegoLang.g:2796:1: ruleVariableRef returns [EObject current=null] : ( ( ruleEString ) ) ;
+    // InternalLegoLang.g:2815:1: ruleVariableRef returns [EObject current=null] : ( ( ruleEString ) ) ;
     public final EObject ruleVariableRef() throws RecognitionException {
         EObject current = null;
 
@@ -7981,14 +8012,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:2802:2: ( ( ( ruleEString ) ) )
-            // InternalLegoLang.g:2803:2: ( ( ruleEString ) )
+            // InternalLegoLang.g:2821:2: ( ( ( ruleEString ) ) )
+            // InternalLegoLang.g:2822:2: ( ( ruleEString ) )
             {
-            // InternalLegoLang.g:2803:2: ( ( ruleEString ) )
-            // InternalLegoLang.g:2804:3: ( ruleEString )
+            // InternalLegoLang.g:2822:2: ( ( ruleEString ) )
+            // InternalLegoLang.g:2823:3: ( ruleEString )
             {
-            // InternalLegoLang.g:2804:3: ( ruleEString )
-            // InternalLegoLang.g:2805:4: ruleEString
+            // InternalLegoLang.g:2823:3: ( ruleEString )
+            // InternalLegoLang.g:2824:4: ruleEString
             {
             if ( state.backtracking==0 ) {
 
@@ -8045,7 +8076,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSubstraction"
-    // InternalLegoLang.g:2825:1: entryRuleSubstraction returns [EObject current=null] : iv_ruleSubstraction= ruleSubstraction EOF ;
+    // InternalLegoLang.g:2844:1: entryRuleSubstraction returns [EObject current=null] : iv_ruleSubstraction= ruleSubstraction EOF ;
     public final EObject entryRuleSubstraction() throws RecognitionException {
         EObject current = null;
 
@@ -8053,8 +8084,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:2825:53: (iv_ruleSubstraction= ruleSubstraction EOF )
-            // InternalLegoLang.g:2826:2: iv_ruleSubstraction= ruleSubstraction EOF
+            // InternalLegoLang.g:2844:53: (iv_ruleSubstraction= ruleSubstraction EOF )
+            // InternalLegoLang.g:2845:2: iv_ruleSubstraction= ruleSubstraction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSubstractionRule()); 
@@ -8085,7 +8116,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSubstraction"
-    // InternalLegoLang.g:2832:1: ruleSubstraction returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:2851:1: ruleSubstraction returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleSubstraction() throws RecognitionException {
         EObject current = null;
 
@@ -8101,11 +8132,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:2838:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:2839:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2857:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:2858:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:2839:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:2840:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:2858:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2859:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '-' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8113,18 +8144,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getSubstractionAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:2844:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:2845:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:2863:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:2864:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:2845:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:2846:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:2864:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:2865:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getSubstractionAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_33);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -8154,11 +8185,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getSubstractionAccess().getHyphenMinusKeyword_2());
               		
             }
-            // InternalLegoLang.g:2867:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:2868:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:2886:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:2887:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:2868:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:2869:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:2887:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:2888:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -8220,7 +8251,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAddition"
-    // InternalLegoLang.g:2894:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
+    // InternalLegoLang.g:2913:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
     public final EObject entryRuleAddition() throws RecognitionException {
         EObject current = null;
 
@@ -8228,8 +8259,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:2894:49: (iv_ruleAddition= ruleAddition EOF )
-            // InternalLegoLang.g:2895:2: iv_ruleAddition= ruleAddition EOF
+            // InternalLegoLang.g:2913:49: (iv_ruleAddition= ruleAddition EOF )
+            // InternalLegoLang.g:2914:2: iv_ruleAddition= ruleAddition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditionRule()); 
@@ -8260,7 +8291,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAddition"
-    // InternalLegoLang.g:2901:1: ruleAddition returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:2920:1: ruleAddition returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleAddition() throws RecognitionException {
         EObject current = null;
 
@@ -8276,11 +8307,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:2907:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:2908:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2926:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:2927:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:2908:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:2909:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:2927:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2928:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '+' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8288,18 +8319,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getAdditionAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:2913:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:2914:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:2932:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:2933:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:2914:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:2915:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:2933:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:2934:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getAdditionAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_34);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -8329,11 +8360,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getAdditionAccess().getPlusSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:2936:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:2937:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:2955:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:2956:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:2937:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:2938:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:2956:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:2957:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -8395,7 +8426,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplication"
-    // InternalLegoLang.g:2963:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
+    // InternalLegoLang.g:2982:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
     public final EObject entryRuleMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -8403,8 +8434,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:2963:55: (iv_ruleMultiplication= ruleMultiplication EOF )
-            // InternalLegoLang.g:2964:2: iv_ruleMultiplication= ruleMultiplication EOF
+            // InternalLegoLang.g:2982:55: (iv_ruleMultiplication= ruleMultiplication EOF )
+            // InternalLegoLang.g:2983:2: iv_ruleMultiplication= ruleMultiplication EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicationRule()); 
@@ -8435,7 +8466,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplication"
-    // InternalLegoLang.g:2970:1: ruleMultiplication returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:2989:1: ruleMultiplication returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -8451,11 +8482,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:2976:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:2977:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2995:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:2996:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:2977:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:2978:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:2996:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:2997:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '*' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8463,18 +8494,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMultiplicationAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:2982:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:2983:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3001:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3002:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:2983:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:2984:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3002:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3003:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getMultiplicationAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_35);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -8504,11 +8535,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getMultiplicationAccess().getAsteriskKeyword_2());
               		
             }
-            // InternalLegoLang.g:3005:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3006:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3024:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3025:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3006:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3007:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3025:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3026:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -8570,7 +8601,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDivision"
-    // InternalLegoLang.g:3032:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
+    // InternalLegoLang.g:3051:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
     public final EObject entryRuleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -8578,8 +8609,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3032:49: (iv_ruleDivision= ruleDivision EOF )
-            // InternalLegoLang.g:3033:2: iv_ruleDivision= ruleDivision EOF
+            // InternalLegoLang.g:3051:49: (iv_ruleDivision= ruleDivision EOF )
+            // InternalLegoLang.g:3052:2: iv_ruleDivision= ruleDivision EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDivisionRule()); 
@@ -8610,7 +8641,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDivision"
-    // InternalLegoLang.g:3039:1: ruleDivision returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3058:1: ruleDivision returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -8626,11 +8657,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3045:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3046:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3064:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3065:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3046:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3047:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3065:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3066:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '/' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8638,18 +8669,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDivisionAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3051:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3052:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3070:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3071:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3052:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3053:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3071:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3072:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getDivisionAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_36);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -8679,11 +8710,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getDivisionAccess().getSolidusKeyword_2());
               		
             }
-            // InternalLegoLang.g:3074:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3075:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3093:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3094:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3075:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3076:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3094:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3095:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -8745,7 +8776,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGT"
-    // InternalLegoLang.g:3101:1: entryRuleGT returns [EObject current=null] : iv_ruleGT= ruleGT EOF ;
+    // InternalLegoLang.g:3120:1: entryRuleGT returns [EObject current=null] : iv_ruleGT= ruleGT EOF ;
     public final EObject entryRuleGT() throws RecognitionException {
         EObject current = null;
 
@@ -8753,8 +8784,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3101:43: (iv_ruleGT= ruleGT EOF )
-            // InternalLegoLang.g:3102:2: iv_ruleGT= ruleGT EOF
+            // InternalLegoLang.g:3120:43: (iv_ruleGT= ruleGT EOF )
+            // InternalLegoLang.g:3121:2: iv_ruleGT= ruleGT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGTRule()); 
@@ -8785,7 +8816,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGT"
-    // InternalLegoLang.g:3108:1: ruleGT returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3127:1: ruleGT returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleGT() throws RecognitionException {
         EObject current = null;
 
@@ -8801,11 +8832,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3114:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3115:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3133:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3134:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3115:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3116:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3134:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3135:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8813,18 +8844,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGTAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3120:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3121:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3139:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3140:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3121:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3122:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3140:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3141:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGTAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_38);
+            pushFollow(FOLLOW_37);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -8854,11 +8885,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGTAccess().getGreaterThanSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3143:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3144:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3162:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3163:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3144:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3145:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3163:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3164:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -8920,7 +8951,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLT"
-    // InternalLegoLang.g:3170:1: entryRuleLT returns [EObject current=null] : iv_ruleLT= ruleLT EOF ;
+    // InternalLegoLang.g:3189:1: entryRuleLT returns [EObject current=null] : iv_ruleLT= ruleLT EOF ;
     public final EObject entryRuleLT() throws RecognitionException {
         EObject current = null;
 
@@ -8928,8 +8959,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3170:43: (iv_ruleLT= ruleLT EOF )
-            // InternalLegoLang.g:3171:2: iv_ruleLT= ruleLT EOF
+            // InternalLegoLang.g:3189:43: (iv_ruleLT= ruleLT EOF )
+            // InternalLegoLang.g:3190:2: iv_ruleLT= ruleLT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLTRule()); 
@@ -8960,7 +8991,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLT"
-    // InternalLegoLang.g:3177:1: ruleLT returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3196:1: ruleLT returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleLT() throws RecognitionException {
         EObject current = null;
 
@@ -8976,11 +9007,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3183:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3184:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3202:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3203:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3184:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3185:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3203:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3204:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8988,18 +9019,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getLTAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3189:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3190:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3208:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3209:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3190:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3191:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3209:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3210:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getLTAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_38);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -9029,11 +9060,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getLTAccess().getLessThanSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3212:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3213:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3231:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3232:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3213:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3214:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3232:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3233:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9095,7 +9126,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEqual"
-    // InternalLegoLang.g:3239:1: entryRuleEqual returns [EObject current=null] : iv_ruleEqual= ruleEqual EOF ;
+    // InternalLegoLang.g:3258:1: entryRuleEqual returns [EObject current=null] : iv_ruleEqual= ruleEqual EOF ;
     public final EObject entryRuleEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9103,8 +9134,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3239:46: (iv_ruleEqual= ruleEqual EOF )
-            // InternalLegoLang.g:3240:2: iv_ruleEqual= ruleEqual EOF
+            // InternalLegoLang.g:3258:46: (iv_ruleEqual= ruleEqual EOF )
+            // InternalLegoLang.g:3259:2: iv_ruleEqual= ruleEqual EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEqualRule()); 
@@ -9135,7 +9166,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEqual"
-    // InternalLegoLang.g:3246:1: ruleEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3265:1: ruleEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9151,11 +9182,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3252:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3253:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3271:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3272:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3253:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3254:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3272:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3273:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '==' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9163,18 +9194,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getEqualAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3258:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3259:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3277:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3278:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3259:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3260:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3278:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3279:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getEqualAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_39);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -9204,11 +9235,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getEqualAccess().getEqualsSignEqualsSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3281:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3282:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3300:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3301:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3282:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3283:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3301:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3302:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9270,7 +9301,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDifferent"
-    // InternalLegoLang.g:3308:1: entryRuleDifferent returns [EObject current=null] : iv_ruleDifferent= ruleDifferent EOF ;
+    // InternalLegoLang.g:3327:1: entryRuleDifferent returns [EObject current=null] : iv_ruleDifferent= ruleDifferent EOF ;
     public final EObject entryRuleDifferent() throws RecognitionException {
         EObject current = null;
 
@@ -9278,8 +9309,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3308:50: (iv_ruleDifferent= ruleDifferent EOF )
-            // InternalLegoLang.g:3309:2: iv_ruleDifferent= ruleDifferent EOF
+            // InternalLegoLang.g:3327:50: (iv_ruleDifferent= ruleDifferent EOF )
+            // InternalLegoLang.g:3328:2: iv_ruleDifferent= ruleDifferent EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDifferentRule()); 
@@ -9310,7 +9341,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDifferent"
-    // InternalLegoLang.g:3315:1: ruleDifferent returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3334:1: ruleDifferent returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleDifferent() throws RecognitionException {
         EObject current = null;
 
@@ -9326,11 +9357,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3321:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3322:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3340:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3341:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3322:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3323:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3341:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3342:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '!=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9338,18 +9369,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDifferentAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3327:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3328:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3346:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3347:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3328:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3329:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3347:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3348:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getDifferentAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_40);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -9379,11 +9410,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getDifferentAccess().getExclamationMarkEqualsSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3350:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3351:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3369:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3370:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3351:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3352:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3370:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3371:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9445,7 +9476,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLTorEqual"
-    // InternalLegoLang.g:3377:1: entryRuleLTorEqual returns [EObject current=null] : iv_ruleLTorEqual= ruleLTorEqual EOF ;
+    // InternalLegoLang.g:3396:1: entryRuleLTorEqual returns [EObject current=null] : iv_ruleLTorEqual= ruleLTorEqual EOF ;
     public final EObject entryRuleLTorEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9453,8 +9484,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3377:50: (iv_ruleLTorEqual= ruleLTorEqual EOF )
-            // InternalLegoLang.g:3378:2: iv_ruleLTorEqual= ruleLTorEqual EOF
+            // InternalLegoLang.g:3396:50: (iv_ruleLTorEqual= ruleLTorEqual EOF )
+            // InternalLegoLang.g:3397:2: iv_ruleLTorEqual= ruleLTorEqual EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLTorEqualRule()); 
@@ -9485,7 +9516,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLTorEqual"
-    // InternalLegoLang.g:3384:1: ruleLTorEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3403:1: ruleLTorEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleLTorEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9501,11 +9532,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3390:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3391:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3409:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3410:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3391:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3392:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3410:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3411:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '<=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9513,18 +9544,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getLTorEqualAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3396:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3397:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3415:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3416:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3397:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3398:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3416:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3417:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getLTorEqualAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -9554,11 +9585,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getLTorEqualAccess().getLessThanSignEqualsSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3419:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3420:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3438:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3439:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3420:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3421:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3439:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3440:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9620,7 +9651,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGTorEqual"
-    // InternalLegoLang.g:3446:1: entryRuleGTorEqual returns [EObject current=null] : iv_ruleGTorEqual= ruleGTorEqual EOF ;
+    // InternalLegoLang.g:3465:1: entryRuleGTorEqual returns [EObject current=null] : iv_ruleGTorEqual= ruleGTorEqual EOF ;
     public final EObject entryRuleGTorEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9628,8 +9659,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3446:50: (iv_ruleGTorEqual= ruleGTorEqual EOF )
-            // InternalLegoLang.g:3447:2: iv_ruleGTorEqual= ruleGTorEqual EOF
+            // InternalLegoLang.g:3465:50: (iv_ruleGTorEqual= ruleGTorEqual EOF )
+            // InternalLegoLang.g:3466:2: iv_ruleGTorEqual= ruleGTorEqual EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGTorEqualRule()); 
@@ -9660,7 +9691,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGTorEqual"
-    // InternalLegoLang.g:3453:1: ruleGTorEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
+    // InternalLegoLang.g:3472:1: ruleGTorEqual returns [EObject current=null] : (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleGTorEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9676,11 +9707,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3459:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
-            // InternalLegoLang.g:3460:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3478:2: ( (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' ) )
+            // InternalLegoLang.g:3479:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
             {
-            // InternalLegoLang.g:3460:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
-            // InternalLegoLang.g:3461:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
+            // InternalLegoLang.g:3479:2: (otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')' )
+            // InternalLegoLang.g:3480:3: otherlv_0= '(' ( (lv_left_1_0= ruleExpression ) ) otherlv_2= '>=' ( (lv_right_3_0= ruleExpression ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,29,FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9688,18 +9719,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGTorEqualAccess().getLeftParenthesisKeyword_0());
               		
             }
-            // InternalLegoLang.g:3465:3: ( (lv_left_1_0= ruleExpression ) )
-            // InternalLegoLang.g:3466:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3484:3: ( (lv_left_1_0= ruleExpression ) )
+            // InternalLegoLang.g:3485:4: (lv_left_1_0= ruleExpression )
             {
-            // InternalLegoLang.g:3466:4: (lv_left_1_0= ruleExpression )
-            // InternalLegoLang.g:3467:5: lv_left_1_0= ruleExpression
+            // InternalLegoLang.g:3485:4: (lv_left_1_0= ruleExpression )
+            // InternalLegoLang.g:3486:5: lv_left_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGTorEqualAccess().getLeftExpressionParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_42);
             lv_left_1_0=ruleExpression();
 
             state._fsp--;
@@ -9729,11 +9760,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGTorEqualAccess().getGreaterThanSignEqualsSignKeyword_2());
               		
             }
-            // InternalLegoLang.g:3488:3: ( (lv_right_3_0= ruleExpression ) )
-            // InternalLegoLang.g:3489:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3507:3: ( (lv_right_3_0= ruleExpression ) )
+            // InternalLegoLang.g:3508:4: (lv_right_3_0= ruleExpression )
             {
-            // InternalLegoLang.g:3489:4: (lv_right_3_0= ruleExpression )
-            // InternalLegoLang.g:3490:5: lv_right_3_0= ruleExpression
+            // InternalLegoLang.g:3508:4: (lv_right_3_0= ruleExpression )
+            // InternalLegoLang.g:3509:5: lv_right_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9795,7 +9826,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAssignement"
-    // InternalLegoLang.g:3515:1: entryRuleAssignement returns [EObject current=null] : iv_ruleAssignement= ruleAssignement EOF ;
+    // InternalLegoLang.g:3534:1: entryRuleAssignement returns [EObject current=null] : iv_ruleAssignement= ruleAssignement EOF ;
     public final EObject entryRuleAssignement() throws RecognitionException {
         EObject current = null;
 
@@ -9803,8 +9834,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3515:52: (iv_ruleAssignement= ruleAssignement EOF )
-            // InternalLegoLang.g:3516:2: iv_ruleAssignement= ruleAssignement EOF
+            // InternalLegoLang.g:3534:52: (iv_ruleAssignement= ruleAssignement EOF )
+            // InternalLegoLang.g:3535:2: iv_ruleAssignement= ruleAssignement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAssignementRule()); 
@@ -9835,7 +9866,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAssignement"
-    // InternalLegoLang.g:3522:1: ruleAssignement returns [EObject current=null] : ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) ) ;
+    // InternalLegoLang.g:3541:1: ruleAssignement returns [EObject current=null] : ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) ) ;
     public final EObject ruleAssignement() throws RecognitionException {
         EObject current = null;
 
@@ -9850,14 +9881,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3528:2: ( ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) ) )
-            // InternalLegoLang.g:3529:2: ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) )
+            // InternalLegoLang.g:3547:2: ( ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) ) )
+            // InternalLegoLang.g:3548:2: ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) )
             {
-            // InternalLegoLang.g:3529:2: ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) )
-            // InternalLegoLang.g:3530:3: () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) )
+            // InternalLegoLang.g:3548:2: ( () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) ) )
+            // InternalLegoLang.g:3549:3: () otherlv_1= 'set' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '=' ( (lv_right_4_0= ruleExpression ) )
             {
-            // InternalLegoLang.g:3530:3: ()
-            // InternalLegoLang.g:3531:4: 
+            // InternalLegoLang.g:3549:3: ()
+            // InternalLegoLang.g:3550:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -9880,11 +9911,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getAssignementAccess().getSetKeyword_1());
               		
             }
-            // InternalLegoLang.g:3544:3: ( (lv_left_2_0= ruleExpression ) )
-            // InternalLegoLang.g:3545:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3563:3: ( (lv_left_2_0= ruleExpression ) )
+            // InternalLegoLang.g:3564:4: (lv_left_2_0= ruleExpression )
             {
-            // InternalLegoLang.g:3545:4: (lv_left_2_0= ruleExpression )
-            // InternalLegoLang.g:3546:5: lv_left_2_0= ruleExpression
+            // InternalLegoLang.g:3564:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3565:5: lv_left_2_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9921,11 +9952,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getAssignementAccess().getEqualsSignKeyword_3());
               		
             }
-            // InternalLegoLang.g:3567:3: ( (lv_right_4_0= ruleExpression ) )
-            // InternalLegoLang.g:3568:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3586:3: ( (lv_right_4_0= ruleExpression ) )
+            // InternalLegoLang.g:3587:4: (lv_right_4_0= ruleExpression )
             {
-            // InternalLegoLang.g:3568:4: (lv_right_4_0= ruleExpression )
-            // InternalLegoLang.g:3569:5: lv_right_4_0= ruleExpression
+            // InternalLegoLang.g:3587:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3588:5: lv_right_4_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -9981,7 +10012,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePlusEqual"
-    // InternalLegoLang.g:3590:1: entryRulePlusEqual returns [EObject current=null] : iv_rulePlusEqual= rulePlusEqual EOF ;
+    // InternalLegoLang.g:3609:1: entryRulePlusEqual returns [EObject current=null] : iv_rulePlusEqual= rulePlusEqual EOF ;
     public final EObject entryRulePlusEqual() throws RecognitionException {
         EObject current = null;
 
@@ -9989,8 +10020,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3590:50: (iv_rulePlusEqual= rulePlusEqual EOF )
-            // InternalLegoLang.g:3591:2: iv_rulePlusEqual= rulePlusEqual EOF
+            // InternalLegoLang.g:3609:50: (iv_rulePlusEqual= rulePlusEqual EOF )
+            // InternalLegoLang.g:3610:2: iv_rulePlusEqual= rulePlusEqual EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPlusEqualRule()); 
@@ -10021,7 +10052,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePlusEqual"
-    // InternalLegoLang.g:3597:1: rulePlusEqual returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) ;
+    // InternalLegoLang.g:3616:1: rulePlusEqual returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) ;
     public final EObject rulePlusEqual() throws RecognitionException {
         EObject current = null;
 
@@ -10037,14 +10068,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3603:2: ( ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) )
-            // InternalLegoLang.g:3604:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
+            // InternalLegoLang.g:3622:2: ( ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) )
+            // InternalLegoLang.g:3623:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
             {
-            // InternalLegoLang.g:3604:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
-            // InternalLegoLang.g:3605:3: () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')'
+            // InternalLegoLang.g:3623:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
+            // InternalLegoLang.g:3624:3: () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '+=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')'
             {
-            // InternalLegoLang.g:3605:3: ()
-            // InternalLegoLang.g:3606:4: 
+            // InternalLegoLang.g:3624:3: ()
+            // InternalLegoLang.g:3625:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10067,18 +10098,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getPlusEqualAccess().getLeftParenthesisKeyword_1());
               		
             }
-            // InternalLegoLang.g:3619:3: ( (lv_left_2_0= ruleExpression ) )
-            // InternalLegoLang.g:3620:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3638:3: ( (lv_left_2_0= ruleExpression ) )
+            // InternalLegoLang.g:3639:4: (lv_left_2_0= ruleExpression )
             {
-            // InternalLegoLang.g:3620:4: (lv_left_2_0= ruleExpression )
-            // InternalLegoLang.g:3621:5: lv_left_2_0= ruleExpression
+            // InternalLegoLang.g:3639:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3640:5: lv_left_2_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getPlusEqualAccess().getLeftExpressionParserRuleCall_2_0());
               				
             }
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_43);
             lv_left_2_0=ruleExpression();
 
             state._fsp--;
@@ -10108,11 +10139,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getPlusEqualAccess().getPlusSignEqualsSignKeyword_3());
               		
             }
-            // InternalLegoLang.g:3642:3: ( (lv_right_4_0= ruleExpression ) )
-            // InternalLegoLang.g:3643:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3661:3: ( (lv_right_4_0= ruleExpression ) )
+            // InternalLegoLang.g:3662:4: (lv_right_4_0= ruleExpression )
             {
-            // InternalLegoLang.g:3643:4: (lv_right_4_0= ruleExpression )
-            // InternalLegoLang.g:3644:5: lv_right_4_0= ruleExpression
+            // InternalLegoLang.g:3662:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3663:5: lv_right_4_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -10174,7 +10205,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMinusEqual"
-    // InternalLegoLang.g:3669:1: entryRuleMinusEqual returns [EObject current=null] : iv_ruleMinusEqual= ruleMinusEqual EOF ;
+    // InternalLegoLang.g:3688:1: entryRuleMinusEqual returns [EObject current=null] : iv_ruleMinusEqual= ruleMinusEqual EOF ;
     public final EObject entryRuleMinusEqual() throws RecognitionException {
         EObject current = null;
 
@@ -10182,8 +10213,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3669:51: (iv_ruleMinusEqual= ruleMinusEqual EOF )
-            // InternalLegoLang.g:3670:2: iv_ruleMinusEqual= ruleMinusEqual EOF
+            // InternalLegoLang.g:3688:51: (iv_ruleMinusEqual= ruleMinusEqual EOF )
+            // InternalLegoLang.g:3689:2: iv_ruleMinusEqual= ruleMinusEqual EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMinusEqualRule()); 
@@ -10214,7 +10245,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMinusEqual"
-    // InternalLegoLang.g:3676:1: ruleMinusEqual returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) ;
+    // InternalLegoLang.g:3695:1: ruleMinusEqual returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) ;
     public final EObject ruleMinusEqual() throws RecognitionException {
         EObject current = null;
 
@@ -10230,14 +10261,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3682:2: ( ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) )
-            // InternalLegoLang.g:3683:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
+            // InternalLegoLang.g:3701:2: ( ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' ) )
+            // InternalLegoLang.g:3702:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
             {
-            // InternalLegoLang.g:3683:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
-            // InternalLegoLang.g:3684:3: () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')'
+            // InternalLegoLang.g:3702:2: ( () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')' )
+            // InternalLegoLang.g:3703:3: () otherlv_1= '(' ( (lv_left_2_0= ruleExpression ) ) otherlv_3= '-=' ( (lv_right_4_0= ruleExpression ) ) otherlv_5= ')'
             {
-            // InternalLegoLang.g:3684:3: ()
-            // InternalLegoLang.g:3685:4: 
+            // InternalLegoLang.g:3703:3: ()
+            // InternalLegoLang.g:3704:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10260,18 +10291,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getMinusEqualAccess().getLeftParenthesisKeyword_1());
               		
             }
-            // InternalLegoLang.g:3698:3: ( (lv_left_2_0= ruleExpression ) )
-            // InternalLegoLang.g:3699:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3717:3: ( (lv_left_2_0= ruleExpression ) )
+            // InternalLegoLang.g:3718:4: (lv_left_2_0= ruleExpression )
             {
-            // InternalLegoLang.g:3699:4: (lv_left_2_0= ruleExpression )
-            // InternalLegoLang.g:3700:5: lv_left_2_0= ruleExpression
+            // InternalLegoLang.g:3718:4: (lv_left_2_0= ruleExpression )
+            // InternalLegoLang.g:3719:5: lv_left_2_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getMinusEqualAccess().getLeftExpressionParserRuleCall_2_0());
               				
             }
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_44);
             lv_left_2_0=ruleExpression();
 
             state._fsp--;
@@ -10301,11 +10332,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getMinusEqualAccess().getHyphenMinusEqualsSignKeyword_3());
               		
             }
-            // InternalLegoLang.g:3721:3: ( (lv_right_4_0= ruleExpression ) )
-            // InternalLegoLang.g:3722:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3740:3: ( (lv_right_4_0= ruleExpression ) )
+            // InternalLegoLang.g:3741:4: (lv_right_4_0= ruleExpression )
             {
-            // InternalLegoLang.g:3722:4: (lv_right_4_0= ruleExpression )
-            // InternalLegoLang.g:3723:5: lv_right_4_0= ruleExpression
+            // InternalLegoLang.g:3741:4: (lv_right_4_0= ruleExpression )
+            // InternalLegoLang.g:3742:5: lv_right_4_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -10367,7 +10398,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEBoolean"
-    // InternalLegoLang.g:3748:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
+    // InternalLegoLang.g:3767:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
     public final String entryRuleEBoolean() throws RecognitionException {
         String current = null;
 
@@ -10375,8 +10406,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3748:48: (iv_ruleEBoolean= ruleEBoolean EOF )
-            // InternalLegoLang.g:3749:2: iv_ruleEBoolean= ruleEBoolean EOF
+            // InternalLegoLang.g:3767:48: (iv_ruleEBoolean= ruleEBoolean EOF )
+            // InternalLegoLang.g:3768:2: iv_ruleEBoolean= ruleEBoolean EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEBooleanRule()); 
@@ -10407,7 +10438,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEBoolean"
-    // InternalLegoLang.g:3755:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // InternalLegoLang.g:3774:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleEBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10417,10 +10448,10 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3761:2: ( (kw= 'true' | kw= 'false' ) )
-            // InternalLegoLang.g:3762:2: (kw= 'true' | kw= 'false' )
+            // InternalLegoLang.g:3780:2: ( (kw= 'true' | kw= 'false' ) )
+            // InternalLegoLang.g:3781:2: (kw= 'true' | kw= 'false' )
             {
-            // InternalLegoLang.g:3762:2: (kw= 'true' | kw= 'false' )
+            // InternalLegoLang.g:3781:2: (kw= 'true' | kw= 'false' )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -10439,7 +10470,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalLegoLang.g:3763:3: kw= 'true'
+                    // InternalLegoLang.g:3782:3: kw= 'true'
                     {
                     kw=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -10452,7 +10483,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalLegoLang.g:3769:3: kw= 'false'
+                    // InternalLegoLang.g:3788:3: kw= 'false'
                     {
                     kw=(Token)match(input,64,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -10489,7 +10520,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnInteger"
-    // InternalLegoLang.g:3778:1: entryRuleUnInteger returns [EObject current=null] : iv_ruleUnInteger= ruleUnInteger EOF ;
+    // InternalLegoLang.g:3797:1: entryRuleUnInteger returns [EObject current=null] : iv_ruleUnInteger= ruleUnInteger EOF ;
     public final EObject entryRuleUnInteger() throws RecognitionException {
         EObject current = null;
 
@@ -10497,8 +10528,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3778:50: (iv_ruleUnInteger= ruleUnInteger EOF )
-            // InternalLegoLang.g:3779:2: iv_ruleUnInteger= ruleUnInteger EOF
+            // InternalLegoLang.g:3797:50: (iv_ruleUnInteger= ruleUnInteger EOF )
+            // InternalLegoLang.g:3798:2: iv_ruleUnInteger= ruleUnInteger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnIntegerRule()); 
@@ -10529,7 +10560,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnInteger"
-    // InternalLegoLang.g:3785:1: ruleUnInteger returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? ) ;
+    // InternalLegoLang.g:3804:1: ruleUnInteger returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? ) ;
     public final EObject ruleUnInteger() throws RecognitionException {
         EObject current = null;
 
@@ -10545,14 +10576,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3791:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? ) )
-            // InternalLegoLang.g:3792:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? )
+            // InternalLegoLang.g:3810:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? ) )
+            // InternalLegoLang.g:3811:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? )
             {
-            // InternalLegoLang.g:3792:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? )
-            // InternalLegoLang.g:3793:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )?
+            // InternalLegoLang.g:3811:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )? )
+            // InternalLegoLang.g:3812:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'int' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )?
             {
-            // InternalLegoLang.g:3793:3: ()
-            // InternalLegoLang.g:3794:4: 
+            // InternalLegoLang.g:3812:3: ()
+            // InternalLegoLang.g:3813:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10569,7 +10600,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:3803:3: ( (lv_isConst_1_0= 'const' ) )?
+            // InternalLegoLang.g:3822:3: ( (lv_isConst_1_0= 'const' ) )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -10578,12 +10609,12 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalLegoLang.g:3804:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:3823:4: (lv_isConst_1_0= 'const' )
                     {
-                    // InternalLegoLang.g:3804:4: (lv_isConst_1_0= 'const' )
-                    // InternalLegoLang.g:3805:5: lv_isConst_1_0= 'const'
+                    // InternalLegoLang.g:3823:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:3824:5: lv_isConst_1_0= 'const'
                     {
-                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_46); if (state.failed) return current;
+                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_45); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(lv_isConst_1_0, grammarAccess.getUnIntegerAccess().getIsConstConstKeyword_1_0());
@@ -10612,18 +10643,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getUnIntegerAccess().getIntKeyword_2());
               		
             }
-            // InternalLegoLang.g:3821:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalLegoLang.g:3822:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:3840:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalLegoLang.g:3841:4: (lv_name_3_0= ruleEString )
             {
-            // InternalLegoLang.g:3822:4: (lv_name_3_0= ruleEString )
-            // InternalLegoLang.g:3823:5: lv_name_3_0= ruleEString
+            // InternalLegoLang.g:3841:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:3842:5: lv_name_3_0= ruleEString
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getUnIntegerAccess().getNameEStringParserRuleCall_3_0());
               				
             }
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             lv_name_3_0=ruleEString();
 
             state._fsp--;
@@ -10647,7 +10678,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:3840:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )?
+            // InternalLegoLang.g:3859:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) ) )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -10656,7 +10687,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalLegoLang.g:3841:4: otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) )
+                    // InternalLegoLang.g:3860:4: otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEInt ) )
                     {
                     otherlv_4=(Token)match(input,31,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -10664,11 +10695,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getUnIntegerAccess().getEqualsSignKeyword_4_0());
                       			
                     }
-                    // InternalLegoLang.g:3845:4: ( (lv_initialeValue_5_0= ruleEInt ) )
-                    // InternalLegoLang.g:3846:5: (lv_initialeValue_5_0= ruleEInt )
+                    // InternalLegoLang.g:3864:4: ( (lv_initialeValue_5_0= ruleEInt ) )
+                    // InternalLegoLang.g:3865:5: (lv_initialeValue_5_0= ruleEInt )
                     {
-                    // InternalLegoLang.g:3846:5: (lv_initialeValue_5_0= ruleEInt )
-                    // InternalLegoLang.g:3847:6: lv_initialeValue_5_0= ruleEInt
+                    // InternalLegoLang.g:3865:5: (lv_initialeValue_5_0= ruleEInt )
+                    // InternalLegoLang.g:3866:6: lv_initialeValue_5_0= ruleEInt
                     {
                     if ( state.backtracking==0 ) {
 
@@ -10730,7 +10761,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnDouble"
-    // InternalLegoLang.g:3869:1: entryRuleUnDouble returns [EObject current=null] : iv_ruleUnDouble= ruleUnDouble EOF ;
+    // InternalLegoLang.g:3888:1: entryRuleUnDouble returns [EObject current=null] : iv_ruleUnDouble= ruleUnDouble EOF ;
     public final EObject entryRuleUnDouble() throws RecognitionException {
         EObject current = null;
 
@@ -10738,8 +10769,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3869:49: (iv_ruleUnDouble= ruleUnDouble EOF )
-            // InternalLegoLang.g:3870:2: iv_ruleUnDouble= ruleUnDouble EOF
+            // InternalLegoLang.g:3888:49: (iv_ruleUnDouble= ruleUnDouble EOF )
+            // InternalLegoLang.g:3889:2: iv_ruleUnDouble= ruleUnDouble EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnDoubleRule()); 
@@ -10770,7 +10801,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnDouble"
-    // InternalLegoLang.g:3876:1: ruleUnDouble returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? ) ;
+    // InternalLegoLang.g:3895:1: ruleUnDouble returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? ) ;
     public final EObject ruleUnDouble() throws RecognitionException {
         EObject current = null;
 
@@ -10789,14 +10820,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3882:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? ) )
-            // InternalLegoLang.g:3883:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? )
+            // InternalLegoLang.g:3901:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? ) )
+            // InternalLegoLang.g:3902:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? )
             {
-            // InternalLegoLang.g:3883:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? )
-            // InternalLegoLang.g:3884:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )?
+            // InternalLegoLang.g:3902:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )? )
+            // InternalLegoLang.g:3903:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'double' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )?
             {
-            // InternalLegoLang.g:3884:3: ()
-            // InternalLegoLang.g:3885:4: 
+            // InternalLegoLang.g:3903:3: ()
+            // InternalLegoLang.g:3904:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10813,7 +10844,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:3894:3: ( (lv_isConst_1_0= 'const' ) )?
+            // InternalLegoLang.g:3913:3: ( (lv_isConst_1_0= 'const' ) )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -10822,12 +10853,12 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // InternalLegoLang.g:3895:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:3914:4: (lv_isConst_1_0= 'const' )
                     {
-                    // InternalLegoLang.g:3895:4: (lv_isConst_1_0= 'const' )
-                    // InternalLegoLang.g:3896:5: lv_isConst_1_0= 'const'
+                    // InternalLegoLang.g:3914:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:3915:5: lv_isConst_1_0= 'const'
                     {
-                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_48); if (state.failed) return current;
+                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_47); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(lv_isConst_1_0, grammarAccess.getUnDoubleAccess().getIsConstConstKeyword_1_0());
@@ -10856,18 +10887,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getUnDoubleAccess().getDoubleKeyword_2());
               		
             }
-            // InternalLegoLang.g:3912:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalLegoLang.g:3913:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:3931:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalLegoLang.g:3932:4: (lv_name_3_0= ruleEString )
             {
-            // InternalLegoLang.g:3913:4: (lv_name_3_0= ruleEString )
-            // InternalLegoLang.g:3914:5: lv_name_3_0= ruleEString
+            // InternalLegoLang.g:3932:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:3933:5: lv_name_3_0= ruleEString
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getUnDoubleAccess().getNameEStringParserRuleCall_3_0());
               				
             }
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             lv_name_3_0=ruleEString();
 
             state._fsp--;
@@ -10891,7 +10922,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:3931:3: (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )?
+            // InternalLegoLang.g:3950:3: (otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) ) )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -10900,7 +10931,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // InternalLegoLang.g:3932:4: otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) )
+                    // InternalLegoLang.g:3951:4: otherlv_4= '=' ( (lv_initialeValue1_5_0= ruleEInt ) ) otherlv_6= '.' ( (lv_initialeValue2_7_0= ruleEInt ) )
                     {
                     otherlv_4=(Token)match(input,31,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -10908,18 +10939,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getUnDoubleAccess().getEqualsSignKeyword_4_0());
                       			
                     }
-                    // InternalLegoLang.g:3936:4: ( (lv_initialeValue1_5_0= ruleEInt ) )
-                    // InternalLegoLang.g:3937:5: (lv_initialeValue1_5_0= ruleEInt )
+                    // InternalLegoLang.g:3955:4: ( (lv_initialeValue1_5_0= ruleEInt ) )
+                    // InternalLegoLang.g:3956:5: (lv_initialeValue1_5_0= ruleEInt )
                     {
-                    // InternalLegoLang.g:3937:5: (lv_initialeValue1_5_0= ruleEInt )
-                    // InternalLegoLang.g:3938:6: lv_initialeValue1_5_0= ruleEInt
+                    // InternalLegoLang.g:3956:5: (lv_initialeValue1_5_0= ruleEInt )
+                    // InternalLegoLang.g:3957:6: lv_initialeValue1_5_0= ruleEInt
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getUnDoubleAccess().getInitialeValue1EIntParserRuleCall_4_1_0());
                       					
                     }
-                    pushFollow(FOLLOW_49);
+                    pushFollow(FOLLOW_48);
                     lv_initialeValue1_5_0=ruleEInt();
 
                     state._fsp--;
@@ -10949,11 +10980,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_6, grammarAccess.getUnDoubleAccess().getFullStopKeyword_4_2());
                       			
                     }
-                    // InternalLegoLang.g:3959:4: ( (lv_initialeValue2_7_0= ruleEInt ) )
-                    // InternalLegoLang.g:3960:5: (lv_initialeValue2_7_0= ruleEInt )
+                    // InternalLegoLang.g:3978:4: ( (lv_initialeValue2_7_0= ruleEInt ) )
+                    // InternalLegoLang.g:3979:5: (lv_initialeValue2_7_0= ruleEInt )
                     {
-                    // InternalLegoLang.g:3960:5: (lv_initialeValue2_7_0= ruleEInt )
-                    // InternalLegoLang.g:3961:6: lv_initialeValue2_7_0= ruleEInt
+                    // InternalLegoLang.g:3979:5: (lv_initialeValue2_7_0= ruleEInt )
+                    // InternalLegoLang.g:3980:6: lv_initialeValue2_7_0= ruleEInt
                     {
                     if ( state.backtracking==0 ) {
 
@@ -11015,7 +11046,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnBoolean"
-    // InternalLegoLang.g:3983:1: entryRuleUnBoolean returns [EObject current=null] : iv_ruleUnBoolean= ruleUnBoolean EOF ;
+    // InternalLegoLang.g:4002:1: entryRuleUnBoolean returns [EObject current=null] : iv_ruleUnBoolean= ruleUnBoolean EOF ;
     public final EObject entryRuleUnBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -11023,8 +11054,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:3983:50: (iv_ruleUnBoolean= ruleUnBoolean EOF )
-            // InternalLegoLang.g:3984:2: iv_ruleUnBoolean= ruleUnBoolean EOF
+            // InternalLegoLang.g:4002:50: (iv_ruleUnBoolean= ruleUnBoolean EOF )
+            // InternalLegoLang.g:4003:2: iv_ruleUnBoolean= ruleUnBoolean EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnBooleanRule()); 
@@ -11055,7 +11086,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnBoolean"
-    // InternalLegoLang.g:3990:1: ruleUnBoolean returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? ) ;
+    // InternalLegoLang.g:4009:1: ruleUnBoolean returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? ) ;
     public final EObject ruleUnBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -11071,14 +11102,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:3996:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? ) )
-            // InternalLegoLang.g:3997:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? )
+            // InternalLegoLang.g:4015:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? ) )
+            // InternalLegoLang.g:4016:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? )
             {
-            // InternalLegoLang.g:3997:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? )
-            // InternalLegoLang.g:3998:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )?
+            // InternalLegoLang.g:4016:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )? )
+            // InternalLegoLang.g:4017:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'bool' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )?
             {
-            // InternalLegoLang.g:3998:3: ()
-            // InternalLegoLang.g:3999:4: 
+            // InternalLegoLang.g:4017:3: ()
+            // InternalLegoLang.g:4018:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11095,7 +11126,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4008:3: ( (lv_isConst_1_0= 'const' ) )?
+            // InternalLegoLang.g:4027:3: ( (lv_isConst_1_0= 'const' ) )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -11104,12 +11135,12 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalLegoLang.g:4009:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4028:4: (lv_isConst_1_0= 'const' )
                     {
-                    // InternalLegoLang.g:4009:4: (lv_isConst_1_0= 'const' )
-                    // InternalLegoLang.g:4010:5: lv_isConst_1_0= 'const'
+                    // InternalLegoLang.g:4028:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4029:5: lv_isConst_1_0= 'const'
                     {
-                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_50); if (state.failed) return current;
+                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_49); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(lv_isConst_1_0, grammarAccess.getUnBooleanAccess().getIsConstConstKeyword_1_0());
@@ -11138,18 +11169,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getUnBooleanAccess().getBoolKeyword_2());
               		
             }
-            // InternalLegoLang.g:4026:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalLegoLang.g:4027:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4045:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalLegoLang.g:4046:4: (lv_name_3_0= ruleEString )
             {
-            // InternalLegoLang.g:4027:4: (lv_name_3_0= ruleEString )
-            // InternalLegoLang.g:4028:5: lv_name_3_0= ruleEString
+            // InternalLegoLang.g:4046:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4047:5: lv_name_3_0= ruleEString
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getUnBooleanAccess().getNameEStringParserRuleCall_3_0());
               				
             }
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             lv_name_3_0=ruleEString();
 
             state._fsp--;
@@ -11173,7 +11204,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4045:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )?
+            // InternalLegoLang.g:4064:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) ) )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -11182,19 +11213,19 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // InternalLegoLang.g:4046:4: otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) )
+                    // InternalLegoLang.g:4065:4: otherlv_4= '=' ( (lv_initialeValue_5_0= ruleEBoolean ) )
                     {
-                    otherlv_4=(Token)match(input,31,FOLLOW_51); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,31,FOLLOW_50); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_4, grammarAccess.getUnBooleanAccess().getEqualsSignKeyword_4_0());
                       			
                     }
-                    // InternalLegoLang.g:4050:4: ( (lv_initialeValue_5_0= ruleEBoolean ) )
-                    // InternalLegoLang.g:4051:5: (lv_initialeValue_5_0= ruleEBoolean )
+                    // InternalLegoLang.g:4069:4: ( (lv_initialeValue_5_0= ruleEBoolean ) )
+                    // InternalLegoLang.g:4070:5: (lv_initialeValue_5_0= ruleEBoolean )
                     {
-                    // InternalLegoLang.g:4051:5: (lv_initialeValue_5_0= ruleEBoolean )
-                    // InternalLegoLang.g:4052:6: lv_initialeValue_5_0= ruleEBoolean
+                    // InternalLegoLang.g:4070:5: (lv_initialeValue_5_0= ruleEBoolean )
+                    // InternalLegoLang.g:4071:6: lv_initialeValue_5_0= ruleEBoolean
                     {
                     if ( state.backtracking==0 ) {
 
@@ -11256,7 +11287,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnString"
-    // InternalLegoLang.g:4074:1: entryRuleUnString returns [EObject current=null] : iv_ruleUnString= ruleUnString EOF ;
+    // InternalLegoLang.g:4093:1: entryRuleUnString returns [EObject current=null] : iv_ruleUnString= ruleUnString EOF ;
     public final EObject entryRuleUnString() throws RecognitionException {
         EObject current = null;
 
@@ -11264,8 +11295,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4074:49: (iv_ruleUnString= ruleUnString EOF )
-            // InternalLegoLang.g:4075:2: iv_ruleUnString= ruleUnString EOF
+            // InternalLegoLang.g:4093:49: (iv_ruleUnString= ruleUnString EOF )
+            // InternalLegoLang.g:4094:2: iv_ruleUnString= ruleUnString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnStringRule()); 
@@ -11296,7 +11327,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnString"
-    // InternalLegoLang.g:4081:1: ruleUnString returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? ) ;
+    // InternalLegoLang.g:4100:1: ruleUnString returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? ) ;
     public final EObject ruleUnString() throws RecognitionException {
         EObject current = null;
 
@@ -11311,14 +11342,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4087:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? ) )
-            // InternalLegoLang.g:4088:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? )
+            // InternalLegoLang.g:4106:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? ) )
+            // InternalLegoLang.g:4107:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? )
             {
-            // InternalLegoLang.g:4088:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? )
-            // InternalLegoLang.g:4089:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )?
+            // InternalLegoLang.g:4107:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )? )
+            // InternalLegoLang.g:4108:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'string' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )?
             {
-            // InternalLegoLang.g:4089:3: ()
-            // InternalLegoLang.g:4090:4: 
+            // InternalLegoLang.g:4108:3: ()
+            // InternalLegoLang.g:4109:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11335,7 +11366,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4099:3: ( (lv_isConst_1_0= 'const' ) )?
+            // InternalLegoLang.g:4118:3: ( (lv_isConst_1_0= 'const' ) )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -11344,12 +11375,12 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalLegoLang.g:4100:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4119:4: (lv_isConst_1_0= 'const' )
                     {
-                    // InternalLegoLang.g:4100:4: (lv_isConst_1_0= 'const' )
-                    // InternalLegoLang.g:4101:5: lv_isConst_1_0= 'const'
+                    // InternalLegoLang.g:4119:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4120:5: lv_isConst_1_0= 'const'
                     {
-                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_52); if (state.failed) return current;
+                    lv_isConst_1_0=(Token)match(input,65,FOLLOW_51); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(lv_isConst_1_0, grammarAccess.getUnStringAccess().getIsConstConstKeyword_1_0());
@@ -11378,18 +11409,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getUnStringAccess().getStringKeyword_2());
               		
             }
-            // InternalLegoLang.g:4117:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalLegoLang.g:4118:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4136:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalLegoLang.g:4137:4: (lv_name_3_0= ruleEString )
             {
-            // InternalLegoLang.g:4118:4: (lv_name_3_0= ruleEString )
-            // InternalLegoLang.g:4119:5: lv_name_3_0= ruleEString
+            // InternalLegoLang.g:4137:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4138:5: lv_name_3_0= ruleEString
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getUnStringAccess().getNameEStringParserRuleCall_3_0());
               				
             }
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             lv_name_3_0=ruleEString();
 
             state._fsp--;
@@ -11413,7 +11444,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4136:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )?
+            // InternalLegoLang.g:4155:3: (otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) ) )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -11422,19 +11453,19 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalLegoLang.g:4137:4: otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) )
+                    // InternalLegoLang.g:4156:4: otherlv_4= '=' ( (lv_initialeValue_5_0= RULE_STRING ) )
                     {
-                    otherlv_4=(Token)match(input,31,FOLLOW_53); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,31,FOLLOW_52); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_4, grammarAccess.getUnStringAccess().getEqualsSignKeyword_4_0());
                       			
                     }
-                    // InternalLegoLang.g:4141:4: ( (lv_initialeValue_5_0= RULE_STRING ) )
-                    // InternalLegoLang.g:4142:5: (lv_initialeValue_5_0= RULE_STRING )
+                    // InternalLegoLang.g:4160:4: ( (lv_initialeValue_5_0= RULE_STRING ) )
+                    // InternalLegoLang.g:4161:5: (lv_initialeValue_5_0= RULE_STRING )
                     {
-                    // InternalLegoLang.g:4142:5: (lv_initialeValue_5_0= RULE_STRING )
-                    // InternalLegoLang.g:4143:6: lv_initialeValue_5_0= RULE_STRING
+                    // InternalLegoLang.g:4161:5: (lv_initialeValue_5_0= RULE_STRING )
+                    // InternalLegoLang.g:4162:6: lv_initialeValue_5_0= RULE_STRING
                     {
                     lv_initialeValue_5_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -11491,7 +11522,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnColor"
-    // InternalLegoLang.g:4164:1: entryRuleUnColor returns [EObject current=null] : iv_ruleUnColor= ruleUnColor EOF ;
+    // InternalLegoLang.g:4183:1: entryRuleUnColor returns [EObject current=null] : iv_ruleUnColor= ruleUnColor EOF ;
     public final EObject entryRuleUnColor() throws RecognitionException {
         EObject current = null;
 
@@ -11499,8 +11530,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4164:48: (iv_ruleUnColor= ruleUnColor EOF )
-            // InternalLegoLang.g:4165:2: iv_ruleUnColor= ruleUnColor EOF
+            // InternalLegoLang.g:4183:48: (iv_ruleUnColor= ruleUnColor EOF )
+            // InternalLegoLang.g:4184:2: iv_ruleUnColor= ruleUnColor EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnColorRule()); 
@@ -11531,7 +11562,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnColor"
-    // InternalLegoLang.g:4171:1: ruleUnColor returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? ) ;
+    // InternalLegoLang.g:4190:1: ruleUnColor returns [EObject current=null] : ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? ) ;
     public final EObject ruleUnColor() throws RecognitionException {
         EObject current = null;
 
@@ -11547,14 +11578,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4177:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? ) )
-            // InternalLegoLang.g:4178:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? )
+            // InternalLegoLang.g:4196:2: ( ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? ) )
+            // InternalLegoLang.g:4197:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? )
             {
-            // InternalLegoLang.g:4178:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? )
-            // InternalLegoLang.g:4179:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )?
+            // InternalLegoLang.g:4197:2: ( () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )? )
+            // InternalLegoLang.g:4198:3: () ( (lv_isConst_1_0= 'const' ) )? otherlv_2= 'color' ( (lv_name_3_0= ruleEString ) ) (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )?
             {
-            // InternalLegoLang.g:4179:3: ()
-            // InternalLegoLang.g:4180:4: 
+            // InternalLegoLang.g:4198:3: ()
+            // InternalLegoLang.g:4199:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11571,7 +11602,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4189:3: ( (lv_isConst_1_0= 'const' ) )?
+            // InternalLegoLang.g:4208:3: ( (lv_isConst_1_0= 'const' ) )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -11580,10 +11611,10 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalLegoLang.g:4190:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4209:4: (lv_isConst_1_0= 'const' )
                     {
-                    // InternalLegoLang.g:4190:4: (lv_isConst_1_0= 'const' )
-                    // InternalLegoLang.g:4191:5: lv_isConst_1_0= 'const'
+                    // InternalLegoLang.g:4209:4: (lv_isConst_1_0= 'const' )
+                    // InternalLegoLang.g:4210:5: lv_isConst_1_0= 'const'
                     {
                     lv_isConst_1_0=(Token)match(input,65,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -11614,18 +11645,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getUnColorAccess().getColorKeyword_2());
               		
             }
-            // InternalLegoLang.g:4207:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalLegoLang.g:4208:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4226:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalLegoLang.g:4227:4: (lv_name_3_0= ruleEString )
             {
-            // InternalLegoLang.g:4208:4: (lv_name_3_0= ruleEString )
-            // InternalLegoLang.g:4209:5: lv_name_3_0= ruleEString
+            // InternalLegoLang.g:4227:4: (lv_name_3_0= ruleEString )
+            // InternalLegoLang.g:4228:5: lv_name_3_0= ruleEString
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getUnColorAccess().getNameEStringParserRuleCall_3_0());
               				
             }
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             lv_name_3_0=ruleEString();
 
             state._fsp--;
@@ -11649,7 +11680,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4226:3: (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )?
+            // InternalLegoLang.g:4245:3: (otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) ) )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -11658,19 +11689,19 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalLegoLang.g:4227:4: otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) )
+                    // InternalLegoLang.g:4246:4: otherlv_4= '=' ( (lv_initialValue_5_0= ruleColors ) )
                     {
-                    otherlv_4=(Token)match(input,31,FOLLOW_54); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,31,FOLLOW_53); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_4, grammarAccess.getUnColorAccess().getEqualsSignKeyword_4_0());
                       			
                     }
-                    // InternalLegoLang.g:4231:4: ( (lv_initialValue_5_0= ruleColors ) )
-                    // InternalLegoLang.g:4232:5: (lv_initialValue_5_0= ruleColors )
+                    // InternalLegoLang.g:4250:4: ( (lv_initialValue_5_0= ruleColors ) )
+                    // InternalLegoLang.g:4251:5: (lv_initialValue_5_0= ruleColors )
                     {
-                    // InternalLegoLang.g:4232:5: (lv_initialValue_5_0= ruleColors )
-                    // InternalLegoLang.g:4233:6: lv_initialValue_5_0= ruleColors
+                    // InternalLegoLang.g:4251:5: (lv_initialValue_5_0= ruleColors )
+                    // InternalLegoLang.g:4252:6: lv_initialValue_5_0= ruleColors
                     {
                     if ( state.backtracking==0 ) {
 
@@ -11732,7 +11763,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTheDouble"
-    // InternalLegoLang.g:4255:1: entryRuleTheDouble returns [EObject current=null] : iv_ruleTheDouble= ruleTheDouble EOF ;
+    // InternalLegoLang.g:4274:1: entryRuleTheDouble returns [EObject current=null] : iv_ruleTheDouble= ruleTheDouble EOF ;
     public final EObject entryRuleTheDouble() throws RecognitionException {
         EObject current = null;
 
@@ -11740,8 +11771,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4255:50: (iv_ruleTheDouble= ruleTheDouble EOF )
-            // InternalLegoLang.g:4256:2: iv_ruleTheDouble= ruleTheDouble EOF
+            // InternalLegoLang.g:4274:50: (iv_ruleTheDouble= ruleTheDouble EOF )
+            // InternalLegoLang.g:4275:2: iv_ruleTheDouble= ruleTheDouble EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTheDoubleRule()); 
@@ -11772,7 +11803,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheDouble"
-    // InternalLegoLang.g:4262:1: ruleTheDouble returns [EObject current=null] : ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) ) ;
+    // InternalLegoLang.g:4281:1: ruleTheDouble returns [EObject current=null] : ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) ) ;
     public final EObject ruleTheDouble() throws RecognitionException {
         EObject current = null;
 
@@ -11786,14 +11817,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4268:2: ( ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) ) )
-            // InternalLegoLang.g:4269:2: ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) )
+            // InternalLegoLang.g:4287:2: ( ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) ) )
+            // InternalLegoLang.g:4288:2: ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) )
             {
-            // InternalLegoLang.g:4269:2: ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) )
-            // InternalLegoLang.g:4270:3: () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) )
+            // InternalLegoLang.g:4288:2: ( () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) ) )
+            // InternalLegoLang.g:4289:3: () ( (lv_value1_1_0= ruleEInt ) ) otherlv_2= '.' ( (lv_value2_3_0= ruleEInt ) )
             {
-            // InternalLegoLang.g:4270:3: ()
-            // InternalLegoLang.g:4271:4: 
+            // InternalLegoLang.g:4289:3: ()
+            // InternalLegoLang.g:4290:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11810,18 +11841,18 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4280:3: ( (lv_value1_1_0= ruleEInt ) )
-            // InternalLegoLang.g:4281:4: (lv_value1_1_0= ruleEInt )
+            // InternalLegoLang.g:4299:3: ( (lv_value1_1_0= ruleEInt ) )
+            // InternalLegoLang.g:4300:4: (lv_value1_1_0= ruleEInt )
             {
-            // InternalLegoLang.g:4281:4: (lv_value1_1_0= ruleEInt )
-            // InternalLegoLang.g:4282:5: lv_value1_1_0= ruleEInt
+            // InternalLegoLang.g:4300:4: (lv_value1_1_0= ruleEInt )
+            // InternalLegoLang.g:4301:5: lv_value1_1_0= ruleEInt
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getTheDoubleAccess().getValue1EIntParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             lv_value1_1_0=ruleEInt();
 
             state._fsp--;
@@ -11851,11 +11882,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getTheDoubleAccess().getFullStopKeyword_2());
               		
             }
-            // InternalLegoLang.g:4303:3: ( (lv_value2_3_0= ruleEInt ) )
-            // InternalLegoLang.g:4304:4: (lv_value2_3_0= ruleEInt )
+            // InternalLegoLang.g:4322:3: ( (lv_value2_3_0= ruleEInt ) )
+            // InternalLegoLang.g:4323:4: (lv_value2_3_0= ruleEInt )
             {
-            // InternalLegoLang.g:4304:4: (lv_value2_3_0= ruleEInt )
-            // InternalLegoLang.g:4305:5: lv_value2_3_0= ruleEInt
+            // InternalLegoLang.g:4323:4: (lv_value2_3_0= ruleEInt )
+            // InternalLegoLang.g:4324:5: lv_value2_3_0= ruleEInt
             {
             if ( state.backtracking==0 ) {
 
@@ -11911,7 +11942,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTheInt"
-    // InternalLegoLang.g:4326:1: entryRuleTheInt returns [EObject current=null] : iv_ruleTheInt= ruleTheInt EOF ;
+    // InternalLegoLang.g:4345:1: entryRuleTheInt returns [EObject current=null] : iv_ruleTheInt= ruleTheInt EOF ;
     public final EObject entryRuleTheInt() throws RecognitionException {
         EObject current = null;
 
@@ -11919,8 +11950,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4326:47: (iv_ruleTheInt= ruleTheInt EOF )
-            // InternalLegoLang.g:4327:2: iv_ruleTheInt= ruleTheInt EOF
+            // InternalLegoLang.g:4345:47: (iv_ruleTheInt= ruleTheInt EOF )
+            // InternalLegoLang.g:4346:2: iv_ruleTheInt= ruleTheInt EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTheIntRule()); 
@@ -11951,7 +11982,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheInt"
-    // InternalLegoLang.g:4333:1: ruleTheInt returns [EObject current=null] : ( () ( (lv_value_1_0= ruleEInt ) ) ) ;
+    // InternalLegoLang.g:4352:1: ruleTheInt returns [EObject current=null] : ( () ( (lv_value_1_0= ruleEInt ) ) ) ;
     public final EObject ruleTheInt() throws RecognitionException {
         EObject current = null;
 
@@ -11962,14 +11993,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4339:2: ( ( () ( (lv_value_1_0= ruleEInt ) ) ) )
-            // InternalLegoLang.g:4340:2: ( () ( (lv_value_1_0= ruleEInt ) ) )
+            // InternalLegoLang.g:4358:2: ( ( () ( (lv_value_1_0= ruleEInt ) ) ) )
+            // InternalLegoLang.g:4359:2: ( () ( (lv_value_1_0= ruleEInt ) ) )
             {
-            // InternalLegoLang.g:4340:2: ( () ( (lv_value_1_0= ruleEInt ) ) )
-            // InternalLegoLang.g:4341:3: () ( (lv_value_1_0= ruleEInt ) )
+            // InternalLegoLang.g:4359:2: ( () ( (lv_value_1_0= ruleEInt ) ) )
+            // InternalLegoLang.g:4360:3: () ( (lv_value_1_0= ruleEInt ) )
             {
-            // InternalLegoLang.g:4341:3: ()
-            // InternalLegoLang.g:4342:4: 
+            // InternalLegoLang.g:4360:3: ()
+            // InternalLegoLang.g:4361:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11986,11 +12017,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4351:3: ( (lv_value_1_0= ruleEInt ) )
-            // InternalLegoLang.g:4352:4: (lv_value_1_0= ruleEInt )
+            // InternalLegoLang.g:4370:3: ( (lv_value_1_0= ruleEInt ) )
+            // InternalLegoLang.g:4371:4: (lv_value_1_0= ruleEInt )
             {
-            // InternalLegoLang.g:4352:4: (lv_value_1_0= ruleEInt )
-            // InternalLegoLang.g:4353:5: lv_value_1_0= ruleEInt
+            // InternalLegoLang.g:4371:4: (lv_value_1_0= ruleEInt )
+            // InternalLegoLang.g:4372:5: lv_value_1_0= ruleEInt
             {
             if ( state.backtracking==0 ) {
 
@@ -12046,7 +12077,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTheBoolean"
-    // InternalLegoLang.g:4374:1: entryRuleTheBoolean returns [EObject current=null] : iv_ruleTheBoolean= ruleTheBoolean EOF ;
+    // InternalLegoLang.g:4393:1: entryRuleTheBoolean returns [EObject current=null] : iv_ruleTheBoolean= ruleTheBoolean EOF ;
     public final EObject entryRuleTheBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -12054,8 +12085,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4374:51: (iv_ruleTheBoolean= ruleTheBoolean EOF )
-            // InternalLegoLang.g:4375:2: iv_ruleTheBoolean= ruleTheBoolean EOF
+            // InternalLegoLang.g:4393:51: (iv_ruleTheBoolean= ruleTheBoolean EOF )
+            // InternalLegoLang.g:4394:2: iv_ruleTheBoolean= ruleTheBoolean EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTheBooleanRule()); 
@@ -12086,7 +12117,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheBoolean"
-    // InternalLegoLang.g:4381:1: ruleTheBoolean returns [EObject current=null] : ( () ( (lv_value_1_0= ruleEBoolean ) ) ) ;
+    // InternalLegoLang.g:4400:1: ruleTheBoolean returns [EObject current=null] : ( () ( (lv_value_1_0= ruleEBoolean ) ) ) ;
     public final EObject ruleTheBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -12097,14 +12128,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4387:2: ( ( () ( (lv_value_1_0= ruleEBoolean ) ) ) )
-            // InternalLegoLang.g:4388:2: ( () ( (lv_value_1_0= ruleEBoolean ) ) )
+            // InternalLegoLang.g:4406:2: ( ( () ( (lv_value_1_0= ruleEBoolean ) ) ) )
+            // InternalLegoLang.g:4407:2: ( () ( (lv_value_1_0= ruleEBoolean ) ) )
             {
-            // InternalLegoLang.g:4388:2: ( () ( (lv_value_1_0= ruleEBoolean ) ) )
-            // InternalLegoLang.g:4389:3: () ( (lv_value_1_0= ruleEBoolean ) )
+            // InternalLegoLang.g:4407:2: ( () ( (lv_value_1_0= ruleEBoolean ) ) )
+            // InternalLegoLang.g:4408:3: () ( (lv_value_1_0= ruleEBoolean ) )
             {
-            // InternalLegoLang.g:4389:3: ()
-            // InternalLegoLang.g:4390:4: 
+            // InternalLegoLang.g:4408:3: ()
+            // InternalLegoLang.g:4409:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -12121,11 +12152,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4399:3: ( (lv_value_1_0= ruleEBoolean ) )
-            // InternalLegoLang.g:4400:4: (lv_value_1_0= ruleEBoolean )
+            // InternalLegoLang.g:4418:3: ( (lv_value_1_0= ruleEBoolean ) )
+            // InternalLegoLang.g:4419:4: (lv_value_1_0= ruleEBoolean )
             {
-            // InternalLegoLang.g:4400:4: (lv_value_1_0= ruleEBoolean )
-            // InternalLegoLang.g:4401:5: lv_value_1_0= ruleEBoolean
+            // InternalLegoLang.g:4419:4: (lv_value_1_0= ruleEBoolean )
+            // InternalLegoLang.g:4420:5: lv_value_1_0= ruleEBoolean
             {
             if ( state.backtracking==0 ) {
 
@@ -12181,7 +12212,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTheString"
-    // InternalLegoLang.g:4422:1: entryRuleTheString returns [EObject current=null] : iv_ruleTheString= ruleTheString EOF ;
+    // InternalLegoLang.g:4441:1: entryRuleTheString returns [EObject current=null] : iv_ruleTheString= ruleTheString EOF ;
     public final EObject entryRuleTheString() throws RecognitionException {
         EObject current = null;
 
@@ -12189,8 +12220,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4422:50: (iv_ruleTheString= ruleTheString EOF )
-            // InternalLegoLang.g:4423:2: iv_ruleTheString= ruleTheString EOF
+            // InternalLegoLang.g:4441:50: (iv_ruleTheString= ruleTheString EOF )
+            // InternalLegoLang.g:4442:2: iv_ruleTheString= ruleTheString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTheStringRule()); 
@@ -12221,7 +12252,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheString"
-    // InternalLegoLang.g:4429:1: ruleTheString returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // InternalLegoLang.g:4448:1: ruleTheString returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleTheString() throws RecognitionException {
         EObject current = null;
 
@@ -12231,14 +12262,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4435:2: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // InternalLegoLang.g:4436:2: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // InternalLegoLang.g:4454:2: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // InternalLegoLang.g:4455:2: ( () ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // InternalLegoLang.g:4436:2: ( () ( (lv_value_1_0= RULE_STRING ) ) )
-            // InternalLegoLang.g:4437:3: () ( (lv_value_1_0= RULE_STRING ) )
+            // InternalLegoLang.g:4455:2: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // InternalLegoLang.g:4456:3: () ( (lv_value_1_0= RULE_STRING ) )
             {
-            // InternalLegoLang.g:4437:3: ()
-            // InternalLegoLang.g:4438:4: 
+            // InternalLegoLang.g:4456:3: ()
+            // InternalLegoLang.g:4457:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -12255,11 +12286,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4447:3: ( (lv_value_1_0= RULE_STRING ) )
-            // InternalLegoLang.g:4448:4: (lv_value_1_0= RULE_STRING )
+            // InternalLegoLang.g:4466:3: ( (lv_value_1_0= RULE_STRING ) )
+            // InternalLegoLang.g:4467:4: (lv_value_1_0= RULE_STRING )
             {
-            // InternalLegoLang.g:4448:4: (lv_value_1_0= RULE_STRING )
-            // InternalLegoLang.g:4449:5: lv_value_1_0= RULE_STRING
+            // InternalLegoLang.g:4467:4: (lv_value_1_0= RULE_STRING )
+            // InternalLegoLang.g:4468:5: lv_value_1_0= RULE_STRING
             {
             lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12310,7 +12341,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTheColor"
-    // InternalLegoLang.g:4469:1: entryRuleTheColor returns [EObject current=null] : iv_ruleTheColor= ruleTheColor EOF ;
+    // InternalLegoLang.g:4488:1: entryRuleTheColor returns [EObject current=null] : iv_ruleTheColor= ruleTheColor EOF ;
     public final EObject entryRuleTheColor() throws RecognitionException {
         EObject current = null;
 
@@ -12318,8 +12349,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4469:49: (iv_ruleTheColor= ruleTheColor EOF )
-            // InternalLegoLang.g:4470:2: iv_ruleTheColor= ruleTheColor EOF
+            // InternalLegoLang.g:4488:49: (iv_ruleTheColor= ruleTheColor EOF )
+            // InternalLegoLang.g:4489:2: iv_ruleTheColor= ruleTheColor EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTheColorRule()); 
@@ -12350,7 +12381,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheColor"
-    // InternalLegoLang.g:4476:1: ruleTheColor returns [EObject current=null] : ( () ( (lv_value_1_0= ruleColors ) ) ) ;
+    // InternalLegoLang.g:4495:1: ruleTheColor returns [EObject current=null] : ( () ( (lv_value_1_0= ruleColors ) ) ) ;
     public final EObject ruleTheColor() throws RecognitionException {
         EObject current = null;
 
@@ -12361,14 +12392,14 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4482:2: ( ( () ( (lv_value_1_0= ruleColors ) ) ) )
-            // InternalLegoLang.g:4483:2: ( () ( (lv_value_1_0= ruleColors ) ) )
+            // InternalLegoLang.g:4501:2: ( ( () ( (lv_value_1_0= ruleColors ) ) ) )
+            // InternalLegoLang.g:4502:2: ( () ( (lv_value_1_0= ruleColors ) ) )
             {
-            // InternalLegoLang.g:4483:2: ( () ( (lv_value_1_0= ruleColors ) ) )
-            // InternalLegoLang.g:4484:3: () ( (lv_value_1_0= ruleColors ) )
+            // InternalLegoLang.g:4502:2: ( () ( (lv_value_1_0= ruleColors ) ) )
+            // InternalLegoLang.g:4503:3: () ( (lv_value_1_0= ruleColors ) )
             {
-            // InternalLegoLang.g:4484:3: ()
-            // InternalLegoLang.g:4485:4: 
+            // InternalLegoLang.g:4503:3: ()
+            // InternalLegoLang.g:4504:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -12385,11 +12416,11 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLegoLang.g:4494:3: ( (lv_value_1_0= ruleColors ) )
-            // InternalLegoLang.g:4495:4: (lv_value_1_0= ruleColors )
+            // InternalLegoLang.g:4513:3: ( (lv_value_1_0= ruleColors ) )
+            // InternalLegoLang.g:4514:4: (lv_value_1_0= ruleColors )
             {
-            // InternalLegoLang.g:4495:4: (lv_value_1_0= ruleColors )
-            // InternalLegoLang.g:4496:5: lv_value_1_0= ruleColors
+            // InternalLegoLang.g:4514:4: (lv_value_1_0= ruleColors )
+            // InternalLegoLang.g:4515:5: lv_value_1_0= ruleColors
             {
             if ( state.backtracking==0 ) {
 
@@ -12445,7 +12476,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFQN"
-    // InternalLegoLang.g:4517:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
+    // InternalLegoLang.g:4536:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
     public final String entryRuleFQN() throws RecognitionException {
         String current = null;
 
@@ -12453,8 +12484,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4517:43: (iv_ruleFQN= ruleFQN EOF )
-            // InternalLegoLang.g:4518:2: iv_ruleFQN= ruleFQN EOF
+            // InternalLegoLang.g:4536:43: (iv_ruleFQN= ruleFQN EOF )
+            // InternalLegoLang.g:4537:2: iv_ruleFQN= ruleFQN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFQNRule()); 
@@ -12485,7 +12516,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFQN"
-    // InternalLegoLang.g:4524:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalLegoLang.g:4543:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleFQN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12497,13 +12528,13 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4530:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalLegoLang.g:4531:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalLegoLang.g:4549:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalLegoLang.g:4550:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalLegoLang.g:4531:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalLegoLang.g:4532:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalLegoLang.g:4550:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalLegoLang.g:4551:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_55); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_54); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -12514,7 +12545,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getFQNAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalLegoLang.g:4539:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalLegoLang.g:4558:3: (kw= '.' this_ID_2= RULE_ID )*
             loop33:
             do {
                 int alt33=2;
@@ -12527,7 +12558,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
                 switch (alt33) {
             	case 1 :
-            	    // InternalLegoLang.g:4540:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalLegoLang.g:4559:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,68,FOLLOW_3); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -12536,7 +12567,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getFQNAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_55); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_54); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -12581,7 +12612,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // InternalLegoLang.g:4557:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // InternalLegoLang.g:4576:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -12589,8 +12620,8 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalLegoLang.g:4557:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalLegoLang.g:4558:2: iv_ruleEInt= ruleEInt EOF
+            // InternalLegoLang.g:4576:44: (iv_ruleEInt= ruleEInt EOF )
+            // InternalLegoLang.g:4577:2: iv_ruleEInt= ruleEInt EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEIntRule()); 
@@ -12621,7 +12652,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // InternalLegoLang.g:4564:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // InternalLegoLang.g:4583:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12632,13 +12663,13 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4570:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // InternalLegoLang.g:4571:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalLegoLang.g:4589:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // InternalLegoLang.g:4590:2: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // InternalLegoLang.g:4571:2: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // InternalLegoLang.g:4572:3: (kw= '-' )? this_INT_1= RULE_INT
+            // InternalLegoLang.g:4590:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalLegoLang.g:4591:3: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // InternalLegoLang.g:4572:3: (kw= '-' )?
+            // InternalLegoLang.g:4591:3: (kw= '-' )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -12647,9 +12678,9 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalLegoLang.g:4573:4: kw= '-'
+                    // InternalLegoLang.g:4592:4: kw= '-'
                     {
-                    kw=(Token)match(input,51,FOLLOW_56); if (state.failed) return current;
+                    kw=(Token)match(input,51,FOLLOW_55); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(kw);
@@ -12698,7 +12729,7 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColors"
-    // InternalLegoLang.g:4590:1: ruleColors returns [Enumerator current=null] : ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) ) ;
+    // InternalLegoLang.g:4609:1: ruleColors returns [Enumerator current=null] : ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) ) ;
     public final Enumerator ruleColors() throws RecognitionException {
         Enumerator current = null;
 
@@ -12709,10 +12740,10 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalLegoLang.g:4596:2: ( ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) ) )
-            // InternalLegoLang.g:4597:2: ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) )
+            // InternalLegoLang.g:4615:2: ( ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) ) )
+            // InternalLegoLang.g:4616:2: ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) )
             {
-            // InternalLegoLang.g:4597:2: ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) )
+            // InternalLegoLang.g:4616:2: ( (enumLiteral_0= 'black' ) | (enumLiteral_1= 'white' ) )
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -12731,10 +12762,10 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // InternalLegoLang.g:4598:3: (enumLiteral_0= 'black' )
+                    // InternalLegoLang.g:4617:3: (enumLiteral_0= 'black' )
                     {
-                    // InternalLegoLang.g:4598:3: (enumLiteral_0= 'black' )
-                    // InternalLegoLang.g:4599:4: enumLiteral_0= 'black'
+                    // InternalLegoLang.g:4617:3: (enumLiteral_0= 'black' )
+                    // InternalLegoLang.g:4618:4: enumLiteral_0= 'black'
                     {
                     enumLiteral_0=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -12750,10 +12781,10 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalLegoLang.g:4606:3: (enumLiteral_1= 'white' )
+                    // InternalLegoLang.g:4625:3: (enumLiteral_1= 'white' )
                     {
-                    // InternalLegoLang.g:4606:3: (enumLiteral_1= 'white' )
-                    // InternalLegoLang.g:4607:4: enumLiteral_1= 'white'
+                    // InternalLegoLang.g:4625:3: (enumLiteral_1= 'white' )
+                    // InternalLegoLang.g:4626:4: enumLiteral_1= 'white'
                     {
                     enumLiteral_1=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -13658,30 +13689,29 @@ public class InternalLegoLangParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x800B40312FFAC070L,0x00000000000001EFL});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x800B40312FFA8070L,0x00000000000001EFL});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x8008001168000070L,0x0000000000000181L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000180L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000010L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0004000040000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000180L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000040L});
 
 }

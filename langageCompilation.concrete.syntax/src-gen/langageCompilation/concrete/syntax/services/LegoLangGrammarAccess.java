@@ -1588,22 +1588,26 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMethodePrintAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPrintKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cExpressionAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cExpressionExpressionParserRuleCall_2_0_0 = (RuleCall)cExpressionAssignment_2_0.eContents().get(0);
-		private final Keyword cCommaKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExpressionExpressionParserRuleCall_2_0 = (RuleCall)cExpressionAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExpressionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cExpressionExpressionParserRuleCall_3_1_0 = (RuleCall)cExpressionAssignment_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//MethodePrint returns MethodePrint:
 		//    {MethodePrint}
 		//    'print('
-		//    (expression+=Expression ",")+
+		//    (expression+=Expression)
+		//    (',' expression+=Expression)*
 		//    ')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{MethodePrint}
 		//'print('
-		//(expression+=Expression ",")+
+		//(expression+=Expression)
+		//(',' expression+=Expression)*
 		//')'
 		public Group getGroup() { return cGroup; }
 		
@@ -1613,20 +1617,26 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'print('
 		public Keyword getPrintKeyword_1() { return cPrintKeyword_1; }
 		
-		//(expression+=Expression ",")+
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//expression+=Expression
-		public Assignment getExpressionAssignment_2_0() { return cExpressionAssignment_2_0; }
+		//(expression+=Expression)
+		public Assignment getExpressionAssignment_2() { return cExpressionAssignment_2; }
 		
 		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_2_0_0() { return cExpressionExpressionParserRuleCall_2_0_0; }
+		public RuleCall getExpressionExpressionParserRuleCall_2_0() { return cExpressionExpressionParserRuleCall_2_0; }
 		
-		//","
-		public Keyword getCommaKeyword_2_1() { return cCommaKeyword_2_1; }
+		//(',' expression+=Expression)*
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//','
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		
+		//expression+=Expression
+		public Assignment getExpressionAssignment_3_1() { return cExpressionAssignment_3_1; }
+		
+		//Expression
+		public RuleCall getExpressionExpressionParserRuleCall_3_1_0() { return cExpressionExpressionParserRuleCall_3_1_0; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class VariableRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "langageCompilation.concrete.syntax.LegoLang.VariableRef");
@@ -3366,7 +3376,8 @@ public class LegoLangGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//MethodePrint returns MethodePrint:
 	//    {MethodePrint}
 	//    'print('
-	//    (expression+=Expression ",")+
+	//    (expression+=Expression)
+	//    (',' expression+=Expression)*
 	//    ')';
 	public MethodePrintElements getMethodePrintAccess() {
 		return pMethodePrint;

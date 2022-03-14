@@ -729,7 +729,7 @@ public class LegoLangSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     MethodePrint returns MethodePrint
 	 *
 	 * Constraint:
-	 *     expression+=Expression+
+	 *     (expression+=Expression expression+=Expression*)
 	 */
 	protected void sequence_MethodePrint(ISerializationContext context, MethodePrint semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
