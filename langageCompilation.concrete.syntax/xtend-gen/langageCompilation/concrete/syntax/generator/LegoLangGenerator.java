@@ -300,7 +300,7 @@ public class LegoLangGenerator extends AbstractGenerator {
     }
     if ((v instanceof UnDouble)) {
       String _name_4 = ((UnDouble)v).getName();
-      String _plus_6 = (_name_4 + ":double=");
+      String _plus_6 = (_name_4 + ":float=");
       int _initialeValue1 = ((UnDouble)v).getInitialeValue1();
       String _plus_7 = (_plus_6 + Integer.valueOf(_initialeValue1));
       String _plus_8 = (_plus_7 + ".");

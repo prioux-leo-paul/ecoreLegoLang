@@ -194,7 +194,7 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 			return v.name + ":bool=" + v.initialeValue.toString().substring(0, 1).toUpperCase() +  v.initialeValue.toString().substring(1)
 		}
 		if (v instanceof UnDouble){
-			return v.name + ":double=" + v.initialeValue1 + "." + v.initialeValue2
+			return v.name + ":float=" + v.initialeValue1 + "." + v.initialeValue2
 		}
 		if (v instanceof UnColor){
 			return v.name + ":str=" + colorToPython(v.initialValue)
@@ -254,8 +254,8 @@ from ev3dev2.sensor.virtual import *\n\n'+fileContent)
 				tmp += ' or '+expressionToPython(v.right)
 			return tmp
 		}
+		
 	}
-	
 	
 	def String sensorOperationToPython(SensorOperation v){
 		if( v instanceof ColorOperation){
